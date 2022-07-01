@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/config.css" rel="stylesheet" />
+	<link type="text/css" href="../css/config/uart.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
+	<script type="text/javascript" src="../js/jquery.ipaddress.js"></script>
+	<script type="text/javascript" src="../js/jquery.caret.js"></script>
+	<script type="text/javascript" src="../js/config/uart.js"></script>
+</head>
+<body id="config-page">
+	<p class="menuLocationInfo">
+		<span class="04060301">Setup > Peripheral ></span>
+		<span id="pagename" class="04060302">Serial Port</span>
+	</p>
+	<ul class="box">
+		<li class="box-title"><h2><span class="04060303">Serial Port</span> (<span id="type"></span>)</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<ul>
+						<li class="item-title 04060304">Baud rate :</li>
+						<li>
+							<select id="formUartBaudRate">
+							</select>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title 04060305">Data : </li>
+						<li>
+							<input type="radio" name="formUartData" id="formUartData5bit" value="5" />
+							<label for="formUartData5bit"> 5bit</label>
+							<input type="radio" name="formUartData" id="formUartData6bit" value="6" />
+							<label for="formUartData6bit"> 6bit</label>
+							<input type="radio" name="formUartData" id="formUartData7bit" value="7" />
+							<label for="formUartData7bit"> 7bit</label>
+							<input type="radio" name="formUartData" id="formUartData8bit" value="8" />
+							<label for="formUartData8bit"> 8bit</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title 04060306">Parity : </li>
+						<li>
+							<input type="radio" name="formUartParity" id="formUartParityEven" value="even" />
+							<label for="formUartParityEven" class="04060307"> even</label>
+							<input type="radio" name="formUartParity" id="formUartParityOdd" value="odd" />
+							<label for="formUartParityOdd" class="04060308"> odd</label>
+							<input type="radio" name="formUartParity" id="formUartParityNone" value="none" />
+							<label for="formUartParityNone" class="04060309"> none</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title 04060310">Stop : </li>
+						<li>
+							<input type="radio" name="formUartStop" id="formUartStop1bit" value="1" />
+							<label for="formUartStop1bit"> 1bit</label>
+							<input type="radio" name="formUartStop" id="formUartStop2bit" value="2" />
+							<label for="formUartStop2bit"> 2bit</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title 04060311">Flow control : </li>
+						<li>
+							<input type="radio" name="formUartFlowCtrl" id="formUartFlowCtrlNone" value="none" />
+							<label for="formUartFlowCtrlNone" class="04060312"> none</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title 04060327">Mode : </li>
+						<li>
+							<input type="radio" name="formUartMode" id="formUartModePTZ" value="ptz" />
+							<label for="formUartModePTZ" class="04060328"> PTZ</label>
+							<input type="radio" name="formUartMode" id="formUartModeOverIP" value="overip" />
+							<label for="formUartModeOverIP" class="04060329"> SerialOverIP</label>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<ul class="box">
+		<li class="box-title"><h2 class="04060313">SerialOverIP</h2></li>
+		<li class="box-content" id="serialoverip">
+			<ul>
+				<li class="item">
+					<ul>
+						<li class="item-title 04060315">Mode : </li>
+						<li>
+							<input type="radio" name="formUartOverIPMode" id="formUartOverIPModeUdp" value="udp" />
+							<label for="formUartOverIPModeUdp" class="04060316"> UDP</label>
+							<input type="radio" name="formUartOverIPMode" id="formUartOverIPModeTcpClient" value="tcp-client" />
+							<label for="formUartOverIPModeTcpClient" class="04060317"> TCP client</label>
+							<input type="radio" name="formUartOverIPMode" id="formUartOverIPModeTcpServer" value="tcp-server" />
+							<label for="formUartOverIPModeTcpServer" class="04060318"> TCP server</label>
+						</li>
+					</ul>
+				</li>
+				<div id="udp"></div>
+				<div id="tcpclient"></div>
+				<div id="tcpserver"></div>
+			</ul>
+		</li>
+	</ul>
+
+	<div class="box" align="center">
+		<button id="btnApply"><span class="04060319">Apply</span></button>
+	</div>
+
+	<div id="uart_udp">
+		<ul class="box evenInit">
+			<li class="box-content">
+				<ul>
+					<li id="IPAddress_udp" class="item">
+						<p>
+							<span class="04060321">IP address :</span>
+							<input type="text" id="formUartIpaddress_udp" size="20"></input>
+						</p>
+					</li>
+					<li class="item">
+						<ul>
+							<li class="item-title 04060322">Port :</li>
+							<li>
+								<input type="text" id="formUartPort_udp"></input>
+								<label for="formUartPort_udp"> (1 ... 65535) </label>
+							</li>
+						</ul>
+					</li>
+					<li class="item">
+						<ul>
+							<li class="item-title 04060323">Status :</li>
+							<li>
+								<span class="status"></span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div id="uart_tcpclient">
+		<ul class="box evenInit">
+			<li class="box-content">
+				<ul>
+					<li id="IPAddress_tcpclient" class="item">
+						<p>
+							<span class="04060321">IP address :</span>
+							<input type="text" id="formUartIpaddress_tcpclient" size="20"></input>
+						</p>
+					</li>
+					<li class="item">
+						<ul>
+							<li class="item-title 04060322">Port :</li>
+							<li>
+								<input type="text" id="formUartPort_tcpclient"></input>
+								<label for="formUartPort_tcpclient"> (1 ... 65535) </label>
+							</li>
+						</ul>
+					</li>
+					<li class="item">
+						<ul>
+							<li class="item-title 04060324">Timeout :</li>
+							<li>
+								<input type="text" id="formUartTimeout_tcpclient"></input>
+								<label for="formUartTimeout_tcpclient" class="04060325"> (0:unlimited, 1~9999 seconds)</label>
+							</li>
+						</ul>
+					</li>
+					<li class="item">
+						<ul>
+							<li class="item-title 04060323">Status :</li>
+							<li>
+								<span class="status"></span>
+							</li>
+						</ul>
+					</li>					
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div id="uart_tcpserver">
+		<ul class="box evenInit">
+			<li class="box-content">
+				<ul>
+					<li class="item">
+						<ul>
+							<li class="item-title 04060322">Port :</li>
+							<li>
+								<input type="text" id="formUartPort_tcpserver"></input>
+								<label for="formUartPort_tcpserver"> (1 ... 65535) </label>
+							</li>
+						</ul>
+					</li>
+					<li class="item">
+						<ul>
+							<li class="item-title 04060324">Timeout :</li>
+							<li>
+								<input type="text" id="formUartTimeout_tcpserver"></input>
+								<label for="formUartTimeout_tcpserver" class="04060325"> (0:unlimited, 1~9999 seconds)</label>
+							</li>
+						</ul>
+					</li>
+					<li class="item">
+						<ul>
+							<li class="item-title 04060323">Status :</li>
+							<li>
+								<span class="status"></span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>	 
+	</div>
+
+	<div id="debug_console"></div>
+</body>
+</html>

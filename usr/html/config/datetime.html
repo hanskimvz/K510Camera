@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/common.css" rel="stylesheet" />
+	<link type="text/css" href="../css/jquery.epiclock.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/jquery.dateformat.js"></script>
+	<script type="text/javascript" src="../js/jquery.epiclock.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
+	<script type="text/javascript" src="../js/config/datetime.js"></script>
+</head>
+<body id="config-page" style="display:none">
+	<p class="menuLocationInfo"><span class="04070201">Setup &gt; Maintenance &gt;</span>
+		<span id="pagename" class="04070202">Date &amp; Time</span>
+	</p>
+	<ul class="box">
+		<li class="box-title"><h2 class="04070203">Current Camera/Encoder Time</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<div id="server_clock"></div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<ul class="box">
+		<li class="box-title"><h2 class="04070204">Configuration</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<ul>
+						<li class="item-title 04070205">Time zone : </li>
+						<li>
+							<select id="formTzName" class="width_step49"><option></option></select>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title 04070206">Sync source : </li>
+						<li>
+							<input type="checkbox" id="formSyncSource" />
+							<label for="formSyncSource" class="04070208"> NTP server</label>
+						</li>
+						<li id="formDTNtpLink" class="float_r">
+							<a id="linkNtp" href="#" class="04070209">Go to NTP Configuration</a>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title 04070210">Date &amp; Time format :</li>
+						<li>
+							<label class="04070211">Predefined :</label>
+							<select id="formDateFormat">
+								<option value="yyyymmdd">YYYY-MM-DD</option>
+								<option value="mmddyyyy">MM-DD-YYYY</option>
+								<option value="ddmmyyyy">DD-MM-YYYY</option>
+							</select>
+						</li>
+						<li>
+							<input type="checkbox" id="formTimehour" />
+							<label for="formTimehour" class="04070215">24-Hour</label>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<div class="box settingButton text_cen">
+		<button id="btnApply"><span class="04070216">Apply</span></button>
+	</div>
+	<p>&nbsp;</p>
+	<ul class="box">
+		<li class="box-title"><h2 class="04070218">New Camera/Encoder Time </h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<ul>
+						<li class="item-title 04070219">Source : </li>
+						<li>
+							<input type="radio" name="formSyncMethod" id="formSyncMethod0" value="pc" checked/>
+							<label for="formSyncMethod0" class="04070220">Set this computer's Date &amp; Time</label>
+							<p id="formUserDateTime" class="margin_left_step2"></p>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul class="sourceNtpServer">
+						<li class="item-title"></li>
+						<li>
+							<input type="radio" name="formSyncMethod" id="formSyncMethod1" value="ntp" />
+							<label for="formSyncMethod1" class="04070221">Set with NTP server</label>
+							<p>
+								<span class="margin_left_step2 04070222">NTP server :</span>
+								<span id="formNtpServer"></span>
+							</p>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title"></li>
+						<li>
+							<input type="radio" name="formSyncMethod" id="formSyncMethod2" value="menu" />
+							<label for="formSyncMethod2" class="04070223">Set manually</label>
+							<p class="manuallyDateTimeForm margin_left_step2">
+								<span id="formDTDate" class="04070224">Date :</span><input id="formDate" type="text" size="13" /> <span>MM-DD-YYYY</span><br />
+								<span id="formDTTime" class="04070225">Time :</span><input id="formTime" type="text" size="13" /> <span>HH:MM:SS(24-Hour)</span>
+							</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<div class="settingButton text_cen">
+		<button id="btnSet"><span class="04070226">Apply</span></button>
+	</div>
+	<div id="debug_console"></div>
+</body>
+</html>

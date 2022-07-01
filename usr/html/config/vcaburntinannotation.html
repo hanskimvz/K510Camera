@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+  <meta http-equiv='imagetoolbar' content='no' />
+  <meta http-equiv="Cache-Control" content="no-cache"/>
+  <meta http-equiv="Expires" content="0"/>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <title></title>
+  <link type='text/css' href='../css/config.css' rel='stylesheet' />
+  <link type='text/css' href='../css/theme.css' rel='stylesheet' />
+  <link type='text/css' href='../css/themes/base/jquery-ui.css' rel='stylesheet' />
+  <link type='text/css' href='../css/config/vcaburntinannotation.css' rel='stylesheet' />
+  <script type='text/javascript' src='../js/jquery-1.4.2.min.js'></script>
+  <script type='text/javascript' src='../js/jquery-ui-1.8.4.min.js'></script>
+  <script type='text/javascript' src='../js/jquery.cookie.js'></script>
+  <script type='text/javascript' src='../js/common.js'></script>
+  <script type='text/javascript' src='../js/uapi.ajax.js'></script>
+  <script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
+  <script type='text/javascript' src='../js/cap.js'></script>
+  <script type='text/javascript' src='../js/cap.vca.js'></script>
+  <script type='text/javascript' src='../js/config/vcaburntinannotation.js'></script>
+</head>
+<body id='config-page'>
+  <p class='menuLocationInfo'>
+    <span class="04051101">Setup > VCA ></span>
+    <span id='pagename' class="04051102">Burnt-in Annotation</span>
+  </p>
+
+  <!-- VCA Disabled Message -->
+  <ul class='box vcaDisabled' style='display:none'>
+    <li class='box-title 04051102'><h2>Burnt-in Annotation</h2></li>
+    <li class='box-content'>
+      <p> <span class='04051138'>VCA is disabled, please go to the </span><span class='menuLocationInfo 04051139'>VCA > </span><span id='pagename' class='04051140'>Enable/Disable</span><span class ='04051141'> page to enable VCA.</span></p>
+    </li>
+  </ul>
+
+  <!-- VCA Initialising Message -->
+  <div class='vcaInitialising' id='loadingMessage'>
+    <img id='loadingImage' src='/images/loading.gif'></img>
+    <span class="04051137">Loading Data - Please Wait</span>
+  </div>
+
+  <!-- Stream Tabs -->
+  <ul class="box vcaEnabled" style='display:none'>
+    <li>
+      <div id="stream_tabs" class="tab_inline">
+        <ul class="css-tabs">
+          <li><a href="#stream_0" class="04051103">First Stream</a></li>
+          <li><a href="#stream_1" class="04051104">Second Stream</a></li>
+          <li><a href="#stream_2" class="04051105">Snapshot</a></li>
+          <li><a href="#stream_3" class="04051136">Analog Output</a></li>
+        </ul>
+
+        <div id="stream_0"></div>
+        <div id="stream_1"></div>
+        <div id="stream_2"></div>
+        <div id="stream_3"></div>
+      </div>
+    </li>
+  </ul>
+
+  <!-- The Template for Stream Tabs -->
+  <div id="streamTemplate" style="display: none">
+
+  <ul class='box vcaEnabled' style='display:none'>
+    <li class='box-title'><h2 class="04051106">Burnt-in Annotation</h2></li>
+    <li class='box-content'>
+      <ul>
+        <li class='item'>
+          <input type='checkbox' id='Ba0.enable' class='auto-yesno' />
+          <label for='Ba0.enable' class="04051107">Enable Burnt-in Annotation</label>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <span id='biaOptionsS0'>
+
+  <ul class='box vcaEnabled' style='display:none'>
+    <li class='box-title'><h2 class="04051108">Zones</h2></li>
+    <li class='box-content'>
+      <ul>
+        <li class='item'>
+          <input type='checkbox' id='Ba0.enablezone' class='auto-yesno' />
+          <label for='Ba0.enablezone' class="04051109">Display Zones</label>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul class='box vcaEnabled' style='display:none'>
+    <li class='box-title'><h2 class="04051110">Objects</h2></li>
+    <li class='box-content'>
+      <ul>
+        <li class='item'>
+          <input type='checkbox' id='Ba0.enableobject' class='auto-yesno' />
+          <label for='Ba0.enableobject' class="04051111"> Display Objects</label>
+        </li>
+        <span id="objectOptionsS0">
+        <span id='Ba0.objectfmt' class='auto-multi'>
+        <li class='item'>
+          <input type='checkbox' id='nonalarm' class='auto-multi indent1' />
+          <label for='nonalarm' class="04051112"> Non-Alarmed Objects</label>
+        </li>
+        <li class='item vcaCalibration notTofDevice'>
+          <input type='checkbox' id='speed' class='auto-multi indent1' />
+          <label for='speed' class="04051113"> Object Speed</label>
+        </li>
+        <li class='item vcaCalibration notTofDevice'>
+          <input type='checkbox' id='height' class='auto-multi indent1' />
+          <label for='height' class="04051114"> Object Height</label>
+        </li>
+        <li class='item vcaCalibration notTofDevice'>
+          <input type='checkbox' id='area' class='auto-multi indent1' />
+          <label for='area' class="04051115"> Object Area</label>
+        </li>
+        <li class='item vcaCalibration notTofDevice'>
+          <input type='checkbox' id='class' class='auto-multi indent1' />
+          <label for='class' class="04051116"> Object Classification</label>
+        </li>
+        <input type='checkbox' id='multicolor' style='display: none'/>
+        </span>
+        <li class="item">
+          <ul class="indent1">
+            <li class="item-title 04051117">Text Size :</li>
+            <li>
+              <select id="Ba0.objecttxtsz" class="auto-select">
+                <option value="small"> Small</option>
+                <option value="medium"> Medium</option>
+                <option value="large"> Large</option>
+              </select>
+            </li>
+          </ul>
+        </li>
+        <li class="item indent1">
+          <input type="radio" id="twoColorS0" class="indent1" name="colorModeS0"/>
+          <label class="04051118" for="twoColorS0">Display objects in two colors</label>
+        </li>
+        <li class="item">
+          <ul class="indent2">
+            <li class="item-title 04051119">Alarm Object Color :</li>
+            <li>
+              <select id="Ba0.alarmcolor" class="auto-select">
+                <option value="255,0,0"> Red</option>
+                <option value="0,255,0"> Green</option>
+                <option value="0,0,255"> Blue</option>
+                <option value="255,255,0"> Yellow</option>
+                <option value="255,0,255"> Magenta</option>
+                <option value="0,255,255"> Cyan</option>
+                <option value="255,128,0"> Orange</option>
+              </select>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <ul class="indent2">
+            <li class="item-title 04051120">Non-Alarm Object Color :</li>
+            <li>
+              <select id="Ba0.nonalarmcolor" class="auto-select">
+                <option value="255,0,0"> Red</option>
+                <option value="0,255,0"> Green</option>
+                <option value="0,0,255"> Blue</option>
+                <option value="255,255,0"> Yellow</option>
+                <option value="255,0,255"> Magenta</option>
+                <option value="0,255,255"> Cyan</option>
+                <option value="255,128,0"> Orange</option>
+              </select>
+            </li>
+          </ul>
+        </li>
+        <li class="item indent1">
+          <input type="radio" id="multiColorS0" class="indent1" name="colorModeS0"/>
+          <label class="04051121" for="multiColorS0">Display objects in multiple colors</label>
+        </li>
+        </span>
+      </ul>
+    </li>
+  </ul>
+
+  <ul class='box vcaEnabled' style='display:none'>
+    <li class='box-title vcaCounting'><h2 class="04051122">Counters</h2></li>
+    <li class='box-content vcaCounting'>
+      <ul>
+        <li class='item'>
+          <input type='checkbox' id='Ba0.enablecounter' class='auto-yesno' />
+          <label for='Ba.enablecounter' class="04051123"> Display Counters</label>
+        </li>
+        <span id="counterOptionsS0">
+        <span id='Ba0.counterfmt' class='auto-multi'>
+        <li class='item'>
+          <input type='checkbox' id='name' class='auto-multi indent1' />
+          <label for='name' class="04051124"> Name</label>
+        </li>
+        <li class='item'>
+          <input type='checkbox' id='value' class='auto-multi indent1' />
+          <label for='value' class="04051125"> Value</label>
+        </li>
+        </span>
+        <li class="item">
+          <ul class="indent1">
+            <li class="item-title 04051126">Text Size :</li>
+            <li>
+              <select id="Ba0.countertxtsz" class="auto-select">
+                <option value="small"> Small</option>
+                <option value="medium"> Medium</option>
+                <option value="large"> Large</option>
+              </select>
+            </li>
+          </ul>
+        </li>
+        </span>
+      </ul>
+    </li>
+  </ul>
+
+  <ul class='box vcaEnabled' style='display:none'>
+    <li class='box-title'><h2 class="04051127">System Messages</h2></li>
+    <li class='box-content'>
+      <ul>
+        <li class='item'>
+          <input type='checkbox' id='Ba0.enablesysmsg' class='auto-yesno' />
+          <label for='Ba0.enablesysmsg' class="04051128"> Display Messages</label>
+        </li>
+        <li class='item'>
+          <input type='checkbox' id='Ba0.enableprofiletext' class='auto-yesno' />
+          <label for='Ba0.enableprofiletext' class="04051135"> Display Current Profile</label>
+        </li>
+        <span id="sysMsgOptionsS0">
+        <li class="item">
+          <ul class="indent1">
+            <li class="item-title 04051129">Text Size :</li>
+            <li>
+              <select id="Ba0.sysmsgtxtsz" class="auto-select">
+                <option value="small"> Small</option>
+                <option value="medium"> Medium</option>
+                <option value="large"> Large</option>
+              </select>
+            </li>
+          </ul>
+        </li>
+        </span>
+      </ul>
+    </li>
+  </ul>
+
+  <ul class='box vcaEnabled' style='display:none'>
+    <li class='box-title vcaDiagnostics'><h2 class="04051130">Diagnostics</h2></li>
+    <li class='box-content vcaDiagnostics'>
+      <span id='Ba0.diagnostics' class='auto-multi'><ul>
+        <li class='item vcaCountingLine'>
+          <input type='checkbox' id='countingline' class='auto-multi' />
+          <label for='countingline' class='04051131'> Display Counting Line Events</label>
+        </li>
+      </ul></span>
+    </li>
+  </ul>
+
+  </span>
+  </div>
+
+  <div class='box vcaEnabled' align='center'>
+    <button id='btnApply' ><span class="04051132">Apply</span></button>
+    <button id='btnRestoreDefaults'><span class="04051134">Restore Defaults</span></button>
+  </div>
+</body>
+</html>

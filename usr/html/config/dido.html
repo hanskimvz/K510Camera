@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/common.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.mouse.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.slider.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.slider-rtl.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/utils/log.js"></script>
+	<script type="text/javascript" src="../js/defstring/defbrand.js"></script>
+	<script type="text/javascript" src="../js/utils/jq_string.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
+	<script type="text/javascript" src="../js/plat_utils/string.js"></script>
+	<script type="text/javascript" src="../js/config/dido.js"></script>
+</head>
+<body id="config-page" style="display:none">
+	<p class="menuLocationInfo">
+		<span class="04060101">Setup > Peripheral ></span>
+		<span id="pagename" class="04060102">Sensor/Alarm</span>
+	</p>
+	<ul class="box diContents">
+		<li class="box-title"><h2 class="04060103">Sensor (DI)</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item resourcetype_hidden">
+					<ul>
+						<li class="item-title 04060104">Resource type :</li>
+						<li>
+							<input type="radio" name="formDiResource" id="formDiResource0" value="relay" /><label for="formDiResource0" class="04060105"> Relay</label>
+						</li>
+						<li>
+							<input type="radio" name="formDiResource" id="formDiResource1" value="voltage" /><label for="formDiResource1" class="04060106"> Voltage (max. 5V)</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title"><span class="04060124">DI</span>#1</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul class="indentContents">
+						<li class="item-title 04060107">Trigger type :</li>
+						<li>
+							<input type="radio" name="formDiTrigger" id="formDiTrigger0" value="no" /><label for="formDiTrigger0" class="04060108"> Normally open</label>
+						</li>
+						<li>
+							<input type="radio" name="formDiTrigger" id="formDiTrigger1" value="nc" /><label for="formDiTrigger1" class="04060109"> Normally closed</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item diDetectionType_ch0">
+					<ul>
+						<li class="item-title margin_left_step4 04060138">Detection type :</li>
+						<li>
+							<input type="radio" name="diDetectionType_ch0" id="diDetectionType_ch0_0" value="edge" /><label for="diDetectionType_ch0_0" class="04060139"> Edge trigger</label>
+						</li>
+						<li>
+							<input type="radio" name="diDetectionType_ch0" id="diDetectionType_ch0_1" value="level" /><label for="diDetectionType_ch0_1" class="04060140"> Level trigger</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item diDetectionTypeSub_ch0">
+					<ul>
+						<li class="item-title margin_left_step8" style="width:220px; margin: 1px 0px 1px 4px;" >
+							<span class="04060110">Interval between triggers</span><br /><span class="04060111">(0: trigger for every detection) :</span>
+						</li>
+						<li style="margin-top: 4px;"><div id="sliderDiInterval_ch0" class="slider-bar"></div></li>
+						<li>
+							<input type="text" size="5" id="formDiSensorInterval_ch0" style="text-align:center;" />
+							<label for="formDiSensorInterval_ch0" class="04060112"> (0 ... 600 sec)</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item diDetectionTypeSub_ch0">
+					<ul>
+						<li class="item-title margin_left_step8 04060122">Duration :</li>
+						<li><div id="sliderDiDuration_ch0" class="slider-bar"></div></li>
+						<li>
+							<input type="text" size="5" id="formDiDuration_ch0" style="text-align:center;" />
+							<label class="04060123"> (1 ... 600 sec)</label>
+						</li>
+					</ul>
+				</li>
+				<div id="di_append"></div>
+			</ul>
+		</li>
+	</ul>
+
+	<ul class="box doContents">
+		<li class="box-title"><h2 class="04060125">Alarm (DO)</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<ul>
+						<li class="item-title"><span class="04060131">DO</span>#1</li>
+					</ul>
+				</li>
+				<li class="item doDetectionType_ch0">
+					<ul>
+						<li class="item-title margin_left_step4 04060138">Detection type :</li>
+						<li>
+							<input type="radio" name="doDetectionType_ch0" id="doDetectionType_ch0_0" value="edge" /><label for="doDetectionType_ch0_0" class="04060139"> Edge trigger</label>
+						</li>
+						<li>
+							<input type="radio" name="doDetectionType_ch0" id="doDetectionType_ch0_1" value="level" /><label for="doDetectionType_ch0_1" class="04060140"> Level trigger</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item doDetectionTypeSub_ch0">
+					<ul>
+						<li class="item-title margin_left_step8" style="width:220px; margin: 1px 0px 1px 4px;" >
+							<span class="04060132">Interval between triggers</span><br /><span class="04060133">(0: trigger for every detection) :</span>
+						</li>
+						<li style="margin-top: 4px;"><div id="sliderDoInterval_ch0" class="slider-bar"></div></li>
+						<li>
+							<input type="text" size="5" id="formDoAlarmInterval_ch0" style="text-align:center;" />
+							<label for="formDoAlarmInterval_ch0" class="04060134"> (0 ... 600 sec)</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item doDetectionTypeSub_ch0">
+					<ul>
+						<li class="item-title margin_left_step8 04060135">Duration :</li>
+						<li><div id="sliderDoDuration_ch0" class="slider-bar"></div></li>
+						<li>
+							<input type="text" size="5" id="formDoDuration_ch0" style="text-align:center;" />
+							<label class="04060136"> (1 ... 600 sec)</label>
+						</li>
+					</ul>
+				</li>
+				<div id="do_append"></div>
+			</ul>
+		</li>
+	</ul>
+
+	<div class="box settingButton text_cen">
+		<button id="btnApply"><span class="04060117">Apply</span></button>
+	</div>
+	
+	<ul class="box doContents">
+		<li class="box-title"><h2 class="04060137">Alarm (DO) Control</h2></li>
+		<li class="box-content">
+			<ul>
+				<li>
+					<li class="item">
+						<ul>
+							<li class="item-title 04060126">Trigger</li>
+						</ul>
+					</li>
+					<li class="item">
+						<ul class="indentContents">
+							<li class="item-title"><span class="04060127">DO</span>#1 :</li>
+							<li>
+								<input type="radio" name="formMainTrigger" id="trig_on" value="on" /><label for="trig_on" class="04060128"> Active</label>
+							</li>
+							<li>
+								<input type="radio" name="formMainTrigger" id="trig_off" value="off" /><label for="trig_off" class="04060129"> Inactive</label>
+							</li>
+						</ul>
+					</li>
+					<div id="doctr_append"></div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<div id="debug_console"></div>
+</body>
+</html>

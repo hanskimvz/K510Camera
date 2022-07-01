@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	<meta http-equiv='imagetoolbar' content='no' />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type='text/css' href='../css/config.css' rel='stylesheet' />
+	<link type='text/css' href='../css/theme.css' rel='stylesheet' />
+	<link type='text/css' href='../css/themes/base/jquery-ui.css' rel='stylesheet' />
+	<link type='text/css' href='../css/config/vcaclassification.css' rel='stylesheet' />
+	<script type='text/javascript' src='../js/jquery-1.4.2.min.js'></script>
+	<script type='text/javascript' src='../js/jquery-ui-1.8.4.min.js'></script>
+	<script type='text/javascript' src='../js/jquery.cookie.js'></script>
+	<script type='text/javascript' src='../js/common.js'></script>
+	<script type='text/javascript' src='../js/uapi.ajax.js'></script>
+	<script type='text/javascript' src='../js/cap.js'></script>
+	<script type='text/javascript' src='../js/cap.vca.js'></script>
+	<script type='text/javascript' src='../js/config/vcaclassification.js'></script>
+</head>
+<body id='config-page'>
+	<p class='menuLocationInfo'>
+		<span class="04050401">Setup > VCA ></span>
+		<span id='pagename' class="04050402">Classification</span>
+	</p>
+
+	<!-- VCA Disabled Message -->
+	<ul class='box vcaDisabled' style='display:none'>
+		<li class='box-title 04050402'><h2>Classification</h2></li>
+		<li class='box-content'>
+			<p> <span class='04050404'>VCA is disabled, please go to the </span><span class='menuLocationInfo 04050405'>VCA > </span><span id='pagename' class='04050406'>Enable/Disable</span><span class ='04050407'> page to enable VCA.</span></p>
+		</li>
+	</ul>
+
+	<!-- VCA Initialising Message -->
+	<div class='vcaInitialising' id='loadingMessage'>
+		<img id='loadingImage' src='/images/loading.gif'></img>
+		<span class="04050408">Loading Data - Please Wait</span>
+	</div>
+
+	<!-- Object Classifier List -->
+	<div id='listregion' class='box vcaEnabled'>
+		<!-- Alarm Holdoff Time section -->
+		<ul class='box vcaEnabled' style='display:none'>
+			<li class='box-title'><h2 class="04050409">Choose an object classifier</h2></li>
+			<li class='box-content'>
+				<ul>
+					<li class="item">
+						<span class="listtitle 04050410">Id</span>
+						<span class="listtitle 04050411">Name</span>
+					</li>
+					<li class="item">
+						<select id="classifierlist" size="8">
+						</select>
+					</li>
+					<li class="item" id="addremovebuttons">
+						<button id='btnAdd' ><span class="04050422">Add</span></button>
+						<button id='btnRemove' ><span class="04050423">Remove</span></button>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<!-- Detailed Object Classifier Information -->
+	<div id="detailsregion" class="vcaEnabled" style="display:none">
+		<!-- Alarm Holdoff Time section -->
+		<ul class='box vcaEnabled' style='display:none'>
+			<li class='box-title'><h2 class="04050412">Detailed object classifier information</h2></li>
+			<li class='box-content'>
+				<ul>
+					<li class="item detailsproperty">
+						<ul>
+							<li class="item-title 04050413">Name:</li>
+							<li>
+							<input class="classifierproperty" type="text" id="name" />
+							</li>
+						</ul>
+					</li>
+					<li class="item detailsproperty">
+						<ul>
+							<li class="item-title 04050414">Enable:</li>
+							<li>
+							<select class="classifierproperty" id="enableclassifier">
+								<option value=1>Yes</option>
+								<option value=0>No</option>
+							</select>
+							</li>
+						</ul>
+					</li>
+					<li class="item detailsproperty">
+						<ul>
+							<li class="item-title 04050415">Min Area:</li>
+							<li>
+								<input type="text" class="classifierproperty" id="minarea" data-validation="float,0,1000"/><label for="minarea" class="metric">m<sup>2</sup></label><label for="minarea" class="imperial">ft<sup>2</sup></label>
+							</li>
+						</ul>
+					</li>
+					<li class="item detailsproperty">
+						<ul>
+							<li class="item-title 04050416">Max Area:</li>
+							<li>
+								<input type="text" class="classifierproperty" id="maxarea" data-validation="float,0,1000"/><label for="maxarea" class="metric">m<sup>2</sup></label><label for="maxarea" class="imperial">ft<sup>2</sup></label>
+							</li>
+						</ul>
+					</li>
+					<li class="item detailsproperty">
+						<ul>
+							<li class="item-title 04050417">Min Speed:</li>
+							<li>
+								<input type="text" class="classifierproperty" id="minspeed" data-validation="int,0,1000"/><label for="minspeed" class="metric">km/h</label><label for="minspeed" class="imperial">mph</label>
+							</li>
+						</ul>
+					</li>
+					<li class="item detailsproperty">
+						<ul>
+							<li class="item-title 04050418">Max Speed:</li>
+							<li>
+								<input type="text" class="classifierproperty" id="maxspeed" data-validation="int,0,1000"/><label for="maxspeed" class="metric">km/h</label><label for="maxspeed" class="imperial">mph</label>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="clear"></div>
+	
+	<div class='box vcaEnabled' align='center'>
+		<button id='btnApply' ><span class="04050419">Apply</span></button>
+		<button id='btnRestoreDefaults'><span class="04050421">Restore Defaults</span></button>
+	</div>
+</body>
+</html>

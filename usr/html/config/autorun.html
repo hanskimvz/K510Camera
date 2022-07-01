@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/config.css" rel="stylesheet" />
+	<link type="text/css" href="../css/config/autorun.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/defstring/defbrand.js"></script>
+	<script type="text/javascript" src="../js/utils/log.js"></script>
+	<script type="text/javascript" src="../js/utils/jq_string.js"></script>
+	<script type="text/javascript" src="../js/utils/jq_control.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/plat_utils/string.js"></script>
+	<script type="text/javascript" src="../js/config/autorun.js"></script>
+</head>
+
+<body id="config-page">
+	<p class="menuLocationInfo">
+		<span class="04110201">Setup &gt; PTZ &gt;</span>
+		<span id="pagename" class="04110202">Autorun</span>
+	</p>
+	
+	<ul class="box">
+		<li class="box-title"><h2 class="04110203">Configuration</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<input type="checkbox" id="formAutorunEnable" /><label for="formAutorunEnable" class="04110204"> Enable autorun</label>
+				</li>
+				<li class="item">
+					<span class="formAutorunTimeText 04110205"> After</span>
+					<input type="text" size="5" id="formAutorunTime" />
+					<select id="autorunTime">
+						<option value="min">Min(s)</option>
+						<option value="sec">Sec(s)</option>
+					</select>
+					<span id="autorunTimeSpeedType1" class="formAutorunTimeText"> (1 ... 60)</span>
+					<span id="autorunTimeIRSpeedPTZ">(10, 30, 60, 300, 600, 1200, 1800, 2400, 3000, 3600)</span>
+				</li>
+				<li class="item">
+					<ul>
+						<li>
+							<div class="formAutorunMoveMenu_home">
+								<input type="radio" name="formAutorunMoveMenu" id="formAutorunMoveMenu0" value="home" checked />
+								<label for="formAutorunMoveMenu0" class="04110207"> Go to home position</label>
+							</div>
+							<div class="formAutorunMoveMenu_tour">
+								<input type="radio" name="formAutorunMoveMenu" id="formAutorunMoveMenu1" value="tour" />
+								<label for="formAutorunMoveMenu1" class="04110208"> Start tour</label>
+								<select id="selectTouringNumber">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+								</select>
+							</div>
+							<div class="formAutorunMoveMenu_preset">
+								<input type="radio" name="formAutorunMoveMenu" id="formAutorunMoveMenu2" value="preset" />
+								<label for="formAutorunMoveMenu2" class="04110209"> Go to preset</label>
+								<select id="selectPresetNumber">
+									<option value="none">none</option>
+								</select>
+							</div>
+							<div class="formAutorunMoveMenu_panning" >
+								<input type="radio" name="formAutorunMoveMenu" id="formAutorunMoveMenu3" value="autopan" />
+								<label for="formAutorunMoveMenu3" class="04110212"> Panning</label>
+							</div>
+							<div class="formAutorunMoveMenu_panningInfo">
+								<span class="04110213"> Angle : </span>
+								<input type="text" size="5" id="formAutorunPanningAngle" value="" />
+								<label>(-5 ... 185)</label>,
+								<span class="panningSpeed_Contents 04110214"> Speed : </span>
+								<input type="text" size="5" id="formAutorunPanningSpeed" value="" />
+								<label>(20 ... 50)</label>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	
+	<div id="btn" class="box settingButton">
+		<button id="btnApply"><span class="04110210">Apply</span></button>
+	</div>
+	<div id="debug_console"></div>
+</body>
+</html>

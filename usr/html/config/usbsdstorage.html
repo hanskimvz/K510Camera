@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/common.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/utils/log.js"></script>
+	<script type="text/javascript" src="../js/utils/jq_control.js"></script>
+	<script type="text/javascript" src="../js/utils/query.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/jquery.progression.1.3.js"></script>
+	<script type="text/javascript" src="../js/config/usbsdstorage.js"></script>
+</head>
+<body id="config-page">
+	<p class="menuLocationInfo">
+		<span class="04140301">Setup &gt; Storage &gt;</span>
+		<span id="pagename" class="04140302 usbsd_Contents dsp_hide">USB/SD</span>
+		<span id="pagename" class="04140320 sd_Contents dsp_show_block">SD</span>
+	</p>
+	<select size="8" id="formStorageList">
+		<option />
+	</select>
+	<ul class="box">
+		<li class="box-title usbsd_Contents dsp_hide"><h2 class="04140303">USB/SD Storage List</h2></li>
+		<li class="box-title sd_Contents dsp_show_block"><h2 class="04140321">SD Storage List</h2></li>
+		<li class="box-content">
+			<ul id="formUsbSdStorageList">
+				<li class="item">
+					<ul>
+						<li id="usbsd_chooseDevice" class="item-title 04140304">Choose a storage device</li>
+						<li class="item-title 04140305">Detail storage information</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li id="usbsd_diskArea" class="04140306">Disk</li>
+						<li class="04140307">Size</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="padding_left_step28 04140308">Disk :</li>
+						<li id="txtDisk"></li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="padding_left_step28 04140309">Type :</li>
+						<li id="txtType"></li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="padding_left_step28 04140310">Total capacity :</li>
+						<li id="txtSize"></li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="padding_left_step28 04140311">Free space :</li>
+						<li id="txtFree"></li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="padding_left_step28 04140312">Status :</li>
+						<li id="txtStatus"></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<div class="box dsp_show_block" id="listButton">
+		<button id="btnList" class="usbsd_Contents dsp_hide"><span class="04140313">Refresh USB/SD Device List</span></button>
+		<button id="btnList_sd" class="sd_Contents dsp_show_block"><span class="04140322">Refresh SD Device List</span></button>
+		<button id="btnSelect" class="dsp_hide"><span class="04140314">Select Record Device</span></button>
+	</div>
+	<ul class="box dsp_show_block" id="RDCButton">
+		<li class="box-title"><h2 class="04140315">Record Device Control</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<ul>
+						<li>
+							<button id="btnFormatVfat"><span class="04140316">Format(vfat)</span></button>
+							<button id="btnFormatExt3"><span class="04140317">Format(ext3)</span></button>
+							<button id="btnMount"><span class="04140318">Mount</span></button>
+							<button id="btnEject"><span class="04140319">Eject</span></button>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<div id="formatStatus_contents" class="dsp_hide" align="center">
+		<div style="width:410px;">
+			<h5>Formatting...</h5>
+			<div id="image-progress" class="progressbar" />
+		</div>
+	</div>
+</body>
+</html>

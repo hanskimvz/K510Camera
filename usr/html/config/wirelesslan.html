@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/config.css" rel="stylesheet" />
+	<link type="text/css" href="../css/config/wirelesslan.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/jquery.ipaddress.js"></script>
+	<script type="text/javascript" src="../js/jquery.caret.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/config/wirelesslan.js"></script>
+	<!--[If lte IE 8]>
+		<link type="text/css" href="../css/ie8.css" rel="stylesheet" />
+	<![endif]-->
+</head>
+
+<body id="config-page">
+	<p class="menuLocationInfo">
+		<span class="04041001">Setup &gt; Network Configuration &gt;</span>
+		<span id="pagename" class="04041002">Wireless LAN</span>
+	</p>
+	<select size="10" id="formWL_List">
+		<option />
+	</select>
+	<ul class="box">
+		<li class="box-title"><h2 class="04041003">Wireless AP List</h2></li>
+		<li class="box-content">
+			<ul id="formWL_WirelessList">
+				<li class="item">
+					<ul>
+						<li id="formWL_chooseDevice" class="item-title 04041004">Choose a wireless network</li>
+						<li class="item-title 04041005">Detail wireless AP information</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li id="formWL_ListBoxEssid" class="04041006">Essid</li>
+						<li id="formWL_ListBoxMode" class="04041007">Networks to Access</li>
+						<li id="info_quality" class="04041028">Quality</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li id="formWL_ListEssid">ESSID :</li>
+						<li>-</li>
+					</ul>
+				</li>
+				<li class="item hidden_contents">
+					<ul>
+						<li id="formWL_ListMode">Mode :</li>
+						<li>-</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li id="formWL_ListMac" class="04041008">Mac address :</li>
+						<li>-</li>
+					</ul>
+				</li>
+				<li class="item infoAP_bitrates">
+					<ul>
+						<li id="formWL_ListBitrates" class="04041009">Bitrates :</li>
+						<li>-</li>
+					</ul>
+				</li>
+				<li class="item infoAP_encryption">
+					<ul>
+						<li id="formWL_ListEncType" class="04041010">Encryption :</li>
+						<li>-</li>
+					</ul>
+				</li>
+				<li class="item hidden_contents">
+					<ul>
+						<li id="formWL_ListChannel" class="04041011">Channel :</li>
+						<li>-</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li id="formWL_ListAuth" class="item-title 04041012">Authentication : </li>
+						<li class="marginAdjustZero">
+							<select id="formWL_ListAuthSelect">
+								<option>-</option>
+							</select>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li id="formWL_ListNetkey" class="item-title 04041013">Network key : </li>
+						<li class="marginAdjustZero">
+							<input id="formWL_ListNetkeyPass" type="password"></input>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<div class="box" id="listButton">
+		<button id="btnList"><span class="04041014">Refresh Network List</span></button>
+	</div>
+
+	<ul class="box">
+		<li class="box-title"><h2 class="04041015">Wireless network IP configuration</h2></li>
+		<li class="box-content">		
+			<ul>
+				<li id="formWL_Dhcp" class="item">
+					<input type="radio" name="formWL_DhcpChk" id="formWL_DhcpChk0" value="yes" />
+					<label for="formWL_DhcpChk0" class="04041016"> Obtain an IP address via DHCP </label>
+					<p id="formWL_DhcpIP">
+						<span class="04041017">IP address :</span>
+						<input type="text" id="formWL_DhcpIPText" size="20" />
+					</p>
+					<p id="formWL_DhcpSubnet">
+						<span class="04041018">Subnet mask :</span>
+						<input type="text" id="formWL_DhcpSubnetText" size="20" />
+					</p>
+					<p id="formWL_DhcpGateway">
+						<span class="04041019">Gateway address :</span>
+						<input type="text" id="formWL_DhcpGatewayText" size="20" />
+					</p>
+				</li>
+				<li id="formWL_Static" class="item">
+					<input type="radio" name="formWL_DhcpChk" id="formWL_DhcpChk1" value="no" />
+					<label for="formWL_DhcpChk1" class="04041020"> Use the following IP address </label>
+					<p id="formWL_StaticIP">
+						<span class="04041021">IP address :</span>
+						<input type="text" id="formWL_StaticIPText" size="20" />
+						<button id="btnIPTest"><span class="04041026" id="testButton">Test</span></button>&nbsp;&nbsp;
+						<span id="formTestBtnResult"></span>
+					</p>
+					<p id="formWL_StaticSubnet">
+						<span class="04041022">Subnet mask :</span>
+						<input type="text" id="formWL_StaticSubnetText" size="20" />
+					</p>
+					<p id="formWL_StaticGateway">
+						<span class="04041023">Gateway address :</span>
+						<input type="text" id="formWL_StaticGatewayText" size="20" />
+					</p>
+					<p id="formWL_StaticDns1">
+						<span class="04041024">Primary DNS server :</span>
+						<input type="text" id="formWL_StaticDns1Text" size="20" />
+					</p>
+					<p id="formWL_StaticDns2">
+						<span class="04041025">Secondary DNS server :</span>
+						<input type="text" id="formWL_StaticDns2Text" size="20" />
+					</p>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<ul class="box">
+		<li class="box-title"><h2 class="04041029">Link-Local Address</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<input type="checkbox" id="linkLocalEnable" />
+					<label for="linkLocalEnable" class="04041030">Enable Auto-Configuration link-local address</label>
+				</li>
+				<li id="linkLocalIPContents" class="item linkLocalIPContents">
+					<p>
+						<span class="04041031">IP address :</span>
+						<input type="text" id="formLinkLocalIP" size="20" />
+					</p>
+				</li>
+				<li id="linkLocalSubnetContents" class="item linkLocalSubnetContents">
+					<p>
+						<span class="SubnetTitle 04041032">Subnet mask :</span>
+						<input type="text" id="formLinkLocalSubnet" size="20" />&nbsp;&nbsp;
+						<button id="btnIPRenew"><span class="04041033">Renew</span></button>
+					</p>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	
+	<div id="btn" class="box" align="center">
+		<button id="btnApply"><span class="04041027">Apply</span></button>
+	</div>
+</body>
+</html>

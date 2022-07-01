@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+  <meta http-equiv='imagetoolbar' content='no' />
+  <meta http-equiv="Cache-Control" content="no-cache"/>
+  <meta http-equiv="Expires" content="0"/>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <title></title>
+  <link type='text/css' href='../css/config.css' rel='stylesheet' />
+  <link type='text/css' href='../css/theme.css' rel='stylesheet' />
+  <link type='text/css' href='../css/themes/base/jquery-ui.css' rel='stylesheet' />
+  <link type='text/css' href='../css/config/vcaadvanced.css' rel='stylesheet' />
+  <script type='text/javascript' src='../js/jquery-1.4.2.min.js'></script>
+  <script type='text/javascript' src='../js/jquery-ui-1.8.4.min.js'></script>
+  <script type='text/javascript' src='../js/jquery.cookie.js'></script>
+  <script type='text/javascript' src='../js/common.js'></script>
+  <script type='text/javascript' src='../js/uapi.ajax.js'></script>
+  <script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
+  <script type='text/javascript' src='../js/cap.js'></script>
+  <script type='text/javascript' src='../js/cap.vca.js'></script>
+  <script type='text/javascript' src='../js/config/vcaadvanced.js'></script>
+</head>
+<body id='config-page'>
+  <p class='menuLocationInfo'>
+    <span class="04050501">Setup > VCA ></span>
+    <span id='pagename' class="04050502">Advanced</span>
+  </p>
+
+  <!-- VCA Disabled Message -->
+  <ul class='box vcaDisabled' style='display:none'>
+    <li class='box-title 04050502'><h2>Advanced</h2></li>
+    <li class='box-content'>
+      <p> <span class='04050504'>VCA is disabled, please go to the </span><span class='menuLocationInfo 04050505'>VCA > </span><span id='pagename' class='04050506'>Enable/Disable</span><span class ='04050507'> page to enable VCA.</span></p>
+    </li>
+  </ul>
+
+  <!-- VCA Initialising Message -->
+  <div class='vcaInitialising' id='loadingMessage'>
+    <img id='loadingImage' src='/images/loading.gif'></img>
+    <span class="04050508">Loading Data - Please Wait</span>
+  </div>
+  
+  <!-- Alarm Holdoff Time section -->
+  <ul class='box vcaEnabled' style='display:none'>
+    <li class='box-title'><h2 class="04050509">Alarm Holdoff Time</h2></li>
+    <li class='box-content'>
+      <ul>
+        <li class="item">
+          <ul>
+            <li class="item-title 04050510">Threshold:</li>
+            <li>
+              <input type="text" id="retrigtime" class="auto-text" size="25" data-validation="int,0,3600"/><label for="retrigtime" class="04050511">seconds</label>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Measurement Units section -->
+  <ul class='box vcaEnabled' style='display:none'>
+    <li class='box-title'><h2 class="04050512">Measurement Units</h2></li>
+    <li class='box-content'>
+      <ul>
+        <li class="item">
+          <ul>
+            <li class="item-title 04050513">Height/Area/Speed units:</li>
+            <li>
+              <select id="meaunits" class="auto-select">
+                <option id="metric" value="metric">Metric</option>
+                <option id="imperial" value="imperial">Imperial</option>
+              </select>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Metadata section -->
+  <ul class='box vcaEnabled' style='display:none'>
+    <li class='box-title'><h2 class="04050515">Metadata Format</h2></li>
+    <li class='box-content'>
+      <ul>
+        <span class="auto-multi" id="metafmt">
+          <li class='item'>
+            <ul>
+              <li class="item-title 04050516">Metadata :</li>
+              <div class="clear"></div>
+              <li>
+                <input type='checkbox' class='auto-multi' id='event' /><label for='event' class="04050517"> Event</label>
+                <input type='checkbox' class='auto-multi' id='object' /><label for='object' class="04050518"> Object</label>
+                <input type='checkbox' class='auto-multi' id='counting' /><label for='counting' class="04050519"> Counting</label>
+                <br/>
+                <input type='checkbox' class='auto-multi' id='compactdata' /><label for='compactdata' class="04050520"> Do not send empty metadata packets (metadata won't be sent if no information generated)</label>
+              </li>
+            </ul>
+          </li>
+          <li class='item'>
+            <ul>
+              <li class="item-title 04050521">Diagnostic Metadata:</li>
+              <div class="clear"></div>
+              <li>
+                <input type='checkbox' class='auto-multi' id='blob' /><label for='blob' class="04050522"> Blob</label>
+                <input type='checkbox' class='auto-multi' id='linecounter' /><label for='linecounter' class="04050523"> Counting Line</label>
+                <input type='checkbox' class='auto-multi' id='tamper' /><label for='tamper' class="04050537"> Tamper</label>
+                <input type='checkbox' class='auto-multi' id='scenechange' /><label for='scenechange' class="04050538"> Scene Change</label>
+              </li>
+            </ul>
+          </li>
+        </span>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Stationary Hold-on Time section -->
+  <ul class='box vcaEnabled' style='display:none'>
+    <li class='box-title'><h2 class="04050524">Stationary Object Hold-on Time</h2></li>
+    <li class='box-content'>
+      <ul>
+        <li class="item">
+          <ul>
+            <li class="item-title 04050525">Time:</li>
+            <li>
+              <span class="auto-select" id="autostatholdontime">
+                <input type="radio" id="yes" name="autostatholdontime"><span class="radiolabel">Auto</span></input>
+                <br>
+                <input type="radio" id="no" name="autostatholdontime"><input type="text" id="statholdontime" class="auto-text" size="15" data-validation="int,1,65535"/><label for="statholdontime" class="04050526">seconds</label></input>
+              </span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Tracking Options section -->
+  <ul class='box vcaEnabled notTofDevice' style='display:none'>
+    <li class='box-title'><h2 class="04050527">Tracking Options</h2></li>
+    <li class='box-content'>
+      <ul>
+        <li class="item">
+          <ul>
+            <li class="item-title 04050528">Minimum tracked object size:</li>
+            <li>
+              <span class="auto-select" id="autominobjarea">
+                <input type="radio" id="yes" name="autominobjarea"><span class="radiolabel">Auto</span></input>
+                <br>
+                <input type="radio" id="no" name="autominobjarea"><input type="text" id="minobjarea" class="auto-text" size="15" data-validation="int,1,65535"/><label for="minobjarea" class="04050529">blobmap pixels</label></input>
+              </span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Display Options section -->
+  <ul class='box vcaEnabled' style='display:none'>
+    <li class='box-title'><h2 class="04050530">Display Options</h2></li>
+    <li class='box-content'>
+      <ul>
+        <li class="item">
+          <ul>
+            <li class="item-title 04050531">Minimum alarm object display time:</li>
+            <li>
+              <input type="text" id="alarmdwell" class="auto-text" size="15" data-validation="int,0,65535"/><label for="alarmdwell" class="04050532">milliseconds</label>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <ul>
+            <li class="item-title 04050533">Minimum object display time:</li>
+            <li>
+              <input type="text" id="fadeoutdwell" class="auto-text" size="15" data-validation="int,0,65535"/><label for="fadeoutdwell" class="04050534">milliseconds</label>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Detection Point of Tracked Objects section -->
+  <ul class='box vcaEnabled' style='display:none'>
+    <li class='box-title'><h2 class="04050539">Detection Point of Tracked Objects</h2></li>
+    <li class='box-content'>
+      <ul>
+        <li class="item">
+          <ul>
+            <li>
+              <span class="auto-select" id="detectionpoint">
+                <input type="radio" id="default" class="auto-item" name="detectionpoint"> <span class="04050540">Default (choose centroid if calibrated overhead, midbottom if calibrated sideon or uncalibrated)</span></input>
+                <br>
+                <input type="radio" id="centroid" class="auto-item" name="detectionpoint"> <span class="04050541">Centroid (force centroid)</span></input>
+                <br>
+                <input type="radio" id="midbottom" class="auto-item" name="detectionpoint"/> <span class="04050542">Midbottom (force midbottom)</span></input>
+              </span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Global Restore Defaults section -->
+  <ul class='box vcaEnabled' style='display:none'>
+    <li class='box-title'><h2 class="04050544">Global Restore Defaults</h2></li>
+    <li class='box-content'>
+      <ul>
+        <li class="item">
+          <div align='center'>
+            <button id='btnRestoreAllDefaults'><span class="04050545">Restore all default VCA settings</span></button>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class='box vcaEnabled' align='center'>
+    <button id='btnApply' ><span class="04050535">Apply</span></button>
+    <button id='btnRestoreDefaults'><span class="04050543">Restore Defaults</span></button>
+  </div>
+</body>
+</html>

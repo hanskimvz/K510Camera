@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/common.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/defstring/defregexp.js"></script>
+	<script type="text/javascript" src="../js/utils/log.js"></script>
+	<script type="text/javascript" src="../js/utils/jq_string.js"></script>
+	<script type="text/javascript" src="../js/utils/jq_control.js"></script>
+	<script type="text/javascript" src="../js/utils/control.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
+	<script type="text/javascript" src="../js/jquery.ipaddress.js"></script>
+	<script type="text/javascript" src="../js/jquery.caret.js"></script>
+	<script type="text/javascript" src="../js/plat_utils/string.js"></script>
+	<script type="text/javascript" src="../js/config/tcpip.js"></script>
+	<!--[If lte IE 8]>
+		<link type="text/css" href="../css/ie8.css" rel="stylesheet" />
+	<![endif]-->
+</head>
+<body id="config-page">
+	<p class="menuLocationInfo"><span class="04040101">Setup &gt; Network Configuration &gt;</span>
+		<span id="pagename" class="04040102">TCP/IP</span>
+	</p>
+	<ul class="box">
+		<li class="box-title"><h2 class="04040103">IP Address Configuration</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<input type="checkbox" id="ipv4Enable" checked disabled/>
+					<label for="ipv4Enable" class="04040131"> Enable IPv4</label>
+				</li>
+				<li id="formTI_dhcp" class="item">
+					<input type="radio" name="formTcpipDhcpChk" id="formTcpipDhcpChk0" value="yes" />
+					<label for="formTcpipDhcpChk0" class="04040104"> Obtain an IP address via DHCP </label>
+					<p id="tcpip_dhcp_ip">
+						<span class="04040105">IP address :</span>
+						<input type="text" id="formTcpipDhcpIP" size="20" />
+					</p>
+					<p id="tcpip_dhcp_subnet">
+						<span class="04040106">Subnet mask :</span>
+						<input type="text" id="formTcpipDhcpSub" size="20" />
+					</p>
+					<p id="tcpip_dhcp_gateway">
+						<span class="04040107">Gateway address :</span>
+						<input type="text" id="formTcpipDhcpGate" size="20" />
+					</p>
+				</li>
+				<li id="formTI_static" class="item">
+					<input type="radio" name="formTcpipDhcpChk" id="formTcpipDhcpChk1" value="no" />
+					<label for="formTcpipDhcpChk1" class="04040108"> Use the following IP address </label>
+					<p id="tcpip_static_ip">
+						<span class="04040109">IP address :</span>
+						<input type="text" id="formTcpipNoDhcpIP" size="20" />&nbsp;&nbsp;
+						<button id="btnIPTest"><span class="04040110">Test</span></button>&nbsp;&nbsp;
+						<span id="formTestBtnResult"></span>
+					</p>
+					<p id="tcpip_static_subnet">
+						<span class="04040111">Subnet mask :</span>
+						<input type="text" id="formTcpipNoDhcpSub" size="20" />
+					</p>
+					<p id="tcpip_static_gateway">
+						<span class="04040112">Gateway address :</span>
+						<input type="text" id="formTcpipNoDhcpGate" size="20" />
+					</p>
+				</li>
+
+				<li class="item">
+					<input type="checkbox" id="ipv6Enable"/>
+					<label for="ipv6Enable" class="04040132"> Enable IPv6</label>
+				</li>
+				<li class="item ipv6Contents">
+					<ul>
+						<li class="item-title ipv6Indentation 04040133">IP address (Information) :</li>
+						<li><textarea id="ipaddressInformation" class="ipaddressInformation" readonly="readonly"></textarea></li>
+					</ul>
+				</li>
+				<li class="item ipv6Contents">
+					<input type="checkbox" id="acceptRAEnable" class="ipv6Indentation" />
+					<label for="acceptRAEnable" class="04040134"> Enable accept router advertisements</label>
+				</li>
+				<li class="item ipv6Contents">
+					<input type="checkbox" id="dhcpEnable" class="ipv6Indentation" />
+					<label for="dhcpEnable" class="04040135"> Enable DHCP</label>
+				</li>
+				<li class="item ipv6Contents">
+					<ul>
+						<li class="item-title ipv6Indentation_dhcpType 04040136"> DHCP type :</li>
+						<li>
+							<select id="dhcpType">
+								<option value="auto"> auto</option>
+								<option value="stateful"> stateful</option>
+								<option value="stateless"> stateless</option>
+							</select>
+						</li>
+					</ul>
+				</li>
+				<li class="item ipv6Contents">
+					<ul>
+						<li class="item-title ipv6Indentation 04040105">IP address :</li>
+						<li><input type="text" id="staticIPaddress" size="50"/></li>
+					</ul>
+				</li>
+				<li class="item ipv6Contents">
+					<ul>
+						<li class="item-title ipv6Indentation 04040137">Prefix length :</li>
+						<li>
+							<input type="text" id="prefixLength" size="6"/>
+							<label>(0 ... 128, 128)</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item ipv6Contents">
+					<ul>
+						<li class="item-title ipv6Indentation 04040138">Default router :</li>
+						<li><input type="text" id="defaultRouter" size="50"/></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<ul class="box">
+		<li class="box-title"><h2 class="04040113">DNS Configuration</h2></li>
+		<li class="box-content">
+			<ul>
+				<li id="formPriDNSServ" class="item">
+					<p>
+						<span class="04040114">Primary DNS server :</span>
+						<input type="text" id="formTcpipPriDNS" size="50" />
+					</p>
+				</li>
+				<li id="formSecDNSServ" class="item">
+					<p>
+						<span class="04040115">Secondary DNS server :</span>
+						<input type="text" id="formTcpipSecDNS" size="50" />
+					</p>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<ul class="box">
+		<li class="box-title"><h2 class="04040118">Host Configuration</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<ul>
+						<li class="item-title 04040119">Host name :</li>
+						<li><input type="text" id="formHostname" size="33"/></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<ul class="box">
+		<li class="box-title"><h2 class="04040123">Link-Local Address</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<input type="checkbox" id="linkLocalEnable" />
+					<label for="linkLocalEnable" class="04040124"> Enable Auto-Configuration link-local address</label>
+				</li>
+				<li id="linkLocalIPContents" class="item linkLocalIPContents dsp_hide">
+					<p>
+						<span class="04040125">IP address :</span>
+						<input type="text" id="formLinkLocalIP" size="20" />
+					</p>
+				</li>
+				<li id="linkLocalSubnetContents" class="item linkLocalSubnetContents dsp_hide">
+					<p>
+						<span class="SubnetTitle 04040126">Subnet mask :</span>
+						<input type="text" id="formLinkLocalSubnet" size="20" />&nbsp;&nbsp;
+						<button id="btnIPRenew"><span class="04040127">Renew</span></button>
+					</p>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	
+	<div id="btn" class="box" align="center">
+		<button id="btnApply"><span class="04040116">Apply</span></button>
+	</div>
+	
+	<div id='debug_console'></div>
+</body>
+</html>

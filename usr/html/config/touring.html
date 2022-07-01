@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/config.css" rel="stylesheet" />
+	<link type="text/css" href="../css/config/touring.css" rel="stylesheet" />
+	<link type="text/css" href="../css/jquery.ui.slider-rtl.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.mouse.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.slider.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.slider-rtl.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/defstring/defbrand.js"></script>
+	<script type="text/javascript" src="../js/utils/log.js"></script>
+	<script type="text/javascript" src="../js/utils/jq_string.js"></script>
+	<script type="text/javascript" src="../js/utils/jq_control.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/uapi.player.js"></script>
+	<script type="text/javascript" src="../js/activexobject.js"></script>
+	<script type="text/javascript" src="../js/plat_utils/string.js"></script>
+	<script type="text/javascript" src="../js/config/touring.js"></script>
+</head>
+<body id="config-page">
+	<p class="menuLocationInfo">
+		<span class="04110101">Setup &gt; PTZ &gt;</span>
+		<span id="pagename" class="04110102">Touring</span>
+	</p>
+	<select size="8" id="touringList"></select>
+	<ul class="box">
+		<li class="box-title"><h2 class="04110103">Touring List</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<ul>
+						<li class="04110104 touringListTitle0">Preset Number</li>
+						<li class="04110105 touringListTitle1">Interval</li>
+						<li class="04110119 tourSpeedContents">Speed</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li id="touringNumber" class="04110106">Touring Number :</li>
+						<li id="">
+							<select class="select" id="selectTouringList">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li id="touringPresetNumber" class="04110107">Preset Number :</li>
+						<li id="">
+							<select class="select" id="selectPresetList"></select>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li id="touringInterval" class="04110108">Interval :</li>
+						<li><div id="touringIntervalSlider" class="slider-bar"></div></li>
+						<li>
+							<input type="text" size="5" id="touringIntervalText" />
+							<label class="tourIntervalSpeedType1">(1 ... 80)</label>
+							<label class="tourIntervalIrSpeedPtz">(3 ... 99)</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item tourSpeedContents">
+					<ul>
+						<li id="touringSpeed" class="04110131">Speed :</li>
+						<li><div id="touringSpeedSlider" class="slider-bar"></div></li>
+						<li>
+							<input type="text" size="5" id="touringSpeedText" />
+							<label class="tourSpeed_1_63">(1 ... 63)</label>
+							<label class="tourSpeed_1_64">(1 ... 64)</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li id="touringSetBtn" class="">
+							<button id="btnAdd"><span class="04110109">Add</span></button>
+							<button id="btnRemove"><span class="04110110">Remove</span></button>
+							<button id="btnUp"><span class="04110111">Up</span></button>
+							<button id="btnDown"><span class="04110112">Down</span></button>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li id="touringUpDownBtn" class="">
+							<button id="btnApply"><span class="04110113">Apply</span></button>
+							<button id="btnPreview"><span class="04110114">View</span></button>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<ul class="box" id="viewToggle">
+		<li class="box-title"><h2 class="04110115">Preset</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item nocolor">
+					<ul>
+						<li id="ptzContents">
+							<div id="panel_ptz">
+								<dl class="box">
+									<dd class="box-title" class=""><h2 class="04110116">Movement</h2></dd>
+									<dd id="ptz" class="box-content">
+										<dl>
+											<dd id="ptz_panel" class="item">
+												<dl>
+													<dd id="pt_lu" class="ui-button"></dd>
+													<dd id="pt_cu" class="ui-button"></dd>
+													<dd id="pt_ru" class="ui-button"></dd>
+													<dd id="pt_lm" class="ui-button"></dd>
+													<dd id="pt_cm" class="ui-button"></dd>
+													<dd id="pt_rm" class="ui-button"></dd>
+													<dd id="pt_ld" class="ui-button"></dd>
+													<dd id="pt_cd" class="ui-button"></dd>
+													<dd id="pt_rd" class="ui-button"></dd>
+												</dl>
+											</dd>
+											<dd id="ptz_zoomfocus">
+												<dl>
+													<dd id="main_ptz_zoom" class="04110117">Zoom</dd>
+													<dd>
+														<img id="_zIn" class="ui-button" width="16" height="16" src="../images/pt_fnear.gif" alt="zoom in" />
+														<img id="_zOut" class="ui-button" width="16" height="16" src="../images/pt_ffar.gif" alt="zoom out" />
+													</dd>
+												</dl>
+												<dl>
+													<dd id="main_ptz_focus" class="04110118">Focus</dd>
+													<dd>
+														<img id="_fNear" class="ui-button" width="16" height="16" src="../images/pt_fnear.gif" alt="focus near" />
+														<img id="_fFar" class="ui-button" width="16" height="16" src="../images/pt_ffar.gif" alt="focus far" />
+													</dd>
+												</dl>
+											</dd>
+										</dl>
+									</dd>
+								</dl>
+								<dl class="box">
+									<dd class="box-title"><h2 class="04110119">Speed</h2></dd>
+									<dd class="box-content">
+										<dl>
+											<dd id="ptz_speedbar">
+												<dl>
+													<dd><div id="slider_speedbar"></div></dd>
+													<dd>
+														<input type="text" size="3" id="text_speedbar" value=20></input>
+													</dd>
+												</dl>
+											</dd>
+										</dl>
+									</dd>
+								</dl>
+								<dl class="box">
+									<dd class="box-title" class=""><h2 class="04110120">Pre Position</h2></dd>
+									<dd class="box-content">
+										<dl>
+											<dd id="ptz_numberbar">
+												<dl>
+													<dd>
+														<input type="text" size="1" id="preset_number" value=20></input>
+														<label for="preset_number">(1 ... 255)</label>
+													</dd>
+												</dl>
+											</dd>
+											<dd class="setclear_button">
+												<button id="btnSet"><span class="04110121">Set</span></button>
+												<button id="btnClear"><span class="04110122">Clear</span></button>
+											</dd>
+											<dd>
+												<dl>
+													<dd>
+														<span class="04110123">Preset Number :</span>
+														<select class="select" id="setPresetList"></select>
+													</dd>
+												</dl>
+											</dd>
+											<dd class="go_button">
+												<button id="btnGo"><span class="04110124">Go</span></button>
+											</dd>
+										</dl>
+									</dd>
+								</dl>
+								<dl class="box">
+									<dd class="box-title"><h2 class="04110125">Tour</h2></dd>
+									<dd class="box-content">
+										<dl>
+											<dd>
+												<span class="04110126">Touring Number :</span>
+												<select class="select" id="bottomTourListContents">
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+												</select>
+											</dd>
+										</dl>
+										<dl>
+											<dd class="tourStartStop_button">
+												<button id="btnTourStart"><span class="04110127">Start</span></button>
+												<button id="btnTourStop"><span class="04110128">Stop</span></button>
+											</dd>
+										</dl>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li id="screen">
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

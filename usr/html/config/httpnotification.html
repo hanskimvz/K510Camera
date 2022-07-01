@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/common.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/jquery.effects.core.js"></script>
+	<script type="text/javascript" src="../js/jquery.effects.blind.js"></script>
+	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
+	<script type="text/javascript" src="../js/config/httpnotification.js"></script>
+	<!--[If lte IE 8]>
+		<link type="text/css" href="../css/ie8.css" rel="stylesheet" />
+	<![endif]-->
+</head>
+<body id="config-page">
+	<p class="menuLocationInfo">
+		<span class="04030501">Setup > Event Configuration ></span>
+		<span id="pagename" class="04030502">HTTP Notification</span>
+	</p>
+	<ul class="box">
+		<li class="box-title"><h2 class="04030503">HTTP Notification List</h2></li>
+		<li class="box-content">
+			<ul>
+				<li id="formHNListBox" class="item">
+					<ul>
+						<li id="httpnotification_id" class="notiListTitleID 04030504">Id</li>
+						<li id="httpnotification_name" class="notiListTitleName 04030505">Name</li>
+						<li class="notiListTitleDes 04030506">Description</li>
+					</ul>
+				</li>
+				<li class="item">
+					<select size="8" id="formNotifyList" class="select-list"><option></option></select>
+					<button id="btnAdd"><span class="04030507">Add...</span></button>
+					<button id="btnModify"><span class="04030508">Modify...</span></button>
+					<button id="btnRemove"><span class="04030509">Remove</span></button>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+
+<div id="input_form">
+	<p id="msg_status"></p>
+
+	<fieldset>
+		<ul class="box">
+			<li class="box-content">
+				<ul>
+					<li class="item">
+						<ul>
+							<li class="item-title-mini 04030510">Name :</li>
+							<li>
+								<input type="text" id="formHttpName" class="formWidth width_step22" />
+							</li>
+						</ul>
+					</li>
+					<li class="item">
+						<ul>
+							<li class="item-title-mini 04030511">Description :</li>
+							<li>
+								<input type="text" id="formHttpDes" class="formWidth width_step22" />
+							</li>
+						</ul>
+					</li>
+					<li class="item dsp_hide">
+						<ul>
+							<li class="item-title-mini 04030512">Address :</li>
+							<li>
+								<input type="hidden" id="formHttpAddr" class="formWidth width_step22" />
+							</li>
+						</ul>
+					</li>
+					<li class="item">
+						<ul>
+							<li class="item-title-mini 04030543">URL :</li> 
+							<li>
+								<input type="text" id="formHttpUrl" class="formWidth width_step22" placeholder="http://10.0.0.1:123/test.cgi?query=value"/>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<input type="checkbox" id="formHttpOption" class="margin_left_step15"/> 
+								<label for="formHttpOption" class="04030518">Append detailed information</label>
+							</li>
+						</ul>
+					</li>
+					<li class="item dsp_hide">
+						<ul>
+							<li class="item-title-mini 04030513">Port (1 ... 65535) :</li>
+							<li>
+								<input type="hidden" id="formHttpPort" class="formWidth width_step22" />
+							</li>
+						</ul>
+					</li>
+					<li id="formHNNeedAuth" class="item">
+						<ul id="httpnotification_authDetail">
+							<li class="04030514">Login Credentials (if required)</li>
+						</ul>
+						<ul class="margin_top_step1">
+							<li id="httpnotification_account" class="item-title-mini	04030515">Account :</li>
+							<li>
+								<input type="text" id="formHttpUser"	class="formWidth width_step22" />
+							</li>
+						</ul>
+						<ul>
+							<li id="httpnotification_pass" class="item-title-mini 04030516">Password :</li>
+							<li>
+								<input type="password" id="formHttpPwd"	class="formWidth width_step22" />
+							</li>
+						</ul>
+					</li>
+					<li class="item dsp_hide">
+						<ul>
+							<li class="item-title-mini 04030517">Message :</li>
+							<li>
+								<input type="hidden" id="formHttpMsg" class="formWidth width_step22" />
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="box settingButtonDialog text_right">
+			<button id="btnHTTPTest"><span class="04030542">Test</span></button>
+			<button id="btnDialogOK"><span class="04030536">OK</span></button>
+			<button id="btnDialogCancel"><span class="04030537">Cancel</span></button>
+		</div>
+	</fieldset>
+</div>
+<div class="demo">
+	<div class="toggler">
+		<div id="effect" class="ui-widget-content ui-corner-all dsp_hide">
+			<ul class="box">
+				<li class="box-title"><h2 class="04030519">Information</h2></li>
+				<li class="box-content">
+					<ul>
+						<li class="item">
+							<ul>
+								<li class="item-title 04030520">Name :</li>
+								<li id="infoHttpName"></li>
+							</ul>
+						</li>
+						<li class="item">
+							<ul>
+								<li class="item-title 04030521">Description :</li>
+								<li id="infoHttpDes"></li>
+							</ul>
+						</li>
+						<li class="item">
+							<ul>
+								<li class="item-title 04030522">Address :</li>
+								<li id="infoHttpAddr"></li>
+							</ul>
+						</li>
+						<li class="item">
+							<ul>
+								<li class="item-title 04030523">Port :</li>
+								<li id="infoHttpPort"></li>
+							</ul>
+						</li>
+						<li class="item">
+							<ul>
+								<li class="item-title 04030524">Account :</li>
+								<li id="infoHttpAcc"></li>
+							</ul>
+						</li>
+						<li class="item">
+							<ul>
+								<li class="item-title 04030525">Message :</li>
+								<li id="infoHttpMsg"></li>
+							</ul>
+						</li>
+						<li class="item dsp_hide">
+							<ul>
+								<li class="item-title 04030526">Enable option :</li>
+								<li id="infoHttpEnableOption"></li>
+							</ul>
+						</li>
+						<!--
+						<li class="item">
+							<ul>
+								<li class="item-title 04030527">Timeout :</li>
+								<li id="infoHttpTimeout"></li>
+							</ul>
+						</li>
+						//-->
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div><!-- End demo -->
+<div id="debug_console"></div>
+</body>
+</html>

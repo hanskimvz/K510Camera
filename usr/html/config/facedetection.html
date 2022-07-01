@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/common.css" rel="stylesheet" />
+	<link type="text/css" href="../css/jquery.ui.slider-rtl.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.mouse.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.slider.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.slider-rtl.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/defstring/defpath.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/uapi.player.js"></script>
+	<script type="text/javascript" src="../js/activexobject.js"></script>
+	<script type="text/javascript" src="../js/defstring/defbrand.js"></script>
+	<script type="text/javascript" src="../js/utils/jq_string.js"></script>
+	<script type="text/javascript" src="../js/utils/jq_control.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
+	<script type="text/javascript" src="../js/plat_utils/string.js"></script>
+	<script type="text/javascript" src="../js/plat_utils/playerobject.js"></script>
+	<script type="text/javascript" src="../js/dataconfig.js"></script>
+	<script type="text/javascript" src="../js/uiconfig.js"></script>
+	<script type="text/javascript" src="../js/plat_utils/brand.js"></script>
+	<script type="text/javascript" src="../js/config/facedetection.js"></script>
+	<script type="text/javascript" src="../js/config/facedetection_activex.js"></script>
+</head>
+<body id="faceDetection">
+	<p class="menuLocationInfo">
+		<span class="04031301">Setup &gt; Event Configuration &gt;</span>
+		<span id="pagename" class="04031302">Face Detection</span>
+	</p>
+	<ul class="box">
+		<li class="box-title"><h2 class="04031303">Configuration</h2></li>
+		<li class="item">
+			<input type="checkbox" id="mdChannelEnable" /><label for="mdChannelEnable" class="04031304">Enable</label>
+			<div id="formFdConfSubSensor" class="subsection">
+				<ul>
+					<li class="item-title 04031319">Confidence :</li>
+					<li><div id="fdConfidenceSlider" class="slider-bar"></div></li>
+					<li>
+						<input type="text" size="5" id="formFdConfidence" class="text_cen"/>
+						<label id="confidenceRange" class="04031320">(0 ... 255, 128)</label>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<div class="noti_msg margin_left_step1">
+			<ul>
+				<li>
+					<span class="04031305">Note: Face detection is disabled while the following feature is activated.</span>
+				</li>
+			</ul>
+			<ul class="margin_left_step1">
+				<li>&middot;&nbsp;
+					<span>VCA</span>&nbsp;:&nbsp;
+					<a id="linkRotationVCA" href="#" class="linkVCA link_blue 04031306">Go to VCA Configuration</a>
+				</li>
+			</ul>
+			<ul class="margin_left_step1" id="videoStab">
+				<li>&middot;&nbsp;
+					<span class="04031315">Video Stabilization</span>&nbsp;:&nbsp;
+					<a id="linkCameraStabilization" href="#" class="linkStabilization link_blue 04031314">Go to Camera Configuration</a>
+				</li>
+			</ul>
+			<ul class="margin_left_step1">
+				<li>&middot;&nbsp;
+					<span class="04031317">Image Rotation</span>&nbsp;:&nbsp;
+					<a id="linkRotation" href="#" class="linkStabilization link_blue 04031314">Go to Camera Configuration</a>
+				</li>
+			</ul>
+		</div>
+	</ul>
+	<ul class="box">
+		<li class="box-title"><h2 class="04031307">View</h2></li>
+	</ul>
+	<div id="viewToggle" class="box" align="center">
+		<li id="screen"></li>
+		<li>
+			<span class="noIEMsg 04031313">* Face Detection configuration is only supported in Internet Explorer.</span>
+		</li>
+		<li>
+			<span class="ratioMsg noti_msg dsp_hide 04031318">* The detection area will be adjusted to a 5: 3 aspect ratio based on the width.</span>
+		</li>
+	</div>
+	<ul class="box dsp_hide">
+		<li class="box-title"><h2 class="04031308">Zones</h2></li>
+		<li>
+			<ul id="infoTable">
+				<li class="item nocolor">
+					<ul>
+						<table id="users">
+							<thead>
+								<tr>
+									<th class="04031304">Enable</th>
+									<th class="04031309">Zone ID</th>
+									<th class="04031310">Name</th>
+									<th class="04031311">Description</th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+						</table>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<ul class="box">
+		<li class="box-title"><h2 class="04031321">OSD</h2></li>
+		<li class="item">
+			<input type="checkbox" id="osdEnable" /><label for="osdEnable" class="04031304">Enable</label>
+		</li>
+		<li class="item">
+			<input type="checkbox" id="formFdOsdZoneEnable"/>
+			<label for="formFdOsdZoneEnable" class="04031322">Zone OSD Enable</label>
+		</li>
+		<li class="item">
+			<ul>
+				<li>
+					<input type="checkbox" id="formFdOsdSt0Enable"/>
+					<label for="formFdOsdSt0Enable" class="04031323">First Stream</label>
+					<input type="checkbox" id="formFdOsdSt1Enable"/>
+					<label for="formFdOsdSt1Enable" class="04031324">Second Stream</label>
+					<input type="checkbox" id="formFdOsdSnapshotEnable"/>
+					<label for="formFdOsdSnapshotEnable" class="04031325">Snapshot</label>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<div id="btn" class="box" align="right">
+		<button id="btnApply"><span class="04031312">Apply</span></button>
+	</div>
+</body>
+</html>

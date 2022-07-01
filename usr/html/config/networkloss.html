@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/common.css" rel="stylesheet" />
+	<link type="text/css" href="../css/jquery.ui.slider-rtl.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.mouse.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.slider.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.slider-rtl.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/utils/control.js"></script>
+	<script type="text/javascript" src="../js/defstring/defregexp.js"></script>	
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
+	<script type="text/javascript" src="../js/config/networkloss.js"></script>
+</head>
+<body id="config-page">
+	<p class="menuLocationInfo">
+		<span class="04031201">Setup > Event Configuration ></span>
+		<span id="pagename" class="04031202">Network Loss</span>
+	</p>
+	<ul class="box">
+		<li class="box-title"><h2 class="04031203">Configuration</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<input type="checkbox" id="formEthlinkConnectionEnable" /><label for="formEthlinkConnectionEnable" class="04031204"> Check ethernet connectivity</label>
+				</li>
+				<li class="item">
+					<input type="checkbox" id="formPingResponseEnable" /><label for="formPingResponseEnable" class="04031205"> Check ping response</label>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title Submenu margin_left_step2 04031206">Interval :</li>
+						<li><div id="sliderPingResponseInterval" class="slider-bar"></div></li>
+						<li>
+							<input type="text" size="5" id="formPingResponseInterval" class="text_cen"/>
+							<label id="formPingResponseInterval" class="04031207">(5 ... 60 sec(s))</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title Submenu margin_left_step2 04031208">Host address :</li>
+						<li>
+							<input type="text" id="formHostAddr" size="50" />
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<div class="box text_cen">
+		<button id="btnApply"><span class="04031209">Apply</span></button>
+	</div>
+	<div id="debug_console"></div>
+</body>
+</html>

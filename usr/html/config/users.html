@@ -1,0 +1,139 @@
+<?php
+
+echo "hello";
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/common.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/config/users.js"></script>
+</head>
+<body id="config-page" style="display:none">
+	<p class="menuLocationInfo">
+		<span class="04070101">Setup > Maintenance ></span>
+		<span id="pagename" class="04070102">Users</span>
+	</p>
+	<ul class="box">
+		<li class="box-title"><h2 class="04070103">User List</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<select size="10" id="formUserList" class="select-list"><option></option></select><br />
+					<button id="btnAdd"><span class="04070104">Add...</span></button>
+					<button id="btnModify"><span class="04070105">Modify...</span></button>
+					<button id="btnRemove"><span class="04070106">Remove</span></button>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<ul class="box">
+		<li class="box-title"><h2 class="04070107">User Authentication</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<input class="displayCheck dsp_hide" type="radio" name="formEnableAuthen" id="formEnableAuthen0" value="yes" /><label class="displayCheck dsp_hide" for="formEnableAuthen0" class="04070108"> Enable</label>
+					<div>
+						<input type="checkbox" id="formAnonymous" /><label for="formAnonymous" class="04070109"> Enable anonymous viewer login (no user name or password required)</label>
+					</div>
+				</li>
+				<li class="item displayCheck dsp_hide">
+					<input type="radio" name="formEnableAuthen" id="formEnableAuthen1" value="no" /><label for="formEnableAuthen1" class="04070110"> Disable</label>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<div class="box settingButton text_cen">
+		<button id="btnApply"><span class="04070115">Apply</span></button>
+	</div>
+
+<div id="user_form">
+	<p id="msg_status" />
+
+	<fieldset>
+		<ul class="box">
+			<li class="box-content">
+				<ul>
+					<li class="item">
+						<ul>
+							<li class="item-title-mini">
+								<span class="04070111">User name :</span>
+							</li>
+							<li>
+								<input type="text" id="formUserName" class="width_step15"/>
+							</li>
+						</ul>
+					</li>
+					<li class="item">
+						<ul>
+							<li class="item-title-mini">
+								<span class="04070112">Password :</span>
+							</li>
+							<li>
+								<input type="password" id="formUserPassword" class="width_step15"/>
+							</li>
+						</ul>
+					</li>
+					<li class="item">
+						<ul>
+							<li class="item-title-mini">
+								<span class="04070113">Confirm password :</span>
+							</li>
+							<li>
+								<input type="password" id="formUserConfirmPassword" class="width_step15"/>
+							</li>
+						</ul>
+					</li>
+					<li class="item">
+						<ul>
+							<li class="item-title-mini">
+								<span class="04070132">User group</span>
+							</li>
+							<li></li>
+						</ul>
+						<ul>
+							<li class="item-title-mini"></li>
+							<li>
+								<input type="radio" id="formUserGroup0" name="formUserGroup" value="viewer" checked="checked" />
+								<label for="formUserGroup0" class="04070133">Viewer</label><br />
+							</li>
+						</ul>
+						<ul>
+							<li class="item-title-mini"></li>
+							<li>
+								<input type="radio" id="formUserGroup1" name="formUserGroup" value="operator" />
+								<label for="formUserGroup1" class="04070134">Operator</label><br />
+							</li>
+						</ul>
+						<ul>
+							<li class="item-title-mini"></li>
+							<li>
+								<input type="radio" id="formUserGroup2" name="formUserGroup" value="admin" />
+								<label for="formUserGroup2" class="04070135">Administrator</label>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="box settingButtonDialog float_right">
+			<button id="btnDialogApply"><span class="04070124">Apply</span></button>
+		</div>
+	</fieldset>
+</div>
+
+</body>
+</html>

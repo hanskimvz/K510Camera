@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/common.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/defstring/defpath.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/defstring/defregexp.js"></script>
+	<script type="text/javascript" src="../js/utils/control.js"></script>
+	<script type="text/javascript" src="../js/utils/jq_string.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/plat_utils/string.js"></script>
+	<script type="text/javascript" src="../js/dataconfig.js"></script>
+	<script type="text/javascript" src="../js/uiconfig.js"></script>
+	<script type="text/javascript" src="../js/config/rtmp.js"></script>
+</head>
+<body id="config-page">
+	<p class="menuLocationInfo">
+		<span class="04041401">Setup &gt; Network Configuration &gt;</span>
+		<span id="pagename">RTMP</span>
+	</p>
+	<ul class="box">
+		<li class="box-title"><h2 class="04041402">Configuration</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<input type="checkbox" id="network_rtmp_enable" /><label for="network_rtmp_enable" class="04041403">Enable</label>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title 04041404">Port :</li>
+						<li><input type="text" id="network_rtmp_port" size="20" /></li>
+						<li class="margin_left_step1"><label for="network_rtmp_port"> (1024 ... 65535)</label></li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title 04041405">Chunk size :</li>
+						<li><input type="text" id="network_rtmp_chunksize" size="20" /></li>
+						<li class="margin_left_step1"><label for="network_rtmp_chunksize"> (4096 ... 2147483646)</label></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<ul class="box">
+		<li class="box-title"><h2 class="04041406">First Stream</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<ul>
+						<li class="item-title 04041407">Name :</li>
+						<li><input type="text" id="network_rtmp_st0_appname" size="40" /></li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title 04041408">Instance :</li>
+						<li><input type="text" id="network_rtmp_st0_appinstance" size="40" /></li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title">URL : </li>
+						<li>rtmp://<span id="hostName_st0"></span>:<span id="port_st0"></span>/<span id="name_st0"></span>/<span id="instance_st0"></span></li>
+					</ul>
+				</li>
+				<li class="item">
+					<input type="checkbox" id="network_rtmp_st0_publish_enable" /><label for="network_rtmp_st0_publish_enable" class="04041413">Enable publish</label>
+				</li>
+				<li class="item firstPublishSub">
+					<ul>
+						<li class="item-title margin_left_step4 04041414">Type : </li>
+						<li>
+							<input type="radio" name="network_rtmp_st0_publish_type" id="network_rtmp_st0_publish_type_live" value="live" />
+							<label for="network_rtmp_st0_publish_type_live"> Live</label>
+							<input type="radio" name="network_rtmp_st0_publish_type" id="network_rtmp_st0_publish_type_record" value="record" />
+							<label for="network_rtmp_st0_publish_type_record"> Record</label>
+							<input type="radio" name="network_rtmp_st0_publish_type" id="network_rtmp_st0_publish_typeappend" value="append" />
+							<label for="network_rtmp_st0_publish_typeappend"> Append</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item firstPublishSub">
+					<ul>
+						<li class="item-title margin_left_step4 04041415">Buffer length :</li>
+						<li><input type="text" id="network_rtmp_st0_publish_bufferlength" size="20" /></li>
+						<li class="margin_left_step1"><label for="network_rtmp_st0_publish_bufferlength"> (0 ... 1000000 <span class="04041416">milliseconds</span>)</label></li>
+					</ul>
+				</li>
+				<li class="item firstPublishSub">
+					<ul>
+						<li class="item-title margin_left_step4">URL :</li>
+						<li><input type="text" id="network_rtmp_st0_publish_url" size="50" /></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<ul class="box">
+		<li class="box-title"><h2 class="04041409">Second Stream</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<ul>
+						<li class="item-title 04041407">Name : </li>
+						<li><input type="text" id="network_rtmp_st1_appname" size="40" /></li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title 04041408">Instance : </li>
+						<li><input type="text" id="network_rtmp_st1_appinstance" size="40" /></li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title">URL : </li>
+						<li>rtmp://<span id="hostName_st1"></span>:<span id="port_st1"></span>/<span id="name_st1"></span>/<span id="instance_st1"></span></li>
+					</ul>
+				</li>
+				<li class="item">
+					<input type="checkbox" id="network_rtmp_st1_publish_enable" /><label for="network_rtmp_st1_publish_enable" class="04041413">Enable publish</label>
+				</li>
+				<li class="item secondPublishSub">
+					<ul>
+						<li class="item-title margin_left_step4 04041414">Type : </li>
+						<li>
+							<input type="radio" name="network_rtmp_st1_publish_type" id="network_rtmp_st1_publish_type_live" value="live" />
+							<label for="network_rtmp_st1_publish_type_live"> Live</label>
+							<input type="radio" name="network_rtmp_st1_publish_type" id="network_rtmp_st1_publish_type_record" value="record" />
+							<label for="network_rtmp_st1_publish_type_record"> Record</label>
+							<input type="radio" name="network_rtmp_st1_publish_type" id="network_rtmp_st1_publish_type_append" value="append" />
+							<label for="network_rtmp_st1_publish_type_append"> Append</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item secondPublishSub">
+					<ul>
+						<li class="item-title margin_left_step4 04041415">Buffer length :</li>
+						<li><input type="text" id="network_rtmp_st1_publish_bufferlength" size="20" /></li>
+						<li class="margin_left_step1"><label for="network_rtmp_st1_publish_bufferlength"> (0 ... 1000000 <span class="04041416">milliseconds</span>)</label></li>
+					</ul>
+				</li>
+				<li class="item secondPublishSub">
+					<ul>
+						<li class="item-title margin_left_step4">URL :</li>
+						<li><input type="text" id="network_rtmp_st1_publish_url" size="50" /></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<div class="box" align="center">
+		<button id="btnApply"><span class="04041410">Apply</span></button>
+	</div>
+</body>
+</html>

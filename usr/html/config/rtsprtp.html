@@ -1,0 +1,572 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/common.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.mouse.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.slider.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/utils/control.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/defstring/defregexp.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
+	<script type="text/javascript" src="../js/jquery.ipaddress.js"></script>
+	<script type="text/javascript" src="../js/jquery.caret.js"></script>
+	<script type="text/javascript" src="../js/config/rtsprtp.js"></script>
+</head>
+
+<body id="config-page">
+	<p class="menuLocationInfo">
+		<span class="04040501">Setup &gt; Network Configuration &gt;</span>
+		<span id="pagename" class="04040502">RTSP/RTP</span>
+	</p>
+	<ul class="box">
+		<li class="box-title"><h2 class="04040503">RTSP Configuration</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<ul>
+						<li class="item-title 04040504"> Port :</li>
+						<li>
+							<input type="text" id="formRtspPort" size="15" />
+							<label for="formRtspPort" class="04040505">(1 ... 65535)</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item adjustRtspAuthEnable">
+						<input type="checkbox" id="formRtspAuthEnable" /><label for="formRtspAuthEnable" class="04040555"> Enable RTSP Authentication</label>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title adjustRtspAuthType 04040556">Authentication Type :</li>
+						<li>
+							<select id="formRtspAuthType">
+								<option value="digest"> digest</option>
+								<option value="basic"> basic</option>
+							</select>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<ul class="box">
+		<li class="box-title"><h2>SRTP</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+						<input type="checkbox" id="srtpEnable" /><label for="srtpEnable" class="04040569"> Enable</label>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title 04040570">Protection profile :</li>
+						<li>
+							<select id="protectionProfile" class="width_step23">
+								<option value="srtp_aes128_cm_hmac_sha1_80"> SRTP_AES128_CM_HMAC_SHA1_80</option>
+								<option value="srtp_aes128_cm_hmac_sha1_32"> SRTP_AES128_CM_HMAC_SHA1_32</option>
+								<option value="srtp_null_hmac_sha1_80"> SRTP_NULL_HMAC_SHA1_80</option>
+								<option value="srtp_aria128_cm_hmac_sha1_80"> SRTP_ARIA128_CM_HMAC_SHA1_80</option>
+							</select>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title 04040571"> Master key :</li>
+						<li>
+							<input type="text" id="masterKey" size="40" />
+							<button id="masterGenerate"><span class="04040573">Key generation</span></button>
+						</li>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title 04040572"> Salt key :</li>
+						<li>
+							<input type="text" id="saltKey" size="40" />
+							<button id="saltGenerate"><span class="04040573">Key generation</span></button>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<ul class="box">
+		<li>
+			<div id="stream_tab" class="tab_inline">
+				<ul class="css-tabs">
+					<li><a href="#stream_0" class="04040510">First Stream</a></li>
+					<li><a href="#stream_1" class="04040511">Second Stream</a></li>
+				</ul>
+				<div id="stream_0">
+					<ul class="box">
+						<li class="box-title"><h2 class="04040512">Unicast</h2></li>
+						<li class="box-content">
+							<ul>
+								<li class="item">
+									<input type="checkbox" id="formRtpUniEnable_stream_0" /><label for="formRtpUniEnable_stream_0" class="04040513"> Enable stream</label>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040514">Session</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul class="sessionContents">
+										<li class="item-title margin_left_step2 04040537">Name :</li>
+										<li>
+											<input type="text" id="formRtpUniSSName_stream_0" size="30" />
+										</li>
+									</ul>
+								</li>
+								<li class="item audioContents">
+									<input type="checkbox" id="formRtpUniAudio_stream_0" class="sessionContents margin_left_step2" /><label for="formRtpUniAudio_stream_0" class="04040515"> Enable audio stream</label>
+								</li>
+								<li class="item">
+									<input type="checkbox" id="formRtpUniMeta_stream_0" class="sessionContents margin_left_step2" /><label for="formRtpUniMeta_stream_0" class="04040516"> Enable metadata</label>
+								</li>
+								<li class="item">
+									<input type="checkbox" id="formRtpUniMetaOnvif_stream_0" class="sessionContents margin_left_step2" /><label for="formRtpUniMetaOnvif_stream_0" class="04040558"> Enable ONVIF metadata</label>
+								</li>
+								<li class="item">
+									<input type="checkbox" id="formRtpUniQos_stream_0" /><label for="formRtpUniQos_stream_0" class="04040517"> Enable QoS DSCP</label>
+								</li>
+								<li class="item">
+									<ul>
+										<li id="formRtpUniVD_stream_0" class="item-title margin_left_step2 04040518">Video DSCP :</li>
+										<li>
+											<input type="text" size="5" id="formRtpUniVideoDSCP_stream_0" class="text_cen"/>
+											<label for="formRtpUniVideoDSCP_stream_0" class="04040519">(0 ... 63)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item audioContents">
+									<ul>
+										<li id="formRtpUniAD_stream_0" class="item-title margin_left_step2 04040520">Audio DSCP :</li>
+										<li>
+											<input type="text" size="5" id="formRtpUniAudioDSCP_stream_0" class="text_cen"/>
+											<label for="formRtpUniAudioDSCP_stream_0" class="04040521">(0 ... 63)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li id="formRtpUniMD_stream_0" class="item-title margin_left_step2 04040522">Meta DSCP :</li>
+										<li>
+											<input type="text" size="5" id="formRtpUniMetaDSCP_stream_0" class="text_cen"/>
+											<label for="formRtpUniMetaDSCP_stream_0" class="04040523">(0 ... 63)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li id="formRtpUniOMD_stream_0" class="item-title margin_left_step2 04040559">ONVIF Meta DSCP :</li>
+										<li>
+											<input type="text" size="5" id="formRtpUniOnvifMetaDSCP_stream_0" class="text_cen"/>
+											<label for="formRtpUniOnvifMetaDSCP_stream_0" class="">(0 ... 63)</label>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="box">
+						<li class="box-title"><h2 class="04040524">Multicast</h2></li>
+						<li class="box-content">
+							<ul>
+								<li class="item">
+									<input type="checkbox" id="formRtpMulEnable_stream_0" /><label for="formRtpMulEnable_stream_0" class="04040525"> Enable stream</label>
+								</li>
+								<li class="item">
+									<input type="checkbox" id="formRtpMulEnableAlways_stream_0" /><label for="formRtpMulEnableAlways_stream_0" class="04040526"> Enable always multicast</label>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040560">Video IP address :</li>
+										<li id="formRtpMulIPValid_stream_0">
+											<input type="text" id="formRtpMulIP_stream_0" size="15" />
+											<label class="04040528"> (Enter 0.0.0.0 for automatic configuration)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040529"> Video port :</li>
+										<li>
+											<input type="text" id="formRtpMulVideoPort_stream_0" size="15" />
+											<label class="04040530"> (1 ... 65535)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item audioContents">
+									<ul>
+										<li class="item-title 04040561">Audio IP address :</li>
+										<li id="formRtpMulIPValid_Audio_stream_0">
+											<input type="text" id="formRtpMulIP_Audio_stream_0" size="15" />
+											<label class="04040528"> (Enter 0.0.0.0 for automatic configuration)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item audioContents">
+									<ul>
+										<li class="item-title 04040531"> Audio port :</li>
+										<li>
+											<input type="text" id="formRtpMulAudioPort_stream_0" size="15" />
+											<label class="04040532"> (1 ... 65535)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040562">Meta IP address :</li>
+										<li id="formRtpMulIPValid_Meta_stream_0">
+											<input type="text" id="formRtpMulIP_Meta_stream_0" size="15" />
+											<label class="04040528"> (Enter 0.0.0.0 for automatic configuration)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040533"> Meta port :</li>
+										<li>
+											<input type="text" id="formRtpMulMetaPort_stream_0" size="15" />
+											<label class="04040534"> (1 ... 65535)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040563"> ONVIF Meta IP address :</li>
+										<li id="formRtpMulIPValid_OnvifMeta_stream_0">
+											<input type="text" id="formRtpMulIP_OnvifMeta_stream_0" size="15" />
+											<label class="04040528"> (Enter 0.0.0.0 for automatic configuration)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040564"> ONVIF Meta port :</li>
+										<li>
+											<input type="text" id="formRtpMulOnvifMetaPort_stream_0" size="15" />
+											<label class=""> (1 ... 65535)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040535">TTL :</li>
+										<li>
+											<input type="text" id="formRtpMulTTL_stream_0" size="15" />
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040514">Session</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul class="sessionContents">
+										<li class="item-title margin_left_step2 04040537">Name :</li>
+										<li>
+											<input type="text" id="formRtpMulSSName_stream_0" size="30" />
+										</li>
+									</ul>
+								</li>
+								<li class="item audioContents">
+									<input type="checkbox" id="formRtpMulAudio_stream_0" class="sessionContents margin_left_step2" /><label for="formRtpMulAudio_stream_0" class="04040515"> Enable audio stream</label>
+								</li>
+								<li class="item">
+									<input type="checkbox" id="formRtpMulMeta_stream_0" class="sessionContents margin_left_step2" /><label for="formRtpMulMeta_stream_0" class="04040516"> Enable metadata</label>
+								</li>
+								<li class="item">
+									<input type="checkbox" id="formRtpMulMetaOnvif_stream_0" class="sessionContents margin_left_step2" /><label for="formRtpMulMetaOnvif_stream_0" class="04040558"> Enable ONVIF metadata</label>
+								</li>
+								<li class="item">
+									<input type="checkbox" id="formRtpMulQos_stream_0" /><label for="formRtpMulQos_stream_0" class="04040540"> Enable QoS DSCP</label>
+								</li>
+								<li class="item">
+									<ul>
+										<li id="formRtpMulVD_stream_0" class="item-title margin_left_step2 04040541">Video DSCP :</li>
+										<li>
+											<input type="text" size="5" id="formRtpMulVideoDSCP_stream_0" class="text_cen"/>
+											<label class="04040542">(0 ... 63)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item audioContents">
+									<ul>
+										<li id="formRtpMulAD_stream_0" class="item-title margin_left_step2 04040543">Audio DSCP :</li>
+										<li>
+											<input type="text" size="5" id="formRtpMulAudioDSCP_stream_0" class="text_cen"/>
+											<label class="04040544">(0 ... 63)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li id="formRtpMulMD_stream_0" class="item-title margin_left_step2 04040545">Meta DSCP :</li>
+										<li>
+											<input type="text" size="5" id="formRtpMulMetaDSCP_stream_0" class="text_cen"/>
+											<label for="formRtpMulMetaDSCP_stream_0" class="04040546">(0 ... 63)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li id="formRtpMulOMD_stream_0" class="item-title margin_left_step2 04040559">ONVIF Meta DSCP :</li>
+										<li>
+											<input type="text" size="5" id="formRtpMulOnvifMetaDSCP_stream_0" class="text_cen"/>
+											<label for="formRtpMulOnvifMetaDSCP_stream_0" class="">(0 ... 63)</label>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div id="stream_1">
+					<ul class="box">
+						<li class="box-title"><h2 class="04040512">Unicast</h2></li>
+						<li class="box-content">
+							<ul>
+								<li class="item">
+									<input type="checkbox" id="formRtpUniEnable_stream_1" /><label for="formRtpUniEnable_stream_1" class="04040513"> Enable stream</label>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040514">Session</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul class="sessionContents">
+										<li class="item-title margin_left_step2 04040537">Name :</li>
+										<li>
+											<input type="text" id="formRtpUniSSName_stream_1" size="30" />
+										</li>
+									</ul>
+								</li>
+								<li class="item audioContents">
+									<input type="checkbox" id="formRtpUniAudio_stream_1" class="sessionContents margin_left_step2" /><label for="formRtpUniAudio_stream_1" class="04040515"> Enable audio stream</label>
+								</li>
+								<li class="item">
+									<input type="checkbox" id="formRtpUniMeta_stream_1" class="sessionContents margin_left_step2" /><label for="formRtpUniMeta_stream_1" class="04040516"> Enable metadata</label>
+								</li>
+								<li class="item">
+									<input type="checkbox" id="formRtpUniMetaOnvif_stream_1" class="sessionContents margin_left_step2" /><label for="formRtpUniMetaOnvif_stream_1" class="04040558"> Enable ONVIF metadata</label>
+								</li>
+								<li class="item">
+									<input type="checkbox" id="formRtpUniQos_stream_1" /><label for="formRtpUniQos_stream_1" class="04040517"> Enable QoS DSCP</label>
+								</li>
+								<li class="item">
+									<ul>
+										<li id="formRtpUniVD_stream_1" class="item-title margin_left_step2 04040518">Video DSCP :</li>
+										<li>
+											<input type="text" size="5" id="formRtpUniVideoDSCP_stream_1" class="text_cen"/>
+											<label for="formRtpUniVideoDSCP_stream_1" class="04040519">(0 ... 63)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item audioContents">
+									<ul>
+										<li id="formRtpUniAD_stream_1" class="item-title margin_left_step2 04040520">Audio DSCP :</li>
+										<li>
+											<input type="text" size="5" id="formRtpUniAudioDSCP_stream_1" class="text_cen"/>
+											<label for="formRtpUniAudioDSCP_stream_1" class="04040521">(0 ... 63)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li id="formRtpUniMD_stream_1" class="item-title margin_left_step2 04040522">Meta DSCP :</li>
+										<li>
+											<input type="text" size="5" id="formRtpUniMetaDSCP_stream_1" class="text_cen"/>
+											<label for="formRtpUniMetaDSCP_stream_1" class="04040523">(0 ... 63)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li id="formRtpUniOMD_stream_1" class="item-title margin_left_step2 04040559">ONVIF Meta DSCP :</li>
+										<li>
+											<input type="text" size="5" id="formRtpUniOnvifMetaDSCP_stream_1" class="text_cen"/>
+											<label for="formRtpUniOnvifMetaDSCP_stream_1" class="">(0 ... 63)</label>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="box">
+						<li class="box-title"><h2 class="04040524">Multicast</h2></li>
+						<li class="box-content">
+							<ul>
+								<li class="item">
+									<input type="checkbox" id="formRtpMulEnable_stream_1" /><label for="formRtpMulEnable_stream_1" class="04040525"> Enable stream</label>
+								</li>
+								<li class="item">
+									<input type="checkbox" id="formRtpMulEnableAlways_stream_1" /><label for="formRtpMulEnableAlways_stream_1" class="04040526"> Enable always multicast</label>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040560">Video IP address :</li>
+										<li id="formRtpMulIPValid_stream_1">
+											<input type="text" id="formRtpMulIP_stream_1" size="15" />
+											<label class="04040528"> (Enter 0.0.0.0 for automatic configuration)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040529"> Video port :</li>
+										<li>
+											<input type="text" id="formRtpMulVideoPort_stream_1" size="15" />
+											<label class="04040530"> (1 ... 65535)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item audioContents">
+									<ul>
+										<li class="item-title 04040561">Audio IP address :</li>
+										<li id="formRtpMulIPValid_Audio_stream_1">
+											<input type="text" id="formRtpMulIP_Audio_stream_1" size="15" />
+											<label class="04040528"> (Enter 0.0.0.0 for automatic configuration)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item audioContents">
+									<ul>
+										<li class="item-title 04040531"> Audio port :</li>
+										<li>
+											<input type="text" id="formRtpMulAudioPort_stream_1" size="15" />
+											<label class="04040532"> (1 ... 65535)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040562">Meta IP address :</li>
+										<li id="formRtpMulIPValid_Meta_stream_1">
+											<input type="text" id="formRtpMulIP_Meta_stream_1" size="15" />
+											<label class="04040528"> (Enter 0.0.0.0 for automatic configuration)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040533"> Meta port :</li>
+										<li>
+											<input type="text" id="formRtpMulMetaPort_stream_1" size="15" />
+											<label class="04040534"> (1 ... 65535)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040563"> ONVIF Meta IP address :</li>
+										<li id="formRtpMulIPValid_OnvifMeta_stream_1">
+											<input type="text" id="formRtpMulIP_OnvifMeta_stream_1" size="15" />
+											<label class="04040528"> (Enter 0.0.0.0 for automatic configuration)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040564"> ONVIF Meta port :</li>
+										<li>
+											<input type="text" id="formRtpMulOnvifMetaPort_stream_1" size="15" />
+											<label class=""> (1 ... 65535)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040535">TTL :</li>
+										<li>
+											<input type="text" id="formRtpMulTTL_stream_1" size="15" />
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li class="item-title 04040514">Session</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul class="sessionContents">
+										<li class="item-title margin_left_step2 04040537">Name :</li>
+										<li>
+											<input type="text" id="formRtpMulSSName_stream_1" size="30" />
+										</li>
+									</ul>
+								</li>
+								<li class="item audioContents">
+									<input type="checkbox" id="formRtpMulAudio_stream_1" class="sessionContents margin_left_step2" /><label for="formRtpMulAudio_stream_1" class="04040515"> Enable audio stream</label>
+								</li>
+								<li class="item">
+									<input type="checkbox" id="formRtpMulMeta_stream_1" class="sessionContents margin_left_step2" /><label for="formRtpMulMeta_stream_1" class="04040516"> Enable metadata</label>
+								</li>
+								<li class="item">
+									<input type="checkbox" id="formRtpMulMetaOnvif_stream_1" class="sessionContents margin_left_step2" /><label for="formRtpMulMetaOnvif_stream_1" class="04040558"> Enable ONVIF metadata</label>
+								</li>
+								<li class="item">
+									<input type="checkbox" id="formRtpMulQos_stream_1" /><label for="formRtpMulQos_stream_1" class="04040540"> Enable QoS DSCP</label>
+								</li>
+								<li class="item">
+									<ul>
+										<li id="formRtpMulVD_stream_1" class="item-title margin_left_step2 04040541">Video DSCP :</li>
+										<li>
+											<input type="text" size="5" id="formRtpMulVideoDSCP_stream_1" class="text_cen"/>
+											<label class="04040542">(0 ... 63)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item audioContents">
+									<ul>
+										<li id="formRtpMulAD_stream_1" class="item-title margin_left_step2 04040543">Audio DSCP :</li>
+										<li>
+											<input type="text" size="5" id="formRtpMulAudioDSCP_stream_1" class="text_cen"/>
+											<label class="04040544">(0 ... 63)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li id="formRtpMulMD_stream_1" class="item-title margin_left_step2 04040545">Meta DSCP :</li>
+										<li>
+											<input type="text" size="5" id="formRtpMulMetaDSCP_stream_1" class="text_cen"/>
+											<label for="formRtpMulMetaDSCP_stream_1" class="04040546">(0 ... 63)</label>
+										</li>
+									</ul>
+								</li>
+								<li class="item">
+									<ul>
+										<li id="formRtpMulOMD_stream_1" class="item-title margin_left_step2 04040559">ONVIF Meta DSCP :</li>
+										<li>
+											<input type="text" size="5" id="formRtpMulOnvifMetaDSCP_stream_1" class="text_cen"/>
+											<label for="formRtpMulOnvifMetaDSCP_stream_1" class="">(0 ... 63)</label>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+	</ul>
+
+	<div class="box" align="center">
+		<button id="btnApply"><span class="04040553">Apply</span></button>
+	</div>
+</body>
+</html>

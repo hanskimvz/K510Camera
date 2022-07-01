@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/common.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/utils/log.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/jquery.effects.core.js"></script>
+	<script type="text/javascript" src="../js/jquery.effects.blind.js"></script>
+	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
+	<script type="text/javascript" src="../js/jquery.ipaddress.js"></script>
+	<script type="text/javascript" src="../js/jquery.caret.js"></script>
+	<script type="text/javascript" src="../js/config/ipfiltering.js"></script>
+</head>
+<body id="config-page">
+	<p class="menuLocationInfo"><span class="04041101">Setup &gt; Network Configuration &gt;</span>
+		<span id="pagename" class="04041102">IP Filtering</span>
+	</p>
+
+	<ul class="box">
+		<li class="box-title"><h2 class="04041103">Configuration</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<ul>
+						<li>
+							<input type="checkbox" id="IPFilteringEnable" />
+							<label for="IPFilteringEnable" class="04041104">Enable</label>
+						</li>
+					</ul>
+				</li >
+				<li class="item">
+					<ul>
+						<li>
+							<input type="checkbox" id="AlwaysAllowPing" />
+							<label for="AlwaysAllowPing" class="04041105">Always allow ping request</label>
+						</li>
+					</ul>
+				</li>
+				<li id="AllowadminIP" class="item">
+					<p>
+						<span class="04041106"> Allow admin IP :</span>
+						<input type="text" id="formAllowadminIP" size="20"/>
+					</p>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	
+	<ul class="box">
+		<li class="box-title"><h2 class="04041121">Policy</h2></li>
+		<li class="box-content">
+			<ul>
+				<li id="formIPFilter" class="item">	
+					<input type="radio" name="formIPFilterAllowDeny" id="formIPFilterAllowDeny0" value="allow" />
+					<label for="formIPFilterAllowDeny0" class="04041108">Allow</label>
+					<input type="radio" name="formIPFilterAllowDeny" id="formIPFilterAllowDeny1" value="deny" />
+					<label for="formIPFilterAllowDeny1" class="04041109">Deny</label>	
+				</li>
+				<li id="formIPAddress" class="item">
+					<ul>
+						<li class="item-title 04041107">Filtered IP Addresses</li>
+						
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li>
+							<select size="10" id="formIPAddressList" class="select-list"><option></option></select>
+							<br />
+							<button id="btnAddIP"><span class="04041111">Add...</span></button>
+							<button id="btnRemoveIP"><span class="04041112">Remove</span></button>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+<div id="user_form_allow">
+	<p id="msg_status_allow"></p>
+	<fieldset>
+		<ul class="box">
+			<li class="item nocolor">
+				<ul class="04041113">IP Address :</ul>
+			</li>
+		</ul>
+		<ul class="box">
+			<li class="item nocolor">
+				<ul>
+					<li id="formIPfilterAllowValid">
+						<input type="text" id="formIPfilterAllowtext" size="41"/>
+					</li>
+					<br />
+					<br />
+				</ul>
+				<br />
+				<ul class="footnotetext 04041114">IP format :<br /></ul>
+				<ul>
+					<li>
+						<ul>xxx.xxx.xxx.xxx</ul>
+						<ul>xxx.xxx.xxx.xxx/xx</ul>
+						<ul>xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="box" align="right">
+			<button id="btnDialogOK"><span class="04041118">OK</span></button>
+			<button id="btnDialogCancel"><span class="04041119">Cancel</span></button>
+		</div>
+	</fieldset>
+</div>
+
+<div class="box" align="center">
+	<button id="btnApply"><span class="04041115">Apply</span></button>
+</div>
+<div id="debug_console"></div>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/config.css" rel="stylesheet" />
+	<link type="text/css" href="../css/config/oem.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/defstring/defconfig.js"></script>
+	<script type="text/javascript" src="../js/config/oem.js"></script>
+</head>
+<body id="config-page">
+	<p class="menuLocationInfo">
+	<span class="04100101">Setup &gt; OEM &gt;</span>
+		<span id="pagename" class="04100102">OEM</span>
+	</p>
+	<ul id="configZone" class="box">
+		<li class="box-title"><h2 class="04100103">Configuration</h2></li>
+		<li class="box-content">
+	  <ul>
+				<li class="item">
+					<ul>
+						<li class="item-title 04100104">Logo images :</li>
+						<form id="formLogoSubmit" action="/uapi-cgi/oem.cgi" enctype="multipart/form-data" method="post" target="iframelogo">
+							<li>
+								<iframe name="iframelogo" id="iframelogo"></iframe>
+								<input type="hidden" name="action" value="set">
+								<input id="oemImages" name="logo" type="file"></input>
+								<input id="logoSubmit" type="submit" value="Send">
+							</li>
+						</form>
+					</ul>
+				</li>
+				<li class="item" id="logoPosition">
+					<ul>
+						<li class="item-title 04100105">Logo position :</li>
+						<li>
+							<select>
+								<option value="left"> Top Left</option>
+								<option value="right"> Top Right</option>
+							</select>
+						</li>
+					</ul>
+				</li>
+				<li class="item" id="logolink">
+					<ul>
+						<li class="item-title 04100106">Logo link URL :</li>
+						<li>
+							<select>
+								<option value="enter"> Input URL</option>
+								<option value="live"> Live page</option>
+							</select>
+						</li>
+						<li>
+							<input id="logolinkEnter" type="text"></input>
+						</li>
+					</ul>
+				</li>
+				<li class="item" id="textlink">
+					<ul>
+						<li class="item-title 04100121">Text link URL :</li>
+						<li>
+							<input id="textlinkEnter" type="text"></input>
+						</li>
+					</ul>
+				</li>
+				<li class="item" id="titlename">
+					<ul>
+						<li class="item-title 04100107">Web-page title name :</li>
+						<li>
+							<select>
+								<option value="enter"> Input</option>
+								<option value="%shortname%"> Use short name</option>
+								<option value="%fullname%"> Use full name</option>
+							</select>
+						</li>
+						<li>
+							<input id="titleNameEnter" type="text"></input>
+						</li>
+					</ul>
+				</li>
+				<li class="item" id="fullname">
+					<ul>
+						<li class="item-title 04100108">Production full name :</li>
+						<li>
+							<input id="fullNameEnter" type="text"></input>
+							<label class="04100109"> (Max. 60 characters)</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item" id="shortname">
+					<ul>
+						<li class="item-title 04100110">Production short name :</li>
+						<li>
+							<input id="shortNameEnter" type="text"></input>
+							<label class="04100109"> (Max. 60 characters)</label>
+						</li>
+					</ul>
+				</li>
+				<li class="item" id="skinList">
+					<ul>
+						<li class="item-title 04100111">Skin :</li>
+						<li>
+							<select id="formThemes">
+								<option value="noline-silver">Nolinesilver</option>
+								<!--<option value="redmond">Redmond</option>//-->
+								<option value="black-tie">Black Tie</option>
+								<option value="blitzer">Blitzer</option>
+								<option value="humanity">Humanity</option>
+								<option value="ui-darkness">UI Darkness</option>
+								<option value="ui-lightness">UI Lightness</option>
+								<option value="smoothness">Smoothness</option>
+								<option value="start">Start</option>
+								<option value="sunny">Sunny</option>
+								<option value="overcast">Overcast</option>
+								<!--<option value="le-frog">Green</option>//-->
+								<option value="eggplant">Eggplant</option>
+								<option value="trontastic">Trontastic</option>
+								<option value="swanky-purse">Swanky Purse</option>
+								<!-- <option value="user">User</option> -->
+							</select>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<div id="setBtn" class="box" align="center">
+		<button id="btnSet"><span class="04100112">Set</span></span></button>
+		<button id="btnResetLogo"><span class="04100114">Default Logo</span></button>
+		<button id="btnDefaultset"><span class="04100115">Defaultset</span></button>
+		<button id="btnDown"><span class="04100116">Export</span></button>
+	</div>
+
+	<ul id="importZone" class="box">
+		<li class="box-title"><h2 class="04100117">Import</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+					<ul>
+						<li class="item-title 04100118">Package :</li>
+						<form id="formPackageSubmit" action="/uapi-cgi/oem.cgi" enctype="multipart/form-data" method="post" target="iframepackage">
+							<li>
+								<iframe name="iframepackage" id="iframepackage"></iframe>
+								<input type="hidden" name="action" value="set">
+								<input id="oemPackage" name="package" type="file"></input>
+							</li>
+							<li	id="packageApply">
+								<input id="packageBtnStart" type="submit" value="Apply"></input>
+							</li>
+						</form>
+					</ul>
+				</li>
+				<li class="item">
+					<ul>
+						<li class="item-title 04100119">OEM DB :</li>
+						<form id="formOEMDBSubmit" action="/uapi-cgi/oem.cgi" enctype="multipart/form-data" method="post" target="iframeOEMDB">
+							<li>
+								<iframe name="iframeOEMDB" id="iframeOEMDB"></iframe>
+								<input type="hidden" name="action" value="set">
+								<input id="oemOEMDB" name="oemdb" type="file"></input>
+							</li>
+							<li	id="OEMDBApply">
+								<input id="oemdbBtnStart" type="submit" value="Apply"></input>
+							</li>
+						</form>
+					</ul>
+				</li>
+				<li class="item hidden_contents">
+					<ul>
+						<li class="item-title">Factory Default :</li>
+						<form id="formFDSubmit" action="/uapi-cgi/oem.cgi" enctype="multipart/form-data" method="post" target="iframeFD">
+							<li>
+								<iframe name="iframeFD" id="iframeFD"></iframe>
+								<input type="hidden" name="action" value="set">
+								<input id="oemFD" name="FatoryDefault" type="file"></input>
+							</li>
+							<li	id="FDApply">
+								<input type="submit" value="Apply"></input>
+							</li>
+						</form>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<ul id="countZone" class="box">
+		<li class="box-title"><h2 class="04100103">Configuration</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item">
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<div id="debug_console"></div>
+</body>
+</html>

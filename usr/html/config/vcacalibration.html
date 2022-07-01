@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'
+  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+  <meta http-equiv='imagetoolbar' content='no' />
+  <meta http-equiv="Cache-Control" content="no-cache"/>
+  <meta http-equiv="Expires" content="0"/>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <title></title>
+  <link type='text/css' href='../css/config.css' rel='stylesheet' />
+  <link type='text/css' href='../css/theme.css' rel='stylesheet' />
+  <link type='text/css' href='../css/themes/base/jquery-ui.css' rel='stylesheet' />
+  <link type='text/css' href='../css/config/vcacalibration.css' rel='stylesheet' />
+  <script type='text/javascript' src='../js/jquery-1.4.2.min.js'></script>
+  <script type='text/javascript' src='../js/jquery-ui-1.8.4.min.js'></script>
+  <script type="text/javascript" src="../js/jquery.ui.mouse.js"></script>
+  <script type="text/javascript" src="../js/jquery.ui.slider.js"></script>
+  <script type='text/javascript' src='../js/jquery.cookie.js'></script>
+  <script type='text/javascript' src='../js/jquery.alphanumeric.pack.js'></script>
+  <script type="text/javascript" src="../js/uapi.ajax.js"></script>
+  <script type='text/javascript' src='../js/common.js'></script>
+  <script type='text/javascript' src='../js/cap.js'></script>
+  <script type='text/javascript' src='../js/cap.vca.js'></script> 
+  <script type="text/javascript" src="../js/uapi.player.js"></script>
+  <script type='text/javascript' src='../js/cap.player.js'></script>
+  <script type='text/javascript' src='../js/config/vcacalibration.js'></script> 
+</head>
+
+<body id='config-page'>
+  <p class='menuLocationInfo'>
+    <span class="04050301">Setup > VCA ></span>
+    <span id='pagename' class="04050302">Calibration</span>
+  </p>
+
+  <ul class='box vcaDisabled' style='display:none'>
+    <li class='box-title 04050302'><h2>Calibration</h2></li>
+    <li class='box-content'>
+      <p> <span class='04050304'>VCA is disabled, please go to the </span><span class='menuLocationInfo 04050305'>VCA > </span><span id='pagename' class='04050306'>Enable/Disable</span><span class ='04050307'> page to enable VCA.</span></p>
+    </li>
+  </ul>
+
+  <div class='vcaInitialising' id='loadingMessage'>
+    <img id='loadingImage' src='/images/loading.gif'></img>
+    <span class="04050308">Loading Data - Please Wait</span>
+  </div>
+
+  <ul class='vcaEnabled' style='display:none'>
+    <li class='box-title'><h2 class="04050309">Calibration</h2></li>
+    <!-- The middle region containing the ActiveX control -->
+    <div id='middleregion' class="vcaEnabled">
+      <!-- The ActiveX control -->
+      <div class="vcaEnabled" id="AxUMF"></div>
+      <!-- The PTZ control -->
+      <li class="vcaEnabled ptzEnabled" id="ptz-control">
+        <h3><a href="#0" class="04050331">PTZ Preset Profiles</a></h3>
+        <div>
+          <iframe src="vcaptzcontrol.html" id="ptzFrame" name="ptzFrame" width="100%" height="100%" scrolling="no" marginheight="1" marginwidth="1" frameborder="0"></iframe>
+        </div>
+      </li>
+
+      <!-- The Uncalibrate option -->
+      <!--div id='lefthalf'>
+        <ul class='box vcaEnabled' style='display:none'>
+          <li class='box-title'><h2>Remove Calibration</h2></li>
+          <li class='box-content'>
+            <ul>
+              <li class="item">
+                <ul>
+                  <li class="item-display">
+                    <button id='btnUncalibrate' disabled='true' >Uncalibrate</button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div-->
+
+      <!-- The Video Control option -->
+      <!--div id='righthalf'>
+        <ul class='box vcaEnabled' style='display:none'>
+          <li class='box-title'><h2>Video Control</h2></li>
+          <li class='box-content'>
+            <ul>
+              <li class="item">
+                <ul>
+                  <li class="item-display">
+                    <button id='btnPlayPause' disabled='true' >Pause</button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div-->
+      <div class="clear"></div>
+    </div>
+
+    <!-- Controls on the right hand side of the page -->
+    <div id="rightpanel" class="vcaEnabled" style="display:none">
+      <!-- Camera Setup section -->
+      <ul class='box vcaEnabled' style='display:none'>
+        <li class='box-title'><h2 class="04050310">Camera Setup</h2></li>
+        <img id="calibrationLegend" width="300" height="212" src="../images/camera_calibration.bmp" />
+      </ul>
+    
+      <!-- Calibration Status -->
+      <ul class='box vcaEnabled' style='display:none'>
+        <li class='box-title'><h2 class="04050311">Calibration Status</h2></li>
+        <li class='box-content'>
+          <ul>
+            <li class="item">
+              <ul>
+                <li class="item-title 04050312">Status:</li>
+                <li class="item-display"><span class="auto-display" id="Cb.status">Loading...</span></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Preset Setups -->
+      <ul class='box vcaEnabled' style='display:none'>
+        <li class='box-title'><h2 class="04050314">Preset Setups</h2></li>
+        <li class='box-content'>
+          <ul>
+            <li class="item">
+              <ul>
+                <li class="item-title 04050315">Select:</li>
+                <li>
+                  <select id="presets"></select>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Camera Setup -->
+      <ul class='box vcaEnabled' style='display:none'>
+        <li class='box-title'><h2 class="04050316">Camera Setup</h2></li>
+        <li class='box-content'>
+          <ul>
+            <li class="item">
+              <ul>
+                <li class="item-title 04050317">Height:</li>
+                <li>
+                  <!-- This is the 'master' height and will never be visible -->
+                  <input type="text" id="Cb.camheight" class="auto-text" size="15" />
+                  <!-- Rounded metric height -->
+                  <input type="text" id="metricHeightRounded" class="metric" size="15" /><label for="metricHeightRounded" class="metric 04050318">meters</label>
+                  <!-- Rounded imperial height -->
+                  <input type="text" id="imperialHeightRounded" class="imperial" size="15" /><label for="imperialHeightRounded" class="imperial 04050319">feet</label>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <ul>
+                <li class="item-title 04050320">Tilt Angle:</li>
+                <li>
+                  <input type="text" id="Cb.tiltangle" class="auto-text" size="15" /><label for="tiltangle" class="04050321">degrees</label>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <ul>
+                <li class="item-title 04050322">Vertical Field of View:</li>
+                <li>
+                  <input type="text" id="Cb.vfov" class="auto-text" size="15" /><label for="vfov" class="04050323">degrees</label>
+                </li>
+                <li class="slider-item"><div class="slider-bar" id="fovSlider"></div></li>
+              </ul>
+            </li>
+            <li>
+            <!--  <span class="configlinkspan">
+                <a id="advancedLink" href="#">Show Advanced Configuration</a>
+              </span>-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    
+
+
+      <!-- Advanced Parameters -->
+      <ul class='box vcaEnabled' id="advancedsection" style='display:none'>
+        <li class='box-title'><h2 class="04050324">Advanced Parameters</h2></li>
+        <li class='box-content'>
+          <ul>
+            <li class="item">
+              <ul>
+                <li class="item-title 04050325">Pan Angle</li>
+                <li>
+                  <input type="text" id="Cb.panangle" class="auto-text" size="15" /><label for="panangle" class="04050326">degrees</label>
+                </li>
+                <li><div class="slider-bar" id="panSlider"></div></li>
+              </ul>
+            </li>
+            <li class="item">
+              <ul>
+                <li class="item-title 04050327">Roll Angle</li>
+                <li>
+                  <input type="text" id="Cb.rollangle" class="auto-text" size="15" /><label for="rollangle" class="04050328">degrees</label>
+                </li>
+                <li><div class="slider-bar" id="rollSlider"></div></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    
+
+      <div id='screenTools' class='box' align='center'>
+        <button id='btnApply' disabled='true' class="04050329" ><span>Apply</span></button>
+        <!--button id='btnRestoreDefaults' disabled='true' >Restore Defaults</button-->
+        <button id='btnUncalibrate' disabled='true' class="04050330" ><span>Uncalibrate</span></button>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </ul>
+</body>
+</html>

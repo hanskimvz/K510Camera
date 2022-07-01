@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/common.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/defstring/defpath.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/defstring/defregexp.js"></script>
+	<script type="text/javascript" src="../js/utils/control.js"></script>
+	<script type="text/javascript" src="../js/utils/jq_string.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/plat_utils/string.js"></script>
+	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
+	<script type="text/javascript" src="../js/dataconfig.js"></script>
+	<script type="text/javascript" src="../js/uiconfig.js"></script>
+	<script type="text/javascript" src="../js/config/presetschedule.js"></script>
+</head>
+<body id="config-page">
+	<p class="menuLocationInfo">
+		<span class="04110501">Setup &gt; PTZ &gt;</span>
+		<span id="pagename" class="04110502">Preset Schedule</span>
+	</p>
+
+	<ul class="box" id="viewToggle">
+		<li class="box-title"><h2 class="04110503">Preset</h2></li>
+		<li class="box-content">
+			<ul>
+				<li class="item nocolor">
+					<ul>
+						<li id="ptzContents">
+							<div id="panel_ptz" class="width_step17">
+								<dl class="box">
+									<dd class="box-title" class=""><h2 class="04110504">Movement</h2></dd>
+									<dd id="ptz" class="box-content">
+										<dl>
+											<dd id="ptz_panel" class="item noBGColor margin_left_step0">
+												<dl>
+													<dd id="pt_lu" class="ui-button"></dd>
+													<dd id="pt_cu" class="ui-button"></dd>
+													<dd id="pt_ru" class="ui-button"></dd>
+													<dd id="pt_lm" class="ui-button"></dd>
+													<dd id="pt_cm" class="ui-button"></dd>
+													<dd id="pt_rm" class="ui-button"></dd>
+													<dd id="pt_ld" class="ui-button"></dd>
+													<dd id="pt_cd" class="ui-button"></dd>
+													<dd id="pt_rd" class="ui-button"></dd>
+												</dl>
+											</dd>
+											<dd id="ptz_zoomfocus">
+												<dl>
+													<dd id="main_ptz_zoom" class="04110505">Zoom</dd>
+													<dd>
+														<img id="_zIn" class="ui-button" width="16" height="16" src="../images/pt_fnear.gif" alt="zoom in" />
+														<img id="_zOut" class="ui-button" width="16" height="16" src="../images/pt_ffar.gif" alt="zoom out" />
+													</dd>
+												</dl>
+												<dl>
+													<dd id="main_ptz_focus" class="04110506">Focus</dd>
+													<dd>
+														<img id="_fNear" class="ui-button" width="16" height="16" src="../images/pt_fnear.gif" alt="focus near" />
+														<img id="_fFar" class="ui-button" width="16" height="16" src="../images/pt_ffar.gif" alt="focus far" />
+													</dd>
+												</dl>
+											</dd>
+										</dl>
+									</dd>
+								</dl>
+								<dl class="box margin_top_step1">
+									<dd class="box-title"><h2 class="04110507">Speed</h2></dd>
+									<dd class="box-content">
+										<dl>
+											<dd id="ptz_speedbar">
+												<dl>
+													<dd><div id="slider_speedbar" class="width_step8 margin_left_small_step5"></div></dd>
+													<dd>
+														<input type="text" size="3" id="text_speedbar" class="text_cen" value=20></input>
+													</dd>
+												</dl>
+											</dd>
+										</dl>
+									</dd>
+								</dl>
+								<dl class="box margin_top_step1">
+									<dd class="box-title" class=""><h2 class="04110508">Pre Position</h2></dd>
+									<dd class="box-content">
+										<dl>
+											<dd id="ptz_numberbar" class="margin_top_small_step5 margin_left_small_step5">
+												<dl>
+													<dd>
+														<input type="text" size="1" id="preset_number" class="text_cen" value=20></input>
+														<label for="preset_number">(1 ... 255)</label>
+													</dd>
+												</dl>
+											</dd>
+											<dd class="setclear_button margin_top_small_step5 margin_left_small_step5">
+												<button id="btnSet"><span class="04110509">Set</span></button>
+												<button id="btnClear"><span class="04110510">Clear</span></button>
+											</dd>
+											<dd class="margin_top_step1 margin_left_small_step5">
+												<dl>
+													<dd>
+														<span class="04110511">Preset Number :</span>
+														<select class="select width_step5" id="setPresetList"></select>
+													</dd>
+												</dl>
+											</dd>
+											<dd class="go_button margin_left_small_step5">
+												<button id="btnGo"><span class="04110512">Go</span></button>
+											</dd>
+										</dl>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<div id="viewToggle" class="box" align="center">
+							<iframe src="view.html" id="viewFrame" width="480px" height="270px" scrolling="no" marginheight="1" marginwidth="1" frameborder="0"></iframe>
+						</div>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<ul id="schedulebox" class="box">
+		<li class="box-title"><h2 class="04110513">Schedule</h2></li>
+		<li class="item nocolor">
+			<ul>
+				<table id="schedule">
+					<thead>
+						<tr>
+							<th class="04110514">Num</th>
+							<th class="04110515">Day</th>
+							<th><span class="04110516">Time</span><br/><span class="04110517">(HH:MM 24-Hour)</span></th>
+							<th class="04110518">Preset Number</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1.</td>
+							<td>
+								<input type="checkbox" id="formPreset0_mon" />
+								<label for="formPreset0_mon" class="04020226"> Mon</label>
+								<input type="checkbox" id="formPreset0_tue" />
+								<label for="formPreset0_tue" class="04020227"> Tue</label>
+								<input type="checkbox" id="formPreset0_wed" />
+								<label for="formPreset0_wed" class="04020228"> Wed</label>
+								<input type="checkbox" id="formPreset0_thu" />
+								<label for="formPreset0_thu" class="04020229"> Thu</label>
+								<input type="checkbox" id="formPreset0_fri" />
+								<label for="formPreset0_fri" class="04020230"> Fri</label>
+								<input type="checkbox" id="formPreset0_sat" />
+								<label for="formPreset0_sat" class="04020231"> Sat</label>
+								<input type="checkbox" id="formPreset0_sun" />
+								<label for="formPreset0_sun" class="04020232"> Sun</label>
+							</td>
+							<td><input type="text" id="ptz_ch0_schedule_s0_time" value=""></input></td>
+							<td>
+								<select id="ptz_ch0_schedule_s0_preset"></select>
+							</td>
+						</tr>
+						<tr>
+							<td>2.</td>
+							<td>
+								<input type="checkbox" id="formPreset1_mon" />
+								<label for="formPreset1_mon" class="04020226"> Mon</label>
+								<input type="checkbox" id="formPreset1_tue" />
+								<label for="formPreset1_tue" class="04020227"> Tue</label>
+								<input type="checkbox" id="formPreset1_wed" />
+								<label for="formPreset1_wed" class="04020228"> Wed</label>
+								<input type="checkbox" id="formPreset1_thu" />
+								<label for="formPreset1_thu" class="04020229"> Thu</label>
+								<input type="checkbox" id="formPreset1_fri" />
+								<label for="formPreset1_fri" class="04020230"> Fri</label>
+								<input type="checkbox" id="formPreset1_sat" />
+								<label for="formPreset1_sat" class="04020231"> Sat</label>
+								<input type="checkbox" id="formPreset1_sun" />
+								<label for="formPreset1_sun" class="04020232"> Sun</label>
+							</td>
+							<td><input type="text" id="ptz_ch0_schedule_s1_time" value=""></input></td>
+							<td>
+								<select id="ptz_ch0_schedule_s1_preset"></select>
+							</td>
+						</tr>
+						<tr>
+							<td>3.</td>
+							<td>
+								<input type="checkbox" id="formPreset2_mon" />
+								<label for="formPreset2_mon" class="04020226"> Mon</label>
+								<input type="checkbox" id="formPreset2_tue" />
+								<label for="formPreset2_tue" class="04020227"> Tue</label>
+								<input type="checkbox" id="formPreset2_wed" />
+								<label for="formPreset2_wed" class="04020228"> Wed</label>
+								<input type="checkbox" id="formPreset2_thu" />
+								<label for="formPreset2_thu" class="04020229"> Thu</label>
+								<input type="checkbox" id="formPreset2_fri" />
+								<label for="formPreset2_fri" class="04020230"> Fri</label>
+								<input type="checkbox" id="formPreset2_sat" />
+								<label for="formPreset2_sat" class="04020231"> Sat</label>
+								<input type="checkbox" id="formPreset2_sun" />
+								<label for="formPreset2_sun" class="04020232"> Sun</label>
+							</td>
+							<td><input type="text" id="ptz_ch0_schedule_s2_time" value=""></input></td>
+							<td>
+								<select id="ptz_ch0_schedule_s2_preset"></select>
+							</td>
+						</tr>
+						<tr>
+							<td>4.</td>
+							<td>
+								<input type="checkbox" id="formPreset3_mon" />
+								<label for="formPreset3_mon" class="04020226"> Mon</label>
+								<input type="checkbox" id="formPreset3_tue" />
+								<label for="formPreset3_tue" class="04020227"> Tue</label>
+								<input type="checkbox" id="formPreset3_wed" />
+								<label for="formPreset3_wed" class="04020228"> Wed</label>
+								<input type="checkbox" id="formPreset3_thu" />
+								<label for="formPreset3_thu" class="04020229"> Thu</label>
+								<input type="checkbox" id="formPreset3_fri" />
+								<label for="formPreset3_fri" class="04020230"> Fri</label>
+								<input type="checkbox" id="formPreset3_sat" />
+								<label for="formPreset3_sat" class="04020231"> Sat</label>
+								<input type="checkbox" id="formPreset3_sun" />
+								<label for="formPreset3_sun" class="04020232"> Sun</label>
+							</td>
+							<td><input type="text" id="ptz_ch0_schedule_s3_time" value=""></input></td>
+							<td>
+								<select id="ptz_ch0_schedule_s3_preset"></select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</ul>
+		</li>
+	</ul>
+
+	<div class="box" align="center">
+		<button id="btnApply"><span class="">Apply</span></button>
+	</div>
+</body>
+</html>

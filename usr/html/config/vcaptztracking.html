@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	<meta http-equiv='imagetoolbar' content='no' />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type='text/css' href='../css/config.css' rel='stylesheet' />
+	<link type='text/css' href='../css/theme.css' rel='stylesheet' />
+	<link type='text/css' href='../css/themes/base/jquery-ui.css' rel='stylesheet' />
+	<link type='text/css' href='../css/config/vcaptztracking.css' rel='stylesheet' />
+	<script type='text/javascript' src='../js/jquery-1.4.2.min.js'></script>
+	<script type='text/javascript' src='../js/jquery-ui-1.8.4.min.js'></script>
+	<script type='text/javascript' src='../js/jquery.cookie.js'></script>
+	<script type='text/javascript' src='../js/common.js'></script>
+	<script type='text/javascript' src='../js/uapi.ajax.js'></script>
+	<script type='text/javascript' src='../js/cap.js'></script>
+	<script type='text/javascript' src='../js/cap.vca.js'></script>
+	<script type='text/javascript' src='../js/config/vcaptztracking.js'></script>
+</head>
+<body id='config-page'>
+	<p class='menuLocationInfo'>
+		<span class="04050801">Setup > VCA ></span>
+		<span id='pagename' class="04050802">PTZ Tracking</span>
+	</p>
+
+	<!-- VCA Disabled Message -->
+	<ul class='box vcaDisabled' style='display:none'>
+		<li class='box-title 04050802'><h2>PTZ Tracking</h2></li>
+		<li class='box-content'>
+			<p> <span class='04050823'>VCA is disabled, please go to the </span><span class='menuLocationInfo 04050824'>VCA > </span><span id='pagename' class='04050825'>Enable/Disable</span><span class ='04050826'> page to enable VCA.</span></p>
+		</li>
+	</ul>
+
+	<!-- VCA Initialising Message -->
+	<div class='vcaInitialising' id='loadingMessage'>
+		<img id='loadingImage' src='/images/loading.gif'></img>
+		<span class="04050822">Loading Data - Please Wait</span>
+	</div>
+
+
+  <!-- General Configuration section -->
+  <ul class='box vcaEnabled' style='display:none'>
+    <li class='box-title'><h2 class="04050803">General Configuration</h2></li>
+    <li class='box-content'>
+      <ul>
+        <li class="item">
+          <ul>
+            <li>
+              <input type="checkbox" id="enable" class="auto-yesno" size="25"/>
+            </li>
+            <li class="item-title 04050804">Enable</li>
+          </ul>
+        </li>
+        <li class="item">
+          <ul>
+            <li class="item-title indent 04050805">Camera preset number for VCA home position</li>
+            <li>
+              <input type="text" id="homepreset" class="auto-text" size="2" data-validation="int,0,15"/>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <ul>
+            <li class="indent">
+              <input type="checkbox" id="hometrackingonly" class="auto-yesno" size="25"/>
+            </li>
+            <li class="item-title 04050806">Enable VCA only when camera at home position</li>
+          </ul>
+        </li>
+       	<li class="item">
+          <ul>
+            <li class="indent">
+              <input type="checkbox" id="return2home" class="auto-yesno" size="25"/>
+            </li>
+            <li class="item-title 04050807">Return to home position following manual override (user control)</li>
+          </ul>
+        </li>
+        <li class="item">
+          <ul>
+            <li class="item-title doubleindent 04050808">Timeout (seconds)</li>
+            <li>
+              <input type="text" id="return2hometimeout" class="auto-text" size="2" data-validation="int,0,86400"/>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+	
+
+<!-- Auto-tracking Configuration section -->
+  <ul class='box vcaEnabled' style='display:none'>
+    <li class='box-title'><h2 class="04050809">Auto-tracking Configuration</h2></li>
+    <li class='box-content'>
+      <ul>
+        <li class="item">
+          <ul>
+            <li>
+              <input type="checkbox" id="At.enable" class="auto-yesno" size="25"/>
+            </li>
+            <li class="item-title 04050810">Enable</li>
+          </ul>
+        </li>
+        <li class="item">
+          <ul>
+            <li class="item-title indent 04050811">Maximum tracking time (seconds)</li>
+            <li>
+              <input type="text" id="At.maxtrackingtime" class="auto-text" size="2" data-validation="int,0,86400"/>
+            </li>
+          </ul>
+        </li>
+         <li class="item">
+          <ul>
+            <li class="item-title indent 04050812">Maximum hold-on time if target is lost or stationary (seconds)</li>
+            <li>
+              <input type="text" id="At.holdontime" class="auto-text" size="2" data-validation="int,0,86400"/>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <ul>
+            <li class="indent">
+              <input type="checkbox" id="At.manualoverride" class="auto-yesno" size="25"/>
+            </li>
+            <li class="item-title 04050813">Allow manual override (user control)</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul class='box vcaEnabled' style='display:none'>
+      <li class='box-title'><h2 class="04050815">Auto-tracking Initiation By Object Detection</h2></li>
+      <li class='box-content'>
+        <ul> 
+ 
+        <li class='item selection-type'>
+          <ul>
+            <li>
+              <span class="auto-select" id="At.triggertype">
+                <input type="radio" id="anyobject" class="auto-item" name="At.triggertype"><span class="04050816"> Any Object</span></input>
+                <input type="radio" id="rules" class="auto-item" name="At.triggertype"><span class="04050817"> Specific Rules</span></input>
+              </span>
+            </li>
+          </ul>
+        </li>
+
+
+        <li style="position:relative; height:160px">
+          <h4 style="position:absolute; left:120px; top:10px;"><span class="04050818">Available Rules</span></h4>
+          <h4 style="position:absolute; left:400px; top:10px;""><span class="04050819">Selected Rules</span></h4>
+          <select style="position:absolute; left:70px; top:30px;"" id="availableRulesList" size="8"></select>
+          <input style="position:absolute; left:285px; top:50px;"" type="button" name="addbutton" value=">>" id="btnLeft"></input>
+          <input style="position:absolute; left:285px; top:100px;"" type="button" name="removebutton" value="<<" id="btnRight"></input>
+          <select style="position:absolute; left:350px; top:30px;"" id="selectedRulesList" size="8"></select>
+        </li>
+
+
+        
+      </ul>
+    </li>
+  </ul>
+
+
+
+	<div class='box vcaEnabled' align='center'>
+		<button id='btnApply' ><span class="04050820">Apply</span></button>
+	</div>
+</body>
+</html>
+

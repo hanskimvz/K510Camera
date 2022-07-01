@@ -1,0 +1,607 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'
+	'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+<head>
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<link type='text/css' href='../css/config.css' rel='stylesheet' />
+	<link type='text/css' href='../css/theme.css' rel='stylesheet' />
+	<link type='text/css' href='../css/themes/smoothness/jquery-ui.css'>
+	<link type='text/css' href='../css/config/vcacounterreport.css' rel='stylesheet' />
+	<link type='text/css' href='../css/themes/base/jquery-ui.css' rel='stylesheet' />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.mouse.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.slider.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src='../js/uapi.ajax.js'></script>
+	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
+	<script type="text/javascript" src="../js/jquery.ipaddress.js"></script>
+	<script type="text/javascript" src="../js/jquery.dateformat.js"></script>
+  	<script type="text/javascript" src="../js/jquery.epiclock.js"></script>
+	<script type="text/javascript" src="../js/jquery.caret.js"></script>
+	<script type='text/javascript' src='../js/common.js'></script>
+	<script type='text/javascript' src='../js/cap.js'></script>
+	<script type='text/javascript' src='../js/cap.vca.js'></script>
+	<script type='text/javascript' src='../js/config/vcacounterreport.js'></script>
+</head>
+
+<body id='config-page'>
+	<p class='menuLocationInfo'>
+		<span class="04050901">Setup &gt; VCA &gt;</span> 
+		<span id='pagename' class="04050902">Counter Report</span>
+	</p>
+	<ul class='box vcaDisabled' style='display:none'>
+		<li class='box-title'><h2>Counter Report</h2></li>
+		<li class='box-content'>
+			<p>VCA is disabled, please go to the <span class='menuLocationInfo'>VCA > <span id='pagename'>Enable/Disable</span></span> page to enable VCA.</p>
+		</li>
+	</ul>
+	<ul class='box vcaEnabled'>	
+		<div id="stream_tab" class="tab_inline">
+			<ul class="css-tabs">
+				<li><a href="#reportservice" id="reportservice_link" class="04050903">Reporting Service</a></li>
+				<li><a href="#dbservice" id="dbservice_link" class="04050904">Database Service</a></li>
+				<li><a href="#notifyservice" id="notifyservice_link" class="04050948">Email Notification</a></li>
+				<li><a href="#pushservice" id="pushservicelink" class="psenable" style="display:none">Push Service</a></li>
+			</ul>
+
+			
+			<div id="reportservice">
+				<ul class="box">
+				<li class="box-content">
+					<ul>
+						<li class="item">
+							<span class="ctrpspan 04050905">Predefined Request</span>
+							<select id="predefinerequest" style="width:100px" onmouseover='xtooltip_show("predefine_tooltip","predefinerequest",0,0);' onmouseout='xtooltip_hide("predefine_tooltip");'></select>
+						</li>
+					</ul>
+				</li>
+				</ul>
+				<ul class="box">
+				<li class='box-title'><h2 class="04050906"  style="text-align:left">Request Command</h2></li>
+				<li class="box-content">
+					<ul>
+						<li class="item">
+							<span class="ctrpspan 04050907">Time :</span>
+							<input type="text" id="timefrom" onmouseover='xtooltip_show("tm_tooltip","timefrom",0,0);' onmouseout='xtooltip_hide("tm_tooltip");'></input><label class="04050908"> (from)</label>
+							<BR>
+							<span class="ctrpspanto"></span>
+							<input type="text" id="timeto" onmouseover='xtooltip_show("tm_tooltip","timefrom",0,0);' onmouseout='xtooltip_hide("tm_tooltip");'></input><label class="04050909"> (to)</label>
+						</li>
+					</ul>
+				</li>
+				<li class="box-content">
+					<ul>
+						<li class="item">
+							<span class="ctrpspan 04050910">Counter ID :</span>
+							<select id="countselect" onmouseover='xtooltip_show("counterid_tooltip","countselect",0,0);' onmouseout='xtooltip_hide("counterid_tooltip");'></select><label> {active|all|0,1,...n}</label>
+						</li>
+					</ul>
+				</li>
+				<li class="box-content">
+					<ul>
+						<li class="item">
+							<span class="ctrpspan 04050911">Table(Sampling) :</span>
+							<select id="tableselect"></select><label class="04050912"> (minutes)</label>
+						</li>
+					</ul>
+				</li>
+				<li class="box-content">
+					<ul>
+						<li class="item">
+							<span class="ctrpspan 04050913">Sorting order :</span>
+							<select id="sortselect" onmouseover='xtooltip_show("sortorder_tooltip","sortselect",0,0);' onmouseout='xtooltip_hide("sortorder_tooltip");'></select>
+						</li>
+					</ul>
+				</li>
+				<li class="box-content">
+					<ul>
+						<li class="item">
+							<span class="ctrpspan 04050914">Value type :</span>
+							<select id="valuetypeselect" onmouseover='xtooltip_show("valuetype_tooltip","valuetypeselect",0,0);' onmouseout='xtooltip_hide("valuetype_tooltip");'></select>
+						</li>
+						
+					</ul>
+				</li>
+				</ul>
+				<ul class="box">
+				<li class='box-title'><h2 class="04050915"  style="text-align:left">Request</h2></li>
+				<li class="box-content">
+					<div class="item">
+						<span class="ctrpspan"></span>
+						<button id="btnTable"><span class="04050916">Table</span></button>
+						<button id="btnBar"><span class="04050917">Bar</span></button>
+						<button id="btnCSV"><span class="04050918">CSV</span></button>
+						<label id="servicedisabled" style="display:none"><FONT color="red" class="04050919">DB Service is disabled!!!</FONT></label>
+					</div>
+				</li>
+				<li class="box-content">
+					<ul>
+						<li class="item">
+							<table class="uritable">
+								<tr>
+									<td style="width:200px; text-align:left" class="04050920">
+										Request URI
+									</td>
+									<td style="align:left">
+										<TEXTAREA id="requesturi" rows="3"  readonly="readonly"></TEXTAREA>
+									</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			</div>
+			<div id="pushservice" class="psenable" style="display:none">
+				<li class="box-content">
+					<ul>
+						<li class="item">
+							<input type="checkbox" id="enablepushservice"></input>
+							<label> Enable Push Service</label>
+						</li>
+					</ul>
+				</li>
+				<li class="box-content">
+					<div>
+						<ul>
+							<li class="item">
+								<span class="ctrpspan 04050939">Protocol Type :</span>
+								<select id="protocaltype" style="width:100px"></select>
+							</li>
+							<li class="item" id="serveripform">
+								<span class="ctrpspan 04050940">Server IP :</span>
+								<input type="text" id="serverip" style="width:100px"></input>
+							</li>
+							<li class="item">
+								<span class="ctrpspan 04050941">Server Port :</span>
+								<input type="text" id="serverport" style="width:100px"></input>
+							</li>
+							<li class="item">
+								<span class="ctrpspan 04050942">Report Interval(sec) :</span>
+								<input type="text" id="reportinter" style="width:100px"></input>
+							</li>
+							<li class="item">
+								<span class="ctrpspan 04050943">Heartbeat Interval(sec) :</span>
+								<input type="text" id="heartinter" style="width:100px"></input>
+							</li>
+							<li class="item">
+								<span class="ctrpspan 04050944">Status :</span>
+								<label id="statuslabe" ></label>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="box-content">
+					<div align="center">
+						<button id="btnPSApply"><span class="04050931">Apply</span></button>
+					</div>
+				</li>
+				<li class="item">
+					<label class="ctrpspan 04050945">DB & Queue Management :</label>
+					<button id="btnCQ"><span class="04050946">Clear Queue</span></button>
+					<button id="btnStatus"><span class="04050947">Status</span></button>
+				</li>
+			</div>
+			<div id="dbservice" style="display:none">
+				<li class='box-title'><h2 class="04050936">General</h2></li>
+				<li class="box-content">
+					<ul>
+						<li class="item">
+							<input type="checkbox" id="enabledbservice" checked="true" ></input>
+							<label class="04050921"> Enable Database Service</label>
+						</li>
+					</ul>
+				</li>
+				<li class="box-content">
+					<div class="item dbinfo">
+						<ul>
+							<li>
+								<span class="ctrpspan 04050922">DB Storage :</span>
+								<select id="storedevice" style="width:100px"></select>
+								<label id="inuser"></label>
+								<a id="linkStoreInfo" href="#" class="04050923">Storage Information</a>
+							</li>
+						</ul>
+						<ul>
+							<li id="dbsize">
+								<span class="ctrpspan 04050924">Total DB Size :</span>
+								<input type="text" id="dbusedsize" readonly="readonly" disabled="true" style="width:80px"></input>
+								<label>/</label>
+								<input type="text" id="dbtotalsize" readonly="readonly" disabled="true" style="width:80px"></input>
+								<label class="04050925"> Kbytes</label>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class='box-title'><h2 class="04050937">Tables</h2></li>
+				<li class="box-content">
+					<ul>
+						<li class="item">
+							<input type="checkbox" id="enabletbl0" checked="true" ></input>
+							<label> <span class="04050926">Enable Table</span> 0</label>
+						</li>
+					</ul>
+				</li>
+				<li class="box-content">
+					<div id="divtable0" class="item dbinfo">
+						<ul>
+							<li>
+								<span class="ctrpspan 04050927">Sampling interval :</span>
+								<input type="text" id="sampling0" class="sampleedit" onpaste="return false"></input>
+								<label class= "04050928"> minutes</label>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="ctrpspan 04050929">Roll-over Count :</span>
+								<input type="text" id="rolloverct0" class="rolloveredit" onpaste="return false"></input>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="ctrpspan 04050930">Max Roll-over Time :</span>
+								<input type="text" id="rollovertime0" class="rollovertimeedit" readonly="readonly" disabled="true"></input>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="box-content">
+					<ul>
+						<li class="item">
+							<input type="checkbox" id="enabletbl1" checked="true" ></input>
+							<label> <span class="04050926">Enable Table</span> 1</label>
+						</li>
+					</ul>
+				</li>
+				<li class="box-content">
+					<div id="divtable1" class="item dbinfo">
+						<ul>
+							<li>
+								<span class="ctrpspan 04050927">Sampling interval :</span>
+								<input type="text" id="sampling1" class="sampleedit" onpaste="return false"></input>
+								<label class="04050928">minutes</label>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="ctrpspan 04050929">Roll-over Count :</span>
+								<input type="text" id="rolloverct1" class="rolloveredit" onpaste="return false"></input>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="ctrpspan 04050930">Max Roll-over Time :</span>
+								<input type="text" id="rollovertime1" class="rollovertimeedit" readonly="readonly" disabled="true"></input>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="box-content">
+					<ul>
+						<li class="item">
+							<input type="checkbox" id="enabletbl2" checked="true" ></input>
+							<label> <span class="04050926">Enable Table</span> 2</label>
+						</li>
+					</ul>
+				</li>
+				<li class="box-content">
+					<div id="divtable2" class="item dbinfo">
+						<ul>
+							<li>
+								<span class="ctrpspan 04050927">Sampling interval :</span>
+								<input type="text" id="sampling2" class="sampleedit" onpaste="return false"></input>
+								<label class="04050928">minutes</label>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="ctrpspan 04050929">Roll-over Count :</span>
+								<input type="text" id="rolloverct2" class="rolloveredit" onpaste="return false"></input>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="ctrpspan 04050930">Max Roll-over Time :</span>
+								<input type="text" id="rollovertime2" class="rollovertimeedit" readonly="readonly" disabled="true"></input>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="box-content">
+					<ul>
+						<li class="item">
+							<input type="checkbox" id="enabletbl3" checked="true" ></input>
+							<label> <span class="04050926">Enable Table</span> 3</label>
+						</li>
+					</ul>
+				</li>
+				<li class="box-content">
+					<div id="divtable3" class="item dbinfo">
+						<ul>
+							<li>
+								<span class="ctrpspan 04050927">Sampling interval :</span>
+								<input type="text" id="sampling3" class="sampleedit" onpaste="return false"></input>
+								<label class="04050928">minutes</label>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="ctrpspan 04050929">Roll-over Count :</span>
+								<input type="text" id="rolloverct3" class="rolloveredit" onpaste="return false"></input>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="ctrpspan 04050930">Max Roll-over Time :</span>
+								<input type="text" id="rollovertime3" class="rollovertimeedit" readonly="readonly" disabled="true"></input>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="box-content">
+					<div align="center">
+						<button id="btnApply"><span class="04050931">Apply</span></button>
+						<button id='btnRestoreDefaults'><span class="04050938">Restore Defaults</span></button>
+					</div>
+				</li>
+				<li class="box-content">
+					<ul>
+						<li class='box-title'><h2 class="04050932">Database Management</h2></li>
+						<li>
+							<div class="item">
+								<ul>
+									<li>
+										<button id="btnClear"><span class="04050933">Clear</span></button>
+										<button id="btnBackup"><span class="04050934">Back Up</span></button>
+									</li>
+								</ul>
+								<ul>
+									<li>
+										<form enctype="multipart/form-data" action="/cgi-bin/operator/countreport.cgi?" method="post" target="iframeImport">
+								            <fieldset>
+								              <ol>
+								                <li id="restore">
+								                  <label class="04050935">Restore from :</label>
+								                  <iframe name="iframeImport" id="iframeImport"></iframe>
+								                  <input type="hidden" name="action" value="set">
+								                  <input name="Filedata" id="Filedata" type="file" />
+								                  <input id="btnStart" type="submit" name="submit" value="Start" />
+								                </li>
+								              </ol>
+								            </fieldset>
+								         </form>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</div>
+			<div id="notifyservice" style="display:none">
+				<ul class="box">
+					<li class="box-title"><h2 class="04050949">Configuration</h2></li>
+			        <li class="box-content">
+			            <ul>
+			                <li class="item">
+			                    <ul>
+			                        <li>
+			                        	<label id="servicedisablednotifyl" style="display:none" class="servicedisablednotify"><FONT color="red" class="04050919">DB Service is disabled!!!</FONT></label>
+										<BR class="servicedisablednotify">
+			                            <input type="checkbox" id="mailNotifyEnable" />
+			                            <label for="mailNotifyEnable" class="04050950">Enable email notification</label>
+			                        </li>
+			                    </ul>
+			                </li>
+			            </ul>
+			        </li>
+				</ul>
+				<div class="box settingButton">
+			        <button id="btnApplyEmailEnable"><span class="04050951">Apply</span></button>
+			    </div>
+				<ul class="box">
+					<li class="box-title"><h2 class="04050952">E-Mail Recipient List</h2></li>
+					<li class="box-content">
+				      <ul>
+				        <li id="formERListBox" class="item">
+				          <ul>
+				            <li id="email_id" class="04050953">Id</li>
+				            <li id="email_name" class="04050954">Name</li>
+				            <li class="04050990">Subject</li>
+				          </ul>
+				        </li>
+				        <li id="formELBtn" class="item">
+				          <select size="8" id="formNotifyList" class="select-list"><option></option></select>
+				          <button id="btnAddAddr"><span class="04050955">Add</span></button>
+				          <button id="btnModifyAddr"><span class="04050956">Modify</span></button>
+				          <button id="btnRemoveAddr"><span class="04050957">Remove</span></button>
+				          <span>
+				            <a id="linkSmtp" href="#" class="04050958">Go to SMTP (E-Mail) Configuration</a>
+				          </span>
+				        </li>
+				      </ul>
+				    </li>
+				</ul>
+			</div>
+		</div>
+	</ul>
+	<div id="input_form" style="display:none">
+		<p id="msg_status"></p>
+		<fieldset>
+			<ul class="box">
+				<li class='box-title'><h2 class="04050959"  style="text-align:left">Email Configuration</h2></li>
+				<li class="box-content">
+					<ul>
+						<li class="item">
+							<span class="ctrpspan 04050960">Name :</span>
+							<input type="text" id="mailname" class="formDialog"></input>
+						</li>
+						<li class="item">
+							<span class="ctrpspan 04050961">Subject :</span>
+							<input type="text" id="maildesc"  class="formDialog"></input>
+						</li>
+						<li class="item">
+							<span class="ctrpspan 04050962">Address :</span>
+							<input type="text" id="mailaddr"   class="formDialog"></input>
+						</li>
+					</ul>
+				</li>
+				<li class='box-title'><h2 class="04050974"  style="text-align:left">Schedule Configuration</h2></li>
+				<li class="box-content">
+					<li class="item">
+						<label class="ctrpspan 04050993" style="float:left">Current Device Time:</label>
+						<div id="server_clock" ></div>
+					</li>
+					<li class="item" id="hourlypan">
+						<span class="ctrpspan">
+						<input type="radio" name="triggerMode" id="triggerMode0" value="hourly"></input>
+						<label for="enablehourly" class="04050992"> Enable Hourly Report</label>
+						</span>
+					</li>
+					<li class="item" id="dailypan">
+						<span class="ctrpspan">
+						<input type="radio" name="triggerMode" id="triggerMode1" value="daily" ></input>
+						<label for="enabledaily" class="04050976"> Enable Daily Report</label>
+						</span>
+					</li>
+					<li class="item" id="weeklypan">
+						<input type="radio" name="triggerMode" id="triggerMode2" value="weekly" class="ctrpspan" ></input>
+						<label for="enableweekly" class="04050977"> Enable Weekly Report</label>
+						<BR>
+						<span class='schedulepan 04050998' id='wdaypan'>Trigger Day :</span>
+						<select id="weekdaysel" ></select>
+					</li>
+					<li class="item" id="monthlypan">
+						<input type="radio" name="triggerMode" id="triggerMode3" value="monthly" class="ctrpspan"></input>
+						<label for="enablemonthly" class="04050979"> Enable Monthly Report</label>
+						<BR>
+						<span class='schedulepan 04050998' id='mdaypan'>Trigger Day :</span>
+						<select id="monthdaysel" ></select>
+					</li>
+				</li>
+				<li class='box-title'><h2 class="04050963"  style="text-align:left">Report Configuration</h2></li>
+				<li class="box-content">
+					<ul>
+						<li class="item datacontent">
+							<label id="contentdisabled" class="disabledtimeperiod"><FONT color="red" class="04050999">Hourly report always sends the count data from the the previous hour.</FONT></label>
+							<BR class="disabledtimeperiod">
+							<span class="ctrpspan 04050907">Time :</span>
+							<input type="checkbox" id="reportall"></input>
+							<label for="reportall" class="04050996">Report all data</label>
+							<BR>
+							<span class="ctrpspan"></span>
+							<select id="mailtimefrom" ></select><label class="04050908"> (from)</label>
+							<BR>
+							<span class="ctrpspan"></span>
+							<select type="text" id="mailtimeto" ></select><label class="04050909"> (to)</label>
+						</li>
+						<li class="item">
+							<span class="ctrpspan 04050910">Counter ID :</span>
+							<select id="mailcountselect" style="width:100px"></select><label> {active|all|0,1,...n}</label>
+						</li>
+						<li class="item">
+							<span class="ctrpspan 04050911">Table(Sampling) :</span>
+							<input type="checkbox" id="table0" class="formDialog"></input><label class="ctrpspan 04050964">Table 0</label>
+							<BR>
+							<span class="tablelistto"></span>
+							<input type="checkbox" id="table1" class="formDialog"></input><label class="ctrpspan 04050965">Table 1</label>
+							<BR>
+							<span class="tablelistto"></span>
+							<input type="checkbox" id="table2" class="formDialog"></input><label class="ctrpspan 04050966">Table 2</label>
+							<BR>
+							<span class="tablelistto"></span>
+							<input type="checkbox" id="table3" class="formDialog"></input><label class="ctrpspan 04050967">Table 3</label>
+						</li>
+						<li class="item">
+							<span class="ctrpspan 04050913">Sorting order :</span>
+							<input type="radio"  name="formSort" id="formSort0" value="descending" />
+							<label for="formSort0" class="04050968"> Descending</label>
+							<input type="radio"  name="formSort" id="formSort1" value="ascending" />
+							<label for="formSort1" class="04050969"> Ascending</label>
+						</li>
+						<li class="item">
+							<span class="ctrpspan 04050914">Value type :</span>
+							<input type="radio"  name="formValue" id="formValue0" value="abs" />
+							<label for="formValue0" class="04050970"> Absolute</label>
+							<input type="radio"  name="formValue" id="formValue1" value="diff" />
+							<label for="formValue1" class="04050971"> Difference</label>
+						</li>
+						<li class="item">
+							<span class="ctrpspan 04050989">Format :</span>
+							<input type="radio"  name="formFormat" id="formFormat0" value="table" />
+							<label for="formFormat0" class="04050972"> HTML</label>
+							<input type="radio"  name="formFormat" id="formFormat2" value="bar" />
+							<label for="formFormat1" class="04050994"> Bar</label>
+							<input type="radio"  name="formFormat" id="formFormat2" value="csv" />
+							<label for="formFormat2" class="04050973"> CSV(Attachment)</label>
+							<input type="radio"  name="formFormat" id="formFormat3" value="plain" />
+							<label for="formFormat3" class="04050995"> CSV(Plain Text)</label>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="box settingButtonDialog">
+		      <button id="btnDialogTest"><span class="04050991">Send Test Report</span></button>
+		      <button id="btnDialogOK"><span class="04050981">OK</span></button>
+		      <button id="btnDialogCancel"><span class="04050982">Cancel</span></button>
+		    </div>
+		</fieldset>
+	</div>
+<!-- ToolTip -->
+	<div id="predefine_tooltip" class="xstooltip">
+		<ul>
+			<li>keyword: from ~ to</li>
+			<li>one hour: now - 1 hour ~ now</li>
+			<li>today: today 00:00:00 ~ now</li>
+			<li>yesterday: yesterday ~ today</li>
+			<li>one day: now - 1 day ~ now</li>
+			<li>this week: sunday ~ today</li>
+			<li>last week: sunday - 1 week ~ saturday - 1 week</li>
+			<li>one week: today - 1 week ~ today</li>
+			<li>this month: 1st this month ~ today</li>
+			<li>last month: 1st last month ~ end last month</li>
+		</ul>
+	</div> 
+	<div id="tm_tooltip" class="xstooltip">
+		<ul>
+			<li>The available values are the reserved keyword, date, time and seconds.</li>
+			<li>keywords : now, today, yesterday, sunday ~ saturday, this_week ...</li>
+			<li>date,time : YYYY/MM/DD hh:mm</li>
+			<li>second : decimal integer value</li>
+			<li>------------------------------</li>
+			<li>time(from,to) examples</li>
+			<li>Assume that current time is 2011/05/23 14:20 monday</li>
+			<li>'now' means 2011/05/23 14:20</li>
+			<li>'today' means 2011/05/23 00:00</li>
+			<li>'now-01:00' means 2011/05/23 13:20</li>
+			<li>'today 04:00' means 2011/05/23 04:00</li>
+			<li>'today-04:00' means 2011/05/22 20:00</li>
+			<li>'yesterday+3600' means 2011/05/22 01:00</li>
+			<li>'sunday 06:00' means 2011/05/22 06:00</li>
+		</ul>
+	</div> 
+	<div id="counterid_tooltip" class="xstooltip">
+		<ul>
+			<li>It is the counter to want to show.</li>
+			<li>'active' means the displayed counters.</li>
+			<li>'all' means all counters (0~19).</li>
+			<li>The integer value means the counter id.</li>
+		</ul>
+	</div> 
+	<div id="sortorder_tooltip" class="xstooltip">
+		<ul>
+			<li>Select whether the results returned should be in</li>
+			<li>descending or ascending order.</li>
+		</ul>
+	</div>
+	<div id="valuetype_tooltip" class="xstooltip">
+		<ul>
+			<li>Select whether the results returned should be</li>
+			<li>the absolute value at each sample,</li>
+			<li>or the difference between the samples.</li>
+		</ul>
+	</div> 
+</body>
+</html>

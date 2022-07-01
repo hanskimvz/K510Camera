@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/common.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
+	<script type="text/javascript" src="../js/config/zoomfocus.js"></script>
+</head>
+<body id="config-page">
+	<p class="menuLocationInfo">
+		<span id="parentpagename" class="04020301">Setup &gt; Video &amp; Audio &gt;</span>
+		<span id="parentpagename_video" class="04020314" style="display:none;">Setup &gt; Video &gt;</span>
+		<span id="pagename" class="04020302">Zoom/Focus</span>
+	</p>
+	<div class="controlMenu">
+		<ul class="box">
+			<li class="box-title"><h2 class="04020303">Movement</h2></li>
+			<li id="ptz" class="box-content">
+				<ul>
+					<li class="item">
+						<ul>
+							<li id="ptz_zoomfocus">
+								<ul>
+									<li id="ptz_zoom" class="04020304">(Zoom) </li>
+									<li id="ptz_wide" class="04020305">Wide</li>
+									<li>
+										<img id="zoom_r3" class="ui-button" width="16" height="16" src="../../images/left3.gif" />
+										<img id="zoom_r2" class="ui-button" width="16" height="16" src="../../images/left2.gif" />
+										<img id="zoom_r1" class="ui-button" width="16" height="16" src="../../images/left1.gif" />
+										<img id="tele_l1" class="ui-button" width="16" height="16" src="../../images/right1.gif" />
+										<img id="tele_l2" class="ui-button" width="16" height="16" src="../../images/right2.gif" />
+										<img id="tele_l3" class="ui-button" width="16" height="16" src="../../images/right3.gif" />
+									</li>
+									<li id="ptz_tele" class="04020306"> Tele</li>
+								</ul>
+								<ul>
+									<li id="ptz_focus" class="04020307">(Focus) </li>
+									<li id="ptz_near" class="04020308"> Near</li>
+									<li>
+										<img id="focus_l3" class="ui-button" width="16" height="16" src="../../images/left3.gif" />
+										<img id="focus_l2" class="ui-button" width="16" height="16" src="../../images/left2.gif" />
+										<img id="focus_l1" class="ui-button" width="16" height="16" src="../../images/left1.gif" />
+										<img id="far_r1" class="ui-button" width="16" height="16" src="../../images/right1.gif" />
+										<img id="far_r2" class="ui-button" width="16" height="16" src="../../images/right2.gif" />
+										<img id="far_r3" class="ui-button" width="16" height="16" src="../../images/right3.gif" />
+									</li>
+									<li id="ptz_far" class="04020309">Far</li>
+								</ul>
+								<ul>
+									<li><button id="btnAF"><span class="04020310">One click focus</span></button></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<ul id="ptz_Calibration" class="box">
+			<li class="box-title"><h2 class="04020311">Calibration</h2></li>
+			<li class="box-content">
+				<ul>
+					<li class="item">
+						<ul>
+							<li id="zoomfocus_Title" class="04020312">Zoom/Focus :</li>
+							<li>
+								<button id="btnZoomFocus"><span class="04020313">Calibrate</span></button>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	<div id="viewToggle" class="box" align="center">
+		<iframe src="view.html" id="viewFrame" width="608px" height="342px" scrolling="no" marginheight="1" marginwidth="1" frameborder="0"></iframe>
+	</div>
+</body>
+</html>

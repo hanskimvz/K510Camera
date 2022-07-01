@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'
+	'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	<meta http-equiv='imagetoolbar' content='no' />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type='text/css' href='../css/config.css' rel='stylesheet' />
+	<link type='text/css' href='../css/theme.css' rel='stylesheet' />
+	<link type='text/css' href='../css/config/vcaloadsave.css' rel='stylesheet' />
+	<link type='text/css' href='../css/themes/base/jquery-ui.css' rel='stylesheet' />
+	<script type='text/javascript' src='../js/jquery-1.4.2.min.js'></script>
+	<script type='text/javascript' src='../js/jquery-ui-1.8.4.min.js'></script>
+	<script type='text/javascript' src='../js/jquery.cookie.js'></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type='text/javascript' src='../js/common.js'></script>
+	<script type='text/javascript' src='../js/cap.js'></script>
+	<script type='text/javascript' src='../js/cap.vca.js'></script>
+	<script type='text/javascript' src='../js/config/vcaloadsave.js'></script>
+</head>
+<body id='config-page'>
+	<p class='menuLocationInfo'>
+		<span class="04051217">Setup > VCA ></span>
+		<span id='pagename' class="04051201">Import/Export</span>
+	</p>
+	
+	
+
+	<ul class='box'>
+		<li class='box-title'><h2 class="04051204">VCA Configuration Export</h2></li>
+			<li class='box-content'>
+			<div>
+				<ul>
+					<li class='item'>
+						<button id='btnApply'><span class="04051216">Export</span></button>
+					</li>
+					<li class='item' style="display:none">
+						<div>
+							<ul>
+								<table>
+								<tr>
+									<td class="checkboxtd">
+									<input type="checkbox" id="expGeneral" name="xmltick" class="spanbox"></input>
+									<label for="expGeneral" class="04051205">General</label>
+									</td>
+									<td class="checkboxtd">
+									<input type="checkbox" id="expZones" name="xmltick" class="spanbox"></input>
+									<label for="expZones" class="04051206">Zones</label>
+									</td>
+									<td class="checkboxtd">
+									<input type="checkbox" id="expRules" name="xmltick" class="spanbox"></input>
+									<label for="expRules" class="04051207 ">Rules</label>
+									</td>
+									<td class="checkboxtd">
+									<input type="checkbox" id="expCounters" name="xmltick" class="spanbox"></input>
+									<label for="expCounters" class="04051208">Counters</label>
+									</td>
+									<td class="checkboxtd">
+									<input type="checkbox" id="expCalibration" name="xmltick" class="spanbox"></input>
+									<label for="expCalibration" class="04051209">Calibration</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="checkboxtd">
+									<input type="checkbox" id="expClass" name="xmltick" class="spanbox"></input>
+									<label for="expClass" class="04051210">Classification</label>
+									</td>
+									<td class="checkboxtd">
+									<input type="checkbox" id="expTamper" name="xmltick" class="spanbox"></input>
+									<label for="expTamper" class="04051211">Tamper</label>
+									</td>
+									<td class="checkboxtd">
+									<input type="checkbox" id="expBIA" name="xmltick" class="spanbox"></input>
+									<label for="expBIA" class="04051212 ">BIA</label>
+									</td>
+									<td class="checkboxtd">
+									<input type="checkbox" id="expPTZ" name="xmltick" class="spanbox"></input>
+									<label for="expPTZ" class="04051213">PTZ</label>
+									</td>
+									<td class="checkboxtd">
+									<input type="checkbox" id="expScene" name="xmltick" class="spanbox"></input>
+									<label for="expScene" class="04051214">Scene Change</label>
+									</td>
+								</tr>
+								</table>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class='box-title'><h2 class="04051202">VCA Configuration Import</h2></li>
+		<li class='box-content'>
+			<div>
+				<ul>
+					<li class='item'>
+						<div>
+							<ul>
+								<table>
+								<tr>
+									<td class="checkboxtd">
+									<input type="checkbox" id="impGeneral" name="xmltick" class="spanbox"></input>
+									<label for="impGeneral" class="04051205">General</label>
+									</td>
+									<td class="checkboxtd">
+									<input type="checkbox" id="impZones" name="xmltick" class="spanbox"></input>
+									<label for="impZones" class="04051206">Zones</label>
+									</td>
+									<td class="checkboxtd">
+									<input type="checkbox" id="impRules" name="xmltick" class="spanbox"></input>
+									<label for="impRules" class="04051207 ">Rules</label>
+									</td>
+									<td class="checkboxtd">
+									<input type="checkbox" id="impCounters" name="xmltick" class="spanbox"></input>
+									<label for="impCounters" class="04051208">Counters</label>
+									</td>
+									<td class="checkboxtd">
+									<input type="checkbox" id="impCalibration" name="xmltick" class="spanbox"></input>
+									<label for="impCalibration" class="04051209">Calibration</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="checkboxtd">
+									<input type="checkbox" id="impClass" name="xmltick" class="spanbox"></input>
+									<label for="impClass" class="04051210">Classification</label>
+									</td>
+									<td class="checkboxtd">
+									<input type="checkbox" id="impTamper" name="xmltick" class="spanbox"></input>
+									<label for="impTamper" class="04051211">Tamper</label>
+									</td>
+									<td class="checkboxtd">
+									<input type="checkbox" id="impBIA" name="xmltick" class="spanbox"></input>
+									<label for="impBIA" class="04051212 ">BIA</label>
+									</td>
+									<td class="checkboxtd">
+									<input type="checkbox" id="impPTZ" name="xmltick" class="spanbox"></input>
+									<label for="impPTZ" class="04051213">PTZ</label>
+									</td>
+									<td class="checkboxtd">
+									<input type="checkbox" id="impScene" name="xmltick" class="spanbox"></input>
+									<label for="impScene" class="04051214">Scene Change</label>
+									</td>
+									
+								</tr>
+								</table>
+							</ul>
+						</div>
+					</li>
+					<li class='item'>
+						<ul>
+							<li>
+								<form id="loadform" enctype="multipart/form-data" action="/uapi-cgi/vcaconfig.cgi?" method="post" target="iframeImport">
+						            <fieldset>
+						              <ol>
+						                <li id="restore">
+						                  <label class="04051203">Import from :</label>
+						                  <iframe name="iframeImport" id="iframeImport"></iframe>
+						                  <input type="hidden" name="action" value="import">
+						                  <input type="hidden" name="group" value="">
+						                  <input name="Filedata" id="Filedata" type="file" />
+						                  <button id="btnStart"  style="display:none"/><span class="04051215">Import</span></button>
+						                </li>
+						              </ol>
+						            </fieldset>
+						         </form>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			</li>
+	</ul>
+</body>
+</html>

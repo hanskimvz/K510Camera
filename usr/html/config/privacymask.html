@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<title></title>
+	<link type="text/css" href="../css/common.css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/jquery.browser.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/defstring/defregexp.js"></script>
+	<script type="text/javascript" src="../js/utils/control.js"></script>
+	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
+	<script type="text/javascript" src="../js/uapi.player.js"></script>
+	<script type="text/javascript" src="../js/activexobject.js"></script>
+	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
+	<script type="text/javascript" src="../js/config/privacymask.js"></script>
+	<script type="text/javascript" src="../js/config/privacymask_activex.js"></script>
+</head>
+
+<body id="config-page">
+	<p class="menuLocationInfo">
+		<span id="parentpagename" class="04020701">Setup &gt; Video &amp; Audio &gt;</span>
+		<span id="parentpagename_video" class="04020710" style="display:none;">Setup &gt; Video &gt;</span>
+		<span id="pagename" class="04020702">Privacy Mask</span>
+	</p>
+	<ul class="box">
+		<li class="box-title"><h2 class="04020703">View</h2></li>
+	</ul>
+	<div id="viewToggle" class="box" align="center">
+		<li id="screen"></li>
+		<li>
+			<span class="noIEMsg 04020709">* Privacy mask configuration is only supported in Internet Explorer.</span>
+		</li>
+	</div>
+	<ul class="box noIEContents">
+		<li class="box-title"><h2 class="04020704">Privacy Mask Zones</h2></li>
+		<li>
+			<ul id="infoTable">
+				<li class="item nocolor">
+					<div align="center">
+						<table id="users">
+							<thead>
+								<tr>
+									<th class="04020705">Show</th>
+									<th class="04020706">Zone ID</th>
+									<th class="04020707">Name</th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+						</table>
+					</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<div id="btn" class="box noIEContents" align="right">
+		<button id="save"><span class="04020708">SAVE</span></button>
+	</div>
+	<div id="debug_console"></div>
+</body>
+</html>
