@@ -1,0 +1,47 @@
+div#detailsregion
+{
+	width:			330px;
+	float:			left;
+}
+
+div#listregion
+{
+	margin:			0px;
+	padding:		0px;
+	float:			left;
+	display:		none;
+	width:			330px;
+}
+
+span.listtitle
+{
+	margin-top:		3px;
+	/* 
+	margin-left:	9px;
+	width:			22px;
+	 */
+	margin-left:	5px;
+	width:			40px;
+	float:			left;
+}
+
+select#classifierlist
+{
+	width:			100%;
+}
+
+ul.box .item .item-title
+{
+	width:			100px;
+	min-width:		100px;
+}
+
+label
+{
+	margin-left:	4px;
+}
+
+#addremovebuttons
+{
+	text-align:center;
+}

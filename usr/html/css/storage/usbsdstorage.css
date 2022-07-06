@@ -1,0 +1,92 @@
+﻿select#formStorageList {
+    width: 265px;
+    position: absolute;
+    top: 90px;
+    left: 15px;
+    font-size: 11px;
+    font-family: courier New;
+}
+select#formStorageList:lang(ar) {
+    left: 35em;
+}
+ul#formUsbSdStorageList li:nth-child(1) li:nth-child(1) {
+    width: 275px;
+}
+ul#formUsbSdStorageList li:nth-child(2) li:nth-child(1) {
+    width: 100px;
+}
+ul#formUsbSdStorageList li:nth-child(3) li:nth-child(1) {
+    margin-left: 280px;
+}
+ul#formUsbSdStorageList li:nth-child(4) li:nth-child(1) {
+    margin-left: 280px;
+}
+ul#formUsbSdStorageList li:nth-child(5) li:nth-child(1) {
+    margin-left: 280px;
+}
+ul#formUsbSdStorageList li:nth-child(6) li:nth-child(1) {
+    margin-left: 280px;
+}
+ul#formUsbSdStorageList li:nth-child(7) li:nth-child(1) {
+    margin-left: 280px;
+}
+ul#formUsbSdStorageList li:nth-child(8) li:nth-child(1) {
+    margin-left: 280px;
+}
+ul#formUsbSdStorageList li:nth-child(3) li:nth-child(1):lang(ar) {
+    margin-left: 0px;
+    margin-right: 280px;
+}
+ul#formUsbSdStorageList li:nth-child(4) li:nth-child(1):lang(ar) {
+    margin-left: 0px;
+    margin-right: 280px;
+}
+ul#formUsbSdStorageList li:nth-child(5) li:nth-child(1):lang(ar) {
+    margin-left: 0px;
+    margin-right: 280px;
+}
+ul#formUsbSdStorageList li:nth-child(6) li:nth-child(1):lang(ar) {
+    margin-left: 0px;
+    margin-right: 280px;
+}
+ul#formUsbSdStorageList li:nth-child(7) li:nth-child(1):lang(ar) {
+    margin-left: 0px;
+    margin-right: 280px;
+}
+ul#formUsbSdStorageList li:nth-child(8) li:nth-child(1):lang(ar) {
+    margin-left: 0px;
+    margin-right: 280px;
+}
+div.box {
+    margin-bottom: 5px;
+}
+button#btnList {
+    margin-top: 10px;
+    margin-right: 90px;
+}
+button#btnList:lang(ar) {
+    margin-right: 8px;
+    margin-left: 90px;
+}
+#listButton {
+    display: block;
+    margin-left: 6px;
+}
+#RDCButton {
+    display: block;
+}
+#btnSelect {
+    display: none;
+}
+h5 {
+    margin: 5px 0px 5px 0px;
+}
+#formatStatus_contents {
+    display: none;
+}
+.sd_Contents {
+    display: block;    
+}
+.usbsd_Contents {
+    display: none;    
+}

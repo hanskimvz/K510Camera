@@ -1,0 +1,17 @@
+.functionEx { 
+	color: #E17009;
+	margin-left: 10px;
+}
+.functionExLists {
+	margin-left: 10px !important;
+	font-size: 10px;
+}
+.linkCamera {
+	color: #0000ff !important;
+}
+.Rotation_Contents {
+	display: none;
+}
+.Stabilization_Contents {
+	display: none;
+}

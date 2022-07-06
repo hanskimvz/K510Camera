@@ -1,0 +1,28 @@
+div#stream_tab {
+	margin: 2px 0px 0px 11px; width: 645px;
+}
+div#stream_tab ul.css-tabs {
+	padding: 0px 10px;
+}
+div#stream_tab ul.css-tabs li {
+	display: none;
+}
+div#stream_tab div#stream_0 {
+	padding: 0px 0px;
+}
+div#fa_source {
+	display: none;
+}
+div#stream_0 ul.box {
+	padding: 0px;
+}
+#viewToggle {
+	display: block;
+}
+#noIEMsg {
+	position: absolute; left: 440px; top: 303px;
+	color: #E17009; font: 10px arial,sans-serif;
+}
+#loading_msg {
+	top: 50px;
+}

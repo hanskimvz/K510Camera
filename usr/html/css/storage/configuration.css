@@ -1,0 +1,57 @@
+﻿input#formARPriRulSeg1 {
+	margin-top: 4px;
+}
+label[for='formARPriRulSeg1'] {
+	top: 3px;
+}
+input#formARPriRulSeg2 {
+	margin-top: 4px;
+}
+label[for='formARPriRulSeg2'] {
+	top: 3px;
+}
+.formConfSliderWidth {
+	width: 40px;
+}
+button#btnStop {
+	display: none;
+}
+button#btnDown {
+	display: none;
+}
+#formConfDownBtn {
+	float: right;
+}
+input#formARMegabyte {
+	text-align: center;
+}
+input#formARMinute {
+	text-align: center;
+}
+input#formARConfRecSec {
+	text-align: center;
+}
+#formARRecRes {
+	width: 120px;
+}
+#formARPriStream {
+	width: 120px;
+}
+#btn {
+	padding-bottom: 20px;
+}
+.avi_contents {
+  display: none;
+}
+.dat_contents {
+  display: none;
+}
+input#formADDuration {
+  text-align: center;
+}
+input#formADUseBuffer {
+  margin-top: 7px;
+}
+.InstantRecContents {
+  display: block;
+}

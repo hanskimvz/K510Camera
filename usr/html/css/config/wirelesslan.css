@@ -1,0 +1,164 @@
+﻿select#formWL_List {
+	position: absolute;
+	width: 28em;
+	height: 11.7em;
+	top: 8.2em;
+	left: 1em;
+	font-size: 0.68em;
+	font-family: courier New;
+}
+ul#formWL_WirelessList li:nth-child(1) li:nth-child(1) {
+	width: 315px;
+}
+ul#formWL_WirelessList li:nth-child(2) li:nth-child(1) {
+	margin-left: 10px;
+	width: 103px;
+}
+ul#formWL_WirelessList li:nth-child(2) li:nth-child(2) {
+	width: 125px;
+}
+ul#formWL_WirelessList li:nth-child(3) li:nth-child(1) {
+	margin-left: 320px;
+}
+ul#formWL_WirelessList li:nth-child(4) li:nth-child(1) {
+	margin-left: 320px;
+}
+ul#formWL_WirelessList li:nth-child(5) li:nth-child(1) {
+	margin-left: 320px;
+}
+ul#formWL_WirelessList li:nth-child(6) li:nth-child(1) {
+	margin-left: 320px;
+}
+ul#formWL_WirelessList li:nth-child(7) li:nth-child(1) {
+	margin-left: 320px;
+}
+ul#formWL_WirelessList li:nth-child(8) li:nth-child(1) {
+	margin-left: 320px;
+}
+ul#formWL_WirelessList li:nth-child(9) li:nth-child(1) {
+	margin-left: 320px;
+}
+ul#formWL_WirelessList li:nth-child(10) li:nth-child(1) {
+	margin-left: 320px;
+}
+#formWL_ListAuthSelect {
+	width: 80px;
+	margin: 0px;
+}
+#formWL_ListNetkeyPass {
+	margin: 0px;
+}
+ul.box li.item .marginAdjustZero {
+	margin: 0px;
+}
+div.box {
+	margin-bottom: 5px;
+}
+#btnList {
+	margin-bottom: 10px;
+}
+#listButton {
+	display: block;
+	margin-left: 6px;
+}
+#btnFormatExt3 {
+	display: none;
+}
+li#formTI_dhcp p {
+	margin-left: 50px;
+}
+li#formWL_Connect p {
+	margin-left: 50px;
+}
+li#formWL_Auth {
+	padding-left: 30px;
+	width:153px;
+	margin-top: 7px;
+}
+li#formWL_NetKey {
+	padding-left: 30px;
+}
+li#formWL_Timeout {
+	padding-left: 30px;
+	width:153px;
+	margin-top: 7px;
+}
+li#formWL_Retrycount {
+	padding-left: 30px;
+	width:153px;
+	margin-top: 7px;
+}
+
+/* Wireless network IP configuration */
+input[name='formWL_DhcpChk'] {
+	margin-left: 30px;
+}
+li#formWL_Dhcp p {
+	margin-left: 70px;
+}
+li#formWL_Dhcp p:nth-child(5) {
+	margin-bottom: 5px;
+}
+li#formWL_Dhcp p:nth-child(3) span {
+	display: inline-block;
+	width: 160px;
+}
+li#formWL_Dhcp p:nth-child(4) span {
+	display: inline-block;
+	width: 160px;
+}
+li#formWL_Dhcp p:nth-child(5) span {
+	display: inline-block;
+	width: 160px;
+}
+li#formWL_Static p {
+	margin-left: 70px;
+}
+li#formWL_Static p:nth-child(3) {
+	margin-top: -5px;
+}
+li#formWL_Static p:nth-child(3) > span {
+	display: inline-block;
+	width: 160px;
+}
+li#formWL_Static p:nth-child(4) span {
+	display: inline-block;
+	width: 160px;
+}
+li#formWL_Static p:nth-child(5) span {
+	display: inline-block;
+	width: 160px;
+}
+li#formWL_Static p:nth-child(6) span {
+	display: inline-block;
+	width: 160px;
+}
+li#formWL_Static p:nth-child(7) span {
+	display: inline-block;
+	width: 160px;
+}
+
+ul.box .box-content .linkLocalIPContents {
+	display: none;
+}
+ul.box .box-content .linkLocalIPContents p {
+	margin-left: 50px;
+}
+ul.box .box-content .linkLocalIPContents p span {
+	display: inline-block;
+	width: 160px;
+}
+ul.box .box-content .linkLocalSubnetContents {
+	display: none;
+}
+ul.box .box-content .linkLocalSubnetContents p {
+	margin-left: 50px;
+}
+ul.box .box-content .linkLocalSubnetContents p .SubnetTitle {
+	display: inline-block;
+	width: 160px;
+}
+#btnIPRenew > span {
+	line-height: 11px;
+	width: 48px;
+}

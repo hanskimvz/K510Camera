@@ -1,0 +1,105 @@
+
+li#CRListBoxColTitles li:nth-child(1) {
+  width: 120px;
+}
+
+select#complexRulesList {
+  width: 100%;
+}
+
+li#CRButtons {
+  text-align: center;
+}
+
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+
+.bg0 {
+	background-color: #E8F2F7;
+}
+
+.bg1 {
+	background-color: #FFFFFF;
+}
+
+.reLeft {
+	float:left;
+	width:60%;
+}
+
+.reFull {
+	width:100%;
+}
+
+.reDebug {
+	float:right;
+	width:30%;
+}
+
+.rule-sentence {
+	font-weight: bold;
+	color: #133E89;
+}
+
+.ident {
+	list-style-type: none;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+.rule-text {
+	font-size: 11px;
+}
+
+.rule-padding {
+	padding: 3px;
+}
+
+.cr-group {
+	border-style: dashed;
+	border-color: #133E89;
+	border-width: thin;
+}
+
+.cr-button {
+	background-color:#f6ecd5;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+	text-indent:0px;
+	border:1px solid #CDC3B7;
+	display:inline-block;
+	color:#2e6e9e;
+	height:13px;
+	line-height:3px;
+	width:12px;
+	text-decoration:none;
+	text-align:center;
+}
+
+.cr-textfield {
+	border:1px solid #CDC3B7;
+}
+
+.cr-description {
+	width:85%;
+}
+
+.cr-input {
+	width:3em;
+}
+
+.cr-clause-select {
+	width:4.5em;
+}
+
+.cr-selector {
+	font-family: "Lucida Console", Monaco, monospace !important;
+}
+
+.crplaceholder {
+	color:#A3A3A3 !important;
+}
+

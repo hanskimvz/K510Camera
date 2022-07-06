@@ -1,0 +1,111 @@
+{
+    "config": {
+        "basic": [
+            { "lang_key":"users",       "id": "basic_user",         "href": "users.html" },
+            { "lang_key":"tcpip",       "id": "basic_tcpip",        "href": "tcpip.html" },
+            { "lang_key":"datetime",    "id": "basic_datetime",     "href": "datetime.html" },
+            { "lang_key":"stream",      "id": "basic_stream",       "href": "stream.html" },
+            { "lang_key":"focusassist", "id": "basic_focusassist",  "href": "stream.html" }
+        ],
+        "videoNaudio":[
+            { "lang_key":"camera",          "id": "va_camera",         "href": "camera.html" },
+            { "lang_key":"zoomfocus",       "id": "va_zoomfocus",      "href": "zoomfocus.html" },
+            { "lang_key":"burntintext",     "id": "va_burntintext",    "href": "burntintext.html" },
+            { "lang_key":"encoderprofile",  "id": "va_encoderprofile", "href": "encoderprofile.html" },
+            { "lang_key":"privacymask",     "id": "va_privacymask",    "href": "privacymask.html" }
+        ],
+        "eventConf":[
+            { "lang_key":"eventrules",          "id": "eventrules",         "href": "eventrules.html" },
+            { "lang_key":"advancedrules",       "id": "advancedrules",      "href": "advancedrules.html" },
+            { "lang_key":"motiondetection",     "id": "motiondetection",    "href": "motiondetection.html" },
+            { "lang_key":"facedetection",   "id": "facedetection", "href": "facedetection.html" },
+            { "lang_key":"networkloss",     "id": "networkloss",    "href": "networkloss.html" },
+            { "lang_key":"heartbeat",          "id": "heartbeat",         "href": "heartbeat.html" },
+            { "lang_key":"eventschedule",       "id": "eventschedule",      "href": "eventschedule.html" },
+            { "lang_key":"emailrecipient",     "id": "emailrecipient",    "href": "emailrecipient.html" },
+            { "lang_key":"ftpnotification",  "id": "ftpnotification", "href": "ftpnotification.html" },
+            { "lang_key":"httpnotification",          "id": "httpnotification",         "href": "httpnotification.html" },
+            { "lang_key":"tcpnotification",       "id": "tcpnotification",      "href": "tcpnotification.html" },
+            { "lang_key":"tcpserver",     "id": "tcpserver",    "href": "tcpserver.html" },
+            { "lang_key":"multicastnotification",  "id": "multicastnotification", "href": "multicastnotification.html" }
+        ],
+        "networkConf":[
+            { "lang_key":"tcpip",          "id": "tcpip",         "href": "tcpip.html" },
+            { "lang_key":"http",       "id": "http",      "href": "http.html" },
+            { "lang_key":"ntp",     "id": "ntp",    "href": "ntp.html" },
+            { "lang_key":"upnp",  "id": "upnp", "href": "upnp.html" },
+            { "lang_key":"rtsprtp",     "id": "rtsprtp",    "href": "rtsprtp.html" },
+            { "lang_key":"rtmp",          "id": "rtmp",         "href": "rtmp.html" },
+            { "lang_key":"mdns",       "id": "mdns",      "href": "mdns.html" },
+            { "lang_key":"wsdiscovery",     "id": "wsdiscovery",    "href": "wsdiscovery.html" },
+            { "lang_key":"smtp",  "id": "smtp", "href": "smtp.html" },
+            { "lang_key":"ddns",          "id": "ddns",         "href": "ddns.html" },
+            { "lang_key":"snmp",       "id": "snmp",      "href": "snmp.html" },
+            { "lang_key":"wirelesslan",     "id": "wirelesslan",    "href": "wirelesslan.html" },
+            { "lang_key":"ipfiltering",  "id": "ipfiltering", "href": "ipfiltering.html" },
+            { "lang_key":"hostedservice",          "id": "hostedservice",         "href": "hostedservice.html" },
+            { "lang_key":"iotservice",       "id": "iotservice",      "href": "iotservice.html" },
+            { "lang_key":"ieee8021x",     "id": "ieee8021x",    "href": "ieee8021x.html" }
+        ],
+        "storage":[
+            { "lang_key":"usbsdstorage",          "id": "usbsdstorage",         "href": "usbsdstorage.html" },
+            { "lang_key":"ftpstorage",       "id": "ftpstorage",      "href": "ftpstorage.html" },
+            { "lang_key":"configuration",     "id": "configuration",    "href": "configuration.html" },
+            { "lang_key":"filedownload",  "id": "filedownload", "href": "filedownload.html" }
+        ],
+        "vcaConf":[
+            { "lang_key":"vcaenabledisable",          "id": "vcaenabledisable",         "href": "vcaenabledisable.html" },
+            { "lang_key":"vcazoneconfiguration",       "id": "vcazoneconfiguration",      "href": "vcazoneconfiguration.html" },
+            { "lang_key":"vcacalibration",     "id": "vcacalibration",    "href": "vcacalibration.html" },
+            { "lang_key":"vcaptztracking",  "id": "vcaptztracking", "href": "vcaclassification.html" },
+            { "lang_key":"vcatamper",          "id": "vcatamper",         "href": "vcatamper.html" },
+            { "lang_key":"vcascenechange",       "id": "vcascenechange",      "href": "vcascenechange.html" },
+            { "lang_key":"vcascenemaintenance",     "id": "vcascenemaintenance",    "href": "vcascenemaintenance.html" },
+            { "lang_key":"vcaptztracking",  "id": "vcaptztracking", "href": "vcaptztracking.html" },
+            { "lang_key":"vcaburntinannotation",  "id": "vcaburntinannotation", "href": "vcaburntinannotation.html" },
+            { "lang_key":"vcacounterreport",          "id": "vcacounterreport",         "href": "vcacounterreport.html" },
+            { "lang_key":"vcaheatmapreport",       "id": "vcaheatmapreport",      "href": "vcaheatmapreport.html" },
+            { "lang_key":"vcaadvanced",     "id": "vcaadvanced",    "href": "vcaadvanced.html" },
+            { "lang_key":"vcaloadsave",  "id": "vcaloadsave", "href": "vcaloadsave.html" }
+        ],
+        "peripherial":[
+            { "lang_key":"dido",          "id": "dido",         "href": "dido.html" },
+            { "lang_key":"uart",       "id": "uart",      "href": "uart.html" },
+            { "lang_key":"heater",     "id": "heater",    "href": "heater.html" }
+        ],
+        "ptzConf":[
+            { "lang_key":"ptz",  "id": "ptz", "href": "ptz.html" },
+            { "lang_key":"touring",          "id": "touring",         "href": "touring.html" },
+            { "lang_key":"autorun",       "id": "autorun",      "href": "autorun.html" },
+            { "lang_key":"protocol",     "id": "protocol",    "href": "protocol.html" },
+            { "lang_key":"presetschedule",  "id": "presetschedule", "href": "presetschedule.html" }          
+        ],
+        "maintenance":[
+            { "lang_key":"users",  "id": "users", "href": "users.html" },
+            { "lang_key":"datetime",          "id": "datetime",         "href": "datetime.html" },
+            { "lang_key":"api",       "id": "api",      "href": "api.html" },
+            { "lang_key":"language",     "id": "language",    "href": "language.html" },
+            { "lang_key":"firmwareupgrade",  "id": "firmwareupgrade", "href": "firmwareupgrade.html" },
+            { "lang_key":"systemlog",  "id": "systemlog", "href": "systemlog.html" },
+            { "lang_key":"confimportexport",          "id": "confimportexport",         "href": "confimportexport.html" },
+            { "lang_key":"resetallsetting",       "id": "resetallsetting",      "href": "resetallsetting.html" },
+            { "lang_key":"reboot",     "id": "reboot",    "href": "reboot.html" },
+            { "lang_key":"thirdmngr",  "id": "thirdmngr", "href": "thirdmngr.html" }    
+        ],
+        "activation":[
+            { "lang_key":"activate",  "id": "activate", "href": "activate.html" } 
+
+        ],
+        "about":[
+            { "lang_key":"information",  "id": "information", "href": "information.html" } ,
+            { "lang_key":"license",  "id": "license", "href": "license.html" } 
+        ],
+        "oem":[
+            { "lang_key":"oem",  "id": "oem", "href": "oem.html" } 
+        ]
+
+
+
+
+    }
+}

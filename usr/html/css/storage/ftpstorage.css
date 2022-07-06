@@ -1,0 +1,14 @@
+﻿#prefixFileType {
+  background: #EEEEEE;
+  text-align: center;
+}
+label[for='prefixFileType'] {
+  top: 2px;
+}
+#formIPAddress {
+  margin-left: 3px;
+}
+#formIPAddress span {
+	display: inline-block;
+	width: 153px;
+}

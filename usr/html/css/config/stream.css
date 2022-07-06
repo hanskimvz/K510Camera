@@ -1,0 +1,144 @@
+﻿input[type='text'] {
+	text-align: center;
+}
+select {
+	margin-top: 0px;
+}
+li#formENListBox.item {
+	 min-heigth: 0px;
+}
+li#formENListBox.item ul li:nth-child(1) {
+	 margin-left: 13px; width: 93px;
+}
+li#formENListBox.item ul li:nth-child(2) {
+	 width: 190px;
+}
+li#formENListBox.item ul li:nth-child(3) {
+	 width: 150px;
+}
+select#formProfileList {
+	width: 640px;
+}
+li#formStreamBtnLink {
+	margin-top: 22px;
+}
+li#formStreamBtnLink li:nth-child(1) {
+	float: left;
+}
+li#formStreamBtnLink li:nth-child(2) {
+	float: right;
+	padding-top:15px;
+}
+li#formStreamBtnLink li:nth-child(1):lang(ar) {
+	float: right;
+}
+li#formStreamBtnLink li:nth-child(2):lang(ar) {
+	float: left;
+}
+li#formStreamBtnLink li:nth-child(2) span a, a#linkEncoderProfile {
+	color: #0000ff;
+}
+div#effect {
+	display: none;
+}
+.profileLoad {
+	display: none;
+}
+.profileList {
+	margin-top: 7px;
+	display: none;
+}
+
+/* first stream */
+div#stream_stream_0 {
+	display: none;
+}
+li#formBRC_VBR_stream_0 ul:nth-child(1) li {
+	margin-left: 20px;
+}
+li#formBRC_VBR_stream_0 ul:nth-child(2) li:nth-child(1) {
+	margin-left: 40px;
+	margin-right: 29px;
+	margin-top: 5px;
+}
+li#formBRC_VBR_stream_0 ul:nth-child(3) li:nth-child(1) {
+	margin-left: 127px;
+}
+li#formBRC_CBR_stream_0 ul:nth-child(1) li {
+	margin-left: 20px;
+}
+li#formBRC_CBR_stream_0 ul:nth-child(2) li:nth-child(1) {
+	margin-left: 40px;
+	margin-right: 29px;
+	margin-top: 5px;
+}
+#formBRC_VBR_stream_0_QValue {
+	margin-top: 0px;
+}
+/* second stream */
+div#stream_stream_1 {
+	display: none;
+}
+li#formBRC_VBR_stream_1 ul:nth-child(1) li {
+	margin-left: 20px;
+}
+li#formBRC_VBR_stream_1 ul:nth-child(2) li:nth-child(1) {
+	margin-left: 40px;
+	margin-right: 29px;
+	margin-top: 5px;
+}
+li#formBRC_VBR_stream_1 ul:nth-child(3) li:nth-child(1) {
+	margin-left: 127px;
+}
+li#formBRC_CBR_stream_1 ul:nth-child(1) li {
+	margin-left: 20px;
+}
+li#formBRC_CBR_stream_1 ul:nth-child(2) li:nth-child(1) {
+	margin-left: 40px;
+	margin-right: 29px;
+	margin-top: 5px;
+}
+#formBRC_VBR_stream_1_QValue {
+	margin-top: 0px;
+}
+
+div#stream_snapshot {
+	display: none;
+}
+div#stream_audio {
+	display: none;
+}
+div#stream_vca {
+	display: none;
+}
+li#button_content {
+	float: right;
+}
+li#button_content:lang(ar) {
+	float: left;
+}
+div.resAddEx {
+	color: #E17009;
+	margin-left: 10px;
+	display: none;
+}
+.vcaEnabled {
+	display: none;
+}
+li#vcaEnabledEx {
+	padding: 5px;	
+}
+li#vcaEnabledEx a {
+	color:	#0000FF;
+}
+
+#stream_tab {
+	height: 380px; 
+}
+#streamButtons {
+	text-align: right;
+}
+div.line-delimiter {
+	height: 3px;
+	background-color: #DEDED0;
+}

@@ -1,0 +1,15 @@
+ul.box .item .onvifInner {
+	margin: 3px 0px 0px 25px;
+}
+ul.box .item .onvifInner:lang(ar) {
+	margin: 3px 25px 0px 0px;
+}
+ul.box .item .onvifInner div {
+	margin-bottom: 3px;
+}
+ul.box .item .onvifSub {
+	margin-left: 25px;
+}
+#onvif_addr {
+	display: inline-block;
+}

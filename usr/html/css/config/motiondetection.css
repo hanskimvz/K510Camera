@@ -1,0 +1,59 @@
+﻿body#config-page {
+	display: block;
+}
+#users {
+	width: 640px;
+	border: 0px solid #E7E3D7;
+	font-size: 10px;
+}
+#users thead th {
+	background-color: #DDDDDD;
+	border: 1px solid #E7E3D7;
+	padding: 1px;
+}
+#users thead th:nth-child(1) {
+	width: 0px;
+}
+#users thead th:nth-child(2) {
+	width: 50px;
+}
+#users thead th:nth-child(3) {
+	width: 100px;
+}
+#users thead th:nth-child(4) {
+	width: 230px;
+}
+#users thead th:nth-child(5) {
+	width: 40px;
+}
+#users thead th:nth-child(6) {
+	width: 40px;
+}
+#users thead th:nth-child(7) {
+	width: 8px;
+}
+#users tbody td {
+	border: 1px solid #E7E3D7;
+	padding: 1px;
+	text-align: center;
+}
+input[type="text"] {
+	border: 0px solid #DEDED0;
+}
+#loading_msg {
+	top: 400px;
+}
+#infoTable {
+	margin-top:0px;
+}
+#noIEMsg {
+  color: #E17009;
+  font: 10px arial,sans-serif;
+  display: none;
+}
+li.box-content li.float_r {
+  float: right;
+}
+#rtsprtpLink a {
+	color: #0000FF;
+}

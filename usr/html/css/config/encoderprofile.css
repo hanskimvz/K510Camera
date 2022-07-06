@@ -1,0 +1,159 @@
+﻿select {
+	margin-top: 0px;
+}
+li#formENListBox.item {
+	 min-heigth: 0px;
+}
+li#formENListBox.item ul li:nth-child(1) {
+	 margin-left: 13px; width: 93px;
+}
+li#formENListBox.item ul li:nth-child(2) {
+	 width: 190px;
+}
+li#formENListBox.item ul li:nth-child(3) {
+	 width: 150px;
+}
+select#formProfileList.select-list {
+	width: 640px;
+}
+li#formENBtn.item {
+	text-align: center;
+}
+div#input_form {
+	display: block;
+}
+li#formEncoderUsage {
+	margin-top: 4px;
+}
+/* first stream */
+div#stream_stream_0 {
+	display: none;
+}
+li#formBRC_VBR_stream_0 ul:nth-child(1) li {
+	margin-left: 20px;
+}
+li#formBRC_VBR_stream_0 ul:nth-child(2) li:nth-child(1) {
+	margin-left: 40px;
+	margin-right: 29px;
+	margin-top: 5px;
+}
+li#formBRC_VBR_stream_0 ul:nth-child(3) li:nth-child(1) {
+	margin-left: 127px;
+}
+li#formBRC_CBR_stream_0 ul:nth-child(1) li {
+	margin-left: 20px;
+}
+li#formBRC_CBR_stream_0 ul:nth-child(2) li:nth-child(1) {
+	margin-left: 40px;
+	margin-right: 29px;
+	margin-top: 5px;
+}
+#formBRC_VBR_stream_0_QValue {
+	margin-top: 0px;
+}
+/* second stream */
+div#stream_stream_1 {
+	display: none;
+}
+li#formBRC_VBR_stream_1 ul:nth-child(1) li {
+	margin-left: 20px;
+}
+li#formBRC_VBR_stream_1 ul:nth-child(2) li:nth-child(1) {
+	margin-left: 40px;
+	margin-right: 29px;
+	margin-top: 5px;
+}
+li#formBRC_VBR_stream_1 ul:nth-child(3) li:nth-child(1) {
+	margin-left: 127px;
+}
+li#formBRC_CBR_stream_1 ul:nth-child(1) li {
+	margin-left: 20px;
+}
+li#formBRC_CBR_stream_1 ul:nth-child(2) li:nth-child(1) {
+	margin-left: 40px;
+	margin-right: 29px;
+	margin-top: 5px;
+}
+#formBRC_VBR_stream_1_QValue {
+	margin-top: 0px;
+}
+
+div#stream_snapshot {
+	display: none;
+}
+div#stream_audio {
+	display: none;
+}
+div#stream_vca {
+	display: none;
+}
+input#formInVolume {
+	text-align: center;
+}
+input#formOutVolume {
+	text-align: center;
+}
+input#formOutPort {
+	text-align: center;
+}
+input#formMaxFps_stream_0 {
+	text-align: center;
+}
+input#formGOP_stream_0 {
+	text-align: center;
+}
+input#formBitrate_stream_0 {
+	text-align: center;
+}
+input#formQuality_stream_0 {
+	text-align: center;
+}
+input#formMaxFps_stream_1 {
+	text-align: center;
+}
+input#formGOP_stream_1 {
+	text-align: center;
+}
+input#formBitrate_stream_1 {
+	text-align: center;
+}
+input#formQuality_stream_1 {
+	text-align: center;
+}
+input#formCdSnapMaxFps {
+	text-align: center;
+}
+input#formCdSnapQuality {
+	text-align: center;
+}
+div#effect {
+	display:none;
+}
+div.resAddEx {
+	color: #E17009;
+	margin-left: 10px;
+	display: none;
+}
+ul.vcaEnabled {
+	display: none;
+}
+li#vcaEnabledEx a {
+	color:	#0000FF;
+}
+div#effect ul.box li.item li#infoStreamAudio {
+	width:470px;
+}
+div#effect ul.box li.item li#infoStreamFirst {
+	width:470px;
+}
+div#effect ul.box li.item li#infoStreamSecond {
+	width:470px;
+}
+
+#stream_tab {
+    height: 380px; 
+}
+div.line-delimiter {
+    height: 3px;
+    background-color: #DEDED0;
+}

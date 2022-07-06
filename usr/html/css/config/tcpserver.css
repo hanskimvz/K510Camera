@@ -1,0 +1,39 @@
+#linkcustomaizeventfmt {
+	float: right;
+}
+.information {
+	padding: 3px; margin-top: 3px;
+}
+.inner-title {
+	padding: 5px; margin-top: 3px; display: block;
+}
+.fmtinput {
+	margin-left: 5px;
+}
+.radiosel {
+	margin-left: 5px;
+}
+.inner-table {
+	margin: 2px 3px;
+}
+.float_r {
+	float: right;
+}
+.xstooltip {
+	font: 8pt/normal sans-serif; 
+	padding: 3px; 
+	border: 1px solid currentColor; 
+	left: 0px; 
+	top: 0px; 
+	visibility: hidden; 
+	position: absolute; 
+	z-index: 2; 
+	font-size-adjust: none; 
+	font-stretch: normal; 
+	background-color: 
+	rgb(250, 250, 250); 
+	first: 1;
+}
+li.sys_fmt_link {
+  display: none;
+}

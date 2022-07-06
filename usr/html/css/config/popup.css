@@ -1,0 +1,11 @@
+#popup-main {
+	border: 1px solid #E7E3D7;
+	margin: 15px auto;
+	width: 650px;
+}
+#screen {
+	padding: 5px;
+}
+#btn {
+	padding: 20px 0px;
+}

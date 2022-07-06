@@ -1,0 +1,24 @@
+﻿input#formEnableAuthen0 ~ p {
+	/*margin-left: 20px;*/
+}
+input#formUserName {
+	width: 115px;
+}
+input#formUserPassword {
+	width: 150px;
+}
+input#formUserConfirmPassword {
+	width: 150px;
+}
+.displayCheck {
+	display: none;
+}
+input.displayCheck:lang(ar), label.displayCheck:lang(ar), li.displayCheck:lang(ar) {
+    display: none;
+}
+li input[type="text"] {
+	margin-top: -2px;	
+}
+li input[type="password"] {
+	margin-top: -2px;
+}

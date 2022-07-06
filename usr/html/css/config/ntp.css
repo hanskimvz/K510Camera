@@ -1,0 +1,27 @@
+﻿#btnNtp1stTest > span {
+	line-height: 10px;
+}
+#btnNtp2ndTest > span {
+	line-height: 10px;
+}
+#btnNtp3rdTest > span {
+	line-height: 10px;
+}
+#btnNtp4thTest > span {
+	line-height: 10px;
+}
+li#testStatus1 {
+	margin-top: 6px;
+}
+li#testStatus2 {
+	margin-top: 6px;
+}
+li#testStatus3 {
+	margin-top: 6px;
+}
+li#testStatus4 {
+	margin-top: 6px;
+}
+.btnRemove {
+	display: none;
+}

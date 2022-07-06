@@ -1,251 +1,76 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html lang="en">
+<?php
+include ("../inc/common.php");
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+?>
+<html lang="en" >
+<?php
+error_reporting( E_ALL );
+ini_set( 'display_errors', '1' );
 
-<head>
-	<!--#include virtual="../ssi/includemeta"-->
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="imagetoolbar" content="no" />
-	<meta http-equiv="Cache-Control" content="no-cache"/>
-	<meta http-equiv="Expires" content="0"/>
-	<meta http-equiv="Pragma" content="no-cache"/>
-	<title></title>
-	<link type="text/css" href="../css/common.css" rel="stylesheet" />
-	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.corner.js?v2.09"></script>
-	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
-	<script type="text/javascript" src="../js/common.js"></script>
-	<script type="text/javascript" src="../js/defstring/defbrand.js"></script>
-	<script type="text/javascript" src="../js/utils/jq_string.js"></script>
-	<script type="text/javascript" src="../js/utils/jq_control.js"></script>
-	<script type="text/javascript" src="../js/utils/log.js"></script>
-	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
-	<script type="text/javascript" src="../js/uapi.player.js"></script>
-	<script type="text/javascript" src="../js/cap.js"></script>
-	<script type="text/javascript" src="../js/cap.vca.js"></script>
-	<script type="text/javascript" src="../js/cap.player.js"></script>
-	<script type='text/javascript' src='../js/xml2json.min.js'></script>
-	<!--script type="text/javascript" src="vcacomplexrules/actiondefinition.js"></script>
-	<script type="text/javascript" src="vcacomplexrules/clausedefinition.js"></script>
-	<script type="text/javascript" src="vcacomplexrules/data.js"></script-->
-	<script type="text/javascript" src="../js/plat_utils/brand.js"></script>
-	<script type="text/javascript" src="../js/plat_utils/string.js"></script>
-	<script type="text/javascript" src="../js/plat_utils/uconfig.js"></script>
-	<script type="text/javascript" src="../js/brand.js"></script>
-	<script type="text/javascript" src="../js/config.js"></script>
-</head>
+echo $header;
+$json = new Services_JSON();
 
-<body id="setup-page">
-<div id="compatible_ie"></div>
-<div id="topbar" class="topbar-close">
-	<b class="0104"></b> <span class="0105">This device has</span> <b class="0106">video analytics capability</b>. <b><a id="activateLink" href="#" class="0107">Click here</a></b> <span class="0108">to get started with a free trial</span><span style="float:right"><a id="topbarCloseLink" href="#"><img id="closeicon" src="../../images/close.png" alt="close"/></a></span>
-</div>
-<div id="frame">
-	<div id="top">
-		<div id="logomenu">
-			<a href="/">
-				<img id="logo" alt=""/>
-			</a>
-		</div>
-		<div id="topmenu" class="ui-widget-header round-bottom">
-			<ul id="list">
-				<li class="ui-state-hover-top">
-					<a href="./index.html" class="0103">Setup</a>
-				</li>
-				<li class="storage_TopMenu">
-					<a href="../storage/storage.html" class="0109">Search</a>
-				</li>
-				<li>
-					<a href="../viewer/main.html" class="0101">Live</a>
-				</li>
-			</ul>
-		</div>
-		<div id="brandname"></div>
-	</div>
-	<div id="textlink">
-		<a href="/" id="textlinkURL"></a>
-	</div>
-	<div class="main">
-		<div id="content">
-			<div id="left">
-				<div id="leftmenu">
-					<h3><a href="#0" class="0401">Basic Configuration</a></h3>
-					<div class="left-detail-menu">
-						<ul>
-							<li class="ui-state-hover"><a href="users.html" class="040701">Users</a></li>
-							<li><a href="tcpip.html" class="040401">TCP/IP</a></li>
-							<li><a href="datetime.html" class="040702">Date &amp; Time</a></li>
-							<li class="streamLoad"><a href="stream.html" class="040206">Stream</a></li>
-							<li id="focusAssist"><a href="focusassist.html" class="040101">Focus Assist</a></li>
-						</ul>
-					</div>
-					<h3 class="videoaudioContents">
-						<a id="videoAudioMenuHeader" href="#1">
-						<span id="videoAudioMenuHeaderText" class="0402">Video &amp; Audio</span>
-						<span id="videoMenuHeaderText" class="0413" style="display:none;">Video</span>
-						</a>
-					</h3>
-					<div class="left-detail-menu">
-						<ul>
-							<li id="Camera_Contents"><a href="camera.html" class="040201">Camera</a></li>
-							<li id="Videoin_Contents" style="display:none;"><a href="camera.html" class="040208">Video-In</a></li>
-							<li id="repositioning" class="dsp_hide"><a href="repositioning.html" class="040202">Repositioning</a></li>
-							<li id="zoomfocus" class="dsp_hide"><a href="zoomfocus.html" class="040203">Zoom/Focus</a></li>
-							<li><a href="burntintext.html" class="040204">Burnt-in Text</a></li>
-							<li class="streamLoad eProfileContents"><a href="encoderprofile.html" class="040205">Encoder Profile</a></li>
-							<li id="streamContents" class="streamLoad"><a href="stream.html" class="040206">Stream</a></li>
-							<li id="privacymask"><a href="privacymask.html" class="040207">Privacy Mask</a></li>
-							<li id="privacymask3d" class="dsp_hide"><a href="privacymask3d.html" class="040209">Privacy Mask</a></li>
-							<li id="privacymask3d_wmk" class="dsp_hide"><a href="privacymask3d_wmk.html" class="040209">Privacy Mask</a></li>
-							<li id="Videoout_Contents" style="display:none;"><a href="videoout.html" class="040210">Video-Out</a></li>
-						</ul>
-					</div>
-					<h3 class="eventConfContents"><a id="eventMenuHeader" href="#2" class="0403">Event Configuration</a></h3>
-					<div class="left-detail-menu">
-						<ul>
-							<li><a href="eventrules.html" class="040301">Event Rules</a></li>
-							<li><a href="advancedrules.html" class="040310" style="display:none">Complex Rules</a></li>
-							<li class="motionContents"><a href="motiondetection.html" class="040302">Motion Detection</a></li>
-							<li class="faceContents"><a href="facedetection.html" class="040313">Face Detection</a></li>
-							<li><a href="networkloss.html" class="040312">Network Loss</a></li>
-							<li><a href="heartbeat.html" class="040309">Heart Beat</a></li>
-							<li><a href="eventschedule.html" class="040311">Schedule</a></li>
-							<li><a href="emailrecipient.html" class="040303">E-Mail Recipient</a></li>
-							<li><a href="ftpnotification.html" class="040304">FTP Notification</a></li>
-							<li><a href="httpnotification.html" class="040305">HTTP Notification</a></li>
-							<li><a href="tcpnotification.html" class="040306">TCP Notification</a></li>
-							<li><a href="tcpserver.html" class="040307">TCP Server</a></li>
-							<li><a href="multicastnotification.html" class="040308">Multicast Notification</a></li>
-						</ul>
-					</div>
-					<h3 class="networkConfContents"><a href="#3" class="0404">Network Configuration</a></h3>
-					<div class="left-detail-menu">
-						<ul>
-							<li><a href="tcpip.html" class="040401">TCP/IP</a></li>
-							<li><a href="http.html" class="040402">Web Server</a></li>
-							<li><a href="ntp.html" class="040403">NTP</a></li>
-							<li><a href="upnp.html" class="040404">UPnP</a></li>
-							<li><a href="rtsprtp.html" class="040405">RTSP/RTP</a></li>
-							<li><a href="rtmp.html">RTMP</a></li>
-							<li><a href="mdns.html" class="040406">mDNS</a></li>
-							<li><a href="wsdiscovery.html" class="040413">WS-Discovery</a></li>
-							<li><a href="smtp.html" class="040407">SMTP (E-Mail)</a></li>
-							<li><a href="ddns.html" class="040408">DDNS</a></li>
-							<li><a href="snmp.html" class="040409">SNMP</a></li>
-							<li id="wirelesslan" style="display:none;"><a href="wirelesslan.html" class="040410">Wireless LAN</a></li>
-							<li><a href="ipfiltering.html" class="040411">IP Filtering</a></li>
-							<li><a href="hostedservice.html" class="040412">Hosted Service</a></li>
-							<li><a href="iotservice.html" class="040415">Retail Cloud Service</a></li>
-							<li><a href="ieee8021x.html" class="040416">IEEE 802.1x</a></li>
-						</ul>
-					</div>
-					<h3 class="storageContents"><a id="storageMenuHeader" href="#4" class="0414">Storage</a></h3>
-					<div class="left-detail-menu">
-						<ul>
-							<li class="ui-state-hover usbsd_Contents dsp_hide"><a href="usbsdstorage.html" class="">USB/SD</a></li>
-							<li class="ui-state-hover sd_Contents dsp_show_block"><a href="usbsdstorage.html" class="">SD</a></li>
-							<li><a href="ftpstorage.html" class="">FTP</a></li>
-							<li><a href="configuration.html" class="041402">Recording</a></li>
-							<li><a href="filedownload.html" class="041401">Continuous</a></li>
-						</ul>
-					</div>
-					<h3 class="vcaContents"><a id="vcaMenuHeader" href="#5" class="0405">VCA</a></h3>
-					<div class="left-detail-menu">
-						<ul>
-							<li id="vcaError" class="vcaError" style="display:none;text-align: center">None...yet!</li>
-							<li class="vcaLoaded vcaEnableDisableContents" style="display:none;"><a href="vcaenabledisable.html" class="040501">Enable/Disable</a></li>
-							<li class="vcaLoaded vcaEnabled" style="display:none;"><a href="vcazoneconfiguration.html" class="040502">Zones and Rules</a></li>
-							<li class="vcaLoaded vcaEnabled vcaCalibration" style="display:none;"><a href="vcacalibration.html" class="040503">Calibration</a></li>
-							<li class="vcaLoaded vcaEnabled vcaClassification" style="display:none;"><a href="vcaclassification.html" class="040504">Classification</a></li>
-							<li class="vcaLoaded vcaEnabled vcaTamper" style="display:none;"><a href="vcatamper.html" class="040506">Tamper Detection</a></li>
-							<li class="vcaLoaded vcaEnabled vcaSceneChange" style="display:none;"><a href="vcascenechange.html" class="040507">Scene Change</a></li>
-							<li class="vcaLoaded vcaEnabled vcaMaintenance" style="display:none;"><a href="vcascenemaintenance.html" class="040518">Scene Maintenance</a></li>
-							<li class="vcaLoaded vcaEnabled vcaPtzTracking" style="display:none;"><a href="vcaptztracking.html" class="040508">PTZ Tracking</a></li>
-							<li class="vcaLoaded vcaEnabled" ><a href="vcaburntinannotation.html" class="040511">Burnt-in Annotation</a></li>
+$json_str = file_get_contents($_SERVER['DOCUMENT_ROOT']."/inc/menu.json");
 
-							<li class="vcaLoaded vcaEnabled" style="display:none; font-weight: bold;"><a href="#" class="040517">Reporting</a></li>
-							<li class="vcaLoaded vcaEnabled vcaCounting sub" style="display:none;"><a href="vcacounterreport.html" class="040509">Counters</a></li>
-							<li class="vcaLoaded vcaEnabled vcaStatistics sub" style="display:none;"><a href="vcaheatmapreport.html" class="040514">Heatmaps</a></li>
+$objmenu = $json->decode($json_str);
 
-							<li class="vcaLoaded vcaEnabled vcaStatistics sub" style="display:none;"><a href="vcametadb_events.html?ref=events" class="040515">Events (Beta)</a></li>
-							<li class="vcaLoaded vcaEnabled vcaStatistics sub" style="display:none;"><a href="vcametadb_events.html?ref=tracks" class="040516">Tracks (Beta)</a></li>
+$leftMenu = '';
+foreach(($objmenu->config) as $grp => $obj){
+	if (!isset($msg[$grp])) {
+		$msg[$grp] = $grp;
+	}
+	$leftMenu .= '<h3><a name="'.$grp.'" href="#0" class="dropdown">'.$msg[$grp].'</a></h3>';
+	$leftMenu .= '<div id="'.$grp.'"  class="left-detail-menu"><ul>';
+	foreach($obj as $page => $param){
+		if (!isset($msg[$param->lang_key])) {
+			$msg[$param->lang_key] = $param->lang_key;
+		}		
+		$leftMenu .= '<li class="ui-state-hover"><a href="'.$param->href.'" target="contentFrame">'.$msg[$param->lang_key].'</a></li>';
+	}
+	$leftMenu .= '<ul></div>';
+// 	// print_r($arr['lang_key']);
+}
 
-							<li class="vcaLoaded vcaEnabled" style="display:none;"><a href="vcaadvanced.html" class="040505">Advanced</a></li>
-							<li class="vcaLoaded vcaEnabled" style="display:none;"><a href="vcaloadsave.html" class="040512">Settings Import/Export</a></li>
-						</ul>
-					</div>
-					<h3 class="peripheral_Contents"><a href="#6" class="0406">Peripheral</a></h3>
-					<div class="left-detail-menu peripheral_Contents">
-						<ul>
-							<!--
-							<li><a href="serialport.html">Serial Port</a></li>
-							//-->
-							<li id="dido"><a href="dido.html" class="040601">Sensor/Alarm</a></li>
-							<li id="pir" class="dsp_hide"><a href="pir.html" class="040602">PIR</a></li>
-							<li id="uart" class="dsp_hide"><a href="uart.html" class="040603">Serail Port</a></li>
-							<li id="heater" class="dsp_hide"><a href="heater.html" class="040604">Heater</a></li>
-						</ul>
-					</div>
-					<h3 class="ptzContents dsp_hide"><a href="#7" class="0411">PTZ</a></h3>
-					<div class="left-detail-menu">
-						<ul>
-							<li id="ptz" class="dsp_hide"><a href="ptz.html" class="041104">PTZ</a></li>
-							<li id="touring" class="dsp_hide"><a href="touring.html" class="041101">Touring</a></li>
-							<li id="autorun" class="dsp_hide"><a href="autorun.html" class="041102">Autorun</a></li>
-							<li id="protocol" class="dsp_hide"><a href="protocol.html" class="041103">Protocol</a></li>
-							<li class="presetScheduleContent dsp_hide"><a href="presetschedule.html" class="041105">Preset Schedule</a></li>
-						</ul>
-					</div>
-					<h3 class="maintenanceContents"><a href="#8" class="0407">Maintenance</a></h3>
-					<div class="left-detail-menu">
-						<ul>
-							<li><a href="users.html" class="040701">Users</a></li>
-							<li><a href="datetime.html" class="040702">Date &amp; Time</a></li>
-							<li><a href="api.html" class="040709">API</a></li>
-							<li><a href="language.html" class="040703">Language</a></li>
-							<li><a href="firmwareupgrade.html" class="040704">Firmware Upgrade</a></li>
-							<li><a href="systemlog.html" class="040705">System Log</a></li>
-							<li><a href="confimportexport.html" class="040708">Conf. Import/Export</a></li>
-							<li><a href="resetallsetting.html" class="040706">Reset All Settings</a></li>
-							<li><a href="reboot.html" class="040707">Reboot</a></li>
-							<li class="thirdmngrContent dsp_hide"><a href="thirdmngr.html">Third Settings</a></li> <!--language class 040711 -->
-						</ul>
-					</div>
-					<h3><a href="#9" class="activateContents 0408">Activation</a></h3>
-					<div class="left-detail-menu">
-						<ul>
-							<li><a href="activate.html" class="040801">Activate</a></li>
-						</ul>
-					</div>
-					<h3><a href="#10" class="0409">About</a></h3>
-					<div class="left-detail-menu">
-						<ul>
-							<li><a href="information.html" class="040901">Information</a></li>
-							<li><a href="license.html" class="040902">License</a></li>
-						</ul>
-					</div>
-					<h3 id="oem" class="dsp_hide"><a href="#11" class="0410">OEM</a></h3>
-					<div class="left-detail-menu">
-						<ul>
-							<li><a href="oem.html" class="041001">OEM</a></li>
-						</ul>
-					</div>
-				</div>
-				<div style="display:none">
-					<select id="languageChange">
-						<option value="English">English</option>
-					</select>
+
+?>
+<body>
+    <div id="compatible_ie"></div>
+    <div class="container">
+        <?=$top_menu?>
+        <div class="main">
+            <div class="sidebar">
+                <div id="leftmenu" class="box" style="padding-right:30px">
+					<?=$leftMenu?>
 				</div>
 			</div>
-			<div id="right">
-				<iframe src="users.html" id="contentFrame" name="contentFrame" width="100%" scrolling="no" marginheight="1" marginwidth="1" frameborder="0"></iframe>
-			</div>
-		</div>
-		<div class="clear"></div>
+            <div class="content">
+                <div class="box">
+					<iframe src="tcpip.html" id="contentFrame" name="contentFrame" width="100%" height="800px" scrolling="no" marginheight="1" marginwidth="1" frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="clear">&nbsp;</div>            
+        </div>
 	</div>
 </div>
 </body>
+<?=$footer?>
+<script>
+$(".left-detail-menu li").addClass("dsp_hide");
+$("#basic.left-detail-menu li").removeClass("dsp_hide");
+$(".dropdown").on("click", function () {
+	console.log(this);
+	$(".left-detail-menu li").addClass("dsp_hide");
+	id = this.name;
+	$("#" + id +".left-detail-menu li").removeClass("dsp_hide");
+});
+
+$(".left-detail-menu li").on("click", function(){
+	console.log(this);
+	$(".left-detail-menu li").removeClass("dsp_show_inlineblock");
+	$(this).addClass("dsp_show_inlineblock");
+});
+
+
+</script>
 </html>

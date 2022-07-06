@@ -1,0 +1,296 @@
+/* Live Page */
+dd#main_ptz_zoom {
+  padding: 10px 0px 1px 0px;
+}
+dd#main_ptz_focus {
+  padding: 4px 0px 1px 0px; 
+}
+
+/* USB SD Storage */
+li#usbsd_chooseDevice {
+  width: 275px;
+}
+li#usbsd_diskArea {
+  width: 100px;
+}
+li#usbsd_disk {
+  margin-left: 280px;
+}
+li#usbsd_type {
+  margin-left: 280px;
+}
+li#usbsd_capacity {
+  margin-left: 280px;
+}
+li#usbsd_free {
+  margin-left: 280px;
+}
+li#usbsd_status {
+  margin-left: 280px;
+}
+
+/* File download*/
+li#filedown_num {
+  width: 40px;
+}
+li#filedown_filename {
+  width: 250px;
+}
+li#filedown_datetime {
+  width: 145px;
+}
+li#filedown_size {
+  width: 60px;
+}
+
+/* Encoder Profile */
+li#encoderprofile_name {
+  margin-left: 13px; width: 93px;
+}
+li#encoderprofile_des {
+  width: 210px;
+}
+li#encoderprofile_stream1 {
+  width: 150px;
+}
+li#encoderprofile_vbr_stream_0 {
+  margin-left: 20px;
+}
+li#encoderprofile_image_stream_0 {
+  margin-left: 40px;
+  margin-right: 29px;
+  margin-top: 5px;
+}
+li#encoderprofile_cbr_stream_0 {
+  margin-left: 20px;
+}
+li#encoderprofile_target_stream_0 {
+  margin-left: 40px;
+  margin-right: 29px;
+  margin-top: 5px;
+}
+li#encoderprofile_vbr_stream_1 {
+  margin-left: 20px;
+}
+li#encoderprofile_image_stream_1 {
+  margin-left: 40px;
+  margin-right: 29px;
+  margin-top: 5px;
+}
+li#encoderprofile_cbr_stream_1 {
+  margin-left: 20px;
+}
+li#encoderprofile_target_stream_1 {
+  margin-left: 40px;
+  margin-right: 29px;
+  margin-top: 5px;
+}
+
+/* Stream */
+li#stream_name {
+  margin-left: 13px; width: 93px;
+}
+li#stream_des {
+  width: 210px;
+}
+li#stream_stream1 {
+  width: 150px;
+}
+li#stream_loadbtn {
+  float: left;
+}
+li#stream_link {
+  float: right;
+  padding-top:15px;
+}
+li#stream_vbr_stream_0 {
+  margin-left: 20px;
+}
+li#stream_image_stream_0 {
+  margin-left: 40px;
+  margin-right: 29px;
+  margin-top: 5px;
+}
+li#stream_cbr_stream_0 {
+  margin-left: 20px;
+}
+li#stream_target_stream_0 {
+  margin-left: 40px;
+  margin-right: 29px;
+  margin-top: 5px;
+}
+li#stream_vbr_stream_1 {
+  margin-left: 20px;
+}
+li#stream_image_stream_1 {
+  margin-left: 40px;
+  margin-right: 29px;
+  margin-top: 5px;
+}
+li#stream_cbr_stream_1 {
+  margin-left: 20px;
+}
+li#stream_target_stream_1 {
+  margin-left: 40px;
+  margin-right: 29px;
+  margin-top: 5px;
+}
+
+/* Event Profile */
+li#eventprofile_use {
+  width: 35px; margin-left: 10px;
+}
+li#eventprofile_name {
+  width: 120px;
+}
+
+li.box-content li.float_r {
+  float: right;
+}
+li.box-content li.float_r a {
+  color: #0000FF;
+}
+li#eventprofile_to {
+  width: 80px;
+}
+li#eventprofile_subject {
+  width: 80px;
+}
+
+/* Email Recipient */
+li#emailrecipient_id {
+  width: 40px; margin-left: 8px;
+}
+li#emailrecipient_name {
+  width: 120px;
+}
+
+/* FTP Notification */
+li#ftpnotification_id {
+  width: 40px; margin-left: 8px;
+}
+li#ftpnotification_name {
+  width: 120px;
+}
+
+/* HTTP Notification */
+li#httpnotification_id {
+  width: 40px; margin-left: 8px;
+}
+li#httpnotification_name {
+  width: 120px;
+}
+#httpnotification_authDetail {
+  padding-bottom: 5px;
+}
+#httpnotification_account {
+  margin-left:18px; width:105px;
+}
+#httpnotification_pass {
+  margin-left:18px; width:105px;
+}
+
+/* TCP IP */
+#tcpip_dhcp_gateway {
+  margin-bottom: 5px;
+}
+#tcpip_dhcp_ip span {
+  display: inline-block;
+  width: 160px;
+}
+#tcpip_dhcp_subnet span {
+  display: inline-block;
+  width: 160px;
+}
+#tcpip_dhcp_gateway span {
+  display: inline-block;
+  width: 160px;
+}
+#tcpip_static_ip > span {
+  display: inline-block;
+  width: 160px;
+}
+#tcpip_static_subnet span {
+  display: inline-block;
+  width: 160px;
+}
+#tcpip_static_gateway span {
+  display: inline-block;
+  width: 160px;
+}
+
+/* Repositioning ptz schedule*/
+#schedule select {
+  width: 155px;
+}
+
+/* Wireless Lan */
+li#formWL_chooseDevice {
+  width: 315px;
+}
+li#formWL_ListBoxEssid {
+  margin-left: 10px;
+    width: 100px;
+}
+li#formWL_ListBoxMode {
+    width: 130px;
+}
+li#formWL_ListMac {
+  margin-left: 320px;
+}
+li#formWL_ListEncType {
+  margin-left: 320px;
+}
+li#formWL_ListBitrates {
+  margin-left: 320px;
+}
+li#formWL_ListChannel {
+  margin-left: 320px;
+}
+li#formWL_ListAuth {
+  margin-left: 320px;
+}
+li#formWL_ListNetkey {
+  margin-left: 320px;
+}
+#formWL_DhcpGateway {
+  margin-bottom: 5px;
+}
+#formWL_DhcpIP span {
+  display: inline-block;
+  width: 160px;
+}
+#formWL_DhcpSubnet span {
+  display: inline-block;
+  width: 160px;
+}
+#formWL_DhcpGateway span {
+  display: inline-block;
+  width: 160px;
+}
+#formWL_StaticIP span {
+  display: inline-block;
+  width: 160px;
+}
+#formWL_StaticSubnet span {
+  display: inline-block;
+  width: 160px;
+}
+#formWL_StaticGateway span {
+  display: inline-block;
+  width: 160px;
+}
+#formWL_StaticDns1 span {
+  display: inline-block;
+  width: 160px;
+}
+#formWL_StaticDns2 span {
+  display: inline-block;
+  width: 160px;
+}
+#btnIPTest {
+  margin-left: 3px;
+}
+#btnIPTest span {
+  width: 40px;
+}

@@ -1,0 +1,44 @@
+﻿#formFTPLogBackup {
+	margin-left: 10px;
+}
+.listLoad {
+	margin-top: 22px;
+}
+li#ftpNotification_link {
+	float: right;
+	padding-top:15px;
+}
+li#ftpNotification_link:lang(ar) {
+	float: left;
+}
+a#linkEncoderProfile {
+	color: #0000ff;
+}
+ul.notificationList {
+	margin-top: 8px;
+}
+select#formNotificationList {
+	width: 640px;
+}
+#notification_id {
+	width: 40px; margin-left: 8px;
+}
+#notification_name {
+	width: 120px;
+}
+ul.listLoad {
+	display: none;
+}
+ul.notificationList {
+	display: none;
+}
+label[for='prefixFileType'] {
+	top: 2px;
+}
+#formIPAddress {
+	margin-left: 3px;
+}
+#formIPAddress span {
+	display: inline-block;
+	width: 153px;
+}

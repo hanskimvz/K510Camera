@@ -1,0 +1,14 @@
+﻿#formDdnsDynDns {
+	width: 100px;
+}
+#btn {
+	padding-bottom: 20px;
+}
+#ddns_notify {
+	display: none;
+	margin-left: 10px;
+	color: #E17009;
+}
+a#link{
+	color: #0000FF;
+}

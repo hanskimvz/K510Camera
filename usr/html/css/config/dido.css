@@ -1,0 +1,24 @@
+﻿li#formDIInterval li:nth-child(1) {
+	width:220px; margin: 1px 0px 1px 4px;
+}
+li#formDIInterval li:nth-child(2) {
+	margin-top: 4px;
+}
+input#formDiSensorInterval {
+	text-align: center;
+}
+li#formDIRetention li:nth-child(1) {
+	margin: 1px 0px 1px 4px;
+}
+li#formDIRetention li:nth-child(2) {
+	margin-top: 4px;
+}
+input#formDoOutputPeriod {
+	text-align: center;
+}
+ul.box .item li.indentContents {
+	margin-left: 4em;
+}
+ul.box .item li.indentContents:lang(ar) {
+	margin-right: 4em;
+}

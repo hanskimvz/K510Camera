@@ -1,0 +1,62 @@
+﻿div#formIPFilterAllow {
+	float: left;
+}
+div#formIPFilterAllow > ul.box {
+	width: 322px; padding-right: 0px;
+}
+div#formIPFilterAllow li.box-content li:nth-child(1) {
+	min-height: 0px;
+}
+div#formIPFilterAllow li.box-content li:nth-child(1) li:nth-child(1) {
+	width: 50px;
+}
+select#formIPFilterListAllow {
+	width: 315px;
+}
+div#formIPFilterBlock {
+	float: right;
+}
+div#formIPFilterBlock > ul.box {
+	width: 322px; padding-right: 0px;
+}
+div#formIPFilterBlock li.box-content li:nth-child(1) {
+	min-height: 0px;
+}
+div#formIPFilterBlock li.box-content li:nth-child(1) li:nth-child(1) {
+	width: 50px;
+}
+select#formIPFilterListBlock {
+	width: 315px;
+}
+div#user_form_allow fieldset ul.box:nth-child(1) {
+	margin-bottom: -12px;
+}
+div#user_form_allow fieldset ul.box li.item li {
+	margin-left: 10px;
+}
+div#user_form_allow fieldset ul.box li.item ul {
+	font-size :9pt;
+	line-height: 120%;
+}
+
+div#user_form_allow fieldset ul.box li.item ul.footnotetext {
+	font-size :9pt;
+	line-height: 120%;
+	color : gray;
+}
+div#user_form_allow fieldset ul.box li.item ul li ul{
+	font-size :9pt;
+	line-height: 120%;
+	color : gray;
+}
+div#user_form_block fieldset ul.box:nth-child(1) {
+	margin-bottom: -12px;
+}
+div#user_form_block fieldset ul.box:nth-child(1) li.item li {
+	margin-left: 10px;
+}
+#AllowadminIP span {
+	display: inline-block;
+	width: 152px;
+	margin-left: 3px;
+}

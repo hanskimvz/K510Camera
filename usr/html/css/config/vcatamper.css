@@ -1,0 +1,23 @@
+div#rightpanel
+{
+	width:			330px;
+	float:			left;
+}
+
+div#middleregion
+{
+	margin:			0px;
+	padding:		0px;
+	float:			left;
+	display:		none;
+}
+
+div#AxUMF 
+{
+	padding: 5px 5px 5px 5px;
+}
+
+ul.box .item .item-title
+{
+	min-width:		140px;
+}

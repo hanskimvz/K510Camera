@@ -1,0 +1,204 @@
+﻿input[type='text'] {
+  text-align: center;
+}
+.item ul li {
+  text-align:center;
+}
+li#formFDSearch {
+  float: right;
+}
+input#formSearchDate {
+  text-align: center;
+}
+li#eventdown_num {
+  width: 5%;
+}
+li#eventdown_eventrulename {
+  width: 16%;
+}
+li#eventdown_type {
+  width: 14%;
+}
+li#eventdown_ruletime {
+  width: 20%;
+}
+li#eventdown_description {
+  width: 20%;
+}
+li#eventdown_download {
+  width: 10%;
+}
+li#eventdown_playback {
+  width: 8%;
+}
+
+#pageMove li {
+  text-align: center;
+  margin-top: 10px;
+  width: 630px;
+}
+#pageMove li #pagePre {
+  margin-top: 5px;
+}
+.pageNumber_1 {
+  font-weight: bold;
+}
+#reclist ul {
+  display: none;
+}
+.pageNumberGroup span {
+  cursor: pointer;
+}
+#pageMove img {
+  cursor: pointer;
+}
+#formEventFrom {
+  margin-left: 23px;
+  width: 130px;
+}
+#formEventFrom:lang(ar) {
+  margin-left: 0px;
+  margin-right: 23px;
+}
+#formEventTo {
+  width: 130px;
+}
+#formEventTypeAll {
+  margin-left: 10px;
+}
+#formEventTypeMotion {
+  margin-left: 10px;
+}
+#formEventTypeDi {
+  margin-left: 10px;
+}
+#formEventTypeDo {
+  margin-left: 10px;
+}
+#formEventTypeRecurrence {
+  margin-left: 10px;
+}
+#formEventTypeSchedule {
+  margin-left: 10px;
+}
+#formEventTypeVca {
+  margin-left: 10px;
+}
+#formEventTypePir {
+  margin-left: 10px;
+}
+#formEventTypeConfig {
+  margin-left: 10px;
+}
+#formEventDateTime_0 {
+  margin-left: 10px;
+}
+#formEventTypeNetloss {
+  margin-left: 10px;
+}
+#formEventTypeAll:lang(ar) {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+#formEventTypeMotion:lang(ar) {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+#formEventTypeDi:lang(ar) {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+#formEventTypeVca:lang(ar) {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+#formEventTypePir:lang(ar) {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+#formEventTypeConfig:lang(ar) {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+#formEventDateTime_0:lang(ar) {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+#formEventTypeNetloss:lang(ar) {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+ul.box .formEventSearch {
+  background-color: #EEEEEE;
+  margin-top: 2px;
+}
+ul.box .searchButtonArea {
+  position: fixed;
+  left: 85%;
+  top: 23px;
+}
+ul.box .searchButtonArea:lang(ar) {
+  left: 5%;
+}
+#btnSearch {
+  padding: 7px;
+}
+#eventlist span {
+  cursor: pointer;
+}
+#eventlist span.noDown {
+  cursor: default;
+}
+#eventlist ul:hover{
+  background-color: #FEE1D3;
+}
+
+#btnPageNext {
+  width: 12px;
+  height: 12px;
+}
+.download_contents {
+  cursor: pointer;
+}
+.playback_contents {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: default;
+} 
+.diContents {
+  display: none;
+}
+.doContents {
+  display: none;
+}
+.pirContents {
+  display: none;
+}
+.configContents {
+  display: none;
+}
+
+input.diContents:lang(ar), label.diContents:lang(ar) {
+  display: none;
+}
+input.pirContents:lang(ar), label.pirContents:lang(ar) {
+  display: none;
+}
+input.configContents:lang(ar), label.configContents:lang(ar) {
+  display: none;
+ }
+ #EventTypeMamual {
+  margin-left: 10px;
+}
+.LineBreak {
+  white-space: nowrap;
+  display: inline;
+  float: letf;
+}
+li#EventSearchTypeCondition{
+  text-align: left;
+}

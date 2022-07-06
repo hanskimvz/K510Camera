@@ -1,0 +1,183 @@
+﻿#screen {
+	margin-left: 11px;;
+}
+
+/* 텍스트 박스 한글 입력 방지 */
+input[type="text"], input[type="password"] {
+	ime-mode: disabled;
+}
+
+/* 중간 바 font size  */
+.box-title h2 {
+	font-size: 11px;
+	padding: 2px 0px 2px 2px;
+}
+
+/* ptz 버튼 */
+#ptz {
+	height: 90px;
+}
+#ptz #ptz_panel {
+	border: 0px solid #000000;
+	color: #2B88C2;
+	float: left;
+	width: 78px;
+	margin: 5px 15px 0px 10px;
+}
+#ptz #ptz_panel li {
+	float: left;
+	width: 22px;
+	height: 22px;
+	border: 1px solid #999999;
+	padding: 0px;
+	margin: 1px;
+}
+
+/* Zoom, Focus Button */
+#ptz_zoomfocus {
+	color:#000000;
+	padding-top: 5px;
+}
+#ptz_zoom {
+	color: #2B88C2;
+	margin-top: 4px;
+}
+#ptz_focus {
+	color: #2B88C2;
+	margin-top: 4px;
+}
+#ptz_speed {
+	color: #2B88C2;
+	margin-top: 4px;
+}
+#ptz_zoomfocus #tele_l2, #ptz_zoomfocus #tele_l1 {
+	margin-right: -0.2em;
+}
+#ptz_zoomfocus #zoom_r2, #ptz_zoomfocus #zoom_r3 {
+	margin-right: -0.2em;
+}
+#ptz_zoomfocus #focus_l3, #ptz_zoomfocus #focus_l2 {
+	margin-right: -0.2em;
+}
+#ptz_zoomfocus #far_r1, #ptz_zoomfocus #far_r2 {
+	margin-right: -0.2em;
+}
+#ptz_zoomfocus #zoom_r1 {
+	margin-right: 10px;
+}
+#ptz_zoomfocus #focus_l1 {
+	margin-right: 10px;
+}
+#ptz #btnAF {
+	margin: 5px 0px 0px 0px;
+}
+#ptz #btnAF span {
+	padding: 1px 8px 1px 8px;
+}
+#btnPanTilt span {
+	padding: 1px 8px 1px 8px;
+}
+#btnZoomFocus span {
+	padding: 1px 8px 1px 8px;
+}
+#pantilt_Title {
+	margin-top: 5px;
+	margin-left: 10px;
+}
+#zoomfocus_Title {
+	margin-top: 5px;
+}
+#ptz #ptz_zoomfocus #ptz_tele {
+	margin-right: 6px;
+	margin-top: 4px;
+}
+#ptz #ptz_zoomfocus #ptz_near {
+	margin-right: 4px;
+	margin-top: 4px;
+}
+#ptz #ptz_zoomfocus #ptz_wide {
+	margin-left: 2px;
+	margin-top: 4px;
+}
+#ptz #ptz_zoomfocus #ptz_far {
+	margin-left: 3px;
+	margin-top: 4px;
+}
+
+#ptz #ptz_zoomfocus #slider_speedbar{
+  float: left;
+  color: #2B88C2;
+  width: 50px;
+  margin: 4px 0px 0px 0px;
+}
+
+#ptz #ptz_zoomfocus #text_speedbar{
+  text-align: center;
+}
+
+label[for="text_speedbar"] {
+  top: 0px;
+}
+
+/* select 박스 pre position */
+#preset_list {
+	border: 2px solid #DEDED0; color:#3E3E3E; font-size:11px;
+	padding: 1px; margin: 3px 3px 3px 3px;
+	width: 195px;
+}
+#preset_list option {
+	padding-right: 10px;
+}
+
+#preset_name_label {
+	left: 10px;
+}
+
+#preset_name {
+	width: 140px;
+	padding: 1px;
+	margin: 3px 0px 0px 15px;
+}
+.margin_3004 {
+	margin: 3px 0px 0px 4px;
+}
+
+#ptz_movement {
+	float: left;
+	min-width: 362.45px;
+}
+#ptz_config {
+	float: left;
+}
+#ptz_preposition {
+/*	display: block;*/
+	float: left;
+}
+#ptz_profiles {
+	float: left;
+}
+/* loading message */
+#loading_msg {
+	top: 100px;
+}
+button#btnAddProfile
+{
+	width:	98px;
+}
+button#btnDelProfile
+{
+	width:	98px;
+}
+button#btnGo
+{
+	width:	50px;
+}
+button#btnSet
+{
+	width:	50px;
+}
+button#btnClear
+{
+	width:	50px;
+}
+

@@ -1,0 +1,19 @@
+﻿.formLicenseTextArea textarea {
+	border: 1px solid #E7E3D7;
+	display: none;
+	white-space: pre, pre-line;
+	width: 630px;
+	height: 500px;
+	resize: none;
+}
+pre#textarea {
+	display: none;
+	border: 1px solid #E7E3D7;
+	overflow:auto;
+	width: 615px;
+	height: 500px;
+	resize: none;
+	padding: 7px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	word-wrap: break-word; white-space: pre-wrap;
+}

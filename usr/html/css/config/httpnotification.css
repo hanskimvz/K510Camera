@@ -1,0 +1,33 @@
+li#formHNListBox {
+	min-height: 0px;
+}
+li#formHNListBox li:nth-child(1) {
+	width: 40px; margin-left: 8px;
+}
+li#formHNListBox li:nth-child(2) {
+	width: 120px;
+}
+select#formNotifyList {
+	width: 640px;
+}
+div#input_form {
+	display: block
+}
+div#effect {
+	display: none;
+}
+li#formHNNeedAuth ul:nth-child(1) {
+	padding-bottom: 5px;
+}
+li#formHNNeedAuth ul:nth-child(2) li:nth-child(1) {
+	margin-left:18px; width:105px;
+}
+li#formHNNeedAuth ul:nth-child(3) li:nth-child(1) {
+	margin-left:18px; width:105px;
+}
+input#formHttpTimeoutText {
+	text-align: center;
+}
+input#formHttpOption {
+	margin-left: 127px;
+}

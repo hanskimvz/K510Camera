@@ -1,0 +1,243 @@
+#reportservice
+{
+	
+}
+
+li#formERListBox {
+    min-height: 0px;
+}
+li#formERListBox li:nth-child(1) {
+    width: 40px; margin-left: 8px;
+}
+li#formERListBox li:nth-child(2) {
+    width: 120px;
+}
+select#formNotifyList {
+    width: 640px;
+}
+li#formELBtn > span {
+    margin-left: 225px;
+}
+li#formELBtn > span:lang(ar) {
+    margin-left: 0px;
+    margin-right: 225px;
+}
+a#linkSmtp {
+    color: #0000FF;
+}
+div#input_form {
+    display: block
+}
+
+.ctrpspan
+{
+	margin-left: 5px;
+	margin-top:	 3px;
+	width:	200px;
+	display: inline-block;
+}
+
+.ctrpspanto
+{
+	margin-left: 2px;
+	width:	200px;
+	display: inline-block;
+}
+
+.tablelistto
+{
+	margin-left: 5px;
+	width:	200px;
+	display: inline-block;
+}
+
+.schedulepan
+{
+	margin-left: 20px;
+	width:	80px;
+	display: inline-block;
+}
+
+.sendtimepan
+{
+	margin-left: 20px;
+}
+
+#predefinerequest
+{
+	width:	100px;
+	margin-top:		5px;
+	margin-bottom:		5px;
+}
+
+
+
+#timefrom
+{
+	margin-top:		3px;
+	width:			100px;
+}
+
+#timeto
+{
+	margin-top:		3px;
+	margin-left:	3px;
+	width:			100px;
+}
+
+#countselect
+{
+	margin-top:		3px;
+	width:			100px;
+}
+
+#tableselect
+{
+	margin-top:		3px;
+	width:			100px;
+}
+
+#sortselect
+{
+	margin-top:		3px;
+	width:			100px;
+}
+
+#valuetypeselect
+{
+	margin-top:		3px;
+	width:			100px;
+}
+
+.innerfirst
+{
+	margin-top:	 3px;
+	padding-top: 5px;
+	margin-left: 20px;
+}
+
+.innernormal
+{
+	margin-top:	 3px;
+	padding-top: 5px;
+	margin-left: 15px;
+}
+
+.triggertimecls
+{
+	margin-top:	 3px;
+	padding-top: 5px;
+}
+
+.disabledtimeperiod
+{
+	margin-left: 5px;
+	margin-top:	 5px;
+	margin-bottom: 5px;
+}
+
+#requesturi
+{
+	margin-top:		3px;
+	resize:			none;
+}
+
+.dbinfo
+{
+	margin-left:	10px;
+}
+
+#storedevice
+{
+	margin-top:		3px;
+}
+
+#dbusedsize
+{
+	margin-top:		3px;
+}
+
+#btnApply
+{
+	margin-top:		3px;
+	margin-bottom:	3px;
+}
+
+#btnClear
+{
+	margin-top:		3px;
+	margin-left:	3px;
+}
+
+#btnBackup
+{
+	margin-top:		3px;
+	margin-left:	5px;
+}
+
+#Filedata
+{
+	margin-top:		3px;
+	margin-left:	5px;
+}
+
+
+#iframeImport
+{
+	display:	none;
+}
+
+.weekdaylab
+{
+	margin-left:	5px;
+}
+
+#sendtime
+{
+	margin-left:	10px;
+}
+
+#sendtimefrom
+{
+	margin-left:	10px;
+}
+
+.sampleedit
+{
+	margin-top:		3px;
+	width:			120px;
+}
+
+.rolloveredit
+{
+	margin-top:		3px;
+	width:			120px;
+}
+
+.rollovertimeedit
+{
+	margin-top:		3px;
+	width:			120px;
+}
+
+.uritable
+{
+	margin-left:3px;
+	width:100%;
+	text-align:left;
+}
+
+.xstooltip 
+{
+    visibility: hidden; 
+    position: absolute; 
+	first: 1;
+    top: 0;  
+    left: 0; 
+    z-index: 2; 
+
+    font: normal 8pt sans-serif; 
+    padding: 3px; 
+    border: solid 1px;
+	background-color:#fafafa;
+}

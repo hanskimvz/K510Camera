@@ -1,0 +1,62 @@
+﻿div#server_clock {
+	margin-left: 5px;
+}
+div#server_clock:lang(ar) {
+	margin-right: 5px;
+}
+li#formDTNtpLink {
+	margin-left: 50px;
+}
+a#linkNtp {
+	color: #0000FF;
+}
+p#formUserDateTime {
+	margin-left:20px;
+}
+p#formUserDateTime:lang(ar) {
+	margin-right:20px;
+}
+input#formSyncMethod1 ~ p {
+	margin-left: 20px;
+}
+input#formSyncMethod2 ~ p {
+	margin-left: 20px;
+}
+input#formSyncMethod1 ~ p:lang(ar) {
+	margin-right: 20px;
+}
+input#formSyncMethod2 ~ p:lang(ar) {
+	margin-right: 20px;
+}
+span#formDTDate {
+	margin-right: 10px;
+}
+span#formDTTime {
+	margin-right: 9px;
+}
+span#formDTDate:lang(ar) {
+	margin-left: 9px;
+	margin-right: 0px;
+}
+span#formDTTime:lang(ar) {
+	margin-left: 9px;
+	margin-right: 0px;
+}
+p.manuallyDateTimeForm span {
+	display: inline-block;
+}
+#btnSet {
+	margin-bottom: 12px;
+}
+#formDateFormat {
+	width: 110px;
+}
+#formTzName {
+	width: 420px;
+}
+#formTimehour {
+	margin-top: 6px;
+}
+#formNtpServer:lang(ar) {
+	display: inline-block;
+}

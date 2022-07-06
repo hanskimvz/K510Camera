@@ -1,0 +1,189 @@
+﻿* {
+	padding: 0px; margin: 0px;
+}
+ul, li {
+	list-style-type: none
+}
+img {
+	border: 0 none;
+}
+input, textarea, select {
+	outline: 0 none;
+}
+.clear {
+	clear: both; display: block; visibility: hidden;
+}
+div#top {
+	position: relative; height: 60px; width: 885px;
+	width: 100%;
+	margin:0 auto;
+	text-align:center;
+}
+#logomenu {
+	width: 140px;
+	float: right;
+	position: relative;
+	margin: 5px 0px 0px 0px;
+	padding: 0px 5px;
+}
+#logomenu:lang(ar) {
+	width: 140px;
+	float: left;
+	position: relative;
+	margin: 5px 0px 0px 0px;
+	padding: 0px 5px;
+}
+div#top #logomenu img#logo {
+	margin-top: 5px;
+	z-index: 999;
+}
+#topmenu {
+	display: none;
+	font-size: 11px;
+	color:#fff; 
+	height: 22px;
+	/* width: 175px; */
+	width: auto;	
+	float: left;
+	position: relative;
+	margin: 0px 17px;
+	padding: 0px 5px; 
+}
+#topmenu:lang(ar) {
+	display: none;
+	font-size: 11px;
+	color:#fff; 
+	height: 22px;
+	/* width: 175px; */
+	width: auto;	
+	float: right;
+	position: relative;
+	margin: 0px 17px;
+	padding: 0px 5px; 
+}
+#topmenu li {
+	position: relative; 
+	float: right; 
+	font: bold 12px Verdana; 
+	height: 13px; 
+	cursor: pointer;
+	margin: 3px 9px 10px; 
+	color:#FFFFFF
+}
+#topmenu a {
+	display: block; text-decoration: none; color: #FFFFFF;
+}
+#topmenu li a:hover {
+	color: #B0D730;
+}
+#topmenu li.ui-state-hover-top a {
+	color: #EDD385;
+}
+.main {
+	background: none repeat scroll 0 0 #FFFFFF; 
+	position: relative; 
+	font-size: 11px;  
+	margin-top: 1em; 
+	padding-top: 5px; 
+	border: 1px solid #E7E3D7;
+}
+#content {
+	margin: 0px;
+}
+#left {
+	float:left;
+	margin: 3px 0px 10px 10px; 
+	width: 185px; 
+}
+#left:lang(ar) {
+	float:right;
+	margin: 3px 10px 10px 0px; 
+	width: 185px; 
+}
+#right {
+	margin-top: 5px;
+}
+#setup-page #right {
+	float:right;
+	width:665px;
+	margin:5px 7px 5px 0px;
+}
+#setup-page #right:lang(ar) {
+	float:left;
+	width:665px;
+	margin:5px 7px 5px 0px;
+}
+#bottom {
+	margin:10px; padding:10px; background-color: #F6F6EA; color:#3E3E3E; height:50px;
+}
+#leftmode {
+	width:110px; margin:10px 0px 0px 30px; padding:5px;cursor: pointer;
+	text-align:center; font-weight:bold;
+}
+#leftmenu .ui-state-default a {
+	font-family: Verdana, sans-serif;
+}
+
+body {
+	background: #FFFFFF; font-family: verdana,sans-serif
+}
+body #frame {
+	background: #FFFFFF; margin: auto; width: 885px;
+}
+#brandname {
+	color: #447AA4; font: bold 25px arial,sans-serif;
+	width: 100%;
+	position: absolute;
+	pointer-events: none;
+	top:35%;
+	left: 0%
+}
+
+body .left-detail-menu li {
+	font-size: 10px; margin-bottom: 1px; cursor: pointer;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+body .left-detail-menu li a{
+	text-decoration: none;
+	padding: 5px;
+	display: block;
+}
+.ui-accordion .ui-accordion-header a {
+	font: 10px Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+/* Dispaly None */
+.hidden_contents {
+	display: none;
+}
+
+#textlinkURL{
+    font-size: 11px;
+}
+div#textlink{
+    text-align: right;
+}
+
+/******************************
+F.Angel
+******************************/
+
+#toolbar li {
+	float: left; padding-bottom: 10px;
+}
+
+#screen-page .ui-widget {
+	font-family:verdana,sans-serif; font-size: 10px;
+}
+
+.settingButtonDialog:lang(ar) {
+    text-align: left;
+}
+.ui-tabs .ui-tabs-nav li:lang(ar) {
+    float: right;
+}
+input[type="radio"]:lang(ar) {
+    display: inline-block;
+}
+label:lang(ar) {
+    display: inline-block;
+}

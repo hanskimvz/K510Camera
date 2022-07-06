@@ -1,0 +1,53 @@
+﻿.formAutorunTimeText {
+	margin-top: 4px;
+}
+.formAutorunMoveMenu_home {
+	height: 20px;
+}
+.formAutorunMoveMenu_tour {
+	height: 25px;
+}
+.formAutorunMoveMenu_panning {
+	margin-top: 5px;
+}
+.formAutorunMoveMenu_panningInfo {
+	margin-left: 30px;
+}
+.formAutorunMoveMenu_panningInfo:lang(ar) {
+	margin-right: 30px;
+	margin-left: 0px;
+}
+.formAutorunMoveMenu_panningInfo span:lang(ar) {
+	display: inline-block;
+}
+.formAutorunMoveMenu_panningInfo input:lang(ar) {
+	display: inline-block;
+}
+.formAutorunMoveMenu_panningInfo label:lang(ar) {
+	display: inline-block;
+}
+select {
+	font-size: 1em;
+}
+#formAutorunTime {
+	text-align: center;
+}
+#formAutorunPanningAngle {
+	text-align: center;	
+}
+#formAutorunPanningSpeed {
+	text-align: center;	
+}
+.panningSpeed_Contents {
+	margin-left: 10px;
+}
+.panningSpeed_Contents:lang(ar) {
+	margin-left: 0px;
+	margin-right: 10px;
+}
+.formAutorunTimeText:lang(ar), #formAutorunTime:lang(ar) {
+	display: inline-block;
+}
+#autorunTime {
+	display: none;
+}

@@ -1,0 +1,54 @@
+#titleNameEnter {
+	margin-top: 3px;
+}
+#logolinkEnter {
+	margin-top: 3px;
+}
+#packageApply {
+	display: none;
+}
+#FDApply {
+	display: none;
+}
+#OEMDBApply {
+	display: none;
+}
+#setBtn {
+	margin-bottom: 10px;
+}
+select {
+	width: 140px;
+}
+#iframelogo {
+	display: none;
+}
+#iframepackage {
+	display: none;
+}
+#iframeFD {
+	display: none;
+}
+#iframeOEMDB {
+	display: none;
+}
+#btnDefaultset {
+	display: none;
+}
+#logolinkEnter {
+	width: 200px;
+}
+#textlinkEnter {
+	width: 200px;
+}
+#titleNameEnter {
+	width: 200px;
+}
+#fullNameEnter {
+	width: 200px;
+}
+#shortNameEnter {
+	width: 200px;
+}
+#countZone {
+	display: none;	
+}

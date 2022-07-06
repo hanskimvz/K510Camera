@@ -1,0 +1,282 @@
+html, body, div, span, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, form, filedset, input, p, a, label, select, button, blockquote, th, td {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family:verdana,sans-serif;
+}
+ul, li {
+    list-style-type:none;
+}
+input[type="text"], input[type="password"], input[type="file"] {
+    border: 2px solid #DEDED0; color:#3E3E3E; font-size:11px;
+    padding: 1px; margin-top: 3px;
+}
+select {
+    border: 2px solid #DEDED0; 
+    color: #3E3E3E;
+    padding: 1px;
+    margin-top: 3px;
+}
+
+input[type="radio"]{
+    height:13px;width:13px;
+}
+input[align="center"] {
+    text-align:center;
+}
+li input[type="text"] {
+    margin-top: 0px;
+}
+
+input[disabled], select[disabled] {
+    color: #A0A0A0;
+}
+
+.clear {
+    clear:both; display:block; visibility:hidden;
+}
+.space {
+    background-color:#FFFFFF; height:5px;
+}
+#config-page fieldset {
+    border:0 none;
+    padding:0px;
+    /*
+    margin-top:15px;
+    */
+}
+.box-button {
+    text-align:center;
+}
+ul.box, div.box {
+    max-width: 715px; padding: 3px 5px 2px 10px;
+}
+
+ul.box .item {
+    margin: 0px; padding: 3px; min-height:20px;
+}
+/* DO */
+ul.box .box-content ul {
+    overflow:auto;
+}
+ul.box .box-content p {
+    margin: 0px; padding: 4px 0px 0px 0px;
+}
+ul.box .box-inner {
+    margin: 0 20px;
+}
+ul.box .item li {
+    float: left; margin:2px 3px;
+}
+ul.box .item li:lang(ar) {
+    float: right; margin:2px 3px;
+}
+ul.box .item .item-title {
+    min-width:150px; font-size:11px; margin-top: 4px;
+    font-weight: normal; font-family: verdana,sans-serif;
+}
+ul.box .item .item-title-mini {
+    width:13em; font-size:11px; margin-top: 4px;
+}
+ul.box label, #config-page label {
+    font-size: 11px;
+}
+ul.box .slider-bar {
+    width: 150px; margin:5px 2px;
+}
+ul.box .select-list {
+     font-family: courier New; width:350px; margin-bottom:5px;
+}
+
+#config-page {
+    display: none;
+}
+#config-page h1 {
+    color:#27465D; font-size:14px; padding: 0px 5px 0px 5px;
+}
+#config-page .box-title h2 {
+    font-size: 11px;    padding: 4px 3px 4px 3px;
+}
+#config-page .box-title h3 {
+    padding: 3px; text-align:center; font-size:13px; font-weight: normal;
+}
+
+#config-page .ui-widget {
+    font-family:verdana,sans-serif; font-size: 11px; font-weight: normal;
+}
+/*
+#loading_msg {
+    border:2px #000 solid; background-color:#bbb; font-size:10pt !important; color:#000;
+    text-align:center; top:50%; left:320px; padding:10px; margin:-15px 0 0 -140px;
+    width:280px;z-index:9999; position: absolute; display: none;
+}
+*/
+#loading_msg {
+    top:50%;
+    left:320px;
+    z-index:9999;
+    position: absolute;
+    display: none;
+}
+
+/******************************
+daniel.lee
+******************************/
+
+body p.menuLocationInfo {
+    font-size: 10px; color: #133E89; font-family: verdana,sans-serif; margin-left: 10px;
+}
+body p.menuLocationInfo span:lang(ar) {
+    display: inline-block;
+}
+body span#pagename {
+    font-weight: bold;
+    font-size: 11px;
+}
+#list .ui-state-hover-top a {
+    color: #FFEA00;
+}
+.odd {
+    background-color: #E8F2F7;
+}
+.even {
+    background-color: #FFFFFF;
+}
+.formWidth {
+    width:220px;
+}
+div.tab_inline ul.box{
+    padding: 3px 0px 0px 0px;
+}
+.toggler {
+    width: 665px; height: 0px;
+}
+#effect {
+    width: 650px; height: 206px; position: relative; background-color: #FFFFFF; margin-left:9px;
+}
+#effect ul {
+    padding:0px;
+}
+#effect h2 {
+    margin: 0; padding: 0.2em; text-align: center;
+}
+.ui-dialog {
+    width: 540px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: hidden;
+}
+div.ui-tabs, div.ui-tabs .ui-tabs-nav, div.ui-tabs .ui-tabs-panel {
+    padding: 0px;
+}
+#tooltip {
+    position: absolute;
+    z-index: 3000;
+    border: 1px solid #111;
+    background-color: #eee;
+    padding: 5px;
+    opacity: 0.85;
+}
+#tooltip h3, #tooltip div {
+    margin: 0;
+}
+input[type="text"], input[type="password"] {
+    ime-mode: disabled;
+}
+.ip_container {
+    border: 2px solid #DEDED0;
+    background-color:#FFFFFF;
+}
+.ip_octet {
+    border: 0;
+    text-align: center;
+    width: 2.5em;
+}
+.ip_cidr {
+    width: 1.5em;
+}
+input[type="checkbox"] {
+    margin-top: 1px;
+}
+label {
+    position: relative;
+    top: -2px;
+}
+.progressbar {
+    border: 1px solid #000000;
+    width: 400px;
+    height: 20px;
+    line-height: 20px;
+}
+#message {
+    font-size: 9pt;
+    padding-left: 10px;
+}
+
+#debug_console {
+    font-size: 9pt;
+    border: 1px solid #000000;
+    padding: 5px;
+    display: none;
+}
+
+iframe#ApiLoadingFrame {
+    display: none;
+}
+
+#loadingMessage, #savingMessage{
+    text-align:     center;
+    margin-top:        130px;
+    margin-bottom:    130px;
+}
+
+#loadingImage, #savingImage{
+    display:        block;
+    margin-left:     auto;
+    margin-right:     auto;
+    margin-bottom:     20px;
+}
+
+#loadingMessage {
+    display: block;
+}
+
+#savingMessage {
+    display: none;
+}
+
+/* Dispaly None */
+.hidden_contents {
+    display: none;
+}
+
+
+.settingButton {
+    text-align: center;
+}
+
+.settingButtonDialog {
+    text-align: right;
+}
+.settingButtonDialog:lang(ar) {
+    text-align: left;
+}
+.ui-tabs .ui-tabs-nav li:lang(ar) {
+    float: right;
+}
+input[type="radio"]:lang(ar) {
+    display: inline-block;
+}
+label:lang(ar) {
+    display: inline-block;
+}
+
+.indentation_margin_4 {
+    margin-left: 4em;
+}
+
+.indentation_margin_8 {
+    margin-left: 8em;
+}
