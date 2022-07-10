@@ -1,8 +1,34 @@
 <?php
+
 require_once $_SERVER['DOCUMENT_ROOT']."/inc/json.php";
-$header = '
-<head>
-    <meta charset="UTF-8">
+if (strpos(" ".$_SERVER['REQUEST_URI'], "/config/") >0 ){
+    $header = <<<EOBLOCK
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title></title>
+        <link href="/css/fontawesome-free.css" rel="stylesheet" type="text/css">
+        <link href="/css/config.css" rel="stylesheet">
+    </head>
+EOBLOCK;
+
+    $footer = <<<EOBLOCK
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+EOBLOCK;
+
+}
+else {   
+    $header = '<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="Cache-Control" content="no-cache"/>
     <meta http-equiv="Expires" content="0"/>
@@ -11,6 +37,13 @@ $header = '
     <link type="text/css" href="/css/common.css" rel="stylesheet" />
 
 </head>';
+$footer = '
+    <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.8.4.min.js"></script>
+';
+}
+
+
 // EOBLOCK;
 /*
 
@@ -80,10 +113,59 @@ $top_menu = '<div id="top">
 
 
 
-$footer = '
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
-';
+// $footer = '
+//     <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+//     <script type="text/javascript" src="/js/jquery-ui-1.8.4.min.js"></script>
+//     <script type="text/javascript" src="/js/common.js"></script>
+// ';
 
 // $footer="";
+
+
+function FillText($str, $nSize, $align)
+{
+    $newStr = "";
+    $strLength = "";
+
+    $strLength = str_replace("&lt;", "<");
+
+    if(strlen($strLength) > $nSize) {
+        if ($align == "right") {
+            $newStr = "...".substr($str, 0, $nSize-3);
+        }
+        else {
+            $newStr = substr($str, 0, $nSize-3)."...";
+        }
+    }
+    else {
+        switch($align)  {
+            case "left":
+                $newStr = $str;
+                for($j = strlen($strLength); $j < $nSize; $j++){
+                    $newStr .= "&nbsp;";
+                }
+                break;
+            case "right":
+                for($j = strlen($strLength); $j < $nSize; $j++){
+                    $newStr .= "&nbsp;";
+                }
+                $newStr .= $str;
+                break;
+            case "center":
+                for($j = 0; $j < ($nSize-strlen(strLength))/2; $j++){
+                    $newStr += "&nbsp;";
+                }
+                $newStr .= $str;
+                $strLength = str_replace($newStr, "&lt;", "<");
+                for($j = strlen($strLength); $j < $nSize; $j++)
+                    $newStr .= "&nbsp;";
+                break;
+            default:
+                $newStr = $str;
+                break;
+            }
+    }
+    return $newStr;
+}
 
 ?>

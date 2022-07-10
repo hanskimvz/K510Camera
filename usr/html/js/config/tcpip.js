@@ -1,14 +1,15 @@
 var g_defaultGroup = "NETWORK";
 
 $(function () {
-	PreCustomize();
-	initEnvironment();
-	LoadParamJs(g_defaultGroup, mainRun);
+	// PreCustomize();
+	// initEnvironment();
+	// LoadParamJs(g_defaultGroup, mainRun);
+	mainRun();
 });
 
 function initEnvironment()
 {
-	initLanguage();
+	// initLanguage();
 	ChangeThemes(parent.g_configData.skin);
 	EvenOdd(parent.g_configData.skin);
 }
@@ -25,10 +26,10 @@ function initLanguage()
 
 function mainRun()
 {
-	InitSetting();
-	EventBind();
-	$("button").button();
-	ContentShow();
+	// InitSetting();
+	// EventBind();
+	// $("button").button();
+	// ContentShow();
 	SetRelation();
 	PostCustomize();
 }

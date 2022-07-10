@@ -84,7 +84,7 @@ sh /etc/init.d/get_version.sh
 
 
 # NTP
-# ntpdate  ntp.aliyun.com >/dev/null 2>&1 &
+ntpdate  ntp.aliyun.com >/dev/null 2>&1 &
 /app/dsp_log/dsp_log &
 i2ctransfer -f -y 0 w3@0x10 0x01 0x00 0x00
 

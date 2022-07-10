@@ -5,7 +5,7 @@
             { "lang_key":"tcpip",       "id": "basic_tcpip",        "href": "tcpip.html" },
             { "lang_key":"datetime",    "id": "basic_datetime",     "href": "datetime.html" },
             { "lang_key":"stream",      "id": "basic_stream",       "href": "stream.html" },
-            { "lang_key":"focusassist", "id": "basic_focusassist",  "href": "stream.html" }
+            { "lang_key":"focusassist", "id": "basic_focusassist",  "href": "focusassist.html" }
         ],
         "videoNaudio":[
             { "lang_key":"camera",          "id": "va_camera",         "href": "camera.html" },
