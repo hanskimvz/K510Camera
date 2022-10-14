@@ -1,100 +1,82 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="imagetoolbar" content="no" />
-	<meta http-equiv="Cache-Control" content="no-cache"/>
-	<meta http-equiv="Expires" content="0"/>
-	<meta http-equiv="Pragma" content="no-cache"/>
-	<title></title>
-	<link type="text/css" href="../css/common.css" rel="stylesheet" />
-	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="../js/common.js"></script>
-	<script type="text/javascript" src="../js/defstring/defbrand.js"></script>
-	<script type="text/javascript" src="../js/utils/log.js"></script>
-	<script type="text/javascript" src="../js/utils/jq_string.js"></script>
-	<script type="text/javascript" src="../js/utils/jq_control.js"></script>
-	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
-	<script type="text/javascript" src="../js/plat_utils/string.js"></script>
-	<script type="text/javascript" src="../js/config/videoout.js"></script>
-</head>
-<body id="config-page">
-	<p class="menuLocationInfo">
-		<span class="04021001">Setup &gt; Video &amp; Audio &gt;</span>
-		<span id="pagename" class="04021002">Video-Out</span>
-	</p>
-	<div id="VideoOut_Encoder" style="display:none;">
-		<ul class="box">
-			<li class="box-title"><h2 class="04021003">Configuration</h2></li>
-			<li class="box-content">
-				<ul>
-					<li class="item">
-						<ul>
-							<li class="item-title 04021004">Mode :</li>
-							<li>
-								<input type="radio"	name="VideoOutMode" id="VideoOutMode0" value="loop" />
-								<label for="VideoOutMode0" class="04021005"> Loop-back</label>
-							</li>
-							<li>
-								<input type="radio"	name="VideoOutMode" id="VideoOutMode1" value="dac" />
-								<label for="VideoOutMode1" class="04021006"> DAC</label>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-	<div id="VideoOut" style="display:none;">
-		<ul class="box">
-			<li class="box-title"><h2 class="04021009">Video Output</h2></li>
-			<li class="box-content">
-				<ul>
-					<li class="item">
-						<ul>
-							<li class="item-title 04021010">BNC output :</li>
-							<li>
-								<input type="radio"	name="VideoOutBNCOutput" id="VideoOutBNCOutput0" value="ntsc" />
-								<label for="VideoOutBNCOutput0" class="04021011"> NTSC</label>
-							</li>
-							<li>
-								<input type="radio"	name="VideoOutBNCOutput" id="VideoOutBNCOutput1" value="pal" />
-								<label for="VideoOutBNCOutput1" class="04021012"> PAL</label>
-							</li>
-							<li>
-								<input type="radio"	name="VideoOutBNCOutput" id="VideoOutBNCOutput2" value="off" />
-								<label for="VideoOutBNCOutput2" class="04021013"> Off</label>
-							</li>
-						</ul>
-						<div class="functionEx">
-							<ul>
-								<li>
-									<span class="04021014">
-										Note: Video output is disabled while any of the features below is activated.
-									</span>
-								</li>
-							</ul>
-							<ul class="functionExLists Rotation_Contents dsp_hide">
-								<li>&middot;&nbsp;<span class="04021016">Image Rotation</span>&nbsp;:&nbsp;</li>
-								<li><a id="linkRotationCamera" href="#" class="04021015 linkCamera">Go to Camera Configuration</a></li>
-							</ul>
-							<ul class="functionExLists Stabilization_Contents dsp_hide">
-								<li>&middot;&nbsp;<span class="04021017">Video Stabilization</span>&nbsp;:&nbsp;</li>
-								<li><a id="linkStabilizationCamera" href="#" class="04021015 linkCamera">Go to Camera Configuration</a></li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
+<!DOCTYPE html lang="en">
+<html lang="en" >
 
-	<div class="text_cen box settingButton" >
-		<button id="btnApply"><span class="04021007">Apply</span></button>
+<?php
+include ("../inc/common.php");
+echo $header;
+?>
+
+<body>
+    <div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+				<p class="menuLocationInfo"><span>Setup</span> > <span>Video & Audio</span> > <strong>Video-Out</strong></p>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="card col-lg-6">
+							<div class="card-header mb-0">
+								<h6 class="mb-0 font-weight-bold text-primary">Configuration</h6>
+							</div>
+							<div class="card-body"> 
+								<div class="form-group">
+									<div class="form-inline">
+										<span class="col-md-2">Mode</span>
+										<label class="form-check">
+											<input type="radio"	name="VideoOutMode" id="VideoOutMode0" value="loop" class="form-check-input" />
+											<span class="form-check-label">Loop-back</span>
+										</label>
+										<label class="form-check ml-2">
+											<input type="radio"	name="VideoOutMode" id="VideoOutMode1" value="dac" class="form-check-input" />
+											<span class="form-check-label">DAC</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-2">
+						<div class="card col-lg-6">
+							<div class="card-header mb-0">
+								<h6 class="mb-0 font-weight-bold text-primary">Video Output</h6>
+							</div>
+							<div class="card-body"> 
+								<div class="form-group mb-0">
+									<div class="form-inline">
+										<span class="col-md-2">BNC output</span>
+										<label class="form-check">
+											<input type="radio"	name="VideoOutBNCOutput" id="VideoOutBNCOutput0" value="ntsc" class="form-check-input" />
+											<span class="form-check-label">NTSC</span>
+										</label>
+										<label class="form-check ml-2">
+											<input type="radio"	name="VideoOutBNCOutput" id="VideoOutBNCOutput1" value="pal" class="form-check-input" />
+											<span class="form-check-label">PAL</span>
+										</label>
+										<label class="form-check ml-2">
+											<input type="radio"	name="VideoOutBNCOutput" id="VideoOutBNCOutput2" value="off" class="form-check-input" />
+											<span class="form-check-label">Off</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-2 col-lg-6 justify-content-center">
+						<button id="btnApply" class="btn btn-sm btn-primary">Apply</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div id="debug_console"></div>
 </body>
+<?=$footer?>
+<script>
+$("button").on("click", function () {
+	console.log(this);
+	// if (this.id == "modalApply") {
+	// 	console.log($("#formUserName").val());
+	// }
+});
+
+</script>
 </html>

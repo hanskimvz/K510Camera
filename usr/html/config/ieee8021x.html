@@ -1,138 +1,127 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="imagetoolbar" content="no" />
-	<meta http-equiv="Cache-Control" content="no-cache"/>
-	<meta http-equiv="Expires" content="0"/>
-	<meta http-equiv="Pragma" content="no-cache"/>
-	<title></title>
-	<link type="text/css" href="../css/common.css" rel="stylesheet" />
-	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="../js/defstring/defpath.js"></script>
-	<script type="text/javascript" src="../js/common.js"></script>
-	<script type="text/javascript" src="../js/defstring/defregexp.js"></script>
-	<script type="text/javascript" src="../js/utils/control.js"></script>
-	<script type="text/javascript" src="../js/utils/jq_string.js"></script>
-	<script type="text/javascript" src="../js/jquery.formsubmit.js"></script>
-	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
-	<script type="text/javascript" src="../js/plat_utils/string.js"></script>
-	<script type="text/javascript" src="../js/dataconfig.js"></script>
-	<script type="text/javascript" src="../js/uiconfig.js"></script>
-	<script type="text/javascript" src="../js/config/ieee8021x.js"></script>
-</head>
-<body id="config-page">
-	<p class="menuLocationInfo">
-		<span class="04041601">Setup &gt; Network Configuration &gt;</span>
-		<span id="pagename" class="04041602">IEEE 802.1x</span>
-	</p>
-	<ul class="box">
-		<li class="box-title"><h2 class="04041603">Configuration</h2></li>
-		<li class="box-content">
-			<ul>
-				<li class="item">
-					<input type="checkbox" id="network_ieee8021x_enable" /><label for="network_ieee8021x_enable" class="04041604"> Enable</label>
-				</li>
-				<li class="item">
-					<ul>
-						<li class="item-title 04041605">EAP Type :</li>
-						<li>
-							<select id="network_ieee8021x_eaptype">
-								<option value="tls"> EAP-TLS</option>
-								<option value="peap"> EAP-PEAP</option>
-							</select>
-						</li>
-					</ul>
-				</li>
-				<li class="item">
-					<ul>
-						<li class="item-title 04041606">Identity :</li>
-						<li><input type="text" id="network_ieee8021x_id" size="20" /></li>
-					</ul>
-				</li>
-				<li class="item">
-					<ul>
-						<li class="item-title 04041607">Private key password :</li>
-						<li><input type="password" id="network_ieee8021x_pwd" size="20" /></li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul>
+<!DOCTYPE html lang="en">
+<html lang="en" >
 
-	<ul class="box">
-		<li class="box-title"><h2 class="04041608">Certificates</h2></li>
-		<li class="box-content">
-			<ul>
-				<li class="item">
-					<ul>
-						<li class="04041609">CA certificate : </li>
-						<li id="state_caCert" class="margin_left_step1"></li>
-					</ul>
-					<ul>
-						<li>
-							<form id="form_ca" enctype="multipart/form-data" action="/uapi-cgi/certmngr.cgi" method="post">
-								<fieldset>
-									<label class="createCertSubContents 04041612">Select certificate file :</label>
-									<input name="Filedata" id="caFiledata" type="file" />
-									<input type="hidden" name="action" value="installstd" />
-									<input type="hidden" name="type" value="ca" />
-									<input class="dsp_hide" type="submit" name="btnStartCACert" id="btnStartCACert"/>
-								</fieldset>
-							</form>
-						</li>
-						<button id="btnRemoveCACert" class="removeBtnContents margin_left_small_step3 margin_top_small_step8"><span class="04041613">Remove</span></button>
-					</ul>
-				</li>
-				<li class="item clientCertContents">
-					<ul>
-						<li class="04041610">Client certificate : </li>
-						<li id="state_clientCert" class="margin_left_step1"></li>
-					</ul>
-					<ul>
-						<li class="">
-							<form id="form_client" enctype="multipart/form-data" action="/uapi-cgi/certmngr.cgi" method="post">
-								<fieldset>
-									<label class="createCertSubContents 04041612">Select certificate file :</label>
-									<input name="Filedata" id="clientFiledata" type="file" />
-									<input type="hidden" name="action" value="installstd" />
-									<input type="hidden" name="type" value="client" />
-									<input class="dsp_hide" type="submit" name="btnStartClientCert" id="btnStartClientCert"/>
-								</fieldset>
-							</form>
-						</li>
-						<button id="btnRemoveClientCert" class="removeBtnContents margin_left_small_step3 margin_top_small_step8"><span class="04041613">Remove</span></button>
-					</ul>
-				</li>
-				<li class="item clientPrivateKeyContents">
-					<ul>
-						<li class="04041611">Client private key : </li>
-						<li id="state_clientPrivateKey" class="margin_left_step1"></li>
-					</ul>
-					<ul>
-						<li class="">
-							<form id="form_clientPrivateKey" enctype="multipart/form-data" action="/uapi-cgi/certmngr.cgi" method="post">
-								<fieldset>
-									<label class="createCertSubContents 04041612">Select certificate file :</label>
-									<input name="Filedata" id="clientprivatekeyFiledata" type="file" />
-									<input type="hidden" name="action" value="installstd" />
-									<input type="hidden" name="type" value="clientprivatekey" />
-									<input class="dsp_hide" type="submit" name="btnStartClientPKeyCert" id="btnStartClientPKeyCert"/>
-								</fieldset>
-							</form>
-						</li>
-						<button id="btnRemoveClientPKeyCert" class="removeBtnContents margin_left_small_step3 margin_top_small_step8"><span class="04041613">Remove</span></button>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul>
+<?php
+include ("../inc/common.php");
+echo $header;
 
-	<div class="box" align="center">
-		<button id="btnApply"><span class="04041618">Apply</span></button>
+?>
+<body>
+    <div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+				<p class="menuLocationInfo"><span>setup</span> > <span>Network Configuration</span> > <strong>IEEE802.x</strong></p>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="card col-lg-6">
+							<div class="card-header mb-0">
+								<h6 class="mb-0 font-weight-bold text-primary">Configuration</h6>
+							</div>
+							<div class="card-body">
+								<div class="form-group mb-0">
+									<label class="form-check">
+										<input type="checkbox" id="network_ieee8021x_enable" class="form-check-input" />
+										<span>Enable</span>
+									</label>
+									<div class="form-inline">
+										<span class="col-md-3">EAP Type</span>
+										<select id="network_ieee8021x_eaptype" class="form-control-custom">
+											<option value="tls">EAP-TLS</option>
+											<option value="peap">EAP-PEAP</option>
+										</select>
+									</div>
+									<div class="form-inline mt-1">
+										<span class="col-md-3">Identity </span>
+										<input type="text" id="network_ieee8021x_id" class="form-control-custom mr-2" />
+									</div>
+									<div class="form-inline mt-1">
+										<span class="col-md-3">Private key password</span>
+										<input type="password" id="network_ieee8021x_pwd" class="form-control-custom mr-2" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-2">
+						<div class="card col-lg-6">
+							<div class="card-header mb-0">
+								<h6 class="mb-0 font-weight-bold text-primary">Certificates</h6>
+							</div>
+							<div class="card-body">
+								<form id="form_ca" enctype="multipart/form-data" action="/uapi-cgi/certmngr.cgi" method="post" class="form-group">
+									<span>CA certificate</span><span class="ml-4" hidden>No certificate configured.</span>
+									<div class="form-group form-inline">
+										<span class="col-md-3">Select certificate file</span>
+										<input name="Filedata" id="caFiledata" type="file" />
+										<input type="hidden" name="action" value="installstd" />
+										<input type="hidden" name="type" value="ca" />
+										<button class="btn btn-mini btn-warning mr-2" type="submit" name="btnStartCACert" id="btnStartCACert">Submit<buton>
+										<button id="btnRemoveCACert" class="btn btn-mini btn-secondary">Remove</button>
+									</div>
+								</form>
+								<form id="form_ca" enctype="multipart/form-data" action="/uapi-cgi/certmngr.cgi" method="post" class="form-group">
+									<span>Client certificate</span><span class="ml-4" hidden>No certificate configured.</span>
+									<div class="form-group form-inline">
+										<span class="col-md-3">Select certificate file</span>
+										<input name="Filedata" id="clientFiledata" type="file" />
+										<input type="hidden" name="action" value="installstd" />
+										<input type="hidden" name="type" value="client" />
+										<button class="btn btn-mini btn-warning mr-2" type="submit" name="btnStartClientCert" id="btnStartClientCert">Submit<buton>
+										<button id="btnRemoveClientCert" class="btn btn-mini btn-secondary">Remove</button>
+									</div>
+								</form>
+								<form id="form_ca" enctype="multipart/form-data" action="/uapi-cgi/certmngr.cgi" method="post" class="form-group">
+									<span>Client private key</span><span class="ml-4" hidden>No certificate configured.</span>
+									<div class="form-group form-inline">
+										<span class="col-md-3">Select certificate file</span>
+										<input name="Filedata" id="clientprivatekeyFiledata" type="file" />
+										<input type="hidden" name="action" value="installstd" />
+										<input type="hidden" name="type" value="clientprivatekey" />
+										<button class="btn btn-mini btn-warning mr-2" type="submit" name="btnStartClientPKeyCert" id="btnStartClientPKeyCert">Submit<buton>
+										<button id="btnRemoveClientPKeyCert" class="btn btn-mini btn-secondary">Remove</button>
+									</div>
+								</form>
+							</div>
+							<div class="card-footer text-center">
+								<button id="btnApply" class="btn btn-sm btn-primary mt-2">Apply</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+	<div id="debug_console"></div>
 </body>
+<?=$footer?>
+<script>
+$("button").on("click", function () {
+	console.log(this);
+	if (this.id == "modalApply") {
+		console.log($("#formUserName").val());
+	}
+});
+
+
+function loadIEEE802Config(){
+	url = "/uapi-cgi/param.cgi?action=list&format=json&group=NETWORK.Ieee8021x";
+	$.getJSON(url, function(response) {
+		console.log(response);
+		if (response['NETWORK.Ieee8021x.enable']=='yes'){
+			$("#network_ieee8021x_enable").prop('checked', true);
+		}
+
+		$("#network_ieee8021x_eaptype").val(response['NETWORK.Ieee8021x.eaptype']);
+		$("#network_ieee8021x_id").val(response['NETWORK.Ieee8021x.id']);
+		$("#network_ieee8021x_pwd").val(response['NETWORK.Ieee8021x.pwd']);
+		// $("#system_datetime_ntp_s3").val(response['SYSTEM.Datetime.Ntp.s3']);
+	});
+}
+// NETWORK.Ieee8021x.eaptype: "tls"
+// NETWORK.Ieee8021x.enable: "no"
+// NETWORK.Ieee8021x.id: ""
+// NETWORK.Ieee8021x.pwd: ""
+loadIEEE802Config();
+
+</script>
 </html>

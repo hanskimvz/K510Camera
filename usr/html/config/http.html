@@ -1,351 +1,257 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="imagetoolbar" content="no" />
-	<meta http-equiv="Cache-Control" content="no-cache"/>
-	<meta http-equiv="Expires" content="0"/>
-	<meta http-equiv="Pragma" content="no-cache"/>
-	<title></title>
-	<link type="text/css" href="../css/common.css" rel="stylesheet" />
-	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="../js/common.js"></script>
-	<script type="text/javascript" src="../js/defstring/defbrand.js"></script>
-	<script type="text/javascript" src="../js/utils/log.js"></script>
-	<script type="text/javascript" src="../js/utils/jq_string.js"></script>
-	<script type="text/javascript" src="../js/utils/jq_control.js"></script>
-	<script type="text/javascript" src="../js/jquery.formsubmit.js"></script>
-	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
-	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
-	<script type="text/javascript" src="../js/plat_utils/string.js"></script>
-	<script type="text/javascript" src="../js/plat_utils/brand.js"></script>
-	<script type="text/javascript" src="../js/config/http.js"></script>
-</head>
-<body id="config-page">
-	<p class="menuLocationInfo">
-		<span class="04040201">Setup &gt; Network Configuration &gt;</span>
-		<span id="pagename" class="04040202">Web Server</span>
-	</p>
-	
-	<ul class="box">
-		<li class="box-title"><h2 class="04040203">Configuration</h2></li>
-		<li class="box-content">
-			<ul>
-				<li class="item">
-					<ul>
-						<li>
-							<input type="radio" name="formHTTPSet" id="formHTTPSet0" value="yes" /><label for="formHTTPSet0" class="04040211"> HTTPS</label>
-						</li>
-					</ul>
-				</li>
-				<li class="item">
-					<ul>
-						<li>
-							<input type="radio" name="formHTTPSet" id="formHTTPSet1" value="no" /><label for="formHTTPSet1" class="04040212"> HTTP</label>
-						</li>
-					</ul>
-				</li>
-				<li class="item">
-					<ul>
-						<li class="item-title 04040209">TCP/IP port number of HTTP : </li>
-						<li>
-							<input type="text" id="formHttpPort" size="8" class="text_cen"/>
-							<label for="formHttpPort" class="04040205">(1 ... 65535)</label>
-						</li>
-					</ul>
-				</li>
-				<li class="item">
-					<ul>
-						<li class="item-title 04040210">TCP/IP port number of HTTPS : </li>
-						<li>
-							<input type="text" id="formHttpsPort" size="8" class="text_cen"/>
-							<label for="formHttpsPort" class="04040205">(1 ... 65535)</label>
-						</li>
-					</ul>
-				</li>
-				<li class="item">
-					<ul>
-						<li class="item-title 04040213">Authentication Type :</li>
-						<li>
-							<select id="formHTTPAuthType">
-								<option value="basic"> basic</option>
-								<option value="digest"> digest</option>
-							</select>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul>
-<!--
-	<ul class="box">
-		<li class="box-title"><h2 class="04040208">HTTP(S) Settings</h2></li>
-		<li class="box-content">
-			<ul>
+<!DOCTYPE html lang="en">
+<html lang="en" >
 
-				<li class="item">
-					<ul>
-						<li class="item-title">TCP/IP port number of HTTP or HTTPS : </li>
-						<li>
-							<input type="text" id="formHttpPort" size="8" />
-							<label for="formHttpPort" class="04040205">(1 ... 65535)</label>
-						</li>
-					</ul>
-				</li>
-				<li class="item">
-					<ul>
-						<li class="item-title 04040209">TCP/IP port number of HTTP : </li>
-						<li>
-							<input type="text" id="formHttpPort" size="8" />
-							<label for="formHttpPort" class="04040205">(1 ... 65535)</label>
-						</li>
-					</ul>
-				</li>
-				<li class="item">
-					<ul>
-						<li class="item-title 04040210">TCP/IP port number of HTTPS : </li>
-						<li>
-							<input type="text" id="formHttpsPort" size="8" />
-							<label for="formHttpsPort" class="04040205">(1 ... 65535)</label>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul>
-	//-->
-	<div class="box" align="center">
-		<button id="btnApply"><span class="04040206">Apply</span></button>
-	</div>
+<?php
+include ("../inc/common.php");
+echo $header;
 
-	<div class="certificateContents dsp_hide">
-		<ul class="box">
-			<li class="box-title"><h2 class="04040217">Certificate Create &amp; Install</h2></li>
-			<li class="box-content">
-				<ul>
-					<li class="item">
-						<ul>
-							<li class="04040218">Create &amp; install self-signed certificate</li>
-						</ul>
-						<ul>
-							<li class="createCertSubContents 04040242">Self-signed certificate: </li>
-							<button id="createSelfCert"><span class="04040243">Create</span></button>
-						</ul>
-					</li>
-					<li class="item">
-						<ul>
-							<li class="04040219">Create certificate signing request</li>
-						</ul>
-						<ul>
-							<li class="createCertSubContents 04040244">Create request: </li>
-							<button id="createCertReq"><span class="04040243">Create</span></button>
-						</ul>
-						<ul>
-							<li class="">
-								<form enctype="multipart/form-data" action="/uapi-cgi/certmngr.cgi" method="post">
-									<fieldset>
-										<label class="createCertSubContents 04040245">Select certificate file:</label>
-										<input name="Filedata" id="Filedata" type="file" accept=".pem" />
-										<input type="hidden" name="action" value="installcert" />
-										<input type="submit" name="submitStart" id="submitStart"/>
-									</fieldset>
-								</form>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-		</ul>
-		<ul class="box">
-			<li class="box-title"><h2 class="04040221">Created Certificate Request</h2></li>
-			<li class="box-content">
-				<ul>
-					<li class="item">
-						<ul>
-							<li><input type="text" id="certReqState" size="90" disabled value="No certificate request created."/></li>
-						</ul>
-					</li>
-					<li class="item">
-						<button id="certReqProperty"><span class="04040224">Properties</span></button>
-						<button id="certReqRemove"><span class="04040225">Remove</span></button>
-					</li>
-					<li class="certReqPropertyArea">
-						<pre class="textarea dsp_hide">
-						</pre>
-					</li>
-				</ul>
-			</li>
-		</ul>
-		<ul class="box">
-			<li class="box-title"><h2 class="04040226">Installed Certificate</h2></li>
-			<li class="box-content">
-				<ul>
-					<li class="item">
-						<ul>
-							<li><input type="text" id="installCertState" size="90" disabled value="No certificate configured."/></li>
-						</ul>
-					</li>
-					<li class="item">
-						<button id="installCertProperty"><span class="04040224">Properties</span></button>
-						<button id="installCertRemove"><span class="04040225">Remove</span></button>
-					</li>
-					<li class="installCertPropertyArea">
-						<pre class="textarea dsp_hide">
-						</pre>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
+?>
+<body>
+    <div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+				<p class="menuLocationInfo"><span>setup</span> > <span>Network Configuration</span> > <strong>Web server</strong></p>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="card col-lg-6">
+							<div class="card-header mb-0">
+								<h6 class="mb-0 font-weight-bold text-primary">Configuration</h6>
+							</div>
+							<div class="card-body">
+								<label class="form-check">
+									<input type="radio" name="formHTTPSet" id="formHTTPSet0" value="yes" class="form-check-input" />
+									<span>Https</span>
+								</label>
+								<label class="form-check">
+									<input type="radio" name="formHTTPSet" id="formHTTPSet1" value="yes" class="form-check-input" />
+									<span>Http</span>
+								</label>
+								<div class="form-group mb-0">
+									<div class="form-inline mb-1">
+										<span class="col-md-4">TCP/IP port number of HTTP </span>
+										<input type="text" id="formHttpPort"  size="8" class="form-control-custom text-center mr-2"/>
+										<label>(1 ... 65535)</label>
+									</div>
+									<div class="form-inline mb-1">
+										<span class="col-md-4">TCP/IP port number of HTTPS </span>
+										<input type="text" id="formHttpsPort"  size="8" class="form-control-custom text-center mr-2"/>
+										<label>(1 ... 65535)</label>
+									</div>
+									<div class="form-inline">
+										<span class="col-md-4">Authentication Type </span>
+										<select id="formHTTPAuthType" class="form-control-custom" style="width:80px">
+											<option value="basic">basic</option>
+											<option value="digest">digest</option>
+										</select>
+									</div>									
+								</div>
+							</div>
+							<div class="card-footer">
+								<button id="btnApply" class="btn btn-sm btn-primary">Apply</button>
+							</div>
+						</div>
+					</div>
+					
+					<div id="https_contents" hidden>
+						<div class="row mt-2">
+							<div class="card col-lg-6">
+								<div class="card-header mb-0">
+									<h6 class="mb-0 font-weight-bold text-primary">Certificate Create & Install</h6>
+								</div>
+								<div class="card-body">
+									<div class="form-group">
+										<span class="col-md-4">Create & install self-signed certificate</span>
+										<div class="form-inline ml-4">
+											<span class="col-md-3">Self-signed certificate</span>
+											<button id="CreateSelfCert" class="btn btn-mini btn-warning" data-toggle="modal" data-target="#selfCertDialog" >Create</button>
+										</div>
+									</div>
+									<div class="form-group mb-0">
+										<span class="col-md-4">Create certificate signing request</span>
+										<div class="form-inline ml-4">
+											<span class="col-md-3">Create request</span>
+											<button id="createCertReq" class="btn btn-mini btn-warning" data-toggle="modal" data-target="#certReqDialog">Create</button>
+										</div>
+										<div class="form-inline ml-4 mt-1">
+												<span class="col-md-3">Select certificate file</span>
+												<form enctype="multipart/form-data" action="/uapi-cgi/certmngr.cgi" method="post" class="form-group">
+												<input name="Filedata" id="Filedata" type="file" accept=".pem"/>
+												<input type="hidden" name="action" value="installcert" />
+												<input type="submit" name="submitStart" id="submitStart" class="btn btn-mini btn-primary"/>
+												</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mt-2">
+							<div class="card col-lg-6">
+								<div class="card-header mb-0">
+									<h6 class="mb-0 font-weight-bold text-primary">Created Certificate Request</h6>
+								</div>
+								<div class="card-body">
+									<input type="text" id="certReqState" size="90" disabled value="No certificate request created." class="col-md-12 form-control-custom mb-1"/>
+									<button id="certReqProperty" class="btn btn-mini btn-secondary">Properties</button>
+									<button id="certReqRemove"  class="btn btn-mini btn-secondary">Remove</button>
+									<pre class="mb-0"></pre>
+								</div>
 
-	<div id="selfCertDialog">
-		<fieldset>
-			<ul class="box">
-				<li class="box-content">
-					<ul>
-						<li class="item">
-							<ul>
-								<li class="item-title-mini 04040229">Country code</li>
-								<li>
-									<input type="text" id="selfCertCountry" class="" size="6" maxlength="2" />
-								</li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title-mini 04040230">State or province</li>
-								<li>
-									<input type="text" id="selfCertState" class="" size="35" maxlength="128"/>
-								</li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title-mini 04040231">Locality</li>
-								<li>
-									<input type="text" id="selfCertLocality" class="" size="35" maxlength="128"/>
-								</li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title-mini 04040232">Organization</li>
-								<li>
-									<input type="text" id="selfCertOrganization" class="" size="35" maxlength="64"/>
-								</li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title-mini 04040233">Organizational Unit</li>
-								<li>
-									<input type="text" id="selfCertOrganizationUnit" class="" size="35" maxlength="64"/>
-								</li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title-mini 04040234">Common Name</li>
-								<li>
-									<input type="text" id="selfCertCommonName" class="" size="35" maxlength="64"/>
-								</li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title-mini 04040235">Validity</li>
-								<li>
-									<input type="text" id="selfCertValidity" class="" size="4" value="365" maxlength="4"/>
-									<label class="04040246">days [1...9999]</label>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<div class="box selfCertBtnContents text_right">
-				<button id="selfCertDialogBtnOk"><span class="04040241">OK</span></button>
-				<button id="selfCertDialogBtnCancel"><span class="04040207">Cancel</span></button>
+							</div>
+						</div>
+						<div class="row mt-2">
+							<div class="card col-lg-6">
+								<div class="card-header mb-0">
+									<h6 class="mb-0 font-weight-bold text-primary">Installed Certificate</h6>
+								</div>
+								<div class="card-body">
+									<input type="text" id="installCertState" size="90" disabled value="No certificate configured." class="col-md-12 form-control-custom mb-1"/>
+									<button id="installCertProperty" class="btn btn-mini btn-secondary">Properties</button>
+									<button id="installCertRemove" class="btn btn-mini btn-secondary">Remove</button>
+									<pre class="mb-0"></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-		</fieldset>
+		</div>
 	</div>
 
-	<div id="certReqDialog">
-		<fieldset>
-			<ul class="box">
-				<li class="box-content">
-					<ul>
-						<li class="item">
-							<ul>
-								<li class="item-title-mini 04040229">Country code</li>
-								<li>
-									<input type="text" id="certReqCountry" class="" size="6" maxlength="2" />
-								</li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title-mini 04040230">State or province</li>
-								<li>
-									<input type="text" id="certReqStateProvince" class="" size="35" maxlength="128"/>
-								</li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title-mini 04040231">Locality</li>
-								<li>
-									<input type="text" id="certReqLocality" class="" size="35" maxlength="128"/>
-								</li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title-mini 04040232">Organization</li>
-								<li>
-									<input type="text" id="certReqOrganization" class="" size="35" maxlength="64"/>
-								</li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title-mini 04040233">Organizational Unit</li>
-								<li>
-									<input type="text" id="certReqOrganizationUnit" class="" size="35" maxlength="64"/>
-								</li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title-mini 04040234">Common Name</li>
-								<li>
-									<input type="text" id="certReqCommonName" class="" size="35" maxlength="64"/>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<div class="box certReqBtnContents text_right">
-				<button id="certReqDialogBtnOk"><span class="04040241">OK</span></button>
-				<button id="certReqDialogBtnCancel"><span class="04040207">Cancel</span></button>
-			</div>
-		</fieldset>
-	</div>
+	<div class="modal fade" id="selfCertDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="exampleModalLabel">Self-signed Certificate</h6>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                </div>
+                <div class="card-body">
+					<div class="form-group form-inline">
+						<span class="col-md-5">Country code</span>
+						<input type="text" id="selfCertCountry" class="form-control-custom" />
+					</div>
+					<div class="form-group form-inline">
+						<span class="col-md-5">State or province</span>
+						<input type="text" id="selfCertState" class="form-control-custom" />
+					</div>
+					<div class="form-group form-inline">
+						<span class="col-md-5">Locality</span>
+						<input type="text" id="selfCertLocality" class="form-control-custom" />
+					</div>
+					<div class="form-group form-inline">
+						<span class="col-md-5">Organization</span>
+						<input type="text" id="selfCertOrganization" class="form-control-custom" />
+					</div>
+					<div class="form-group form-inline">
+						<span class="col-md-5">Organizational Unit</span>
+						<input type="text" id="selfCertOrganizationUnit" class="form-control-custom" />
+					</div>
+					<div class="form-group form-inline">
+						<span class="col-md-5">Common Name</span>
+						<input type="text" id="selfCertCommonName" class="form-control-custom" />
+					</div>
+					<div class="form-group form-inline">
+						<span class="col-md-5">Validity</span>
+						<input type="text" id="selfCertValidity" class="form-control-custom col-md-2"  />
+						<label><span>day(s)</span> [1...9999]</label>
+					</div>
+				</div>
+                <div class="modal-footer">
+                    <button id="selfCertDialogBtnOk" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button id="selfCertDialogBtnCancel" class="btn btn-primary" data-dismiss="modal">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>					
+	<div class="modal fade" id="certReqDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" >Created Request Certificate</h6>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                </div>
+                <div class="card-body">
+					<div class="form-group form-inline">
+						<span class="col-md-5">Country code</span>
+						<input type="text" id="certReqCountry" class="form-control-custom" />
+					</div>
+					<div class="form-group form-inline">
+						<span class="col-md-5">State or province</span>
+						<input type="text" id="certReqStateProvince" class="form-control-custom" />
+					</div>
+					<div class="form-group form-inline">
+						<span class="col-md-5">Locality</span>
+						<input type="text" id="certReqLocality" class="form-control-custom" />
+					</div>
+					<div class="form-group form-inline">
+						<span class="col-md-5">Organization</span>
+						<input type="text" id="certReqOrganization" class="form-control-custom" />
+					</div>
+					<div class="form-group form-inline">
+						<span class="col-md-5">Organizational Unit</span>
+						<input type="text" id="certReqOrganizationUnit" class="form-control-custom" />
+					</div>
+					<div class="form-group form-inline">
+						<span class="col-md-5">Common Name</span>
+						<input type="text" id="certReqCommonName" class="form-control-custom" />
+					</div>
+				</div>
+                <div class="modal-footer">
+                    <button id="certReqDialogBtnOk" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button id="certReqDialogBtnCancel" class="btn btn-primary" data-dismiss="modal">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<div id="countryCodeDialog" class="dsp_hide">
-		<fieldset>
-			<ul class="box">
-				<li class="box-content">
-					<ul id="countryCodeList"></ul>
-				</li>
-			</ul>
-		</fieldset>
+	<div id="countryCodeDialog" hidden>
+		<fieldset id="countryCodeList"></fieldset>
 	</div>
-
 	<div id="debug_console"></div>
 </body>
+<?=$footer?>
+<script>
+// $("#formHTTPSet0").on("click", function () {
+$("input:radio[name=formHTTPSet]").on("click", function () {
+	console.log(this);
+	if ($("#formHTTPSet0").prop('checked')) {
+		$("#https_contents").removeAttr('hidden');
+	}
+	else {
+		$("#https_contents").attr('hidden','');
+	}
+});
+
+function loadHTTPConfig(){
+	url = "/inc/query.php?page=http";
+	url = "/uapi-cgi/param.cgi?action=list&format=json&group=NETWORK.Http,NETWORK.Https";
+	$.getJSON(url, function(response) {
+		console.log(response);
+		// NETWORK.Http.authentype=basic
+		// NETWORK.Http.enable=yes
+		// NETWORK.Http.port=80
+		// NETWORK.Https.enable=no
+		// NETWORK.Https.port=443		
+		if (response['NETWORK.Http.enable']=='yes'){
+			$("#formHTTPSet1").prop('checked', true);
+		}
+		else if (response['NETWORK.Https.enable']=='yes'){
+			$("#formHTTPSet0").prop('checked', true);
+			$("#https_contents").removeAttr('hidden');
+		}
+
+		$("#formHttpPort").val(response['NETWORK.Http.port']);
+		$("#formHttpsPort").val(response['NETWORK.Https.port']);
+		$("#formHTTPAuthType").val(response['NETWORK.Http.authentype']);
+		// $("#system_datetime_ntp_s3").val(response['SYSTEM.Datetime.Ntp.s3']);
+	});
+}
+
+loadHTTPConfig();
+// value="<?=$arr_rs['NETWORK.Http.port']?>"
+// value="<?=$arr_rs['NETWORK.Https.port']?>"
+</script>
 </html>

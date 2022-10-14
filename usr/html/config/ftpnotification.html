@@ -1,227 +1,176 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="imagetoolbar" content="no" />
-	<meta http-equiv="Cache-Control" content="no-cache"/>
-	<meta http-equiv="Expires" content="0"/>
-	<meta http-equiv="Pragma" content="no-cache"/>
-	<title></title>
-	<link type="text/css" href="../css/common.css" rel="stylesheet" />
-	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="../js/common.js"></script>
-	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
-	<script type="text/javascript" src="../js/jquery.effects.core.js"></script>
-	<script type="text/javascript" src="../js/jquery.effects.blind.js"></script>
-	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
-	<script type="text/javascript" src="../js/jquery.ipaddress.js"></script>
-	<script type="text/javascript" src="../js/jquery.caret.js"></script>
-	<script type="text/javascript" src="../js/config/ftpnotification.js"></script>
-	<!--[If lte IE 8]>
-		<link type="text/css" href="../css/ie8.css" rel="stylesheet" />
-	<![endif]-->
-</head>
-<body id="config-page">
-	<p class="menuLocationInfo">
-			<span class="04030401">Setup &gt; Event Configuration &gt;</span>
-		<span id="pagename" class="04030402">FTP Notification</span>
-	</p>
-	<ul class="box">
-		<li class="box-title"><h2 class="04030403">FTP Notification List</h2></li>
-		<li class="box-content">
-			<ul>
-				<li id="formFNListBox" class="item">
-					<ul>
-						<li id="ftpnotification_id" class="notiListTitleID 04030404">Id</li>
-						<li id="ftpnotification_name" class="notiListTitleName 04030405">Name</li>
-						<li class="notiListTitleDes 04030406">Description</li>
-					</ul>
-				</li>
-				<li class="item">
-					<select size="8" id="formNotifyList" class="select-list"><option></option></select>
-					<button id="btnAdd"><span class="04030407">Add...</span></button>
-					<button id="btnModify"><span class="04030408">Modify...</span></button>
-					<button id="btnRemove"><span class="04030409">Remove</span></button>
-				</li>
-			</ul>
-		</li>
-	</ul>
+<!DOCTYPE html lang="en">
+<html lang="en" >
+<?php
+include ("../inc/common.php");
+echo $header;
+?>
 
-<div id="input_form">
-	<p id="msg_status">&nbsp;</p>
-
-	<fieldset>
-		<ul class="box">
-			<li class="box-content">
-				<ul>
-					<li class="item">
-						<ul>
-							<li class="item-title-mini 04030410">Name :</li>
-							<li>
-								<input type="text" id="formFtpName" class="formWidth" />
-							</li>
-						</ul>
-					</li>
-					<li class="item">
-						<ul>
-							<li class="item-title-mini 04030411">Description :</li>
-							<li>
-								<input type="text" id="formFtpDes" class="formWidth" />
-							</li>
-						</ul>
-					</li>
-					<li id="formIPAddress" class="item">
-						<p>
-							<span class="item-title-mini 04030412">IP address :</span>
-							<input type="text" id="formFtpAddr" class="formWidth" />
-						</p>
-					</li>
-
-					<li class="item">
-						<ul>
-							<li class="item-title-mini 04030413">Port (1 ... 65535) :</li>
-							<li>
-								<input type="text" id="formFtpPort" class="formWidth" />
-							</li>
-						</ul>
-					</li>
-					<li class="item">
-						<ul>
-							<li class="item-title-mini 04030414">Target directory :</li>
-							<li>
-								<input type="text" id="formFtpPath" class="formWidth" />
-							</li>
-						</ul>
-					</li>
-					<li class="item">
-						<ul>
-							<li class="item-title-mini 04030415">Account :</li>
-							<li>
-								<input type="text" id="formFtpUser" class="formWidth" />
-							</li>
-						</ul>
-					</li>
-					<li class="item">
-						<ul>
-							<li class="item-title-mini 04030416">Password :</li>
-							<li>
-								<input type="password" id="formFtpPwd" class="formWidth" />
-							</li>
-						</ul>
-					</li>
-					<li class="item">
-						<ul>
-							<li class="item-title-mini 04030417">File name format :</li>
-							<li>
-								<select id="formFtpNameFormat">
-									<option value="yyyymmdd" class="04030419">YYYYMMDD</option>
-									<option value="mmddyyyy" class="04030420">MMDDYYYY</option>
-								</select>
-							</li>
-						</ul>
-					</li>
-					<li class="item">
-						<ul>
-							<li class="item-title-mini 04030445">File name prefix :</li>
-							<li>
-								<input type="radio" name="namePrefixType" id="namePrefixType_ip" class="margin_left_step0" value="ip" />
-								<label for="namePrefixType_ip" class="04030443"> IP address</label>
-							</li>
-							<li>
-								<input type="radio" name="namePrefixType" id="namePrefixType_usn" value="usn" />
-								<label for="namePrefixType_usn"> USN</label>
-							</li>
-							<li>
-								<input type="radio" name="namePrefixType" id="namePrefixType_mac" value="mac" />
-								<label for="namePrefixType_mac"> MAC</label>
-							</li>
-							<li>
-								<input type="radio" name="namePrefixType" id="namePrefixType_text" value="text" />
-								<label for="namePrefixType_text" class="04030444"> Text</label>
-							</li>
-						</ul>
-						<ul class="prefixTextContents">
-							<li>
-								<input type="text" id="prefixText" class="width_step22" />
-							</li>
-						</ul>
-					</li>
-					<li class="item">
-						<span class="04030442 noti_msg">* ([Prefix]_[Channel]_YYYYMMDD_hhmmss.[Millisecond].jpg)</span>
-					</li>
-				</ul>
-			</li>
-		</ul>
-		<div class="box settingButtonDialog text_right">
-			<button id="btnFTPTest"><span class="04030441">Test</span></button>
-			<button id="btnDialogOK"><span class="04030437">OK</span></button>
-			<button id="btnDialogCancel"><span class="04030438">Cancel</span></button>
+<body>
+    <div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+				<p class="menuLocationInfo"><span>setup</span> > <span>Event Configuration</span> > <strong>FTP notification</strong></p>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="card col-lg-6">
+							<div class="card-header">
+								<h6 class="m-0 font-weight-bold text-primary">FTP notification list</span></h6>
+							</div>
+							<div class="card-body">
+								<div class="form-group mb-0">
+									<div class="form-inline">
+										<span class="col-md-1">ID</span>
+										<span class="col-md-3">Name</span>
+										<span class="col-md-4">Description</span>
+									</div>
+									<select size="8" id="formNotifyList" class="form-control-custom col-md-12" onClick="viewSchedule(this)"><option></option></select>
+								</div>
+							</div>
+							<div class="card-footer">
+								<button id="btnAdd" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#ftpNotiModal">Add</button>
+								<button id="btnModify" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#ftpNotiModal">Modify</button>
+								<button id="btnRemove" class="btn btn-sm btn-secondary" >Remove</button>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-2">
+						<div class="card col-lg-6">
+							<div class="card-header">
+								<h6 class="m-0 font-weight-bold text-primary">Information</h6>
+							</div>
+							<div class="card-body">
+								<div class="form-group">
+									<div class="form-inline">
+										<span class="col-md-3">Name</span>
+										<label id="infoFtpName">ㅇ</label>
+									</div>
+									<div class="form-inline mt-1">
+										<span class="col-md-3">Description</span>
+										<label id="infoFtpDes"></label>
+									</div>
+									<div class="form-inline mt-1">
+										<span class="col-md-3">Ip address</span>
+										<label id="infoFtpAddr"></label>
+									</div>
+									<div class="form-inline mt-1">
+										<span class="col-md-3">Port</span>
+										<label id="infoFtpPort"></label>
+									</div>
+									<div class="form-inline mt-1">
+										<span class="col-md-3">Target directory</span>
+										<label id="infoFtpPath"></label>
+									</div>
+									<div class="form-inline mt-1">
+										<span class="col-md-3">Account</span>
+										<label id="infoFtpUser"></label>
+									</div>
+									<div class="form-inline mt-1">
+										<span class="col-md-3">Filename format</span>
+										<label id="infoFtpNameFormat"></label>
+									</div>
+									<div class="form-inline mt-1">
+										<span class="col-md-3">Filename prefix</span>
+										<label id="infoFtpNamePrefix"></label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</fieldset>
-</div>
-<div class="demo">
-	<div class="toggler">
-		<div id="effect" class="ui-widget-content ui-corner-all dsp_hide">
-			<ul class="box">
-				<li class="box-title"><h2 class="04030421">Information</h2></li>
-				<li class="box-content">
-					<ul>
-						<li class="item">
-							<ul>
-								<li class="item-title 04030422">Name :</li>
-								<li id="infoFtpName"></li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title 04030423">Description :</li>
-								<li id="infoFtpDes"></li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title 04030424">IP Address :</li>
-								<li id="infoFtpAddr"></li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title 04030425">Port :</li>
-								<li id="infoFtpPort"></li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title 04030426">Target Directory :</li>
-								<li id="infoFtpPath"></li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title 04030427">Account :</li>
-								<li id="infoFtpUser"></li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title 04030428">File name format :</li>
-								<li id="infoFtpNameFormat"></li>
-							</ul>
-						</li>
-						<li class="item">
-							<ul>
-								<li class="item-title 04030445">File name prefix :</li>
-								<li id="infoFtpNamePrefix"></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-			</ul>
+	</div>
+	<div id="debug_console"></div>
+
+<div class="modal fade" id="ftpNotiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-md" role="document" >
+		<div class="modal-content">
+			<div class="modal-header mb-0">
+				<h6 class="modal-title" id="exampleModalLabel">FTP notification info</h6>
+				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">x</span>
+				</button>
+			</div>
+			<div class="card-body">
+				<div class="form-group">
+					<div class="form-inline">	
+						<span class="col-md-4">Name</span>
+						<input type="text" id="formFtpName" class="form-control-custom col-md-6" />
+					</div>	
+					<div class="form-inline mt-1">	
+						<span class="col-md-4">Description</span>
+						<input type="text" id="formFtpDes" class="form-control-custom col-md-6" />
+					</div>	
+					<div class="form-inline mt-1">	
+						<span class="col-md-4">IP address</span>
+						<input type="text" id="formFtpAddr" class="form-control-custom col-md-6" />
+					</div>	
+					<div class="form-inline mt-1">	
+						<span class="col-md-4">Port</span>
+						<input type="text" id="formFtpPort" class="form-control-custom col-md-2 mr-2" />(1 ... 65535)
+					</div>	
+					<div class="form-inline mt-1">	
+						<span class="col-md-4">Target directory</span>
+						<input type="text" id="formFtpPath" class="form-control-custom col-md-6" />
+					</div>
+					<div class="form-inline mt-1">	
+						<span class="col-md-4">Account</span>
+						<input type="text" id="formFtpUser" class="form-control-custom col-md-6" />
+					</div>
+					<div class="form-inline mt-1">	
+						<span class="col-md-4">Password</span>
+						<input type="text" id="formFtpPwd" class="form-control-custom col-md-6" />
+					</div>
+					<div class="form-inline mt-1">	
+						<span class="col-md-4">Filename format</span>
+						<select id="formFtpNameFormat" class="form-control-custom col-md-6">
+							<option value="yyyymmdd">YYYYMMDD</option>
+							<option value="mmddyyyy">MMDDYYYY</option>
+						</select>
+					</div>
+					<div class="form-inline mt-1">	
+						<span class="col-md-4">Filename prefix</span>
+						<label class="form-check">
+							<input type="radio" name="namePrefixType" id="namePrefixType_ip" class="form-check-input" value="ip" />
+							<span>IP address</span>
+						</label>
+						<label class="form-check ml-2">
+							<input type="radio" name="namePrefixType" id="namePrefixType_usn" class="form-check-input" value="usn" />
+							<span>USN</span>
+						</label>
+						<label class="form-check ml-2">
+							<input type="radio" name="namePrefixType" id="namePrefixType_mac" class="form-check-input" value="mac" />
+							<span>MAC</span>
+						</label>	
+						<label class="form-check ml-2">
+							<input type="radio" name="namePrefixType" id="namePrefixType_text" class="form-check-input" value="text" />
+							<span>Text</span>
+						</label>
+					</div>
+					<div class="form-inline" hidden>
+						<span class="col-md-4">Text</span>
+						<input type="text" id="prefixText" class="form-control-custom col-md-6"/>
+					</div>
+					<div class="mt-2 mb-0">
+						<span>* ([Prefix]_[Channel]_YYYYMMDD_hhmmss.[Millisecond].jpg)</span>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer ">
+				<button id="btnFTPTest" class="btn btn-sm btn-primary" data-dismiss="modal"><span>test</span></button>
+				<button id="btnDialogOK" class="btn btn-sm btn-primary" data-dismiss="modal"><span>apply</span></button>
+				<button id="btnDialogCancel" class="btn btn-sm btn-secondary ml-2" data-dismiss="modal"><span>cancel</span></button>
+			</div>
 		</div>
 	</div>
 </div>
+	
 </body>
+<?=$footer?>
+<script>
+$(".slider").on("input", function () {
+	xt = this.id.replace("slider","form");
+ 	$("#" + xt).val(this.value);
+});
+</script>
 </html>

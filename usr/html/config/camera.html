@@ -4,684 +4,528 @@
 <?php
 include ("../inc/common.php");
 echo $header;
-
-$fname ="/usr/hbin/param.db";
-$db = new SQLite3($fname);
-$sq = "select * from param_tbl where group1='videoin'";
-$rs = $db->query($sq);
-
-$arr_rs= array();
-
-while ($row = $rs->fetchArray()) {
-	// print_r($row);
-	$arr_rs[$row['groupPath'].'.'.$row['entryName']] = $row['entryValue'];
-}
-$db->close();
 ?>
+<style>
+.card .card-header, .card-body {
+	padding-top: 0.5rem !important;
+	padding-bottom: 0.5rem !important;
+}
+</style>
 <body>
     <div id="wrapper">
 		<div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-				<p class="menuLocationInfo"><span>Setup > Video &amp; Audio ></span><strong >Video</strong></p>
 				<div class="container-fluid">
-					<div class="row">
-						<div class="card col-12 col-md-6 col-lg-6">
-							<div class="card-header mb-0">
-								<h6 class="mb-0 font-weight-bold text-primary">General</h6>
-							</div>
-							<div class="card-body">
-								<div class="form-group form-inline">
-									<span class="col-md-2">Friendly name : </span>
-									<input type="text" id="formCamName" class="form-control-custom" />
-								</div>
-								<div class="form-group form-inline mb-0">
-									<span class="col-md-2">Aspect ratio :</span>
-									<label for="aspectRatioOption_1" class="form-check">					
-										<input type="radio"	name="aspectRatioOption" id="aspectRatioOption_1" value="4:3" class="form-check-input" />
-										<span>4:3</span>
-									</label>
-									<label for="aspectRatioOption_0" class="form-check ml-4">
-										<input type="radio"	name="aspectRatioOption" id="aspectRatioOption_0" value="16:9" class="form-check-input" />
-				 						<span>16:9</span>
-									</label>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row mt-2" id="videostandard" hidden>
-						<div class="card col-12 col-md-6 col-lg-6">
-							<div class="card-header mb-0">
-								<h6 class="mb-0 font-weight-bold text-primary">Video Standard Format</h6>
-							</div>
-							<div class="card-body">
-								<span id="formCamStandard">NTSC PAL</span>
-							</div>
-						</div>
-					</div>
-					<div class="row mt-2">
-						<div class="card col-12 col-md-6 col-lg-6">
-							<div class="card-header mb-0">
-								<h6 class="mb-0 font-weight-bold text-primary">Video Appearance</h6>
-							</div>
-							<div class="card-body">  
-								<div class="form-group form-inline">
-									<span class="col-md-2">Brightness :</span>
-									<input type="range" id="sliderCamBright"  min="0" max="255" value="<?=$arr_rs['VIDEOIN.Ch0.Color.brightness']?>" style="width:200px;" class="slider">
-									<input type="text" size="3" id="formCamBright" value="<?=$arr_rs['VIDEOIN.Ch0.Color.brightness']?>" class="form-control-custom text-center ml-2" />
-									<label class="ml-2">(0 ... 255, 128)</label>
-								</div>
-								<div class="form-group form-inline">
-									<span class="col-md-2">Contrast :</span>
-									<input type="range" id="sliderCamContrast"  min="0" max="255" value="<?=$arr_rs['VIDEOIN.Ch0.Color.contrast']?>" style="width:200px;" class="slider">
-									<input type="text" size="3" id="formCamContrast" value="<?=$arr_rs['VIDEOIN.Ch0.Color.contrast']?>" class="form-control-custom text-center ml-2" />
-									<label class="ml-2">(0 ... 255, 128)</label>
-								</div>
-								<div class="form-group form-inline">
-									<span class="col-md-2">Saturation :</span>
-									<input type="range" id="sliderCamSaturation"  min="0" max="255" value="<?=$arr_rs['VIDEOIN.Ch0.Color.saturation']?>" style="width:200px;" class="slider">
-									<input type="text" size="3" id="formCamSaturation" value="<?=$arr_rs['VIDEOIN.Ch0.Color.saturation']?>"class="form-control-custom text-center ml-2" />
-									<label class="ml-2">(0 ... 255, 128)</label>
-								</div>
-								<div class="form-group form-inline mb-0">
-									<span class="col-md-2">Sharpness :</span>
-									<input type="range" id="sliderCamSharpness"  min="0" max="255" value="<?=$arr_rs['VIDEOIN.Ch0.Color.sharpness']?>" style="width:200px;" class="slider">
-									<input type="text" size="3" id="formCamSharpness" value="<?=$arr_rs['VIDEOIN.Ch0.Color.sharpness']?>" class="form-control-custom text-center ml-2"  />
-									<label class="ml-2">(0 ... 255, 128)</label>
-								</div>
-							</div>
-						</div>
-					</div>
-			
-					<div class="row mt-2">
-						<div class="card col-12 col-md-6 col-lg-6">
-							<div class="card-header mb-0">
-								<h6 class="mb-0 font-weight-bold text-primary">Video Transform</h6>
-							</div>
-							<div class="card-body">
-								<div class="form-group form-inline">
-									<span class="col-md-2">Orientation :</span>
-									<label class="form-check">
-										<input type="checkbox" id="formCamFlip" class="form-check-input" />
-										<span>Vertical flip</span>
-									</label>
-									<label class="form-check ml-3">
-										<input type="checkbox" id="formCamMirror" class="form-check-input" />
-										<span>VHorizontal mirror</span>
-									</label>
-								</div>
-								<div class="form-group form-inline">
-									<span class="col-md-2">Rotation :</span>
-									<label class="form-check">
-										<input type="radio"	name="formCamRotation" id="formCamRotation0" value="none" class="form-check-input" />
-										<span>None</span>
-									</label>
-									<label class="form-check ml-3">
-										<input type="radio"	name="formCamRotation" id="formCamRotation1" value="none" class="form-check-input" />
-										<span>Left(-90 degrees)</span>
-									</label>
-									<label class="form-check ml-3">
-										<input type="radio"	name="formCamRotation" id="formCamRotation2" value="none" class="form-check-input" />
-										<span>Right(+90 degrees)</span>
-									</label>
-								</div>
-								<span class="ml-3">
-									*Note: Image rotation is disabled while any of the features below is activated.
-								</span>
-							</div>
-						</div>
-					</div>
-					<div class="row mt-2" hidden>
-						<div class="card col-12 col-md-6 col-lg-6">
-							<div class="card-header mb-0">
-								<h6 class="mb-0 font-weight-bold text-primary">Gain Control</h6>
-							</div>
-							<div class="card-body">
-								<label class="form-check">
-									<input type="radio"	name="gainControlMode" id="gainControlMode_0" value="auto" />
-							 		<span>Auto</span>
-								</label>
-								<label class="form-check">
-									<input type="radio"	name="gainControlMode" id="gainControlMode_1" value="ice" />
-									<span> ICE</span>
-								</label>
-								<div class="form-group form-inline">
-									<span class="col-md-2">Level :</span>
-									<input type="range" id="sliderIceLevel"  min="0" max="255" value="128" style="width:200px;" class="slider">
-									<input type="text" size="3" id="formIceLevel" class="form-control-custom text-center ml-2" />
-								</div>
-								<label class="form-check">
-									<input type="radio"	name="gainControlMode" id="gainControlMode_2" value="manual" />
-									<span>Manual</span>
-								</label>
-								<div class="form-group form-inline">
-									<span class="col-md-2">Gain :</span>
-									<input type="range" id="sliderManualGain"  min="0" max="4095" value="1024" style="width:200px;" class="slider">
-									<input type="text" size="5" id="formManualGain" class="form-control-custom text-center" />
-									<label>(0 ... 4095, 1024)</label>
-								</div>
-								<div class="form-group form-inline">
-									<span class="col-md-2">Level :</span>
-									<input type="range" id="sliderManualLevel"  min="0" max="4095" value="1024" style="width:200px;" class="slider">
-									<input type="text" size="5" id="formManualLevel" class="form-control-custom text-center" />
-									<label>(0 ... 4095, 1024)</label>
-								</div>
-								<span>
-									Note: The option except "Auto" option may lead to inaccurate VCA object tracking.
-								</span>
-							</div>
-						</div>
-					</div>
-					<div class="row mt-2" hidden>
-						<div class="card col-12 col-md-6 col-lg-6">
-							<div class="card-header mb-0">
-								<h6 class="mb-0 font-weight-bold text-primary">Noise Reduction</h6>
-							</div>
-							<div class="card-body">  
-								<label class="form-check mb-0 ml-3">
-									<input type="checkbox" id="noiseredEnable" class="form-check-input" />
-									<span>Enable</span>
-								</label>
-							</div>
-						</div>
-					</div>
-					<div class="row mt-2" hidden>
-						<div class="card col-12 col-md-6 col-lg-6">
-							<div class="card-header mb-0">
-								<h6 class="mb-0 font-weight-bold text-primary">Thermal Meta Data</h6>
-							</div>
-							<div class="card-body">  
-								<label class="form-check mb-0 ml-3">
-									<input type="checkbox" id="thermalMetaEnable" class="form-check-input" />
-									<span>Enable</span>
-								</label>
-							</div>
-						</div>
-					</div>
-					<div class="row mt-2" hidden>
-						<div class="card col-12 col-md-6 col-lg-6">
-							<div class="card-header mb-0">
-								<h6 class="mb-0 font-weight-bold text-primary">Adjust</h6>
-							</div>
-							<div class="card-body">  
-								<div class="form-group form-inline mb-0">
-									<span class="col-md-3">Vertical Delay :</span>
-									<input type="text" size="5" id="verticaldelay"  class="form-control-custom text-center mr-2" />
-									<span id="ntscVdelayContents">(2 ... 128, 18)</label>
-									<span id="palVdelayContents">(5 ... 128, 24)</label>
-								</div>
-								<div class="form-group form-inline mb-0">
-									<span class="col-md-3">Horizontal Delay :</span>
-									<input type="text" size="5" id="verticaldelay"  class="form-control-custom text-center mr-2" />
-									<span id="ntscHdelayContents">(2 ... 128, 15)</label>
-									<span id="palHdelayContents">(2 ... 128, 10)</label>
-								</div>								
-							</div>
-						</div>
-					</div>	
-					<div class="row mt-2" hidden>
-						<div class="card col-12 col-md-6 col-lg-6">
-							<div class="card-header mb-0">
-								<h6 class="mb-0 font-weight-bold text-primary">High Performance Image Processing</h6>
-							</div>
-							<div class="card-body">  
-								<label class="form-check mb-0 ml-3">
-									<input type="checkbox" id="formCamDeinterlaceEnable" class="form-check-input" />
-									<span>Enable De-interlacing</span>
-								</label>								
-							</div>
-						</div>
-					</div>				
-					<div class="row mt-2">
-						<div class="card col-12 col-md-6 col-lg-6">
-							<div class="card-header mb-0">
-								<h6 class="mb-0 font-weight-bold text-primary">Exposure</h6>
-							</div>
-							<div class="card-body">
-								<div class="row">
-									<div class="col-md-3">Exposure mode :</div>
-									<div>
-										<label class="form-check"> 
-											<input type="radio" name="formCamExposureMode" id="formCamExposureModeAuto" value="normal" class="form-check-input"/>
-											<span>Auto</span>
-											<div class="form-inline">
-												<span>Maximum  exposure time : </span>
-												<span>1 / </span>
-												<input id="maxshutter"class="form-control-custom" type="text" size="4" />
-												<span>(1/30 ... 1/500 sec)</span>
+					<p class="menuLocationInfo"><span>Setup</span> > <span>Video & Audio</span> > <strong>Video</strong></p>
+					<div class="col-lg-6">
+						<div class="tab">
+							<ul class="nav nav-tabs" role="tablist">
+								<li class="nav-item" style="height:30px;"><a class="nav-link active" href="#tab-1" data-bs-toggle="tab" role="tab"><span>basic</span></a></li>
+								<li class="nav-item"><a class="nav-link" href="#tab-2" data-bs-toggle="tab" role="tab"><span>advanced</a></li>
+								<li class="nav-item"><a class="nav-link" href="#tab-3" data-bs-toggle="tab" role="tab"><span>Expert</span></a></li>
+								<li class="nav-item"><a class="nav-link" href="#tab-4" data-bs-toggle="tab" role="tab"><span><?=$stream[3]?></audio></a></li>
+							</ul>
+							<div class="tab-content mt-1">
+<!-- Basic setting -->								
+								<div class="tab-pane active" id="tab-1" role="tabpanel">				
+									<div class="card">
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary">General</h6>
+										</div>
+										<div class="card-body">
+											<div class="form-group mb-0">
+												<div class="form-inline">
+													<span class="col-md-2">Friendly name</span>
+													<input type="text" id="formCamName" class="form-control-custom" />
+												</div>
+												<div class="form-inline mt-2">
+													<span class="col-md-2">Aspect ratio</span>
+													<label for="aspectRatioOption_1" class="form-check">					
+														<input type="radio"	name="aspectRatioOption" id="aspectRatioOption_1" value="4:3" class="form-check-input" />
+														<span>4:3</span>
+													</label>
+													<label for="aspectRatioOption_0" class="form-check ml-4">
+														<input type="radio"	name="aspectRatioOption" id="aspectRatioOption_0" value="16:9" class="form-check-input" />
+														<span>16:9</span>
+													</label>
+												</div>
 											</div>
-											<div class="form-inline">
-												<span>Minimum  exposure time : </span>
-												<span>1 / </span>
-												<input id="minshutter" class="form-control-custom" type="text" size="4" />
-												<span>(1/1000 ... 1/10000 sec)</span>
+										</div>
+									</div>
+									<div class="card mt-2" hidden>
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary"><span>Video Standard Format</span></h6>
+										</div>
+										<div class="card-body">
+											<span id="formCamStandard">NTSC PAL</span>
+										</div>
+									</div>
+									<div class="card mt-2">
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary">Video appearance</h6>
+										</div>
+										<div class="card-body">  
+											<div class="form-group mb-0">
+												<div class="form-inline">
+													<span class="col-md-2">Brightness</span>
+													<input type="range" id="sliderCamBright"  min="0" max="255"  style="width:200px;" class="slider">
+													<input type="text" size="3" id="formCamBright" class="form-control-custom text-center ml-2 mr-2" />
+													<label>(0 ... 255, 128)</label>
+												</div>
+												<div class="form-inline">
+													<span class="col-md-2">Contrast</span>
+													<input type="range" id="sliderCamContrast"  min="0" max="255" style="width:200px;" class="slider">
+													<input type="text" size="3" id="formCamContrast" class="form-control-custom text-center ml-2 mr-2" />
+													<label>(0 ... 255, 128)</label>
+												</div>
+												<div class="form-inline">
+													<span class="col-md-2">Saturation</span>
+													<input type="range" id="sliderCamSaturation"  min="0" max="255"  style="width:200px;" class="slider">
+													<input type="text" size="3" id="formCamSaturation" class="form-control-custom text-center ml-2 mr-2" />
+													<label>(0 ... 255, 128)</label>
+												</div>
+												<div class="form-inline">
+													<span class="col-md-2">Sharpness</span>
+													<input type="range" id="sliderCamSharpness"  min="0" max="255" style="width:200px;" class="slider">
+													<input type="text" size="3" id="formCamSharpness" class="form-control-custom text-center ml-2 mr-2"  />
+													<label>(0 ... 255, 128)</label>
+												</div>
 											</div>
-										</label>
-										<label class="form-check"> 
-											<input type="radio" name="formCamExposureMode" id="formCamExposureModeManual" value="normal" class="form-check-input"/>
-											<span>Manual</span>
-											<div class="form-inline">
-												<span>Shutter speed : </span>
-												<span>1 /</span>
-												<input id="fixedshutter" class="form-control-custom" type="text" size="4" />
-												<span>(1/2 ... 1/5000 sec)</span>
+										</div>
+									</div>
+									<div class="card mt-2">
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary">Exposure</h6>
+										</div>
+										<div class="card-body">
+											<div class="form-group">
+												<span class="col-md-3">Exposure mode</span>
+												<div class="form-group ml-5">
+													<label class="form-check"> 
+														<input type="radio" name="formCamExposureMode" id="formCamExposureModeAuto" value="auto" class="form-check-input"/>
+														<span>Auto</span>
+														<div class="form-inline">
+															<span>Maximum exposure time</span>: 1/
+															<input id="maxshutter"class="form-control-custom ml-1 mr-2" type="text" size="4" />
+															(1/30 ... 1/500 <span>sec</span>)
+														</div>
+														<div class="form-inline mt-1">
+															<span>Minimum exposure time</span>: 1/
+															<input id="minshutter" class="form-control-custom ml-1 mr-2" type="text" size="4" />
+															(1/1000 ... 1/10000 <span>sec</span>)
+														</div>
+													</label>
+													<label class="form-check"> 
+														<input type="radio" name="formCamExposureMode" id="formCamExposureModeManual" value="manual" class="form-check-input"/>
+														<span>Manual</span>
+														<div class="form-inline">
+															<span>Shutter speed</span>: 1/
+															<input id="fixedshutter" class="form-control-custom ml-1 mr-1" type="text" size="4" />
+															(1/2 ... 1/5000 <span>sec</span>)
+														</div>
+													</label>
+													<label class="form-check"> 
+														<input type="radio" name="formCamExposureMode" id="formCamExposureModeFlicker" value="flickerless" class="form-check-input"/>
+														<span>Flickerless</span>
+														<div class="form-inline">
+															<label class="form-check"> 
+																<input type="radio" name="en773v_flickerlessMode" id="en773v_flickerless50" value="50" class="form-check-input"/>
+																50Hz
+															</label>
+															<label class="form-check ml-3">
+																<input type="radio" name="en773v_flickerlessMode" id="en773v_flickerless60" value="60" class="form-check-input" checked/>
+																60Hz
+															</label>
+														</div>
+													</label>
+												</div>
 											</div>
-										</label>
-										<label class="form-check"> 
-											<input type="radio" name="formCamExposureMode" id="formCamExposureModeFlicker" value="normal" class="form-check-input"/>
-											<span>Flickerless</span>
-											<div class="form-inline">
-												<label class="form-check"> 
-													<input type="radio" name="en773v_flickerlessMode" id="en773v_flickerless50" value="50" class="form-check-input"/>
-													<span>50Hz</span>
+											<div class="form-group">
+												<div class=" form-inline">	
+													<span class="col-md-3">Maximum AGC</span>
+													<input id="maxagc" class="form-control-custom mr-2" type="text" size="4" />
+													<label>(0 ... 100)</label>
+												</div>
+												<div class="form-inline mt-1">
+													<span class="col-md-3">Exposure adjustment</span>
+													<select id="formCamEVComp" class="form-control-custom mr-2" style="width:100px;">
+														<option value="171">+1.0</option>
+														<option value="153">+0.6</option>
+														<option value="139">+0.3</option>
+														<option value="128">0</option>
+														<option value="117">-0.3</option>
+														<option value="103">-0.6</option>
+														<option value="85">-1.0</option>
+													</select>
+													<span>EV</span>
+												</div>
+												<div class="form-inline mt-1">
+													<span class="col-md-3">Back light compensation</span>
+													<label class="form-check">
+														<input type="radio" name="formCamBLC" id="formCamBLCOn" value="yes" class="form-check-input"/>
+														<span>On</span>
+													</label>
+													<label class="form-check ml-3">
+														<input type="radio" name="formCamBLC" id="formCamBLCOff" value="no" class="form-check-input"/>
+														<span>Off</span>
+													</label>
+													<select id="formCamBLCZone" class="form-control-custom ml-3" style="width:100px;">
+														<option value="center">center</option>
+														<option value="left">left</option>
+														<option value="right">right</option>
+														<option value="top">top</option>
+														<option value="bottom">bottom</option>
+													</select>
+												</div>
+												<div class="form-inline mt-1">
+													<span class="col-md-3">Digital slow shutter</span>
+													<select id="formCamDSS" class="form-control-custom" style="width:100px;">
+														<option value="off">off</option>
+														<option value="2x">2x</option>
+														<option value="4x">4x</option>
+														<option value="8x">8x</option>
+														<option value="16x">16x</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card mt-2">
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary">Digital Wide Dynamic Range</h6>
+										</div>
+										<div class="card-body">
+											<div class="form-group mb-0">
+												<label class="form-check">
+													<input type="checkbox" id="formCamDWDR" class="form-check-input"/>
+													<span class="form-check-label">Enable</span>
 												</label>
-												<label class="form-check ml-3">
-													<input type="radio" name="en773v_flickerlessMode" id="en773v_flickerless60" value="60" class="form-check-input" checked/>
-													<span>60Hz</span>
+												<div class="form-inline">
+													<span class="col-md-2">Level</span>
+													<input type="range" id="sliderCamDWDRLevel"  min="0" max="16"  style="width:200px;" class="slider">
+													<input type="text" size="1" id="formCamDWDRLevel"class="form-control-custom text-center ml-2 mr-2" />
+													<label>(1 ... 16, 8)</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card mt-2">
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary">Day & Night</h6>
+										</div>
+										<div class="card-body">
+											<div class="form-group form-inline mb-0">
+												<span class="col-md-3">Day & Night mode</span>
+												<label class="form-check">
+													<input type="radio" name="formCamDaynightMode" id="formCamDaynightMode0" value="auto" class="form-check-input" />
+													<span>Auto</span>
+												</label>
+												<label class="form-check">
+													<input type="radio" name="formCamDaynightMode" id="formCamDaynightMode1" value="day" class="form-check-input ml-2" />
+													<span>Day</span>
+												</label>
+												<label class="form-check">
+													<input type="radio" name="formCamDaynightMode" id="formCamDaynightMode2" value="night" class="form-check-input ml-2" />
+													<span>Night</span>
+												</label>
+												<label class="form-check">
+													<input type="checkbox" id="enableIllumiSensor" class="form-check-input ml-2" />
+													<span>Enable illumination sensor</span>
 												</label>
 											</div>
-										</label>
-									 </div>
-								</div>
-								<div class="row">
-									<div class="col-md-3">Maximum AGC :</div>
-									<div class="form-group form-inline">
-										<input id="maxagc" class="form-control-custom mr-2" type="text" size="4" />
-										<span>(0 ... 100)</span>
+											<div class="form-inline ml-2">
+												<span class="col-md-3">Day to Night level</span>
+												<input type="range" id="sliderCamDaytonight"  min="0" max="64" style="width:200px;" class="slider">
+												<input type="text" size="5" id="formCamDaytonight"  class="form-control-custom text-center ml-2 mr-2" />
+												<label>(0 ... 63, 1)</label>
+											</div>
+											<div class="form-inline ml-2">
+												<span class="col-md-3">Night to Day level</span>
+												<input type="range" id="sliderCamNighttoday"  min="0" max="64"  style="width:200px;" class="slider">
+												<input type="text" size="5" id="formCamNighttoday" class="form-control-custom text-center ml-2 mr-2" />
+												<label>(1 ... 64, 3)</label>
+											</div>
+											<div class="form-inline" hidden>
+												<span class="col-md-3">Refocus</span>
+												<label class="form-check">
+													<input type="checkbox" id="syncDayNight" class="form-check-input"/>
+													<span>Sync with Day & Night</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class = "col-md-12 mt-2 text-center">
+										<button id="btnApply" class="btn btn-sm btn-primary">Apply</button>
+										<button id="btnView"  class="btn btn-sm btn-primary ml-3 mr-3">View</button>
+										<button id="btnPopup" class="btn btn-sm btn-primary">Pop-up</button>
 									</div>
 								</div>
-								<div class="row">
-									<div class="col-md-3">Exposure adjustment :</div>
-									<div class="form-group form-inline">
-										<select id="formCamEVComp" class="form-control-custom mr-2">
-											<option value="171"> +1.0</option>
-											<option value="153"> +0.6</option>
-											<option value="139"> +0.3</option>
-											<option value="128"> 0</option>
-											<option value="117"> -0.3</option>
-											<option value="103"> -0.6</option>
-											<option value="85"> -1.0</option>
-										</select>
-										<span>EV</span>
+<!-- Advanced -->
+								<div class="tab-pane" id="tab-2" role="tabpanel">												
+									<div class="card">
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary">Image Signal Processing</h6>
+										</div>
+										<div class="card-body">
+											<div class="form-group form-inline mb-0">
+												<span class="col-md-3">Dynamic 2D DNR</span>
+												<input type="range" id="sliderCamNoisefilter" min="0" max="15"  style="width:200px;" class="slider">
+												<input type="text" size="5" id="formCamNoisefilter" class="form-control-custom text-center ml-2 mr-2"/>
+												<label>(0 ... 15)</label>
+											</div>
+											<div class="form-group form-inline" hidden>
+												<span class="col-md-3">Noise Filter</span>
+												<input type="range" id="sliderCamNoisefilter_sub" min="0" max="15"  style="width:200px;" class="slider">
+												<input type="text" size="5" id="formCamNoisefilter_sub" class="form-control-custom text-center ml-2 mr-2"/>
+												<label>(0 ... 15)</label>
+											</div>
+											<div class="form-group ml-4">
+												<label class="form-check mb-0">
+													<input type="checkbox" id="formDefogEnable" class="form-check-input"/>
+													<span  class="form-check-label">Enable defog</span>
+												</label>
+												<div class="form-inline mt-1">
+													<span class="col-md-2">Level</span>
+													<select id="formDefogManualLevel" class="form-control-custom" style="width:120px;"> 
+														<option value="low">low</option>
+														<option value="medium">medium</option>
+														<option value="high">high</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card mt-2">
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary">White Balance</h6>
+										</div>
+										<div class="card-body">
+											<div class="form-group mb-0">
+												<div class="form-inline">
+													<span class="col-md-3">White balance mode</span>
+													<select id="formCamWBMode" class="form-control-custom" style="width:120px;">
+														<option value="atw1">atw1</option>
+														<option value="atw2">atw2</option>
+														<option value="push">push</option>
+														<option value="manual">manual</option>
+														<option value="indoor">indoor</option>
+														<option value="outdoor">outdoor</option>
+													</select>
+												</div>
+												<div class="form-inline">
+													<span class="col-md-3">Red</span>
+													<input type="range" id="sliderCamGainRed" min="0" max="255"  style="width:200px;" class="slider">
+													<input type="text" size="5" id="formCamGainRed" class="form-control-custom text-center" />
+													<label>(0 ...255)</label>
+												</div>
+												<div class="form-inline mb-0">
+													<span class="col-md-3">Blue</span>
+													<input type="range" id="sliderCamGainBlue" min="0" max="255"  style="width:200px;" class="slider">
+													<input type="text" size="5" id="formCamGainBlue" class="form-control-custom text-center"/>
+													<label>(0 ...255)</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card mt-2">
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary">Video transform</h6>
+										</div>
+										<div class="card-body">
+											<div class="form-group mb-0">
+												<div class="form-inline">
+													<span class="col-md-2">Orientation</span>
+													<label class="form-check">
+														<input type="checkbox" id="formCamFlip" class="form-check-input" />
+														<span>Vertical flip</span>
+													</label>
+													<label class="form-check ml-3">
+														<input type="checkbox" id="formCamMirror" class="form-check-input" />
+														<span>Horizontal mirror</span>
+													</label>
+												</div>
+												<div class="form-inline mt-1">
+													<span class="col-md-2">Rotation</span>
+													<label class="form-check">
+														<input type="radio"	name="formCamRotation" id="formCamRotation0" value="none" class="form-check-input" />
+														<span>None</span>
+													</label>
+													<label class="form-check ml-3">
+														<input type="radio"	name="formCamRotation" id="formCamRotation1" value="none" class="form-check-input" />
+														<span>Left(-90 degrees)</span>
+													</label>
+													<label class="form-check ml-3">
+														<input type="radio"	name="formCamRotation" id="formCamRotation2" value="none" class="form-check-input" />
+														<span>Right(+90 degrees)</span>
+													</label>
+												</div>
+											</div>
+											<span class="ml-3 mb-0" hidden>
+												Note: Image rotation is disabled while any of the features below is activated.
+											</span>
+										</div>
+									</div>
+									<div class="card mt-2">
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary">Auto Focus mode</h6>
+										</div>
+										<div class="card-body">
+											<div class="form-group form-inline mb-0">
+												<span class="col-md-3">Auto Focus mode</span>
+												<select id="formCamAFM" class="form-control-custom" style="width:100px">
+													<option value="auto">auto</option>
+													<option value="semiauto">semi-auto</option>
+													<option value="manual">manual</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="card mt-2">
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary">Gain control</h6>
+										</div>
+										<div class="card-body">
+											<div class="form-group">
+												<div class="form-inline">
+													<label class="form-check">
+														<input type="radio"	name="gainControlMode" id="gainControlMode_0" value="auto" class="form-check-input" />
+														<span>Auto</span>
+													</label>
+													<label class="form-check">
+														<input type="radio"	name="gainControlMode" id="gainControlMode_1" value="ice" class="form-check-input ml-3" />
+														<span>ICE</span>
+													</label>
+													<label class="form-check">
+														<input type="radio"	name="gainControlMode" id="gainControlMode_2" value="manual" class="form-check-input ml-3" />
+														<span>Manual</span>
+													</label>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-inline"> <!--view only if ice level-->
+													<span class="col-md-2">level</span>
+													<input type="range" id="sliderIceLevel"  min="0" max="255" value="128" style="width:200px;" class="slider">
+													<input type="text" size="5" id="formIceLevel" class="form-control-custom text-center ml-2" />
+												</div>
+												<div class="form-inline"><!--view only if manual level-->
+													<span class="col-md-2">gain</span>
+													<input type="range" id="sliderManualGain"  min="0" max="4095" value="1024" style="width:200px;" class="slider">
+													<input type="text" size="5" id="formManualGain" class="form-control-custom text-center ml-2 mr-2" />
+													<label>(0 ... 4095, 1024)</label>
+												</div>
+												<div class="form-inline" ><!--view only if manual level-->
+													<span class="col-md-2">level</span>
+													<input type="range" id="sliderManualLevel"  min="0" max="4095" value="1024" style="width:200px;" class="slider">
+													<input type="text" size="5" id="formManualLevel" class="form-control-custom text-center ml-2 mr-2" />
+													<label>(0 ... 4095, 1024)</label>
+												</div>
+											</div>
+											<span hidden>
+												Note: The option except "Auto" option may lead to inaccurate VCA object tracking.
+											</span>
+										</div>
+									</div>
+									<div class="card mt-2">
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary">Noise reduction</h6>
+										</div>
+										<div class="card-body">  
+											<label class="form-check mb-0 ml-3">
+												<input type="checkbox" id="noiseredEnable" class="form-check-input" />
+												<span>Enable</span>
+											</label>
+										</div>
+									</div>
+									<div class="card mt-2">
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary">Thermal metadata</h6>
+										</div>
+										<div class="card-body">  
+											<label class="form-check mb-0 ml-3">
+												<input type="checkbox" id="thermalMetaEnable" class="form-check-input" />
+												<span>Enable</span>
+											</label>
+										</div>
+									</div>
+									<div class="card mt-2">
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary">Window adjust</h6>
+										</div>
+										<div class="card-body">  
+											<div class="form-group form-inline mb-0">
+												<span class="col-md-3">verticaldelay</span>
+												<input type="text" size="5" id="verticaldelay"  class="form-control-custom text-center mr-2" />
+												<span id="ntscVdelayContents">(2 ... 128, 18)</label>
+												<span id="palVdelayContents">(5 ... 128, 24)</label>
+											</div>
+											<div class="form-group form-inline mb-0">
+												<span class="col-md-3">horizontaldelay</span>
+												<input type="text" size="5" id="verticaldelay"  class="form-control-custom text-center mr-2" />
+												<span id="ntscHdelayContents">(2 ... 128, 15)</label>
+												<span id="palHdelayContents">(2 ... 128, 10)</label>
+											</div>								
+										</div>
+									</div>
+									<div class="card mt-2">
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary">High performance imagep rocessing</h6>
+										</div>
+										<div class="card-body">  
+											<label class="form-check mb-0 ml-3">
+												<input type="checkbox" id="formCamDeinterlaceEnable" class="form-check-input" />
+												<span>Enable de-interlacing</span>
+											</label>								
+										</div>
+									</div>
+									<div class="card mt-2">
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary">High performance imagep rocessing</h6>
+										</div>
+										<div class="card-body">
+											<span class="col-md-3">IR</span>
+											<div class="form-group form-inline mb-0">
+												<label class="form-check">
+													<input type="radio" name="formCamSmartIR" id="formCamSmartIR_auto" value="auto" class="form-check-input"/>
+													<span>On(Smart IR)</span>
+												</label>										
+												<label class="form-check">
+													<input type="radio" name="formCamSmartIR" id="formCamSmartIR_off" value="off" class="form-check-input ml-2"  />
+													<span>Off </span>
+												</label>										
+												<label class="form-check">
+													<input type="radio" name="formCamSmartIR" id="formCamSmartIR_manual"  value="manual" class="form-check-input ml-2"/>
+													<span>Manual</span>
+												</label>										
+												<input type="text" size="5" id="textCamSmartIR" class="form-control-custom ml-2 mr-2"/>
+												<label>(0 ... 255, 128)</label>
+											</div>
+										</div>
+									</div>
+									<div class = "col-md-12 mt-2 text-center">
+										<button id="btnApplyAdvanced" class="btn btn-sm btn-primary">Apply</button>
 									</div>
 								</div>
-								<div class="row">
-									<div class="col-md-3">Back light compensation :</div>
-									<div class="form-group form-inline">
-										<label class="form-check">
-											<input type="radio" name="formCamBLC" id="formCamBLCOn" value="yes" class="form-check-input"/>
-										 	<span>On</span>
-										</label>
-										<label class="form-check ml-3">
-											<input type="radio" name="formCamBLC" id="formCamBLCOff" value="no" class="form-check-input"/>
-											<span>Off</span>
-										</label>
-										<select id="formCamBLCZone" class="form-control-custom ml-3">
-											<option value="center"> center</option>
-											<option value="left"> left</option>
-											<option value="right"> right</option>
-											<option value="top"> top</option>
-											<option value="bottom"> bottom</option>
-										</select>
-									</div>
-								</div>
-								<div class="row mb-0">
-									<div class="col-md-3">Digital slow shutter :</div>
-									<div class="form-group form-inline mb-0">
-										<select id="formCamDSS" class="form-control-custom">
-											<option value="off"> off</option>
-											<option value="2x"> 2x</option>
-											<option value="4x"> 4x</option>
-											<option value="8x"> 8x</option>
-											<option value="16x"> 16x</option>
-										</select>
-									</div>
-								</div>
-								<div class="row" hidden>
-									<div class="col-md-3">IR :</div>
-									<div class="form-group form-inline mb-0">
-										<label class="form-check">
-											<input type="radio" name="formCamSmartIR" id="formCamSmartIR_auto" value="auto" class="form-check-input"/>
-											<span>On(Smart IR)</span>
-										</label>										
-										<label class="form-check">
-											<input type="radio" name="formCamSmartIR" id="formCamSmartIR_off" value="off" class="form-check-input ml-2"  />
-											<span> Off </span>
-										</label>										
-										<label class="form-check">
-											<input type="radio" name="formCamSmartIR" id="formCamSmartIR_manual"  value="manual" class="form-check-input ml-2"/>
-											<span> Manual</span>
-										</label>										
-										<input type="text" size="5" id="textCamSmartIR" class="form-control-custom ml-2 mr-2"/>
-										<span>(0 ... 255, 128)</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>	
-					<div class="row mt-2">
-						<div class="card col-12 col-md-6 col-lg-6">
-							<div class="card-header mb-0">
-								<h6 class="mb-0 font-weight-bold text-primary">Digital Wide Dynamic Range</h6>
-							</div>
-							<div class="card-body">
-								<div class="form-group mb-0">
-									<label class="form-check">
-										<input type="checkbox" id="formCamDWDR" class="form-check-input"/>
-										<span> Enable</span>
-									</label>
-									<div class="form-inline">
-										<span class="col-md-2">Level :</span>
-										<input type="range" id="sliderCamDWDRLevel"  min="0" max="16" value="<?=$arr_rs['VIDEOIN.Ch0.Wdr.level']?>" style="width:200px;" class="slider">
-										<input type="text" size="1" id="formCamDWDRLevel" value= "<?=$arr_rs['VIDEOIN.Ch0.Wdr.level']?>" class="form-control-custom text-center ml-2 mr-2" />
-										<label>(1 ... 16, 8)</label>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row mt-2">
-						<div class="card col-12 col-md-6 col-lg-6">
-							<div class="card-header mb-0">
-								<h6 class="mb-0 font-weight-bold text-primary">Auto Focus Mode</h6>
-							</div>
-							<div class="card-body">
-								<div class="form-group form-inline mb-0">
-									<span class="col-md-3">Auto Focus Mode</span>
-									<select id="formCamAFM" class="form-control-custom">
-										<option value="auto"> auto</option>
-										<option value="semiauto"> semi-auto</option>
-										<option value="manual"> manual</option>
-									</select>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row mt-2">
-						<div class="card col-12 col-md-6 col-lg-6">
-							<div class="card-header mb-0">
-								<h6 class="mb-0 font-weight-bold text-primary">Day &amp; Night</h6>
-							</div>
-							<div class="card-body">
-								<div class="form-group form-inline">
-									<span class="col-md-3">Day &amp; Night mode :</span>
-									<label class="form-check">
-										<input type="radio" name="formCamDaynightMode" id="formCamDaynightMode0" value="auto" class="form-check-input" />
-										<span>Auto</span>
-									</label>
-									<label class="form-check">
-										<input type="radio" name="formCamDaynightMode" id="formCamDaynightMode1" value="day" class="form-check-input ml-2" />
-										<span>Day</span>
-									</label>
-									<label class="form-check">
-										<input type="radio" name="formCamDaynightMode" id="formCamDaynightMode2" value="night" class="form-check-input ml-2" />
-										<span>Night</span>
-									</label>
-									<label class="form-check">
-										<input type="checkbox" id="enableIllumiSensor" class="form-check-input ml-2" />
-										<span>Enable illumination sensor</span>
-									</label>
+						
 
-								</div>
-								<div class="form-group form-inline">
-									<span class="col-md-3">Day to Night level :</span>
-									<input type="range" id="sliderCamDaytonight"  min="0" max="64" value="<?=$arr_rs['VIDEOIN.Ch0.Light.Daynight.dtnlevel']?>" style="width:200px;" class="slider">
-									<input type="text" size="5" id="formCamDaytonight" value="<?=$arr_rs['VIDEOIN.Ch0.Light.Daynight.dtnlevel']?>" class="form-control-custom ml-2 mr-2" />
-									<label>(0 ... 63, 1)</label>
-								</div>
-								<div class="form-group form-inline">
-									<span class="col-md-3">Night to Day level :</span>
-									<input type="range" id="sliderCamNighttoday"  min="0" max="64" value="<?=$arr_rs['VIDEOIN.Ch0.Light.Daynight.ntdlevel']?>" style="width:200px;" class="slider">
-									<input type="text" size="5" id="formCamNighttoday" value="<?=$arr_rs['VIDEOIN.Ch0.Light.Daynight.ntdlevel']?>" class="form-control-custom ml-2 mr-2" />
-									<label>(1 ... 64, 3)</label>
-								</div>
-								<div class="form-group form-inline" hidden>
-									<span class="col-md-3">Refocus :</span>
-									<label class="form-check">
-										<input type="checkbox" id="syncDayNight" class="form-check-input"/>
-										<span>Sync with Day &amp; Night</span>
-									</label>
-								</div>
-
-							</div>
-						</div>
-					</div>
-					<div class="row mt-2">
-						<div class="card col-12 col-md-6 col-lg-6">
-							<div class="card-header mb-0">
-								<h6 class="mb-0 font-weight-bold text-primary">White Balance</h6>
-							</div>
-							<div class="card-body">					
-
+<!-- Expert -->
+								<div class="tab-pane" id="tab-3" role="tabpanel">												
+									<div class="card">
+										<div class="card-header mb-0">
+											<h6 class="mb-0 font-weight-bold text-primary">Expert setting</h6>
+										</div>
+										<div class="card-body">
+											ISP 혹은 V4L2의 값을 설정할 수 있도록 설계	
 	
-			<ul>
-			<li class="item-title 04020133">White balance mode :</li>
-			<li>
-				<select id="formCamWBMode">
-					<option value="atw1"> atw1</option>
-					<option value="atw2"> atw2</option>
-					<option value="push"> push</option>
-					<option value="manual"> manual</option>
-					<option value="indoor"> indoor</option>
-					<option value="outdoor"> outdoor</option>
-				</select>
-			</li>
-			</ul>
-		</li>
-		<li class="item">
-			<ul>
-			<li class="item-title padding_left_step2 04020134"> Red :</li>
-			<li><div id="sliderCamGainRed" class="slider-bar"></div></li>
-			<li>
-				<input type="text" size="5" id="formCamGainRed" class="text_cen"/>
-				<label>(0 ...255)</label>
-			</li>
-			</ul>
-		</li>
-		<li class="item">
-			<ul>
-			<li class="item-title padding_left_step2 04020135"> Blue :</li>
-			<li><div id="sliderCamGainBlue" class="slider-bar"></div></li>
-			<li>
-				<input type="text" size="5" id="formCamGainBlue" class="text_cen"/>
-				<label>(0 ...255)</label>
-			</li>
-			</ul>
-		</li>
-		</ul>
-	</li>
-	</ul>
-	<ul class="box ISP_Contents">
-	<li class="box-title"><h2 class="04020127">Image Signal Processing</h2></li>
-	<li class="box-content">
-		<ul>
-		<li class="item noise_filter0 dsp_hide">
-			<ul>
-			<li class="item-title 04020128 2DNRContents">Dynamic 2D DNR :</li>
-			<li class="item-title 04020193 DNRContents dsp_hide">DNR :</li>
-			<li><div id="sliderCamNoisefilter" class="slider-bar"></div></li>
-			<li>
-				<input type="text" size="5" id="formCamNoisefilter" class="text_cen"/>
-				<label>(0 ... 15)</label>
-			</li>
-			</ul>
-		</li>
-		<li class="item noise_filter1 dsp_hide">
-			<ul>
-			<li class="item-title 04020178">Noise Filter :</li>
-			<li><div id="sliderCamNoisefilter_sub" class="slider-bar"></div></li>
-			<li>
-				<input type="text" size="5" id="formCamNoisefilter_sub" class="text_cen"/>
-				<label>(0 ... 15)</label>
-			</li>
-			</ul>
-		</li>
-		<li class="item Defog_Contents Defog_Contents_Enable">
-			<ul>
-			<li>
-				<input type="checkbox" id="formDefogEnable" />
-				<label for="formDefogEnable" class="0402019907"> Enable defog</label>
-			</li>
-			</ul>
-		</li>
-		<li class="item Defog_Contents Defog_Contents_Level">
-			<ul>
-			<li class="item-title 0402019908">Level :</li>
-			<li>
-				<select id="formDefogManualLevel">
-				<option value="low"> low</option>
-				<option value="medium"> medium</option>
-				<option value="high"> high</option>
-				</select>
-			</li>
-			</ul>
-		</li>
-		</ul>
-	</li>
-	</ul>
-	<ul class="box AnalogOutput_Contents dsp_hide">
-	<li class="box-title"><h2 class="04020136">Analog Output</h2></li>
-	<li class="box-content">
-		<ul>
-		<li class="item">
-			<ul>
-			<li class="item-title 04020137">Analog output : </li>
-			<li>
-				<input type="radio" name="formCamAnalogOutput" id="formCamAnalogOutput0" value="ntsc" />
-				<label for="formCamAnalogOutput0" class="04020138"> NTSC</label>
-				<input type="radio" name="formCamAnalogOutput" id="formCamAnalogOutput1" value="pal" />
-				<label for="formCamAnalogOutput1" class="04020139"> PAL</label>
-			</li>
-			</ul>
-		</li>
-		</ul>
-	</li>
-	</ul>
-	<ul class="box Stabilization_Contents">
-	<li class="box-title"><h2 class="04020182">Video Stabilization</h2></li>
-	<li class="box-content">
-		<ul>
-		<li class="item vsEnableContents dsp_hide">
-			<ul>
-			<li>
-				<input type="checkbox" id="stabilizationEnable" />
-				<label for="stabilizationEnable"> Enable</label>
-			</li>
-			</ul>
-		</li>
-		<li class="item vsStreamContents">
-			<ul>
-			<li>
-				<input type="checkbox" id="formVStabSt0Enable" class="StabilizationStream" />
-				<label for="formVStabSt0Enable" class="04020185">First Stream</label>
-			</li>
-			<li>
-				<input type="checkbox" id="formVStabSt1Enable" class="StabilizationStream" />
-				<label for="formVStabSt1Enable" class="04020186">Second Stream</label>
-			</li>
-			<li>
-				<input type="checkbox" id="formVStabSnapshotEnable" class="StabilizationStream" />
-				<label for="formVStabSnapshotEnable" class="04020187">Snapshot</label>
-			</li>
-			</ul>
-		</li>
-		<li class="item vsBorderContents">
-			<ul>
-			<li class="item-title 04020183">Border In-fill :</li>
-			<li>
-				<select id="formVStabBorderType">
-				<option value="dynamic"> dynamic</option>
-				<option value="fixed"> fixed</option>
-				<option value="none"> none</option>
-				</select>
-			</li>
-			</ul>
-			<div class="noti_msg margin_left_step1">
-			<ul>
-				<li>
-				<span class="04020184">
-					Note: Video stabilization is disabled while any of the features below is activated.
-				</span>
-				</li>
-			</ul>
-			<ul class="Ratio_Contents dsp_hide margin_left_step1">
-				<li>&middot;&nbsp;<span class="0402019911">4:3 aspect ratio</span></li>
-			</ul>
-			<ul class="Rotation_Contents dsp_hide margin_left_step1">
-				<li>&middot;&nbsp;<span class="0402019902">Image Rotation</span></li>
-			</ul>
-			<ul class="margin_left_step1">
-				<li>&middot;&nbsp;<span class="04020198">VCA</span>&nbsp;:&nbsp;</li>
-				<li><a id="linkRotationVCA" href="#" class="04020179 linkVCA link_blue">Go to VCA Configuration</a></li>
-			</ul>
-			<ul class="VideoOut_Contents dsp_hide margin_left_step1">
-				<li>&middot;&nbsp;<span class="04020199">Video-Out</span>&nbsp;:&nbsp;</li>
-				<li><a id="linkRotationVideoOut" href="#" class="0402019901 linkVideoOut link_blue">Go to Video-Out Configuration</a></li>
-			</ul>
-			<ul class="margin_left_step1 fdLinkContents">
-				<li>&middot;&nbsp;
-					<span class="0402019909">Face detection</span>&nbsp;:&nbsp;
-					<a id="linkEventFacedetection" href="#" class="linkFacedetection link_blue 0402019910">Go to Face detection Configuration</a>
-				</li>
-			</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
 			</div>
-		</li>
-		</ul>
-	</li>
-	</ul>
-
-	<ul class="box nucAutoCalibContents dsp_hide">
-		<li class="box-title"><h2 class="0402019932">NUC Calibration</h2></li>
-		<li class="box-content">
-			<ul>
-				<li class="item">
-					<ul>
-						<li class="item-title 0402019933 dsp_hide">Interval :</li>
-						<li class="dsp_hide"><div id="sliderNucAutoCalibInterval" class="slider-bar"></div></li>
-						<li class="dsp_hide">
-							<input type="text" size="5" id="nucAutoCalibInterval" class="text_cen"/>
-							<label class="0402019935">(5 ... 60, 5 minutes)</label>
-						</li>
-						<li class="padding_left_step1"><button id="btnCalibrate"><span class="0402019934">Calibrate</span></button></li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul>
-
-	<ul class="box agcMergeSpeedContents dsp_hide">
-		<li class="box-title"><h2 class="0402019942">AGC merge speed</h2></li>
-		<li class="box-content">
-			<ul>
-				<li class="item agcMergeSpeed">
-					<ul>
-					<li class="item-title 0402019943">AGC Speed :</li>
-					<li>
-						<input type="radio"	name="agcMergeSpeedOption" id="agcMergeSpeedOption_1" value="64" />
-						<label for="agcMergeSpeedOption_1" class="0402019944"> low</label>
-					</li>
-					<li>
-						<input type="radio"	name="agcMergeSpeedOption" id="agcMergeSpeedOption_0" value="255" />
-						<label for="agcMergeSpeedOption_0" class="0402019945"> high</label>
-					</li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul>
-
-	<div id="btn" class="box" align="center">
-		<button id="btnApply"><span class="04020129">Apply</span></button>
-		<button id="btnView"><span class="04020131">View</span></button>
-		<button id="btnPopup"><span class="04020189">Pop-up</span></button>
-	</div>
-
-	<div id="TestView" class="box" align="center" style="display: none">
-		<button id="btnStop"><span>stop</span></button>
-		<button id="btnStart"><span>start</span></button>
-	</div>
-
-	<div id="viewToggle" align="center">
-		<li id="screen" class="margin_top_step2"></li>
+		</div>
 	</div>
 
 </body>
@@ -693,6 +537,22 @@ $(".slider").on("input", function () {
 	xt = this.id.replace("slider","form");
  	$("#" + xt).val(this.value);
 });
+
+// value="<?=$arr_rs['VIDEOIN.Ch0.Color.brightness']?>"
+// value="<?=$arr_rs['VIDEOIN.Ch0.Color.contrast']?>"
+// value="<?=$arr_rs['VIDEOIN.Ch0.Color.saturation']?>"
+// value="<?=$arr_rs['VIDEOIN.Ch0.Color.sharpness']?>" 
+// value="<?=$arr_rs['VIDEOIN.Ch0.Wdr.level']?>"
+// value= "<?=$arr_rs['VIDEOIN.Ch0.Wdr.level']?>" 
+// value="<?=$arr_rs['VIDEOIN.Ch0.Light.Daynight.ntdlevel']?>"
+// value="<?=$arr_rs['VIDEOIN.Ch0.Light.Daynight.ntdlevel']?>
+// value="<?=$arr_rs['VIDEOIN.Ch0.Light.Daynight.ntdlevel']?>"
+// value="<?=$arr_rs['VIDEOIN.Ch0.Light.Daynight.ntdlevel']?>"
+
+// value="<?=$arr_rs['VIDEOIN.Ch0.Light.Daynight.dtnlevel']?>" 
+// value="<?=$arr_rs['VIDEOIN.Ch0.Light.Daynight.dtnlevel']?>"
+// value="<?=$arr_rs['VIDEOIN.Ch0.Light.Daynight.ntdlevel']?>"
+// value="<?=$arr_rs['VIDEOIN.Ch0.Light.Daynight.ntdlevel']?>"
 
 
 </script>		

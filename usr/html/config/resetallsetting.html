@@ -1,49 +1,58 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="imagetoolbar" content="no" />
-	<title></title>
-	<link type="text/css" href="../css/common.css" rel="stylesheet" />
-	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="../js/common.js"></script>
-	<script type="text/javascript" src="../js/defstring/defbrand.js"></script>
-	<script type="text/javascript" src="../js/utils/jq_string.js"></script>
-	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
-	<script type="text/javascript" src="../js/plat_utils/string.js"></script>
-	<script type="text/javascript" src="../js/defstring/defconfig.js"></script>
-	<script type="text/javascript" src="../js/config/resetallsetting.js"></script>
-	<script type='text/javascript' src='../js/cap.js'></script>
-</head>
+﻿<!DOCTYPE html lang="en">
+<html lang="en" >
 
-<body id="config-page">
-	<p class="menuLocationInfo">
-		<span class="04070601">Setup &gt; Maintenance &gt;</span>
-		<span id="pagename" class="04070602">Reset All Settings</span>
-	</p>
-	<ul class="box">
-		<li class="box-title"><h2 class="04070602">Reset All Settings</h2></li>
-		<li class="box-content">
-						<ul>
-				<li class="item">
-					<div class="exceptList 04070603"> Reset all configuration settings, but:</div>
-					<div class="exceptNetwork">
-						<input type="checkbox" id="networkInfo" checked /><label for="networkInfo" class="04070604"> Preserve network settings</label>
+<?php
+include ("../inc/common.php");
+echo $header;
+?>
+
+<body>
+    <div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+				<p class="menuLocationInfo"><span>Setup</span> > <span>Maintenance</span> > <strong>Reset all settings</strong></p>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="card col-lg-6">
+							<div class="card-header mb-0">
+								<h6 class="mb-0 font-weight-bold text-primary">Reset all settings</h6>
+							</div>
+							<div class="card-body">
+								<div class="form-group mb-0">
+									<span>Reset all configuration settings, but</span>
+									<label class="form-check mt-1">
+										<input type="checkbox" id="networkInfo" checked />
+										<span>Preserve network settings<span>
+									</label>
+									<label class="form-check">
+										<input type="checkbox" id="userInfo" checked />
+										<span>Preserve user account information<span>
+									</label>
+									<label class="form-check">
+										<input type="checkbox" id="timezoneInfo" checked />
+										<span>Preserve timezone setting<span>
+									</label>
+								</div>
+							</div>
+							<div class="card-footer">
+								<button id="btnFactory" class="btn btn-sm btn-primary">Reset all settings</button>
+							</div>
+						</div>
 					</div>
-					<div class="exceptNetwork">
-						<input type="checkbox" id="userInfo" checked /><label for="userInfo" class="04070605"> Preserve user account information</label>
-					</div>
-					<div class="exceptNetwork">
-						<input type="checkbox" id="timezoneInfo" checked /><label for="timezoneInfo" class="04070606"> Preserve timezone setting</label>
-					</div>
-					<button id="btnFactory" class="margin_top_step1"><span class="04070602">Reset All Settings</span></button>
-				</li>
-			</ul>
-		</li>
-	</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div id="debug_console"></div>
 </body>
-</html>
+<?=$footer?>
+<script>
+$("button").on("click", function () {
+	console.log(this);
+	// if (this.id == "modalApply") {
+	// 	console.log($("#formUserName").val());
+	// }
+});
+</script>
+</html>	
+

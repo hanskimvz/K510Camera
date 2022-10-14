@@ -1,147 +1,125 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="imagetoolbar" content="no" />
-	<meta http-equiv="Cache-Control" content="no-cache"/>
-	<meta http-equiv="Expires" content="0"/>
-	<meta http-equiv="Pragma" content="no-cache"/>
-	<title></title>
-	<link type="text/css" href="../css/common.css" rel="stylesheet" />
-	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="../js/common.js"></script>
-	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
-	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
-	<script type="text/javascript" src="../js/jquery.ipaddress.js"></script>
-	<script type="text/javascript" src="../js/jquery.caret.js"></script>
-	<script type="text/javascript" src="../js/config/systemlog.js"></script>
-</head>
-<body id="config-page">
-	<p class="menuLocationInfo">
-			<span class="04070501">Setup &gt; Maintenance &gt;</span>
-		<span id="pagename" class="04070502">System Log</span>
-	</p>
-	<ul class="box">
-		<li class="box-title"><h2 class="04070548">Download Log</h2></li>
-		<li class="box-content">
-			<ul>
-				<li class="item">
-					<button id="btnDownload"><span class="04070504">Download System Log</span></button>
-					<button id="btnDownloadEvent"><span class="04070549">Download Event Log</span></button>
-				</li>
-			</ul>
-		</li>
-	</ul>
-	<ul class="box">
-		<li class="box-title"><h2 class="04070520">FTP Log Backup Mode</h2></li>
-		<li class="box-content">
-			<ul>
-				<li class="item">
-					<ul>
-						<li>
-							<input type="checkbox" id="formFTPLogMode" /><label for="formFTPLogMode" class="04070542"> Enable auto backup</label>
-							<button id="formFTPLogBackup"><span class="04070524">Backup</span></button>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul>
+<!DOCTYPE html lang="en">
+<html lang="en" >
 
-	<ul class="box">
-		<li class="box-title"><h2 class="04070525">FTP Log Backup Configuration</h2></li>
-		<li class="box-content">
-			<ul>
-				<li class="item">
-					<ul>
-						<li class="item-title 04070526">Name : </li>
-						<li><input type="text" id="formName" size="40" /></li>
-					</ul>
-				</li>
-				<li id="formIPAddress" class="item">
-					<p>
-						<span class="item-title 04070527">IP Address :</span>
-						<input type="text" id="formURL" size="40" />
-					</p>
-				</li>
-				<li class="item">
-					<ul>
-						<li class="item-title 04070528">Port (1 ... 65535) : </li>
-						<li><input type="text" id="formPort" size="40" /></li>
-					</ul>
-				</li>
-				<li class="item">
-					<ul>
-						<li class="item-title 04070529">Target Directory : </li>
-						<li><input type="text" id="formTargetDirectory" size="40" /></li>
-					</ul>
-				</li>
-				<li class="item">
-					<ul>
-						<li class="item-title 04070530">Account : </li>
-						<li><input type="text" id="formID" size="40" /></li>
-					</ul>
-				</li>
-				<li class="item">
-					<ul>
-						<li class="item-title 04070531">Password : </li>
-						<li><input type="password" id="formPassword" size="40" /></li>
-					</ul>
-				</li>
-				<li class="item">
-					<ul>
-						<li class="item-title 04070532">File name format :</li>
-						<li>
-							<input type="text" id="prefixFileType" size=13></input>
-							<label for="prefixFileType" class="">_YYYYMMddhhmmssXXX.log</label>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul>
+<?php
+include ("../inc/common.php");
+echo $header;
+?>
 
-
-	<div class="box" align="center">
-		<button id="btnApply"><span class="04070533">Apply</span></button>
-		<button id="btnShowList"><span class="04070535">Show notification list</span></button>
+<body>
+    <div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+				<p class="menuLocationInfo"><span>Setup</span> > <span>Maintenance</span> > <strong>System log</strong></p>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="card col-lg-6">
+							<div class="card-header mb-0">
+								<h6 class="mb-0 font-weight-bold text-primary">Download log</h6>
+							</div>
+							<div class="card-body">
+								<button id="btnDownload" class="btn btn-mini btn-outline-warning  mr-4">Download system log</button>
+								<button id="btnDownloadEvent" class="btn btn-mini btn-outline-warning">Download event log</button>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-2">
+						<div class="card col-lg-6">
+							<div class="card-header mb-0">
+								<h6 class="mb-0 font-weight-bold text-primary">FTP Log Backup Mode</h6>
+							</div>
+							<div class="card-body">
+								<div class="form-group form-inline mb-0">
+									<label class="form-check">
+										<input type="checkbox" id="formFTPLogMode" class="form-check-input" />
+										<span>Enable auto backup</span>
+									</label>
+									<button id="formFTPLogBackup" class="btn btn-mini btn-warning ml-3">Backup</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-2">
+						<div class="card col-lg-6">
+							<div class="card-header mb-0">
+								<h6 class="mb-0 font-weight-bold text-primary">FTP Log Backup Configuration</h6>
+							</div>
+							<div class="card-body">
+								<div class="form-group">
+									<div class="form-inline">
+										<span class="col-md-3">Name</span>
+										<input type="text" id="formName" class="form-control-custom" size="40" />
+									</div>
+									<div class="form-inline mt-1">
+										<span class="col-md-3">IP address</span>
+										<input type="text" id="formURL" class="form-control-custom" size="40" />
+									</div>									
+									<div class="form-inline mt-1">
+										<span class="col-md-3">Port</span>
+										<input type="text" id="formPort" class="form-control-custom mr-2" size="5" />
+										<label>(1 ... 65535)</label>
+									</div>
+									<div class="form-inline mt-1">
+										<span class="col-md-3">Target directory</span>
+										<input type="text" id="formTargetDirectory" class="form-control-custom" size="40" />
+									</div>
+									<div class="form-inline mt-1">
+										<span class="col-md-3">Account</span>
+										<input type="text" id="formID" class="form-control-custom" size="40" />
+									</div>
+									<div class="form-inline mt-1">
+										<span class="col-md-3">Password</span>
+										<input type="password" id="formPassword" class="form-control-custom" size="40" />
+									</div>
+									<div class="form-inline mt-1">
+										<span class="col-md-3">File name format</span>
+										<input type="text" id="prefixFileType" class="form-control-custom" size="20" />
+										<label>_YYYYMMddhhmmssXXX.log</label>
+									</div>
+								</div>
+							</div>
+							<div class="card-footer">
+								<button id="btnApply" class="btn btn-sm btn-primary mr-2">Apply</button>
+								<button id="btnShowList" class="btn btn-sm btn-primary">Show notification list</button>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-4">
+						<div class="card col-lg-6">
+							<div class="card-header mb-0">
+								<h6 class="mb-0 font-weight-bold text-primary">FTP notification list</h6>
+							</div>
+							<div class="card-body">
+								<div class="form-group mb-0">
+									<div class="form-inline">
+										<span class="col-md-2">ID</span>
+										<span class="col-md-3">Name</span>
+										<span class="col-md-7">Description</span>
+									</div>
+									<select size="7" id="formNotificationList" class="form-control form-control-sm"><option></option></select>
+								</div>
+							</div>
+							<div class="card-footer">
+								<div class="float-right">
+									<a id="linkEncoderProfile" href="#"><span>Go to FTP notification</span></a>
+								</div>
+								<button id="btnLoad" class="btn btn-sm btn-warning">Load notification information setting</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-
-	<ul class="box listLoad dsp_hide">
-		<li class="item nocolor">
-			<ul>
-				<li>
-					<button id="btnLoad"><span class="04070536">Load notification into setting</span></button>
-				</li>
-				<li id="ftpNotification_link" class="float_right">
-					<span>
-						<a id="linkEncoderProfile" href="#" class="04070537">Go to FTP Notification</a>
-					</span>
-				</li>
-			</ul>
-		</li>
-	</ul>
-	<ul class="box notificationList dsp_hide">
-		<li class="box-title"><h2 class="04070538">FTP Notification List</h2></li>
-		<li class="box-content">
-			<ul>
-				<li class="item">
-					<ul>
-						<li id="notification_id" class="04070539 notiListTitleID">Id</li>
-						<li id="notification_name" class="04070540 notiListTitleName">Name</li>
-						<li id="notification_des" class="04070541 notiListTitleDes">Description</li>
-					</ul>
-				</li>
-				<li class="item">
-					<select size="7" id="formNotificationList" class="select-list"><option></option></select>
-				</li>
-			</ul>
-		</li>
-	</ul>
-
 	<div id="debug_console"></div>
 </body>
+<?=$footer?>
+<script>
+$("button").on("click", function () {
+	console.log(this);
+	if (this.id == "modalApply") {
+		console.log($("#formUserName").val());
+	}
+});
+</script>
 </html>

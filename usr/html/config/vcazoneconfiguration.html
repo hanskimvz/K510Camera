@@ -1,101 +1,103 @@
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'
-	'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
-<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
-<head>
-	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
-	<meta http-equiv='imagetoolbar' content='no' />
-	<meta http-equiv="Cache-Control" content="no-cache"/>
-	<meta http-equiv="Expires" content="0"/>
-	<meta http-equiv="Pragma" content="no-cache"/>
-	<title></title>
-	<link type='text/css' href='../css/config.css' rel='stylesheet' />
-	<link type='text/css' href='../css/theme.css' rel='stylesheet' />
-	<link type='text/css' href='../css/themes/base/jquery-ui.css' rel='stylesheet' />
-	<link type='text/css' href='../css/config/vcazoneconfiguration.css' rel='stylesheet' />
-	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.ui.mouse.js"></script>
-	<script type="text/javascript" src="../js/jquery.ui.slider.js"></script>
-	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="../js/common.js"></script>
-	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
-	<script type="text/javascript" src="../js/jquery.effects.core.js"></script>
-	<script type="text/javascript" src="../js/jquery.effects.blind.js"></script>
-	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
-	<script type="text/javascript" src="../js/jquery.tooltip.js"></script>
-	<script type="text/javascript" src="../js/cap.js"></script>
-	<script type='text/javascript' src='../js/cap.vca.js'></script> 
-	<script type="text/javascript" src="../js/uapi.player.js"></script>
-	<script type='text/javascript' src='../js/cap.player.js'></script>
-	<script type='text/javascript' src='../js/xml2json.min.js'></script>
-	<script type="text/javascript" src="vcacomplexrules/actiondefinition.js"></script>
-	<script type="text/javascript" src="vcacomplexrules/clausedefinition.js"></script>
-	<script type="text/javascript" src="vcacomplexrules/data.js"></script>
-	<script type='text/javascript' src='../js/config/vcazoneconfiguration.js'></script> 
-</head>
-<body id='config-page'>
-	<p class='menuLocationInfo'>
-		<span class="04050201">Setup > VCA ></span> 
-		<span id='pagename' class="04050202">Zones and Rules</span>
-	</p>
-	<ul class='box vcaDisabled' style='display:none'>
-		<li class='box-title 04050202'><h2>Zones and Rules</h2></li>
-		<li class='box-content'>
-			<p> <span class='04050204'>VCA is disabled, please go to the </span><span class='menuLocationInfo 04050205'>VCA > </span><span id='pagename' class='04050206'>Enable/Disable</span><span class ='04050207'> page to enable VCA.</span></p>
-		</li>
-	</ul>
-	<ul class='vcaInitialising'>
-		<li class='box-title 04050202'><h2>Zones and Rules</h2></li>
-		<div id='loadingMessage'>
-			<img id='loadingImage' src='/images/loading.gif'></img>
-			<span class="04050209">Loading Data - Please Wait</span>
-		</div>
-	</ul>
-	<ul class='vcaEnabled' style='display:none'>
-		<li class='box-title'><h2 class="04050203">Zones and Rules</h2></li>
-		<li>
-			<div id="rule_tabs" class="tab_inline">
-				<ul class="css-tabs">							
-					<li><a href="#AxUMF" id="AXUMF_link" class="04050213">Zones &amp; Rules</a></li>
-					<li><a href="#ComplexRuleSetting" id="ComplexRuleSetting_link" class="04050214 complexRules">Logical Rules</a></li>
-				</ul>
-				<!-- The ActiveX control -->
-				<div id="AxUMF"></div>
-				<div id="ComplexRuleSetting">							
-					<iframe id="ComplexRuleSettingFrame"  src="vcacomplexrules.html" name="ComplexRuleSettingFrame" width="100%" height="100%" scrolling="no" marginheight="1" marginwidth="1" frameborder="0">
-					</iframe>						
+<!DOCTYPE html lang="en">
+<html lang="en" >
+
+<?php
+include ("../inc/common.php");
+echo $header;
+?>
+<style type="text/css">
+    table {border-collapse: collapse; border: 0; width: 100%; box-shadow: 1px 2px 3px #eee;}
+	.center {text-align: center;}
+	.center table {margin: 1em auto; text-align: left;}
+	.center th {text-align: center !important;}
+	td, th {border: 1px solid #aaa; font-size: 75%; vertical-align: baseline; padding: 4px 5px;}
+</style>
+<body>
+    <div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+				<p class="menuLocationInfo"><span>Setup</span> > <span>VCA Configuration</span> > <strong>Zones & Rules</strong></p>
+				<div class="container-fluid">
+					<div class="row col-lg-12" >
+						<div class="card col-lg-9 pl-0 pr-0 pt-0 pb-0">
+							<canvas id="canvas" class="card-img-top"></canvas>
+							<div class="card-body">
+								<table>
+									<thead><tr>
+										<th><span>ID</span></th>
+										<th><span>Rule</span></th>
+										<th><span>Zone</span></th>
+										<th><span>Object Class</span></th>
+										<th><span>Start time</span></th>
+										<th><span>End time</span></th>
+									</tr></thead>
+									<tbody style="height:200px;";>
+									</tbody>
+
+								</table>
+
+							</div>
+						</div>
+						<div class="card col-lg-3">
+							<div class="card-body pl-0 pr-0 pt-0 pb-0" style="height:600px;">
+								<table>
+									<thead><tr>
+										<th><span>Tree</span></th>
+										<th><span>Value</span></th>
+									</tr></thead>
+									<tbody>
+
+									</tbody>
+								</table>
+								
+							</div>
+						</div>
+					</div>
+					<div class="mt-2 text-center">
+						<button id='btnApply'class="btn btn-sm btn-primary">Apply</button>
+						<button id='btnRestoreDefaults' class="btn btn-sm btn-secondary">Restore Defaults</button>
+					</div>
 				</div>
 			</div>
-		</li>
-		
-		<!-- The PTZ control -->
-		<li class="vcaEnabled ptzEnabled" id="ptz-control">
-			<h3><a href="#0" class="04050212">PTZ Preset Profiles</a></h3>
-			<div>
-				<iframe src="vcaptzcontrol.html" id="ptzFrame" name="ptzFrame" width="100%" scrolling="no" marginheight="1" marginwidth="1" frameborder="0"></iframe>
-			</div>
-		</li>
-	</ul>
-	<!-- <ul class='box vcaEnabled' style='display:none'>
-		<li class='box-title'><h2>PTZ Preset Profiles</h2></li>
-		<li class='box-content'>
-			<ul>
-				<li class="item">
-					<ul>
-						<li class="item-title">Selected Preset:</li>
-						<li>
-							<select id="presetsList"></select>
-							<button id="btnLoadProfile">Load Profile</button>
-							<button id="btnSaveProfile">Save Profile</button>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul>-->
-	<div id='screenTools' align='center'>
-		<button id='btnApply' disabled='true'><span class="04050211" >Apply</span></button>
-		<button id='btnRestoreDefaults'><span class="04050215" >Restore Defaults</span></button>
+		</div>
 	</div>
+
+<script>
+	var canvas = document.getElementById("canvas");
+	canvas.width=720;
+	canvas.height = 360;
+	var ctx = canvas.getContext('2d');
+	var img =  new Image();
+	img.src="../images/demo_screen.jpg";
+	ctx.drawImage(img, 0,0,720,360);
+	function render(){
+		img.src="../images/demo_screen.jpg";
+		ctx.drawImage(img, 0,0,720,360);
+
+
+	}
+	function main() {
+		render();
+		requestAnimationFrame(main);
+	}
+	main();
+</script>
+
+
 </body>
+<?=$footer?>
+<script>
+$("button").on("click", function () {
+	console.log(this);
+	if (this.id == "modalApply") {
+		console.log($("#formUserName").val());
+	}
+});
+
+$(".slider").on("input", function () {
+	xt = this.id.replace("slider","form");
+ 	$("#" + xt).val(this.value);
+});
+
+</script>
 </html>

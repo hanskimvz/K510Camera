@@ -1,26 +1,48 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="imagetoolbar" content="no" />
-	<meta http-equiv="Cache-Control" content="no-cache"/>
-	<meta http-equiv="Expires" content="0"/>
-	<meta http-equiv="Pragma" content="no-cache"/>
-	<title></title>
-	<link type="text/css" href="../css/common.css" rel="stylesheet" />
-	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="../js/common.js"></script>
-	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
-	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui-timepicker-addon.js"></script>
-	<script type="text/javascript" src="../js/config/filedownload.js"></script>
-	<!--[If lte IE 8]>
-		<link type="text/css" href="../css/ie8.css" rel="stylesheet" />
-	<![endif]-->
-</head>
+<!DOCTYPE html lang="en">
+<html lang="en" >
+<?php
+include ("../inc/common.php");
+echo $header;
+?>
+
+<body>
+    <div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+				<p class="menuLocationInfo"><span>Setup</span> > <span>Storage</span> > <strong>Video file download</strong></p>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="card col-lg-6">
+							<div class="card-body">
+								<div id="viewToggle" class="row mt-2 justify-content-center">
+									<canvas id="canvas"></canvas>
+									<script>
+										var canvas = document.getElementById("canvas");
+										canvas.width=720;
+										canvas.height = 360;
+										var ctx = canvas.getContext('2d');
+										var img =  new Image();
+										img.src="../images/demo_screen.jpg";
+										ctx.drawImage(img, 0,0,720,360);
+
+									</script>
+									<!--iframe src="/view.php" id="viewFrame"  class="col-lg-6"  scrolling="no" marginheight="1" marginwidth="1" frameborder="1"></iframe-->
+								</div>	
+							</div>
+							<div class="card-footer text-center">
+								<button id="btnPageFirst" class="btn btn-sm"><img src="../images/btn_page_first.gif" height="20" /></button>
+								<button id="btnPagePrev" class="btn btn-sm"><img src="../images/btn_page_prev.gif" height="20" /></button>
+								<span class="pageNumberGroup">| <span class='pageNumber_1'>1</span> |</span>
+								<button id="btnPageNext" class="btn btn-sm"><img src="../images/btn_page_next.gif" height="20" /></button>
+								<button id="btnPageLast" class="btn btn-sm"><img src="../images/btn_page_last.gif" height="20" /></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 <body id="config-page">
 	<p class="menuLocationInfo">
 		<span class="04140101">Setup &gt; Storage &gt;</span>
@@ -57,16 +79,49 @@
 				<li id="pageMove">
 					<ul>
 						<li>
-							<img id="btnPageFirst" src="../images/btn_page_first.gif" alt="" />
-							<img id="btnPagePrev" src="../images/btn_page_prev.gif" alt="" />
-							<span class="pageNumberGroup">| <span class='pageNumber_1'>1</span> |</span>
-							<img id="btnPageNext" src="../images/btn_page_next.gif" alt="" />
-							<img id="btnPageLast" src="../images/btn_page_last.gif" alt="" />
+
 						</li>
 					</ul>
 				</li>
 			</ul>
 		</li>
 	</ul>
+
+<div id="debug_console"></div>
 </body>
+<?=$footer?>
+<script>
+$("button").on("click", function () {
+	console.log(this);
+	if (this.id == "modalApply") {
+		console.log($("#formUserName").val());
+	}
+});
+
+$("input[type='radio']").on("click", function () {
+	console.log(this);
+	$("#rec_avi0").prop("hidden", true);
+	$("#rec_avi1").prop("hidden", true);
+	$("#rec_avi2").prop("hidden", true);	
+	$("#rec_dat0").prop("hidden", true);
+	$("#rec_dat1").prop("hidden", true);	
+	if (this.id=="formRecType0") {
+		$("#rec_avi0").prop("hidden", false);
+		$("#rec_avi1").prop("hidden", false);
+		$("#rec_avi2").prop("hidden", false);
+	}
+	else if (this.id=="formRecType1") {
+		$("#rec_dat0").prop("hidden", false);
+		$("#rec_dat1").prop("hidden", false);
+	}	
+});
+
+
+$(".slider").on("input", function () {
+	xt = this.id.replace("slider","form");
+ 	$("#" + xt).val(this.value);
+});
+
+
+</script>
 </html>

@@ -1,60 +1,59 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="imagetoolbar" content="no" />
-	<meta http-equiv="Cache-Control" content="no-cache"/>
-	<meta http-equiv="Expires" content="0"/>
-	<meta http-equiv="Pragma" content="no-cache"/>
-	<title></title>
-		<link type="text/css" href="../css/config.css" rel="stylesheet" />
-		<link type="text/css" href="../css/config/focusassist.css" rel="stylesheet" />		
-		<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
-		<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
-		<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-		<script type="text/javascript" src="../js/common.js"></script>
-		<script type="text/javascript" src="../js/uapi.ajax.js"></script>
-		<script type="text/javascript" src="../js/uapi.player.js"></script>
-		<script type="text/javascript" src="../js/activexobject.js"></script>		
-	<script type="text/javascript" src="../js/config/focusassist.js"></script>
-</head>
-<body id="config-page" style="display:">
-	<p class="menuLocationInfo">
-			<span class="04010101">Setup &gt; Basic Configuration &gt;</span>
-		<span id="pagename" class="04010102">Focus Assist</span>
-	</p>
+<!DOCTYPE html lang="en">
+<html lang="en" >
 
-		<!-- Preview Source -->
-		<div id="stream_tab" class="tab_inline">
-				<ul class="css-tabs">
-						<li><a href="#stream_0" class="">First Stream</a></li>
-				</ul>
-				<div id="stream_0"></div>
+<?php
+include ("../inc/common.php");
+echo $header;
+?>
+
+<body>
+    <div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+				<p class="menuLocationInfo"><span>Setup</span> > <span>Video & Audio</span> > <strong>Focus Assist</strong></p>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="card col-lg-6">
+							<div class="card-header mb-0">
+								<h6 class="mb-0 font-weight-bold text-primary">Focus Assist</h6>
+							</div>
+							<div class="card-body"> 
+								<div id="viewToggle" class="row mt-2 justify-content-center">
+									<canvas id="canvas"></canvas>
+									<script>
+										var canvas = document.getElementById("canvas");
+										canvas.width=720;
+										canvas.height = 360;
+										var ctx = canvas.getContext('2d');
+										var img =  new Image();
+										img.src="../images/demo_screen.jpg";
+										ctx.drawImage(img, 0,0,720,360);
+
+									</script>
+									<!--iframe src="/view.php" id="viewFrame"  class="col-lg-6"  scrolling="no" marginheight="1" marginwidth="1" frameborder="1"></iframe-->
+								</div>		
+								<br /><span>* Privacy mask configuration is only supported in Internet Explorer.</span>
+							</div>
+							<div class="card-footer text-center">
+								<button id="btnStart" class="btn btn-sm btn-success">Start</button>
+								<button id="btnStop"  class="btn btn-sm btn-secondary">Stop</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div id="btn" class="box" align="center">
-				<button id="btnView"><span class="04010103">View</span></button>
-				<button id="btnPopup"><span class="04010104">Pop-up</span></button>
-				<span id="noIEMsg"></span>
-		</div>
-		<div id="viewToggle" class="box" align="center">
-				<li id="screen"></li>
-		</div>	
-	
-		<!-- Focus Assist Source -->
-		<div id="fa_source">
-			<ul class="box">
-				<li class="box-title"><h2 class="04010105">Focus Assist</h2></li>
-				<li class="box-content">
-								<ul>
-						<li class="item">
-							<button id="btnStart"><span class="04010106">Start</span></button>
-							<button id="btnStop"><span class="04010107">Stop</span></button>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</div>	
-		<div id="debug_console"></div>
+	</div>
+	<div id="debug_console"></div>
 </body>
+<?=$footer?>
+<script>
+$("button").on("click", function () {
+	console.log(this);
+	// if (this.id == "modalApply") {
+	// 	console.log($("#formUserName").val());
+	// }
+});
+</script>
 </html>
+

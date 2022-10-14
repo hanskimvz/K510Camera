@@ -1,116 +1,158 @@
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'
-	'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
-<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
-<head>
-	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
-	<meta http-equiv='imagetoolbar' content='no' />
-	<meta http-equiv="Cache-Control" content="no-cache"/>
-	<meta http-equiv="Expires" content="0"/>
-	<meta http-equiv="Pragma" content="no-cache"/>
-	<title></title>
-	<link type='text/css' href='../css/config.css' rel='stylesheet' />
-	<link type='text/css' href='../css/theme.css' rel='stylesheet' />
-	<link type='text/css' href='../css/themes/base/jquery-ui.css' rel='stylesheet' />
-	<script type='text/javascript' src='../js/jquery-1.4.2.min.js'></script>
-	<script type='text/javascript' src='../js/jquery-ui-1.8.4.min.js'></script>
-	<script type='text/javascript' src='../js/jquery.cookie.js'></script>
-	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
-	<script type='text/javascript' src='../js/common.js'></script>
-	<script type='text/javascript' src='../js/utils/jq_string.js'></script>
-	<script type='text/javascript' src='../js/cap.js'></script>
-	<script type='text/javascript' src='../js/cap.vca.js'></script>
-	<script type='text/javascript' src='../js/plat_utils/string.js'></script>
-	<script type="text/javascript" src="../js/plat_utils/uconfig.js"></script>
-	<script type="text/javascript" src="../js/brand.js"></script>
-	<script type='text/javascript' src='../js/config/vcaenabledisable.js'></script>
-</head>
-<body id='config-page'>
-	<!-- VCA Initialising Message -->
-	<div class='vcaInitialising' id='loadingMessage'>
-		<img id='loadingImage' src='/images/loading.gif'></img>
-		<span class="04050101">Loading Data - Please Wait</span>
+<!DOCTYPE html lang="en">
+<html lang="en" >
+
+<?php
+include ("../inc/common.php");
+echo $header;
+?>
+<body>
+    <div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+				<p class="menuLocationInfo"><span>Setup</span> > <span>VCA Configuration</span> > <strong>VCA enable</strong></p>
+				<div class="container-fluid">
+					<div class="row" >
+						<div class="card col-lg-6">
+							<div class="card-header mb-0">
+								<h6 class="mb-0 font-weight-bold text-primary">Configuration</h6>
+							</div>
+							<div class="card-body">
+								<div class="form-group">
+									<label class="form-check">
+										<input type="checkbox" id="formVcaEnable" class="form-check-input" />
+										<span class="form-check-label">VCA enable</span>
+									</label>
+								</div>
+								<span class="font-weight-bold">VCA feature</span>
+								<div class="form-group ml-4">
+									<div class="form-inline">
+										<label class="form-check mr-3">
+											<input type="checkbox" id="formObjectTrackingEnable" class="form-check-input" disabled />
+											<span>Object tracking</span>
+										</label>
+										<span id="noObjectTrack">(Not currently licensed)</span>
+									</div>
+									<div class="form-inline mt-2">
+										<label class="form-check mr-3">
+											<input type="checkbox" id="formCountingLineEnable" class="form-check-input" disabled />
+											<span>Counting line</span>
+										</label>
+										<span id="noCountingLine"  >(Not currently licensed)</span>
+									</div>
+									<div class="form-inline mt-2">
+										<label class="form-check mr-3">
+											<input type="checkbox" id="formFaceDetectEnable" class="form-check-input" disabled />
+											<span>Face detection</span>
+										</label>
+										<span id="noFaceDetect"  >(Not currently licensed)</span>
+									</div>
+									<div class="form-inline mt-2">
+										<label class="form-check mr-3">
+											<input type="checkbox" id="formPeopleDetectEnable" class="form-check-input" disabled />
+											<span >People detection</span>
+										</label>
+										<span id="noPoepleDetect" >(Not currently licensed)</span>
+									</div>
+									<div class="form-inline mt-2">
+										<label class="form-check mr-3">
+											<input type="checkbox" id="formCarPlateEnable" class="form-check-input" disabled />
+											<span>Car plate recognization</span>
+										</label>
+										<span id="noCarPlate" >(Not currently licensed)</span>
+									</div>
+									<div class="form-inline mt-2">
+										<label class="form-check mr-3">
+											<input type="checkbox" id="formSimplePoseEnable" class="form-check-input" disabled />
+											<span>Simple pose</span>
+										</label>
+										<span id="noSimplePose">(Not currently licensed)</span>
+									</div>
+								</div>
+								<span class="font-weight-bold">Trackin gmode</span>
+								<div class="form-group ml-2 mb-0">
+									<div class="form-inline">
+										<label class="form-check">
+											<input type="radio" name="trackingmode" id="objectDetectYolo5" class="form-check-input" disabled/>
+											<span>Yolo5</span>
+										</label>
+										<label class="form-check ml-3">
+											<input type="radio" name="trackingmode" id="objectDetectOpencv" class="form-check-input" disabled/>
+											<span>Open CV</span>
+										</label>
+									</div>
+									<span class="ml-2">Select Yolo5 tracking for intruder detection or outdoor scenes.</span>
+								</div>
+							</div>
+							<div class="card-footer">
+								<button class="btn btn-sm btn-primary" id="btnApply">Apply</button>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-2">
+						<div class="card col-lg-6">
+							<div class="card-header mb-0">
+								<h6 class="mb-0 font-weight-bold text-primary">Activation</h6>
+							</div>
+							<div class="card-body">
+								<div class="form-group">
+									<span class="font-weight-bold">Hardware code</span>
+									<input type="text" id='formHardwareCode' class="col-md-12 form-control form-control-sm" readonly />
+								</div>
+								<div class="form-group">
+									<span class="font-weight-bold">Activation code</span>
+									<textarea id='formHardwareCode' rows="3" class="col-md-12 form-control form-control-sm"></textarea>
+								</div>
+								<div class="form-group mb-0">
+									<span class="font-weight-bold">Installed license</span>
+									<div id="installedLic">
+										<label id="vcaLicPro" class="col-lg-12"><span>VCAPro 1ch</span><span class="float-right btn btn-micro btn-outline-primary">x</span></label>
+										<label id="vcaLicPro" class="col-lg-12"><span>VCAPro 1ch</span><span class="float-right btn btn-micro btn-outline-primary">x</span></label>
+									</div>
+								</div>	
+							</div>
+							<div class="card-footer">
+								<button class="btn btn-sm btn-primary" id="btnActivate">Activate</button>
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+	<div id="debug_console"></div>
 
-	<ul class='box vcaNotLicensed' style='display:none'>
-		<li class='box-title'><h2 class="04050102">VCA Not Licensed</h2></li>
-		<li class='box-content'>
-			<ul>
-				<li class='item'>
-					<span class="04050103">VCA is not licensed please go to the</span> <a id="activateLink" href="#" style="color:#0000FF" class="04050104">activation page</a> <span class="04050105">to apply a license</span>
-				</li>
-			</ul>
-		</li>
-	</ul>
-
-	<ul class='box vcaLicensed' style='display:none'>
-		<li class='box-title'><h2 class="04050106">VCA Configuration</h2></li>
-		<li class='box-content'>
-			<ul>
-				<li class='item'>
-					<input type='checkbox' id='formVcaEnable' disabled='true' />
-					<label for='formVcaEnable' class="04050107">Enable</label>
-					<span style="float:right"><a id="streamLink" href="#" style="color:#0000FF" class="04050108">Go to Stream Configuration</a></span>
-				</li>
-			</ul>
-		</li>
-		<span class="corridorOrVSEnabled 04050127">
-			Note: VCA cannot be used while image rotation or video stabilization is in use.
-		</span>
-		<a id="cameraLink" href="#" style="color:#0000FF" class="corridorOrVSEnabled 04050128">Go to Camera Configuration</a>
-	</ul>
-
-	<ul class='box vcaEnabled' style='display:none'>
-		<li class='box-title'><h2 class="04050109">VCA Features</h2></li>
-		<li class='box-content'>
-			<ul>
-				<li class='item'>
-					<input type='checkbox' id='formObjectTrackingEnable' disabled='true' />
-					<label for='formObjectTrackingEnable' class="04050110">Object Tracking</label>
-					<label for='formObjectTrackingEnable' class="trackingNotAllowed 04050115" style='display:none'>(Not currently licensed)</label>
-				</li>
-				<li class='item notTofDevice'>
-					<input type='checkbox' id='formCountingLineEnable' disabled='true' />
-					<label for='formCountingLineEnable' class="04050111">Counting Line</label>
-					<label for='formCountingLineEnable' class="countingNotAllowed 04050115" style='display:none'>(Not currently licensed)</label>
-				</li>
-			</ul>
-		</li>
-		<!--li class='box-content'>
-			<ul>
-				<li class='item'>
-					<input type='checkbox' id='formCamShakeCancelEnable' disabled='true' />
-					<label for='formCamShakeCancelEnable' class="0">Camera Shake Cancellation</label>
-					<p> Can improve performance with camera shake. Does not stabilize video </p>
-				</li>
-			</ul>
-		</li-->
-	</ul>
-
-	<ul class='box vcaEnabled notTofDevice' style='display:none'>
-		<li class='box-title'><h2 class="04050116">Tracking Mode</h2></li>
-		<li class='box-content'>
-			
-			<ul>
-				<li class="item">
-					<ul>
-						<li >
-							<span class="auto-select" id="trackingmode">
-								<input type="radio" id="surveillance" class="auto-item" name="trackingmode"> <span class="04050117">Surveillance</span></input>
-								<input type="radio" id="retail" class="auto-item" name="trackingmode"> <span class="04050118">People</span></input>
-							</span>
-						</li>
-						<li class="04050119" >
-							Select surveillance tracking for intruder detection or outdoor scenes. Select people tracking for tracking multiple people in indoor scenes.
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul>
-
-	<div class='box vcaLicensed default' style='display:none' align="center">
-		<button id='btnApply'><span class="04050112">Apply</span></button>
-		<button id='btnRestoreDefaults'><span class="04050114">Restore Defaults</span></button>
-	</div>
+<div id='loadingMessage' hidden>
+	<img id='loadingImage' src='/images/loading.gif'></img>
+	<span>Loading Data - Please Wait</span>
+</div>
+	
 </body>
+<?=$footer?>
+<script>
+$("button").on("click", function () {
+	console.log(this);
+	if (this.id == "modalApply") {
+		console.log($("#formUserName").val());
+	}
+});
+
+// $("input[type=checkbox]").on("change", function () {
+// 	console.log(this.id, this.checked);
+// 	if (this.id=='formVcaEnable' && this.checked){
+		$("#formObjectTrackingEnable, #formCountingLineEnable, #formFaceDetectEnable, #formPeopleDetectEnable, #formCarPlateEnable, #formSimplePoseEnable").prop("disabled", false);
+// 	}
+// 	else {
+// 		$("#formObjectTrackingEnable, #formCountingLineEnable, #formFaceDetectEnable, #formPeopleDetectEnable, #formCarPlateEnable, #formSimplePoseEnable").prop("disabled", true);
+// 	}
+// });
+
+
+$(".slider").on("input", function () {
+	xt = this.id.replace("slider","form");
+ 	$("#" + xt).val(this.value);
+});
+
+$("#formVcaEnable").prop("checked", true);
+
+</script>
 </html>

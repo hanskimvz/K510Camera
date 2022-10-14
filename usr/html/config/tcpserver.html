@@ -1,377 +1,52 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="imagetoolbar" content="no" />
-	<meta http-equiv="Cache-Control" content="no-cache"/>
-	<meta http-equiv="Expires" content="0"/>
-	<meta http-equiv="Pragma" content="no-cache"/>
-	<title></title>
-	<link type="text/css" href="../css/common.css" rel="stylesheet" />
-	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="../js/common.js"></script>
-	<script type="text/javascript" src="../js/utils/log.js"></script>
-	<script type="text/javascript" src="../js/utils/jq_control.js"></script>
-	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
-	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
-	<script type="text/javascript" src="../js/jquery.ipaddress.js"></script>
-	<script type="text/javascript" src="../js/jquery.caret.js"></script>
-	<script type="text/javascript" src="../js/jquery.ui.mouse.js"></script>
-	<script type="text/javascript" src="../js/jquery.ui.slider.js"></script>
-	<script type="text/javascript" src="../js/jquery.effects.core.js"></script>
-	<script type="text/javascript" src="../js/jquery.effects.blind.js"></script>
-	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
-	<script type="text/javascript" src="../js/jquery.tooltip.js"></script>
-	<script type="text/javascript" src="../js/cap.js"></script>
-	<script type="text/javascript" src="../js/cap.vca.js"></script>
-	<script type="text/javascript" src="../js/config/tcpserver.js"></script>
-</head>
-<body id="config-page">
-	<p class="menuLocationInfo">
-		<span class="04030701">Setup > Event Configuration ></span>
-		<span id="pagename" class="04030702">TCP Server</span>
-	</p>
-	<ul class="box">
-		<li class="box-title"><h2 class="04030703">Configuration</h2></li>
-		<li class="box-content">
-			<ul>
-				<li class="item">
-					<ul>
-						<li class="item-title-mini 04030704">Port :</li>
-						<li>
-							<input type="text" id="formTcpPort" />
-							<label class="04030705"> (1 ... 65535)</label>
-						</li>
-						 <li class="float_right">
-					<button id="linkcustomaizeventfmt">
-						<span class="04030732">Message Customization</span>
-					</button>
-				</li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul>
- 
-	<div id="msgfmt_form">
-		 <ul class="box">
-		 	<li>
-		 		<div id="stream_tab" class="tab_inline">
-			 		<ul class="css-tabs">
-						<li><a href="#msg_header" id="msg_header_link" class="04030708">Message Header</a></li>
-						<li><a href="#vca_fmt" id="vca_fmt_link" class="04030709">VCA</a></li>
-						<li class="mdContents"><a href="#md_fmt" id="md_fmt_link" class="04030710">MD</a></li>
-						<li><a href="#network_fmt" id="network_fmt_link" class="04030711">Network</a></li>
-						<li class="didoContents"><a href="#dido_fmt" id="dido_fmt_link" class="04030712">DI/DO</a></li>
-						<li class="sys_fmt_link dsp_hide"><a href="#sys_fmt" id="system_fmt_link" class="04030714">Video loss/detect</a></li>
-					</ul>
-					<div id="msg_header">
-						<ul class="box">
-							<li class="box-title"><h2 class="04030715">Customized Message Header</h2></li>
-							<li class="box-content">
-								<ul>
-									<li class="item information 04030716">
-										The message header will be sent out first before the message if using customized message header. And it will be effective for all event messages.
-									</li>
-									<li class="item">
-										<input type="checkbox" id="idck_enablecusheader"></input>
-										<B class="04030717">Enable using customized message header</B>
-									</li>
-									<li class="item">
-										<textarea type="text" id="idtext_cusheader" rows="10" cols="80"></textarea>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-					<div id="vca_fmt">
-						<ul class="box">
-							<li class="box-title"><h2 class="04030718">VCA Events</h2></li>
-							<li class="box-content">
-								<ul>
-									<li class="item">
-										<table class="inner-table">
-											<tr>
-												<td>
-													<B class="04030719">VCA Config</B>
-												<td>
-											</tr>
-											<tr>
-												<td>
-													<input class="radiosel" type="radio" name="idradio_vcaconfigformat" id="idradio_vcaconfigformat1" value="default"></input>
-													<label for="idradio_vcaconfigformat1" class="04030720"> Default Message</label>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<input class="radiosel" type="radio" name="idradio_vcaconfigformat" id="idradio_vcaconfigformat2" value="custom"></input>
-													<label for="idradio_vcaconfigformat2" class="04030721"> Customized Message</label>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<input class="fmtinput" type="text" id="idtext_vcaconfigformat" size="100"></input>
-												</td>
-											</tr>
-										</table>
+<!DOCTYPE html lang="en">
+<html lang="en" >
+<?php
+include ("../inc/common.php");
+echo $header;
+?>
 
-									</li>
-									<li class="item">
-										<table class="inner-table">
-											<tr>
-												<td>
-													<B class="04030722">VCA Alarm</B>
-												<td>
-											</tr>
-											<tr>
-												<td>
-													<input class="radiosel" type="radio" name="idradio_vcaalarmformat" id="idradio_vcaalarmformat1" value="default"></input>
-													<label for="idradio_vcaalarmformat1" class="04030720"> Default Message</label>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<input class="radiosel" type="radio" name="idradio_vcaalarmformat" id="idradio_vcaalarmformat2" value="custom"></input>
-													<label for="idradio_vcaalarmformat2" class="04030721"> Customized Message</label>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<input class="fmtinput" type="text" id="idtext_vcaalarmformat" size="100"></input>
-												</td>
-											</tr>
-										</table>
-								</li>
-								<li class="item">
-									<table class="inner-table">
-											<tr>
-												<td>
-													<B class="04030723">VCA Counter</B>
-												<td>
-											</tr>
-											<tr>
-												<td>
-													<input class="radiosel" type="radio" name="idradio_vcacounterformat" id="idradio_vcacounterformat1" value="default"></input>
-													<label for="idradio_vcacounterformat1" class="04030720"> Default Message</label>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<input class="radiosel" type="radio" name="idradio_vcacounterformat" id="idradio_vcacounterformat2" value="custom"></input>
-													<label for="idradio_vcacounterformat2" class="04030721"> Customized Message</label>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<input class="fmtinput" type="text" id="idtext_vcacounterformat" size="100"></input>
-												</td>
-											</tr>
-										</table>
-									</li>	
-								</ul>
-							</li>
-						</ul>
+<body>
+    <div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+				<p class="menuLocationInfo"><span>setup</span> > <span>Event Configuration</span> > <strong>TCP server</strong></p>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="card col-lg-6">
+							<div class="card-header">
+								<h6 class="m-0 font-weight-bold text-primary">Configuration</h6>
+							</div>
+							<div class="card-body">
+								<div class="form-group mb-0">
+									<div class="form-inline">
+										<span class="col-md-2">Port</span>
+										<input type="text" id="formTcpPort" class="form-control-custom mr-2" />
+										<label class="04030705"> (1 ... 65535)</label>
+									</div>
+								</div>
+							</div>
+							<div class="card-footer">
+								<button id="btnApply" class="btn btn-sm btn-primary">Apply</button>
+								<button id="linkcustomaizeventfmt" class="btn btn-mini btn-warning mt-1 float-right" data-toggle="modal" data-target="#tcpNotiModal">Message Customization</button>
+							</div>
+						</div>
 					</div>
-					<div id="md_fmt">
-				 		<ul class="box">
-							<li class="box-title"><h2 class="04030724">MD Events</h2></li>
-							<li class="box-content">
-								<ul>
-								<li class="item">
-									<table class="inner-table">
-											<tr>
-												<td>
-													<B class="04030727">MD Detected Alarm</B>
-												<td>
-											</tr>
-											<tr>
-												<td>
-													<input class="radiosel" type="radio" name="idradio_mddetectedformat" id="idradio_mddetectedformat1" value="default"></input>
-													<label for="idradio_mddetectedformat1" class="04030720"> Default Message</label>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<input class="radiosel" type="radio" name="idradio_mddetectedformat" id="idradio_mddetectedformat2" value="custom"></input>
-													<label for="idradio_mddetectedformat2" class="04030721"> Customized Message</label>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<input class="fmtinput" type="text" id="idtext_mddetectedformat" size="100"></input>
-												</td>
-											</tr>
-									</table>
-								</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-					<div id="network_fmt">
-						<ul class="box">
-							<li class="box-title"><h2 class="04030728">Network Events</h2></li>
-							<li class="box-content">
-								<ul>
-									<li class="item">
-										<table class="inner-table">
-											<tr>
-												<td>
-													<input class="radiosel" type="radio" name="idradio_networkformat" id="idradio_networkformat1" value="default"></input>
-													<label for="idradio_networkformat1" class="04030720"> Default Message</label>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<input class="radiosel" type="radio" name="idradio_networkformat" id="idradio_networkformat2" value="custom"></input>
-													<label for="idradio_networkformat2" class="04030721"> Customized Message</label>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<input class="fmtinput" type="text" id="idtext_networkformat" size="100"></input>
-												</td>
-											</tr>
-									</table>
-								</li>
-							</ul>
-								
-							</li>
-						</ul>
-					</div>
-					<div id="dido_fmt">
-						<ul class="box">
-							<li class="box-title"><h2 class="04030729">DI/DO Events</h2></li>
-							<li class="box-content">
-								<ul>
-									<li class="item">
-										<table class="inner-table">
-											<tr>
-												<td>
-													<input class="radiosel" type="radio" name="idradio_didoformat" id="idradio_didoformat1" value="default"></input>
-													<label for="idradio_didoformat1" class="04030720"> Default Message</label>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<input class="radiosel" type="radio" name="idradio_didoformat" id="idradio_didoformat2" value="custom"></input>
-													<label for="idradio_didoformat2" class="04030721"> Customized Message</label>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<input class="fmtinput" type="text" id="idtext_didoformat" size="100"></input>
-												</td>
-											</tr>
-									</table>
-								</li>
-							</ul>
-							</li>
-						</ul>
-					</div>
-					<div id="sys_fmt">
-						<ul class="box">
-							<li class="box-title"><h2 class="04030714">Video loss/detect</h2></li>
-							<li class="box-content">
-								<ul>
-									<li class="item">
-										<table class="inner-table">
-											<tr>
-												<td>
-													<input class="radiosel" type="radio" name="idradio_sysformat" id="idradio_sysformat1" value="default"></input>
-													<label for="idradio_temperformat1" class="04030720"> Default Message</label>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<input class="radiosel" type="radio" name="idradio_sysformat" id="idradio_sysformat2" value="custom"></input>
-													<label for="idradio_sysformat2" class="04030721"> Customized Message</label>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<input class="fmtinput" type="text" id="idtext_sysformat" size="100"></input>
-												</td>
-											</tr>
-									</table>
-								</li>
-							</ul>
-							</li>
-						</ul>
-					</div>
-		 		</div>
-		 	</li>
-		 </ul>
-		 <div class="box settingButtonDialog text_right">
-				<button id="btnDialogOK"><span class="04030737">OK</span></button>
-				<button id="btnDialogCancel"><span class="04030738">Cancel</span></button>
-		 </div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="box" align="center">
-		<button id="btnApply"><span class="04030706">Apply</span></button>
-	</div>
-	<div id="tooltip" class="xstooltip"></div> 
-	<div id="debug_console"></div>
-	<div id="tooltipmsg" style="display:none">
-		<div class="04030733" id="CH_ID">Channel ID</div>
-			<div class="04030734" id="CFG_INFO">Config information</div>
-			<div class="04030735" id="EV_ID">Event's ID</div>
-			<div class="04030736" id="EV_DESC">Event's description</div>
-			<div class="04030737" id="TIMESTAMP">Time-stamp</div>
-			<div class="04030738" id="CT_ID">Counter's ID</div>
-			<div class="04030739" id="CT_NAME">Counter's name</div>
-			<div class="04030740" id="CT_VAL">Counter's value</div>
-			<div class="04030741" id="ST_NO">Steam's number</div>
-			<div class="04030742" id="ZN_BIT">Detected zone's bit value</div>
-			<div class="04030743" id="ZN_MASK">Mask of zones</div>
-			<div class="04030744" id="ZN_IDX">Zone's index</div>
-			<div class="04030745" id="OBJ_SZ">Objects' size</div>
-			<div class="04030746" id="MD_ENDIS">MD enabled/disabled</div>
-			<div class="04030747" id="SENSITIVITY">Value of sensitivity</div>
-			<div class="04030748" id="PT_NUM">Number of points</div>
-			<div class="04030749" id="PT_POS">Position of points</div>
-			<div class="04030750" id="BTARY_ENDIS">Bit array enabled/disabled</div>
-			<div class="04030751" id="ZNINFO_ENDIS">Zone information enabled/disabled</div>
-			<div class="04030752" id="ALMINFO_ENDIS">Alarm information enabled/disabled</div>
-			<div class="04030753" id="INTERFACE">Network interface</div>
-			<div class="04030754" id="PREV_IP">Previous IP</div>
-			<div class="04030755" id="PREV_SUBNET">Previous subnet mask</div>
-			<div class="04030756" id="PREV_GATEWAY">Previous gateway</div>
-			<div class="04030757" id="PREV_DNS1">Previous DNS1</div>
-			<div class="04030758" id="PREV_DNS2">Previous DNS2</div>
-			<div class="04030759" id="CURR_IP">Current IP</div>
-			<div class="04030760" id="CURR_SUBNET">Current subnet mask</div>
-			<div class="04030761" id="CURR_GATEWAY">Current gateway</div>
-			<div class="04030762" id="CURR_DNS1">Current DNS1</div>
-			<div class="04030763" id="CURR_DNS2">Current DNS2</div>
-			<div class="04030764" id="DSPLOAD">DSP load</div>
-			<div class="04030765" id="FPS">FPS</div>
-			<div class="04030766" id="BITRATE">Bit rate</div>
-			<div class="04030767" id="COUNT">Number of DI sensor</div>
-			<div class="04030768" id="PREV_MASK">Previous status mask</div>
-			<div class="04030769" id="CURR_MASK">Current status mask</div>
-			<div class="04030770" id="TEMP_CELSIUS">Temperature in Celsius</div>
-			<div class="04030771" id="TEMP_CELSIUS_PRECISION3">Three decimal places of current Celsius</div>
-			<div class="04030772" id="TEMP_FAHRENHEIT">Temperature in Fahrenheit</div>
-			<div class="04030773" id="TEMP_FAHRENHEIT_PRECISION3">Three decimal places of current Fahrenheit</div>
-			<div class="04030774" id="HEATER">Heater On/Off</div>
-			<div class="04030775" id="FAN">Fan On/Off</div>
-			<div class="04030776" id="SYS_TYPE">Type of system alarm</div>
-			<div class="04030777" id="SYS_ACTION">Action of system alarm</div>
-			<div class="04030778" id="SYS_INFO">Information of system alarm</div>
-			<div class="04030779" id="PACKETLEN">Length of whole packet</div>
-			<div class="04030780" id="DEVIP">IP of the device</div>
-			<div class="04030781" id="UNITNAME">Unit name</div>
-			<div class="04030782" id="DATETIME">Date and time</div>
-			<div class="04030783" id="DTS">Digital time-stamp</div>
-			<div class="04030784" id="MSGTYPE">Type of alarm message</div>
-			<div class="04030785" id="MSGINFO">Detail of alarm message</div>
-			<div class="04030786" id="EOS">End of string</div>
-			<div class="04030787" id="SUPPORT_KW">The supported keywords:</div>
-			<div class="04030788" id="EXAMPLE">Example:</div>
-			<div class="04030789" id="RULENAME">Event rule name</div>
-	</div>
+<?php
+include "/usr/html/config/messagemodify.html";
+?>
+
 </body>
+<?=$footer?>
+<script>
+$("button").on("click", function () {
+	console.log(this);
+	if (this.id == "modalApply") {
+		console.log($("#formUserName").val());
+	}
+});
+</script>
 </html>

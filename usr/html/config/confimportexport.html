@@ -1,69 +1,60 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="imagetoolbar" content="no" />
-	<meta http-equiv="Cache-Control" content="no-cache"/>
-	<meta http-equiv="Expires" content="0"/>
-	<meta http-equiv="Pragma" content="no-cache"/>
-	<title></title>
-	<link type="text/css" href="../css/common.css" rel="stylesheet" />
-	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="../js/common.js"></script>
-	<script type="text/javascript" src="../js/utils/jq_string.js"></script>
-	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
-	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
-	<script type="text/javascript" src="../js/plat_utils/string.js"></script>
-	<script type="text/javascript" src="../js/defstring/defconfig.js"></script>
-	<script type="text/javascript" src="../js/config/confimportexport.js"></script>
-</head>
-<body id="config-page">
-	<p class="menuLocationInfo">
-		<span class="04070801">Setup &gt; Maintenance &gt;</span>
-		<span id="pagename" class="04070802">Configuration Import/Export</span>
-	</p>
-	<ul class="box exportZone">
-		<li class="box-title"><h2 class="04070803">Configuration Export</h2></li>
-		<li class="box-content">
-			<ul>
-				<li class="item">
-					<button id="btnBackupStart"><span class="04070804">Export</span></button>
-				</li>
-			</ul>
-		</li>
-	</ul>
-	<ul class="box importZone">
-		<li class="box-title"><h2 class="04070805">Configuration Import</h2></li>
-		<li class="box-content">
-			<ul>
-				<li class="item">
-					<ul>
-						<form id="formImportSubmit" action="/uapi-cgi/impexp.cgi?" enctype="multipart/form-data" method="post" target="iframeImport">
-							<li>
-								<iframe name="iframeImport" id="iframeImport" class="dsp_hide"></iframe>
-								<input type="hidden" name="action" value="set">
-								<input id="fileImport" name="import" type="file"></input>
-							</li>
-							<li id="importApply" class="dsp_hide">
-								<button id="btnRestoreStart" type="submit"><span class="04070806">Import</span></button>
-							</li>
-						</form>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul>
-	<ul id="countZone" class="box dsp_hide">
-		<li class="box-title"><h2 class="04070808">Configuration</h2></li>
-		<li class="box-content">
-			<ul>
-				<li class="item">
-				</li>
-			</ul>
-		</li>
-	</ul>
+<!DOCTYPE html lang="en">
+<html lang="en" >
+
+<?php
+include ("../inc/common.php");
+echo $header;
+?>
+
+<body>
+    <div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+				<p class="menuLocationInfo"><span>Setup</span> > <span>Maintenance</span> > <strong>Configuration import/export</strong></p>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="card col-lg-6">
+							<div class="card-header mb-0">
+								<h6 class="mb-0 font-weight-bold text-primary">Configuration export</h6>
+							</div>
+							<div class="card-body">
+								<div class="form-inline">
+									<button id="btnBackupStart" class="btn btn-mini btn-warning">Export</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-2">
+						<div class="card col-lg-6">
+							<div class="card-header mb-0">
+								<h6 class="mb-0 font-weight-bold text-primary">Configuration export</h6>
+							</div>
+							<div class="card-body">
+								<form id="formImportSubmit" action="/uapi-cgi/impexp.cgi?" enctype="multipart/form-data" method="post" target="iframeImport">
+									<iframe name="iframeImport" id="iframeImport" hidden></iframe>
+									<input type="hidden" name="action" value="set">
+									<input id="fileImport" name="import" type="file"></input>
+									<button id="btnRestoreStart" type="submit"  class="btn btn-mini btn-warning">Import</button>
+								</form>								
+							</div>
+						</div>
+					</div>
+					
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="debug_console"></div>
 </body>
-</html>
+<?=$footer?>
+<script>
+$("button").on("click", function () {
+	console.log(this);
+	if (this.id == "modalApply") {
+		console.log($("#formUserName").val());
+	}
+});
+</script>
+</html>>	

@@ -1,60 +1,92 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="imagetoolbar" content="no" />
-	<meta http-equiv="Cache-Control" content="no-cache"/>
-	<meta http-equiv="Expires" content="0"/>
-	<meta http-equiv="Pragma" content="no-cache"/>
-	<title></title>
-	<link type="text/css" href="../css/common.css" rel="stylesheet" />
-	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="../js/common.js"></script>
-	<script type="text/javascript" src="../js/defstring/defbrand.js"></script>
-	<script type="text/javascript" src="../js/utils/jq_string.js"></script>
-	<script type="text/javascript" src="../js/utils/jq_control.js"></script>
-	<script type="text/javascript" src="../js/uapi.ajax.js"></script>
-	<script type="text/javascript" src="../js/config/api.js"></script>
-</head>
-<body id="config-page">
-	<p class="menuLocationInfo">
-		<span class="04070901">Setup &gt; Maintenance &gt;</span>
-		<span id="pagename" class="04070902">API</span>
-	</p>
-	<ul class="box">
-		<li class="box-title"><h2 class="04070903">Configuration</h2></li>
-		<li class="box-content">
-			<ul>
-				<li class="item">
-					<input type="checkbox" id="formApiEnable_genetec" /><label for="formApiEnable_genetec" class="04070904"> Enable Genetec</label>
-				</li>
-				<li class="item">
-					<input type="checkbox" id="formApiEnable_onvif" /><label for="formApiEnable_onvif" class="04070905"> Enable ONVIF</label>
-					<div class="onvifInner">
-						<div>
-							<span id="onvif_addr" class="margin_left_step2 04070910">URL : </span><span id="formApiOnvifaddr"></span>
-						</div>
-						<div>
-							<input type="checkbox" id="formApiEnable_authentication" class="margin_left_step2"/><label for="formApiEnable_authentication" class="04070907"> Enable authentication</label>
-						</div>
-						<div class="onvifSub">
-							<input type="checkbox" id="replayAttackProtecion" class="margin_left_step4" /><label for="replayAttackProtecion" class="04070911"> Enable replay attack protection</label>
-						</div>
-						<div class="profileGContents">
-							<input type="checkbox" id="profileG" class="margin_left_step2" /><label for="profileG" class="04070912"> Enable profile G</label>
+<!DOCTYPE html lang="en">
+<html lang="en" >
+
+<?php
+include ("../inc/common.php");
+echo $header;
+?>
+
+<body>
+    <div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+				<p class="menuLocationInfo"><span>Setup</span> > <span>Maintenance</span> > <strong>API</strong></p>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="card col-lg-6">
+							<div class="card-header mb-0">
+								<h6 class="mb-0 font-weight-bold text-primary">Configuration</h6>
+							</div>
+							<div class="card-body">
+								<div class="form-group form-inline">
+									<label class="form-check">
+										<input type="checkbox" id="formApiEnable_genetec" class="form-check-input" />
+										<span>Enable genetec</span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="form-check">
+										<input type="checkbox" id="formApiEnable_onvif" class="form-check-input" />
+										<span>Enable ONVIF</span>
+									</label>
+									<div class="form-group ml-3">
+										<span>URL</span>:&nbsp;<label id="onvif_url">http://192.168.1.28:80/onvif/device_service</label>
+										<label class="form-check">
+											<input type="checkbox" id="formApiEnable_authentication" class="form-check-input" />
+											<span>Enable authentication</span>
+										</label>
+										<label class="form-check  ml-3">
+											<input type="checkbox" id="replayAttackProtecion" class="form-check-input" />
+											<span>Enable replay attack protection</span>
+										</label>									
+										<label class="form-check">
+											<input type="checkbox" id="profileG" class="form-check-input" />
+											<span>Enable profile G</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="card-footer">
+								<button id="btnApply" class="btn btn-sm btn-primary"><span>apply</span></button>
+							</div>
 						</div>
 					</div>
-				</li>
-			</ul>
-		</li>
-	</ul>
-
-	<div class="box settingButton text_cen" >
-		<button id="btnApply"><span class="04070908">Apply</span></button>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div id="debug_console"></div>
-</body>
+<?=$footer?>
+<script>
+$("button").on("click", function () {
+	console.log(this);
+	if (this.id == "modalApply") {
+		console.log($("#formUserName").val());
+	}
+});
+$(".slider").on("input", function () {
+	xt = this.id.replace("slider","form");
+ 	$("#" + xt).val(this.value);
+});
+
+$("input[type='radio']").on("click", function () {
+	console.log(this);
+	$("#uart_udp").prop("hidden", true);
+	$("#uart_tcpclient").prop("hidden", true);
+	$("#uart_tcpserver").prop("hidden", true);	
+	if (this.id=="formUartOverIPModeUdp") {
+		$("#uart_udp").prop("hidden", false);
+	}
+	else if (this.id=="formUartOverIPModeTcpClient") {
+		$("#uart_tcpclient").prop("hidden", false);
+	}
+	else if (this.id=="formUartOverIPModeTcpServer") {
+		$("#uart_tcpserver").prop("hidden", false);
+	}		
+
+});
+
+
+
+
+</script>
 </html>

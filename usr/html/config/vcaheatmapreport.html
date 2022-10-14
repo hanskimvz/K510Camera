@@ -1,104 +1,87 @@
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'
-	'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
-<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
-<head>
-	<meta http-equiv="Cache-Control" content="no-cache"/>
-	<meta http-equiv="Expires" content="0"/>
-	<meta http-equiv="Pragma" content="no-cache"/>
-	<link type='text/css' href='../css/config.css' rel='stylesheet' />
-	<link type='text/css' href='../css/theme.css' rel='stylesheet' />
-	<link type='text/css' href='../css/themes/smoothness/jquery-ui.css'>
-	<link type='text/css' href='../css/config/vcaheatmapreport.css' rel='stylesheet' />
-	<link type='text/css' href='../css/themes/base/jquery-ui.css' rel='stylesheet' />
-	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui-1.8.4.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.ui.mouse.js"></script>
-	<script type="text/javascript" src="../js/jquery.ui.slider.js"></script>
-	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-	<script type="text/javascript" src='../js/uapi.ajax.js'></script>
-	<script type="text/javascript" src="../js/jquery.alphanumeric.pack.js"></script>
-	<script type="text/javascript" src="../js/jquery.ipaddress.js"></script>
-	<script type="text/javascript" src="../js/jquery.dateformat.js"></script>
-  	<script type="text/javascript" src="../js/jquery.epiclock.js"></script>
-	<script type="text/javascript" src="../js/jquery.caret.js"></script>
-	<script type='text/javascript' src='../js/common.js'></script>
-	<script type='text/javascript' src='../js/cap.js'></script>
-	<script type='text/javascript' src='../js/cap.vca.js'></script>
-	<script type='text/javascript' src='../js/utils/jq_string.js'></script>
-	<script type='text/javascript' src='../js/plat_utils/string.js'></script>
-	<script type='text/javascript' src='../js/config/vcaheatmapreport.js'></script>
-</head>
+<!DOCTYPE html lang="en">
+<html lang="en" >
 
-<body id='config-page'>
-	<p class='menuLocationInfo'>
-		<span class="04051401">Setup > VCA ></span>
-		<span id='pagename' class="04051402">Heatmap Report</span>
-	</p>
-	<ul class='box vcaDisabled' style='display:none'>
-		<li class='box-title'><h2>Heatmap Report</h2></li>
-		<li class='box-content'>
-			<p> <span class='04050720'>VCA is disabled, please go to the </span><span class='menuLocationInfo 04050721'>VCA > </span><span id='pagename' class='04050722'>Enable/Disable</span><span class ='04050723'> page to enable VCA.</span></p>
-		</li>
-	</ul>
-	<ul class='box vcaEnabled'>
-		<div>
-			<ul class="box">
-				<li class='box-title'><h2 class="04051403" style="text-align:left">Database Service</h2></li>
-				<li class="box-content">
-					<div class="item">
-						<input type="checkbox" id="enabledbservice"></input>
-						<label class="04051404"> Enable Heatmap Serivce</label>
+<?php
+include ("../inc/common.php");
+echo $header;
+
+?>
+<body>
+    <div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+			<p class="menuLocationInfo"><span>Setup</span> > <span>VCA Configuration</span> > <strong>Heatmap Report</strong></p>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="card col-lg-6">
+							<div class="card-header">
+								<h6 class="m-0 font-weight-bold text-primary">Database service</h6>
+							</div>
+							<div class="card-body">
+								<label class="form-check">
+									<input type="checkbox" id="enabledbservice" class="form-check-input" />
+									<span class="form-check-label">Enable Heatmap Serivce</span>
+								</label>
+							</div>
+							<div class="card-footer text-center">
+								<button id="btnApply" class="btn btn-sm btn-primary">Apply</button>
+							</div>
+						</div>
 					</div>
-					<div class="item">
-						<span class="ctrpspan"></span>
-						<button id="btnApply"><span class="04051405">Apply</span></button>
+					<div class="row mt-1">
+						<div class="card col-lg-6">
+							<div class="card-header">
+								<h6 class="m-0 font-weight-bold text-primary">Request</h6>
+							</div>
+							<div class="card-body">
+								<label class="form-check">
+									<input type="checkbox" id="usecolor" class="form-check-input" checked />
+									<span class="col-sm-3">Output color image</span>
+								</label>
+								<label class="form-check">
+									<input type="checkbox" id="annotateframe" class="form-check-input" checked />
+									<span class="col-sm-3">Annotate heatmap on snapshot</span>
+								</label>
+								<div class="form-group form-inline">
+									<span class="col-sm-3">Heatmap image size</span>
+									<select id="heatmapsize" class="form-control-custom " style="width:100px">
+										<option value="160x90">160x90</option>
+										<option value="320x180">320x180</option>
+										<option value="480x270">480x270</option>
+										<option value="640x360">640x360</option>
+									</select>
+								</div>
+							</div>
+							<div class="card-footer text-center">
+								<button id="btnPNG" class="btn btn-sm btn-primary">PNG</button>
+								<span id="servicedisabled" class="text-danger">Heatmap service is disabled.</span>
+							</div>
+						</div>
 					</div>
-				</li>
-			</ul>
-			<ul class="box">
-				<li class='box-title'><h2 class="04051406" style="text-align:left">Request Command</h2></li>
-				<li class="box-content">
-					<ul>
-						<li class="item">
-							<span class="ctrpspan 04051407">Output color image :</span>
-							<input type="checkbox" id="usecolor" checked></input>
-						</li>
-					</ul>
-				</li>
-			<li class="box-content">
-				<ul>
-					<li class="item">
-						<span class="ctrpspan 04051408">Annotate heatmap on snapshot :</span>
-						<input type="checkbox" id="annotateframe" onmouseover='xtooltip_show("annotateframe_tooltip","annotateframe",0,0);' onmouseout='xtooltip_hide("annotateframe_tooltip");'></input>
-					</li>
-				</ul>
-			</li>
-			<li class="box-content">
-				<ul>
-					<li class="item">
-						<span class="ctrpspan 04051409">Heatmap image size</span>
-						<select id="heatmapsize" style="width:100px"></select>
-						<label id="annotateframelabel" style="display:none"><FONT color="black" class="04051410">Stream resolution is used for annotated heatmap.</FONT></label>
-					</li>
-				</ul>
-			</li>
-			</ul>
-			<ul class="box">
-				<li class='box-title'><h2 class="04051411" style="text-align:left">Request</h2></li>
-				<li class="box-content">
-					<div class="item">
-						<span class="ctrpspan"></span>
-						<button id="btnPNG"><span class="04051412">PNG</span></button>
-						<label id="servicedisabled" style="display:none"><FONT color="red" class="04051413">Heatmap service is disabled!</FONT></label>
-					</div>
-				</li>
-			</ul>
+				</div>
+			</div>
 		</div>
-	</ul>
-	<div id="annotateframe_tooltip" class="xstooltip">
-		<ul>
-			<li>Blends the heatmap image on top of a snapshot of the camera image.</li>
-		</ul>
 	</div>
+									
+	<div id="debug_console"></div>
+	<div id='loadingMessage' hidden>
+		<img id='loadingImage' src='/images/loading.gif'></img>
+		<span>Loading Data - Please Wait</span>
+	</div>
+	
 </body>
+<?=$footer?>
+<script>
+$("button").on("click", function () {
+	console.log(this);
+	if (this.id == "modalApply") {
+		console.log($("#formUserName").val());
+	}
+});
+
+$(".slider").on("input", function () {
+	xt = this.id.replace("slider","form");
+ 	$("#" + xt).val(this.value);
+});
+</script>
 </html>
