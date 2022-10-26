@@ -1,0 +1,49 @@
+﻿li#formSCListBox {
+	min-height: 0px;
+}
+li#formSCListBox li:nth-child(1) {
+	width: 40px; margin-left: 8px;
+}
+li#formSCListBox li:nth-child(2) {
+	width: 120px;
+}
+select#formScheduleList {
+	width: 640px;
+}
+li#formSCBtn > span {
+	margin-left: 225px;
+}
+li#formSCBtn > span:lang(ar) {
+	margin-left: 0px;
+	margin-right: 225px;
+}
+div#input_form {
+	display: block
+}
+div#effect {
+	display: none;
+}
+li#subItem {
+	margin-left: 20px;
+	width: 60px;
+}
+
+.formTimeWidth {
+	width: 30px;
+}
+
+.formTimeUnit {
+	margin-right: 10px;
+}
+
+.formDate {
+	margin-right: 10px;
+}
+
+.formDays {
+	margin-right: 8px;
+}
+
+input#formDays0 {
+	margin-left: 20px;
+}

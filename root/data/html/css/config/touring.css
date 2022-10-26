@@ -1,0 +1,170 @@
+﻿select#touringList {
+	width: 265px;
+	position: absolute;
+	top: 65px;
+	left: 15px;
+	font-size: 11px;
+	font-family: courier New;
+	display: block;
+}
+select#touringList:lang(ar) {
+	left: 385px;
+}
+
+.touringListTitle0 {
+	width: 11em;
+}
+.touringListTitle1 {
+	width: 7em;
+}
+ul li#touringNumber {
+	margin-left: 280px;
+	margin-top: 5px;
+}
+ul li#touringPresetNumber {
+	margin-left: 280px;
+	margin-top: 5px;
+}
+ul li#touringInterval {
+	margin-left: 280px;
+	width:60px;
+}
+ul li#touringNumber:lang(ar) {
+	margin-left: 0px;
+	margin-right: 280px;
+}
+ul li#touringPresetNumber:lang(ar) {
+	margin-left: 0px;
+	margin-right: 280px;
+}
+ul li#touringInterval:lang(ar) {
+	margin-left: 0px;
+	margin-right: 280px;
+}
+ul li#touringSetBtn {
+	margin-left: 280px;
+}
+ul li#touringSetBtn:lang(ar) {
+	margin-left: 0px;
+	margin-right: 280px;
+}
+ul li#touringUpDownBtn {
+	margin-left: 280px;	
+}
+select#selectTouringList {
+	margin-top: 0px;
+}
+select#bottomTourListContents{
+	margin-top:2px;
+}
+select#selectPresetList {
+	margin-top: 0px;
+}
+#touringInterval {
+	margin-top: 5px;
+}
+#touringIntervalText {
+	text-align: center;
+}
+
+#touringSpeed {
+	margin-left: 280px;
+	width:60px;
+}
+
+#touringSpeedText {
+	text-align: center;
+}
+
+#screen {
+  margin: 2px 1px 0px 5px;
+  float: left;
+}
+#ptzContents {
+	width: 150px;
+	display: none;
+}
+
+/* ptz 8 button*/
+#ptz {
+	height: 100px;
+}
+#ptz #ptz_panel {
+	border: 0px solid #000000;
+	color: #2B88C2;
+	float: left;
+	width: 78px;
+	margin: 5px 5px 0px 0px;
+	background-color: #FFFFFF;
+}
+#ptz #ptz_panel:lang(ar) {
+	float: right;
+}
+#ptz #ptz_panel dd {
+	float: left;
+	width: 22px;
+	height: 22px;
+	border: 1px solid #999999;
+	padding: 0px;
+	margin: 1px;
+}
+
+/* Zoom, Focus Button */
+#ptz_zoomfocus {
+	color:#2B88C2;
+}
+#ptz_zoomfocus dl:nth-child(1) dd:nth-child(1){
+	padding: 10px 0px 1px 0px;
+}
+#ptz_zoomfocus dl:nth-child(2) dd:nth-child(1){
+	padding: 4px 0px 1px 0px;
+}
+
+#slider_speedbar{
+	float: left;
+	color: #2B88C2;
+	width: 85px;
+	margin: 9px 9px 0px 3px;
+}
+#slider_speedbar:lang(ar) {
+	float: right;
+	margin: 9px 3px 0px 9px;
+}
+#text_speedbar{
+	text-align: center;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+#preset_number{
+	text-align: center;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+#main_ptz_zoom {
+	padding-top: 20px;
+	padding-left: 5px;
+}
+#viewToggle {
+	display:none;
+	margin-top: 35px;
+}
+.setclear_button {
+	margin-bottom: 8px;
+}
+.go_button {
+	margin-bottom: 8px;
+}
+.tourStartStop_button {
+	margin-top: 5px;
+}
+
+.irSpeedptz {
+	display: none;
+}
+
+.tourIntervalSpeedType1 {
+	display: none;
+}
+.tourIntervalIrSpeedPtz {
+	display: none;
+}

@@ -1,0 +1,133 @@
+body#setup-page div#frame {
+	display: none;
+}
+div#bottom {
+	display: none;
+}
+div.box {
+	padding-top: 10px;
+}
+#browserChecked {
+	display: none;
+	font: 16px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+	color: #FFF7F7;
+	background-color: #FF5555;
+	margin-bottom: 3px;
+	padding: 8px;
+	text-align: center;
+}
+
+#topbar {
+	top: 0;
+	left: 0;
+	width: 100%;
+	line-height: 25px;
+	vertical-align: middle;
+	background: lightyellow;
+	font-family: sans-serif;
+	color: #CC0000;
+	text-align: center;
+}
+
+.topbar-close {
+	display: none;
+}
+
+#closeicon {
+	padding: 5px;
+}
+
+#browser {
+	font: 14px Arial, Helvetica, sans-serif, Verdana, Geneva;
+	font-weight: bolder;
+	color: #FFDCD4;
+	margin-top: 5px;
+}
+#browser span {
+	margin: 0px 10px;
+}
+#repositioning {
+	display: none;
+}
+#zoomfocus {
+	display: none;
+}
+div#themesList {
+	display: none;
+}
+#oem {
+	display: none;
+}
+
+@-webkit-keyframes warning-pulse {
+	0%		{ background-color:	#dd3300; }
+	50%		{ background-color:	#ffe100; }
+	100%	{ background-color:	#dd3300; }
+}
+@-moz-keyframes warning-pulse {
+	0%		{ background-color:	#dd3300; }
+	50%		{ background-color:	#ffe100; }
+	100%	{ background-color:	#dd3300; }
+}
+@-ms-keyframes warning-pulse {
+	0%		{ background-color:	#dd3300; }
+	50%		{ background-color:	#ffe100; }
+	100%	{ background-color:	#dd3300; }
+}
+@keyframes warning-pulse {
+	0%		{ background-color:	#dd3300; }
+	50%		{ background-color:	#ffe100; }
+	100%	{ background-color:	#dd3300; }
+}
+#vcaLoader {
+	cursor:		progress;
+}
+#vcaError {
+	cursor:								auto;
+	font:									bold 1.25em monospace;
+	color:								 white;
+	text-shadow:					 0 0 2px rgba(32,32,32,0.5);
+	background:						#dd3300;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:		5px;
+	border-radius:				 5px;
+	-webkit-animation:		 warning-pulse 5s infinite;
+	-moz-animation:				warning-pulse 5s infinite;
+	-ms-animation:				 warning-pulse 5s infinite;
+}
+#vcaError:before
+{
+	content:"There was an error communicating with the device (";
+}
+#vcaError:after
+{
+	content:")";
+}
+.ptzContents {
+	display: none;
+}
+#privacymask3d {
+	display: none;
+}
+#pir {
+	display: none;
+}
+#uart {
+	display: none;
+}
+#touring {
+	display: none;
+}
+#autorun {
+	display: none;
+}
+#protocol {
+	display: none;
+}
+#ptz {
+	display: none;
+}
+.thirdmngrContent {
+	display: none;
+}

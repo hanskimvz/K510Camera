@@ -1,0 +1,70 @@
+﻿select {
+	margin:0px; padding: 0px;
+}
+div#stream_tab {
+	margin: 2px 0px 0px 11px; width: 645px;
+}
+div#stream_tab ul.css-tabs {
+	padding: 0px 10px;
+}
+div#stream_tab ul.css-tabs li {
+	display: none;
+}
+div#stream_tab div#stream_0 {
+	padding: 0px 0px;
+}
+div#stream_source {
+	display: none;
+}
+div#stream_0 ul.box {
+	padding: 0px;
+}
+li.bitxtInline {
+	padding-left: 30px; width: 170px;
+}
+li.bitxtInMillisec {
+	padding-left: 30px;
+}
+#viewToggle {
+	display: block;
+}
+button {
+	margin-top: 5px;
+}
+#noIEMsg {
+	position: absolute; left: 440px; top: 303px;
+	color: #E17009; font: 10px arial,sans-serif;
+}
+#loading_msg {
+	top: 200px;
+}
+input#formBitxtDatePositionX {
+	text-align: center;
+}
+input#formBitxtDatePositionY {
+	text-align: center;
+}
+input#formBitxtTimePositionX {
+	text-align: center;
+}
+input#formBitxtTimePositionY {
+	text-align: center;
+}
+input#formBitxtNamePositionX {
+	text-align: center;
+}
+input#formBitxtNamePositionY {
+	text-align: center;
+}
+#formBitxtDatePosition {
+	width: 120px;
+}
+#formBitxtTimePosition {
+	width: 120px;
+}
+#formBitxtNamePosition {
+	width: 120px;
+}
+#btn {
+	padding-bottom: 20px;
+}

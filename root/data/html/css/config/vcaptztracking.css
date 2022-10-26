@@ -1,0 +1,23 @@
+ul.box .item .indent {
+  margin-left: 20px;
+}
+
+ul.box .item .doubleindent {
+  margin-left: 40px;
+}
+
+select#availableRulesList
+{
+	width:			30%;
+}
+
+select#selectedRulesList
+{
+	width:			30%;
+}
+
+li.selection-type
+{
+	text-align:		center;
+}
+

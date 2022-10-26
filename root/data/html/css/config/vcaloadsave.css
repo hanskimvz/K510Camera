@@ -1,0 +1,33 @@
+div#rightpanel
+{
+	width:			330px;
+	float:			left;
+}
+
+div#middleregion
+{
+	margin:			0px;
+	padding:		0px;
+	float:			left;
+	display:		none;
+}
+
+#iframeImport
+{
+	display:	none;
+}
+
+ul.box .item .item-title
+{
+	min-width:		140px;
+}
+
+.spanbox
+{
+	margin-left: 20px;
+}
+
+.checkboxtd
+{
+	width: %20;
+}

@@ -1,0 +1,287 @@
+li#formEVListBox {
+	min-height: 0px;
+}
+li#formEVListBox li:nth-child(1) {
+	width: 35px; margin-left: 10px;
+}
+li#formEVListBox li:nth-child(2) {
+	width: 120px;
+}
+select#formProfileList {
+	width: 640px;
+}
+li#formEVBtn {
+	text-align: center;
+}
+input#formEventPFDuration {
+	text-align: center;
+}
+input#formEventPFRecPreInterval {
+	text-align: center;
+}
+input#formEventPFRecPostInterval {
+	text-align: center;
+}
+input#formEventPFPreImg {
+	text-align: center;
+}
+input.formEventPFDuration {
+	text-align: center;
+}
+div#formEventPFSubDisDo {
+	margin: 0px 0px 5px 30px; display:none
+}
+div#formEventPFSubDisDo li.durationTitle_contents {
+	margin-top: 5px;
+	margin-right: 3px;
+	width: 90px;
+}
+div#formEventPFSubDisDo li.durationUnlimited_contents {
+	margin-top: 4px;
+}
+div#formEventPFSubRecording {
+	margin: 0px 0px 5px 30px; display:none
+}
+div#formEventPFSubRecording li.interval_contents {
+	margin-top: 5px;
+	margin-right: 3px;
+	width: 130px;
+}
+div.formEventPFSubDisDo {
+	margin: 0px 0px 5px 30px; display:none
+}
+div.formEventPFSubDisDo li.durationTitle_contents {
+	margin-top: 5px;
+	margin-right: 3px;
+	width: 90px;
+}
+div.formEventPFSubDisDo li.durationUnlimited_contents {
+	margin-top: 4px;
+}
+
+
+div#formEventPFSubDisEmail {
+	margin: 0px 0px 10px 30px; display:none
+}
+div#formEventPFSubDisEmail > ul:nth-child(1) {
+	padding: 5px 0px;
+}
+input#emailSubTo {
+	width: 425px;
+}
+input#emailSubSubject {
+	width: 425px;
+}
+
+div#formEventPFSubDisEmail .formEventPFPreNumOfImg {
+	width: 16em;
+}
+div#formEventPFSubDisEmail .formEventPFPreSlider {
+	float: left;
+	margin-top: 0em;
+}
+div#formEventPFSubDisEmail .formEventPFPreSlider:lang(ar) {
+	float: right;
+}
+div#formEventPFSubDisEmail .formEventPFPreText {
+	margin-top: 0em;
+}
+
+div#formEventPFSubDisEmail .formEventPFPostNumOfImg {
+	width: 16em;
+}
+div#formEventPFSubDisEmail #formEventPFPreImg {
+	text-align: center;
+}
+div#formEventPFSubDisEmail #formEventPFPostImg {
+	text-align: center;
+}
+div#formEventPFSubDisEmail #eventprofile_to {
+	width: 80px;
+}
+div#formEventPFSubDisEmail #eventprofile_subject {
+	width: 80px;
+}
+
+li.formEventPFfirstExp {
+	padding-left: 10px;
+}
+li.formEventPFPreExp {
+	color: #E17009;
+	padding-bottom: 1em;
+}
+
+textarea#emailSubContents {
+	width: 425px; height: 80px; border: 2px solid #DEDED0; resize: none;
+}
+div#formEventPFSubDisEmail span {
+	float:right; margin-bottom: 3px;
+}
+div#formEventPFSubDisFtp {
+	margin: 0px 0px 10px 30px; display:none;
+}
+div#formEventPFSubDisFtp > ul:nth-child(1) {
+	padding: 5px 0px;
+}
+div#formEventPFSubDisFtp div {
+	border: 2px dashed #C4DAFF; border-left-style: none; border-right-style: none; margin: 2px 42px 2px 10px;
+}
+div#formEventPFSubDisFtp span {
+	float:right; margin-bottom: 3px;
+}
+div#formEventPFSubDisHttp {
+	margin: 0px 0px 10px 30px; display:none;
+}
+div#formEventPFSubDisHttp div {
+	border: 2px dashed #C4DAFF; border-left-style: none; border-right-style: none; margin: 2px 42px 2px 10px;
+}
+div#formEventPFSubDisHttp span {
+	float:right; margin-bottom: 3px;
+}
+div#effect {
+	display: none;
+}
+
+/* link color */
+div#event_sources ul.box li.box-content li.item:nth-child(1) li:nth-child(2) a {
+	color: #0000FF;
+}
+div#event_sources ul.box li.box-content li.item:nth-child(2) li:nth-child(2) a {
+	color: #0000FF;
+}
+div#event_notification ul.box li.box-content li.item:nth-child(1) li:nth-child(2) a {
+	color: #0000FF;
+}
+div#event_notification ul.box li.box-content li.item:nth-child(2) li:nth-child(2) a {
+	color: #0000FF;
+}
+div#event_notification ul.box li.box-content li.item:nth-child(3) li:nth-child(2) a {
+	color: #0000FF;
+}
+div#event_notification ul.box li.box-content li.item:nth-child(4) li:nth-child(2) a {
+	color: #0000FF;
+}
+div#event_notification ul.box li.box-content li.item:nth-child(5) li:nth-child(2) a {
+	color: #0000FF;
+}
+div#event_notification ul.box li.box-content li.item:nth-child(6) li:nth-child(2) a {
+	color: #0000FF;
+}
+div#event_notification ul.box li.box-content li.item:nth-child(7) li:nth-child(2) a {
+	color: #0000FF;
+}
+
+div#effect ul.box li.item li#infoEventPFSources {
+	width:470px;
+}
+div#effect ul.box li.item li#infoEventPFNotification {
+	width:470px;
+}
+
+/* MD css 占쌩곤옙	*/
+div#event_sources ul.box li.box-content li.item:nth-child(2) div#formEventPFSubMD ul li:nth-child(1),	{
+	margin: 5px 50px 5px 34px;
+}
+div#event_sources ul.box li.box-content li.item:nth-child(2) div#formEventPFSubMD ul li:nth-child(2) {
+	float: left;
+}
+#formEventPFMotionInterval {
+	text-align: center;
+}
+div#event_sources ul.box li.box-content li.item:nth-child(2) div#formEventPFSubMD #reclistMD {
+	margin: 2px 0px 0px 2px;
+	width: 495px;
+}
+
+/* VCA css */
+div.subsection {
+	display: none;
+	margin: 0px 5px 0px 54px;
+}
+div.sublist {
+	border: 2px dashed #C4DAFF; border-left-style: none; border-right-style: none; margin: 4px 32px 2px 0px;
+}
+li.sublist {
+	margin: 2px 0px 0px 2px;
+	width: 495px;
+}
+span.configlinkspan {
+	display:block;
+	text-align:right;
+}
+a.configlink {
+	color: #0000FF;
+}
+li.box-content li.float_r {
+	float: right;
+}
+li.box-content li.float_r:lang(ar) {
+	float: left;
+}
+li.box-content li.float_r a {
+	color: #0000FF;
+}
+li.fanheaterContents {
+	display: none;
+}
+
+/* Event Action - Active PTZ*/
+li.actionPtz {
+	display: block;
+}
+div#formEventPFSubPTZ {
+	margin: 0px 0px 10px 30px; display:none;
+}
+div#formEventPFSubPTZ div {
+	border: 2px dashed #C4DAFF; border-left-style: none; border-right-style: none; margin: 2px 42px 2px 10px;
+}
+div#formEventPFSubPTZ span {
+	float:right; margin-bottom: 3px;
+}
+li.fanheaterContents {
+	display: none;
+}
+li#formVcaEventTitle {
+	font-size:12px;
+}
+li#formVcaEventOption{
+	margin-left:2px;
+}
+li#convertVcaToMD{
+	margin-left:2px;
+}
+
+li.linkStreamSnap {
+	color: #0000FF;
+	text-decoration: underline;
+}
+li.linkStreamSnap:hover {
+	cursor: pointer;
+}
+li.linkStreamMjpeg {
+	color: #0000FF;
+	text-decoration: underline;
+}
+li.linkStreamMjpeg:hover {
+	cursor: pointer;
+}
+
+.detectorsContents {
+	margin-left: 20px;
+}
+.systemContents {
+	margin-left: 20px;	
+}
+.scheduleContents {
+	margin-left: 20px;	
+}
+select {
+	margin-top: 0px;
+}
+li#linkRecording {
+	color: #0000FF;
+	text-decoration: underline;
+}
+li#linkRecording:hover {
+	cursor: pointer;
+}

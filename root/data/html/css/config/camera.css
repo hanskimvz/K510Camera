@@ -1,0 +1,188 @@
+input#formCamBright {
+	text-align: center;
+}
+input#formCamContrast {
+	text-align: center;
+}
+input#formCamSaturation {
+	text-align: center;
+}
+input#formCamSharpness {
+	text-align: center;
+}
+input#formCamDNLevel {
+	text-align: center;
+}
+input#textCamSmartIR {
+	text-align: center;
+}
+input#formCamEVComp {
+	text-align: center;
+	margin-top: 0px;
+}
+#formCamNoisefilter {
+	text-align: center;
+}
+#formCamNoisefilter_sub {
+	text-align: center;
+}
+#viewToggle {
+	display: block;
+}
+#noIEMsg {
+	position: absolute; left: 440px; top: 422px;
+	color: #E17009; font: 10px arial,sans-serif;
+}
+#loading_msg {
+	top: 50%;
+}
+#formCamFlicker {
+	width: 70px;
+}
+#formCamExposureMode {
+	width: 120px;
+	margin-top: 0px;
+}
+#btn {
+	padding-bottom: 20px;
+}
+#formCamBLCOn {
+	margin-top: 3px;
+}
+#formCamBLCOff {
+	margin-top: 3px;
+}
+#formCamBLCZone {
+	margin-top: 0px;
+}
+#formCamDSS {
+	margin-top: 0px;
+}
+#smartIRRadio {
+	margin: 6px 15px 0px 3px;	
+}
+#smartIR_contents {
+	display:none;
+}
+#formCamWBMode {
+	margin-top: 0px;
+}
+#formCamGainRed {
+	text-align: center;
+}
+#formCamGainBlue {
+	text-align: center;
+}
+ul.box .item .adjustWBManuel {
+	margin-left: 20px;
+}
+.noise_filter0 {
+	display: none;
+}
+.noise_filter1 {
+	display: none;
+}
+.ATM_Contents {
+	display: none;
+}
+.AnalogOutput_Contents {
+	display: none;
+}
+.SubExposureControlMode{
+	padding-left: 30px;
+	width: 160px;
+}
+#fixedshutter {
+	text-align: center;
+}
+#minshutter {
+	text-align: center;
+}
+#maxagc {
+	text-align: center;
+}
+#formCamDaytonight {
+	text-align: center;
+}
+#formCamNighttoday {
+	text-align: center;
+}
+#formCamDWDRLevel {
+	text-align: center;
+}
+#formCamWDRLevel {
+	text-align: center;
+}
+.daynightleve_Contents {
+	display: block;
+}
+.DWDR_Contents {
+	display: none;
+}
+.WDR_Contents {
+	display: none;
+}
+input#verticaldelay {
+	text-align: center;
+}
+input#horizontaldelay {
+	text-align: center;
+}
+body span#pagename_videoin {
+	font-weight: bold;
+	font-size: 11px;
+}
+.ntscVdelayContents {
+	display: none;
+}
+.palVdelayContents {
+	display: none;
+}
+.ntscHdelayContents {
+	display: none;
+}
+.palHdelayContents {
+	display: none;
+}
+.exposureMaxSpeed {
+	display: none;
+}
+#Exposure_Manual {
+	display: none;
+}
+.MaximumAGC_Contents {
+	display: none;
+}
+#formCamBLCZone {
+	display: none;
+}
+.Rotation_Contents {
+	display: none;
+}
+.functionEx {
+	margin-left: 10px;
+	color: #E17009;
+}
+.DNRContents {
+	display: none;
+}
+#sliderCamSmartIR {
+	width: 9em;
+}
+.VideoOut_Contents {
+	display: none;
+}
+.functionExLists {
+	margin-left: 10px !important;
+	font-size: 10px;
+}
+.functionEx a {
+	color: #0000ff !important;
+}
+
+.normalIR {
+	display: none;
+}
+.smartIR {
+	display: none;
+}

@@ -1,0 +1,53 @@
+#playback-main {
+	margin: auto;
+}
+#plyerctrl {
+	border: 1px solid #E7E3D7;
+	margin: 3px;
+	padding: 3px;
+}
+
+li.icon {
+	float: left;
+	margin: 3px;
+}
+li.control {
+	float: left;
+	margin-left:30px;
+}
+
+#ctrl_autoplay, #ctrl_audio, #ctrl_showprogressbar {
+	margin-top: 5px;
+}
+#ctrl_size {
+	margin-bottom: 3px;
+}
+
+li.icon img {
+  cursor: pointer;
+}
+li.icon-margin {
+	margin-left: 15px;
+}
+
+#playback-main ul.box, div.box {
+	max-width: none;
+}
+div#playback ul.box .box-content ul{
+	overflow: hidden;
+}
+
+li.playerstate {
+  float: right;
+  margin: 3px;
+}
+span#timecode {
+	margin-left: 30px;
+}
+#recordingStatus_contents {
+    display: none;
+}
+
+#recordingStatusMsg {
+    margin: 5px 0px 5px 0px;
+}

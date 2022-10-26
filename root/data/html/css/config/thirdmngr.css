@@ -1,0 +1,19 @@
+.statusContent {
+	padding: 0.2em 0.2em 0.2em 0.5em;
+}
+.btnContent {
+	padding: 0.2em;
+}
+#btnStart {
+	display: none;
+}
+
+#btnServerStart {
+	display: none;
+}
+#btnServerStop {
+	display: none;
+}
+#btnServerRestart {
+	display: none;
+}

@@ -1,0 +1,28 @@
+﻿li#formERListBox {
+	min-height: 0px;
+}
+li#formERListBox li:nth-child(1) {
+	width: 40px; margin-left: 8px;
+}
+li#formERListBox li:nth-child(2) {
+	width: 120px;
+}
+select#formNotifyList {
+	width: 640px;
+}
+li#formERBtn > span {
+	margin-left: 225px;
+}
+li#formERBtn > span:lang(ar) {
+	margin-left: 0px;
+	margin-right: 225px;
+}
+a#linkSmtp {
+	color: #0000FF;
+}
+div#input_form {
+	display: block
+}
+div#effect {
+	display: none;
+}

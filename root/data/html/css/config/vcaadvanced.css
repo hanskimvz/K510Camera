@@ -1,0 +1,10 @@
+input.auto-multi
+{
+	margin-left: 20px;
+}
+
+input.auto-text, #area-manual-value, span.radiolabel
+{
+	margin-left: 10px;
+	margin-right: 10px;
+}

@@ -1,0 +1,46 @@
+﻿body#config-page {
+	display: block;
+}
+#users {
+	width: 640px;
+	border: 0px solid #E7E3D7;
+	font-size: 10px;
+}
+#users thead th {
+	background-color: #DDDDDD;
+	border: 1px solid #E7E3D7;
+	padding: 1px;
+}
+#users thead th:nth-child(1) {
+	width: 5%;
+}
+#users thead th:nth-child(2) {
+	width: 10%;
+}
+#users thead th:nth-child(3) {
+	width: 85%;
+}
+#users tbody td {
+	border: 1px solid #E7E3D7;
+	padding: 1px;
+	text-align: center;
+}
+input[type="text"] {
+	border: 0px solid #DEDED0;
+	text-align: center;
+}
+#loading_msg {
+	top: 400px;
+}
+#infoTable {
+	margin-top:0px;
+}
+#snapshotArea {
+	width: 620px;
+	height: 320px;
+}
+#noIEMsg {
+	color: #E17009;
+	font: 10px arial,sans-serif;
+	display: none;
+}

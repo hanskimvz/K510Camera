@@ -1,0 +1,25 @@
+﻿li#formFNListBox {
+	min-height: 0px;
+}
+li#formFNListBox li:nth-child(1) {
+	width: 40px; margin-left: 8px;
+}
+li#formFNListBox li:nth-child(2) {
+	width: 120px;
+}
+select#formNotifyList {
+	width: 640px;
+}
+div#input_form {
+	display: block
+}
+div#effect {
+	display: none;
+}
+#formIPAddress {
+	margin-left: 3px;
+}
+#formIPAddress span {
+	display: inline-block;
+	width: 145px;
+}

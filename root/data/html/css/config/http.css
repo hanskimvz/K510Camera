@@ -1,0 +1,61 @@
+#formHttpPort {
+	text-align: center;
+}
+#formHttpsPort {
+	text-align: center;
+}
+#formHTTPAuthType {
+	margin-top: 0px;
+}
+.certificateContents {
+	display: none;
+	margin-top: 2em;
+}
+.selfCertBtnContents, .certReqBtnContents {
+	text-align: right;
+}
+pre.textarea {
+	display: none;
+	border: 1px solid #E7E3D7;
+	overflow:auto;
+	width: 600px;
+	height: 350px;
+	resize: none;
+	padding: 7px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	word-wrap: break-word; white-space: pre-wrap;
+}
+
+div.certificateContents ul.box .item li.createCertSubContents {
+	display: inline-block;
+	padding-top: 1em;
+	margin-left: 3em;
+	width: 15em;
+}
+
+label.createCertSubContents {
+	display: inline-block;
+	padding-top: 1em;
+	margin-left: 2.5em;
+	width: 15em;
+}
+
+#createCertReq, #createSelfCert, #installCert {
+	margin-top: 0.6em;
+}
+
+#submitStart {
+	display: none;
+}
+
+#countryCodeDialog {
+	display: none;
+}
+
+#countryCodeDialog .item-title-mini {
+	width: 30em;
+}
+
+#countryCodeList ul:hover{
+	background-color: #FEE1D3;
+}

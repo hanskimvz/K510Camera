@@ -1,0 +1,25 @@
+#formHardwareCode {
+	width:	99%;
+}
+
+#formActivationCode {
+	width:		99%;
+	resize:		vertical;
+	max-height:	90px;
+}
+
+#formInstalledLicenses > li {
+	overflow:	auto;
+}
+
+#formInstalledLicenses > li > span > img {
+	vertical-align:	middle;
+}
+
+.delete-license {
+	float:		right;
+}
+
+.delete-license:lang(ar)  {
+	float:		left;
+}

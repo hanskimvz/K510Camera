@@ -1,0 +1,201 @@
+li#formRtpUniVD_stream_0 {
+	margin-left: 20px;
+}
+li#formRtpUniVD_stream_0:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+input#formRtpUniVideoDSCP_stream_0 {
+	text-align: center;
+}
+li#formRtpUniAD_stream_0 {
+	margin-left: 20px;
+}
+li#formRtpUniAD_stream_0:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+input#formRtpUniAudioDSCP_stream_0 {
+	text-align: center;
+}
+li#formRtpUniMD_stream_0 {
+	margin-left: 20px;
+}
+li#formRtpUniMD_stream_0:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+input#formRtpUniMetaDSCP_stream_0 {
+	text-align: center;
+}
+li#formRtpUniOMD_stream_0 {
+	margin-left: 20px;
+}
+li#formRtpUniOMD_stream_0:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+input#formRtpUniOnvifMetaDSCP_stream_0 {
+	text-align: center;
+}
+li#formRtpMulVD_stream_0 {
+	margin-left: 20px;
+}
+li#formRtpMulVD_stream_0:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+input#formRtpMulVideoDSCP_stream_0 {
+	text-align: center;
+}
+li#formRtpMulAD_stream_0 {
+	margin-left: 20px;
+}
+li#formRtpMulAD_stream_0:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+input#formRtpMulAudioDSCP_stream_0 {
+	text-align: center;
+}
+li#formRtpMulMD_stream_0 {
+	margin-left: 20px;
+}
+li#formRtpMulMD_stream_0:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+input#formRtpMulMetaDSCP_stream_0 {
+	text-align: center;
+}
+li#formRtpMulOMD_stream_0 {
+	margin-left: 20px;
+}
+li#formRtpMulOMD_stream_0:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+input#formRtpMulOnvifMetaDSCP_stream_0 {
+	text-align: center;
+}
+#formRtspAuthEnable {
+	margin-top: 7px;
+}
+#formRtspAuthEnable_stream_0 {
+	display: inline-block;
+	margin-top: 5px;
+}
+#formRtspAuthTyp_stream_0 {
+	margin-top: 0px;
+}
+div#stream_1 li#formRtpMulIPValid_stream_1 div.ip_container .ip_octet {
+	border: 0 none;
+}
+li#formRtpUniVD_stream_1 {
+	margin-left: 20px;
+}
+li#formRtpUniVD_stream_1:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+input#formRtpUniVideoDSCP_stream_1 {
+	text-align: center;
+}
+li#formRtpUniAD_stream_1 {
+	margin-left: 20px;
+}
+li#formRtpUniAD_stream_1:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+input#formRtpUniAudioDSCP_stream_1 {
+	text-align: center;
+}
+li#formRtpUniMD_stream_1 {
+	margin-left: 20px;
+}
+li#formRtpUniMD_stream_1:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+input#formRtpUniMetaDSCP_stream_1 {
+	text-align: center;
+}
+li#formRtpUniOMD_stream_1 {
+	margin-left: 20px;
+}
+li#formRtpUniOMD_stream_1:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+input#formRtpUniOnvifMetaDSCP_stream_1 {
+	text-align: center;
+}
+li#formRtpMulVD_stream_1 {
+	margin-left: 20px;
+}
+li#formRtpMulVD_stream_1:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+input#formRtpMulVideoDSCP_stream_1 {
+	text-align: center;
+}
+li#formRtpMulAD_stream_1 {
+	margin-left: 20px;
+}
+li#formRtpMulAD_stream_1:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+input#formRtpMulAudioDSCP_stream_1 {
+	text-align: center;
+}
+li#formRtpMulMD_stream_1 {
+	margin-left: 20px;
+}
+li#formRtpMulMD_stream_1:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+input#formRtpMulMetaDSCP_stream_1 {
+	text-align: center;
+}
+li#formRtpMulOMD_stream_1 {
+	margin-left: 20px;
+}
+li#formRtpMulOMD_stream_1:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px;
+}
+input#formRtpMulOnvifMetaDSCP_stream_1 {
+	text-align: center;
+}
+#formRtspAuthEnable_stream_1 {
+	display: inline-block;
+	margin-top: 5px;
+}
+#formRtspAuthTyp_stream_1 {
+	margin-top: 0px;
+}
+ul.box .adjustRtspAuthEnable {
+	min-height: 25px;
+}
+ul.box .item li.adjustRtspAuthType {
+	margin-left: 20px;
+	margin-top: 6px;
+}
+ul.box .item li.adjustRtspAuthType:lang(ar) {
+	margin-left: 0px;
+	margin-right: 20px; 
+}
+.sessionContents {
+	margin-left: 20px; 
+}
+.sessionContents:lang(ar) {
+	margin-left: 0px; 
+	margin-right: 20px; 
+}
+#formRtspAuthType {
+	margin-top: 0px;
+}

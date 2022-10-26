@@ -1,0 +1,120 @@
+#btnIPTest > span {
+	line-height: 11px;
+	width: 40px;
+}
+li#formTI_dhcp p {
+	margin-left: 6em;
+}
+li#formTI_dhcp p:lang(ar) {
+	margin-left: 0px;
+	margin-right: 6em;
+}
+li#formTI_dhcp p:nth-child(5) {
+	margin-bottom: 5px;
+}
+li#formTI_dhcp p:nth-child(3) span {
+	display: inline-block;
+	width: 160px;
+}
+li#formTI_dhcp p:nth-child(4) span {
+	display: inline-block;
+	width: 160px;
+}
+li#formTI_dhcp p:nth-child(5) span {
+	display: inline-block;
+	width: 160px;
+}
+li#formTI_static p {
+	margin-left: 6em;
+}
+li#formTI_static p:lang(ar) {
+	margin-left: 0px;
+	margin-right: 6em;
+}
+li#formTI_static p:nth-child(3) {
+	margin-top: -5px;
+}
+li#formTI_static p:nth-child(3) > span {
+	display: inline-block;
+	width: 160px;
+}
+li#formTI_static p:nth-child(4) span {
+	display: inline-block;
+	width: 160px;
+}
+li#formTI_static p:nth-child(5) span {
+	display: inline-block;
+	width: 160px;
+}
+li#formTI_static p:nth-child(6) span {
+	display: inline-block;
+	width: 160px;
+}
+li#formPriDNSServ p span {
+	display: inline-block; margin-left: 3em; width: 160px;
+}
+li#formSecDNSServ p span {
+	display: inline-block; margin-left: 3em; width: 160px;
+}
+li#formPriDNSServ p span:lang(ar) {
+	margin-left: 0px;
+	margin-right: 50px;
+}
+li#formSecDNSServ p span:lang(ar) {
+	margin-left: 0px;
+	margin-right: 50px;
+}
+#btn {
+	padding-bottom: 20px;
+}
+ul.box .box-content .linkLocalIPContents {
+	display: none;
+}
+ul.box .box-content .linkLocalIPContents p {
+	margin-left: 3em;
+}
+ul.box .box-content .linkLocalIPContents p:lang(ar) {
+	margin-left: 0px;
+	margin-right: 3em;
+}
+ul.box .box-content .linkLocalIPContents p span {
+	display: inline-block;
+	width: 160px;
+}
+ul.box .box-content .linkLocalSubnetContents {
+	display: none;
+}
+ul.box .box-content .linkLocalSubnetContents p {
+	margin-left: 3em;
+}
+ul.box .box-content .linkLocalSubnetContents p:lang(ar) {
+	margin-left: 0px;
+	margin-right: 3em;
+}
+ul.box .box-content .linkLocalSubnetContents p .SubnetTitle {
+	display: inline-block;
+	width: 160px;
+}
+#btnIPRenew > span {
+	line-height: 11px;
+	width: 40px;
+}
+#formTcpipDhcpChk0 {
+	margin-left: 3em;
+}
+#formTcpipDhcpChk1 {
+	margin-left: 3em;
+}
+ul.box .item .ipv6Indentation {
+	margin-left: 3em;
+}
+ul.box .item .ipv6Indentation_dhcpType {
+	margin-left: 6em;
+}
+textarea.ipaddressInformation {
+	overflow:hidden;
+	width: 30em;
+	padding: 0.2em;
+	height: 1em;
+	border: 2px solid #DEDED0;
+}

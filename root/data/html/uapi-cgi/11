@@ -1,0 +1,109 @@
+
+
+[root@canaan ~ ]$ free
+              total        used        free      shared  buff/cache   available
+Mem:         196792       41588      132640          52       22564      155524
+Swap:             0           0           0
+[root@canaan ~ ]$ 
+
+
+//login via ssh
+[root@canaan ~ ]$ free
+              total        used        free      shared  buff/cache   available
+Mem:         196792       42620      131612          52       22560      154552
+Swap:             0           0           0
+[root@canaan ~ ]$ 
+
+[root@canaan ~ ]$ free
+              total        used        free      shared  buff/cache   available
+Mem:         196792       44308      120904          52       31580      153260
+Swap:             0           0           0
+[root@canaan ~ ]$ free
+              total        used        free      shared  buff/cache   available
+Mem:         196792       44272      120940          52       31580      153296
+Swap:             0           0           0
+[root@canaan ~ ]$ free
+              total        used        free      shared  buff/cache   available
+Mem:         196792       44312      120900          52       31580      153256
+Swap:             0           0           0
+[root@canaan ~ ]$ free
+              total        used        free      shared  buff/cache   available
+Mem:         196792       44280      120932          52       31580      153288
+Swap:             0           0           0
+[root@canaan ~ ]$ free
+              total        used        free      shared  buff/cache   available
+Mem:         196792       44312      120900          52       31580      153256
+Swap:             0           0           0
+[root@canaan ~ ]$ free
+              total        used        free      shared  buff/cache   available
+Mem:         196792       44312      120900          52       31580      153256
+Swap:             0           0           0
+[root@canaan ~ ]$ free
+              total        used        free      shared  buff/cache   available
+Mem:         196792       44380      120832          52       31580      153188
+Swap:             0           0           0
+[root@canaan ~ ]$ free
+              total        used        free      shared  buff/cache   available
+Mem:         196792       44304      120908          52       31580      153264
+Swap:             0           0           0
+[root@canaan ~ ]$ free
+              total        used        free      shared  buff/cache   available
+Mem:         196792       44408      120804          52       31580      153160
+Swap:             0           0           0
+[root@canaan ~ ]$ free
+              total        used        free      shared  buff/cache   available
+Mem:         196792       44432      120780          52       31580      153136
+Swap:             0           0           0
+[root@canaan ~ ]$ 
+
+
+
+
+//encode_main
+[root@canaan ~ ]$ free
+              total        used        free      shared  buff/cache   available
+Mem:         196792       68964       93020         456       34808      128232
+Swap:             0           0           0
+
+// exit encode_main
+[root@canaan ~ ]$ free
+              total        used        free      shared  buff/cache   available
+Mem:         196792       43172      139724          52       13896      150672
+Swap:             0           0           0
+
+// re encode_main
+[root@canaan ~ ]$ free
+              total        used        free      shared  buff/cache   available
+Mem:         196792       65752      116016         452       15024      127724
+Swap:             0           0           0
+
+
+
+
+
+ch:		    0	    1	
+ch_en:		    1	    1	
+en_v4l2:	    1	    1	
+device:	/dev/video3 /dev/video4 
+rtsp:		    1	    0	
+rtsp_port:	  554	    0	
+rtsp_stream:	ufirststream (null) 
+fps:		   30	   30	
+o-fps:		   15	    2	
+width:		 1280	  800	
+height:	  720	  450	
+rcMode:	    2	    1		 (0:CONST_QP, 1:CBR, 2:VBR)
+bitrate:	 5120K	    0K	
+m-bitrate:	12000K	    0K	
+profile:	    2	    3	
+gop:		   29	   25	
+gdr:		    0	    0	
+gdrfreq:	   25	   25	
+gdrmode:	    0	    0		 (0:VERTICAL 1:HORIZONTAL)
+LTR:		    0	    0	
+LTRfreq:	    0	    0	
+roiCtrlMode:	    0	    0		 (0:NONE,1:RELATIVE,2:ABSOLUTE)
+sliceqp:	   25	   25	
+minqp:		    0	    0	
+maxqp:		   51	   51	
+

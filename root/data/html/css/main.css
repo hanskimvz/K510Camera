@@ -1,0 +1,418 @@
+#content #panel {
+    border: 1px solid #E7E3D7;
+    width: 185px;
+    height: 450px;
+}
+#browserChecked {
+    display: none;
+    font: 16px Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #FFF7F7;
+    background-color: #FF5555;
+    margin-bottom: 3px;
+    padding: 8px;
+    text-align: center;
+}
+#browser {
+    font: 14px Arial, Helvetica, sans-serif, Verdana, Geneva;
+    font-weight: bolder;
+    color: #FFDCD4;
+    margin-top: 5px;
+}
+#browser span {
+    margin: 0px 10px;
+}
+div.toolbar {
+    overflow: auto;
+    display: inline;
+}
+div#left {
+    display: none;
+}
+button.toggle_panel#toggle_panel_in {
+    margin-left: 10px;
+    margin-bottom: 6px;
+}
+button.toggle_panel#toggle_panel_out {
+    margin-left: 15px;
+    margin-top: 3px;
+}
+
+button.toggle_panel#toggle_panel_in:lang(ar) {
+    margin-left: 0px;
+    margin-right: 10px;
+}
+button.toggle_panel#toggle_panel_out:lang(ar) {
+    margin-left: 0px;
+    margin-right: 15px;
+}
+
+div#right.content {
+    hasLayout: true; overflow: auto;
+}
+div#rightlist {
+    hasLayout: true; overflow: auto;
+}
+select {
+    border: 2px solid #DEDED0; color:#3E3E3E; font-size:11px;
+    padding: 1px; margin: 3px 3px 0px 0px;
+}
+#screen_full {
+    margin-top: 2px;
+}
+#main #toolbar li:nth-child(5) {
+    margin-top: 2px;
+}
+#screen-page .ui-widget {
+    font-family:verdana,sans-serif; 
+    font-size: 11px;
+}
+.css-tabs {
+    font-size: 13px;
+}
+/*
+ * ptz
+ */
+/* �ؽ�Ʈ �ڽ� �ѱ� �Է� ���� */
+input[type="text"], input[type="password"] {
+    ime-mode: disabled;
+}
+
+/* �߰� �� font size    */
+.box-title h2 {
+    font-size: 11px;
+    padding: 3px 0px 3px 5px;
+}
+.box-title h2:lang(ar) {
+    padding-left: 0px;
+    padding-right: 5px;
+}
+
+/* ptz 8���� ��ư */
+#ptz {
+    height: 90px;
+}
+#panel #ptz #ptz_panel {
+    border: 0px solid #000000;
+    color: #2B88C2;
+    float: left;
+    width: 78px;
+    margin: 5px 15px 0px 15px;
+}
+#panel #ptz #ptz_panel:lang(ar) {
+    float: right;
+}
+#panel #ptz #ptz_panel dd {
+    float: left;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #999999;
+    padding: 0px;
+    margin: 1px;
+}
+
+/* Zoom, Focus Button */
+#ptz_zoomfocus {
+    color:#2B88C2;
+}
+#ptz_zoomfocus dl:nth-child(1) dd:nth-child(1){
+    padding: 10px 0px 1px 0px;
+}
+#ptz_zoomfocus dl:nth-child(2) dd:nth-child(1){
+    padding: 4px 0px 1px 0px;
+}
+
+#ptz_speedbar {
+    height: 40px;
+    margin-left: 9px;
+}
+#content #panel #slider_speedbar{
+    float: left;
+    color: #2B88C2;
+    width: 90px;
+    margin: 9px 9px 0px 0px;
+}
+#content #panel #slider_speedbar:lang(ar) {
+    float: right;
+    width: 90px;
+    margin: 9px 0px 0px 9px;
+}
+#content #panel #text_speedbar{
+    text-align: center;
+}
+input#text_speedbar[type="text"] {
+    margin-top: 6px;
+    border: 2px solid #E7E3D7;
+}
+label[for="text_speedbar"] {
+    top: 0px;
+}
+#preset_list {
+    border: 2px solid #DEDED0; color:#3E3E3E; font-size:11px;
+    padding: 1px; margin: 3 0 0 0px;
+}
+
+/* Set, Go, Clear Button */
+#preset {
+    clear: both;
+    color:#2B88C2;
+    text-align:center;
+}
+#preset #preset_button {
+    text-align: center;
+    margin-top: 5px;
+}
+ /* select �ڽ� pre position */
+#preset_list {
+    border: 2px solid #DEDED0; color:#3E3E3E; font-size:11px;
+    padding: 1px; 
+    margin: 5px 0px 0px 5px;
+    width: 92%;
+}
+#preset_list option {
+    padding-right: 10px;
+}
+#preset_name {
+    width: 90%;
+    margin: 1px 0px 0px 5px;
+    border: 2px solid #E7E3D7;
+}
+/* panel tabs*/
+#panel_tabs > ul > li {
+    margin-bottom: 2px;
+}
+#panel_tabs > ul > li > a {
+    padding: 0.5em 0.3em;
+    font-size: 1em;
+}
+#tab_0 #transmission {
+    margin-left: 5px;
+    /* width: 140px; */
+    /* width: auto; */
+    width: 92%;
+}
+#tab_0 #transmission:lang(ar) {
+    margin-left: 0px;
+    margin-right: 5px;
+}
+#tab_0 #screen_size {
+    margin-left: 5px;
+}
+#tab_0 #createMMProc {
+    margin-left: 5px;
+}
+#tab_0 #screen_size:lang(ar) {
+    margin-left: 0px;
+    margin-right: 5px;
+}
+#tab_0 #createMMProc:lang(ar) {
+    margin-left: 0px;
+    margin-right: 5px;
+}
+/* 
+#tab_0 #trig_on {
+    margin-left: 5px;
+    margin-top: 2px;
+    width: 47px;
+}
+#tab_0 #trig_off {
+    margin-left: 0px;
+    margin-top: 2px;
+    width: 47px;
+}
+*/
+#tab_0 #trig_on {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+#tab_0 #trig_off {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+#tab_0 #trig_on:lang(ar) {
+    margin-left: 0px;
+    margin-right: 5px;
+}
+#tab_0 #trig_off:lang(ar) {
+    margin-left: 0px;
+    margin-right: 5px;
+}
+#tab_0 #streamSector {
+    height: 40px;
+}
+#tab_0 #sizeSector {
+    height: 40px;
+}
+#tab_0 #triggerSector {
+    height: 40px;
+}
+#tab_0 #audioSector {
+    height: 50px;
+}
+#tab_0 #controlSector {
+    height: 70px;
+}
+label
+{
+    position: relative;
+    top: -2px;
+}
+input#audioMicrophone {
+    margin: 3px 0px 0px 6px;
+}
+input#audioSpeaker {
+    margin: 2px 0px 0px 6px;
+}
+input#audioMicrophone:lang(ar) {
+    margin-left: 0px;
+    margin-right: 6px;
+}
+input#audioSpeaker:lang(ar) {
+    margin-left: 0px;
+    margin-right: 6px;
+}
+#tab_1 .adjustStatus {
+    padding-bottom: 15px;
+    padding-left: 5px;
+}
+#tab_1 .adjustStatus:lang(ar) {
+    padding-bottom: 15px;
+    padding-left: 0px;
+    padding-right: 5px;
+}
+#tab_1 #connectSector {
+    height: 125px;
+}
+#formConnectList{
+    width:14.8em;
+    margin:3px;
+    padding:3px;
+}
+.h2BottomSpace {
+    margin-bottom: 2px;
+}
+#preset_name {
+    display: none;
+}
+#preset_number {
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    border: 2px solid #deded0;
+}
+label[for="preset_number"] {
+    top: 0px;
+}
+.preset_Number_contents {
+    padding: 5px 0px 0px 3px;
+}
+.go_button {
+    padding: 0px 0px 8px 0px;
+}
+.tourStartStop_button {
+    padding: 5px 0px 10px 0px;
+}
+.homeSetGo_button {
+    padding: 5px 0px 0px 0px;
+}
+#loading_ptz {
+    text-align: center;
+    margin-top: 15px;
+    display: block;
+}
+#panel_ptz {
+    display: none;
+}
+.audioContents {
+    display: block;
+}
+#doChannel {
+    display: none;
+    margin: 3px 0px 5px 3px;
+}
+#setPresetText {
+    display: none;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    border: 2px solid #deded0
+}
+#snapshot {
+    margin-top: 4px;
+    margin-left: 2px;
+    width: 78px;
+}
+#recording {
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+    width: 78px;
+}
+#pause {
+    margin-top: 2px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+    width: 78px;
+}
+#controlSetting {
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-bottom: 4px;
+    width: 78px;
+}
+.viewTypeContents {
+    display: none;
+}
+
+.intallPlaceContents {
+    display: block;
+    margin-bottom: 1.5em;
+}
+
+.intallPlaceContents input[type='radio'] {
+    margin: 0em 0em 0em 0.3em;
+}
+.viewTypeContents {
+    margin-bottom: 1.5em;
+}
+.viewTypeContents input[type='radio'] {
+    margin: 0.3em 0em 0em 0.3em;
+}
+.positionTypeSave {
+    margin: 0.5em 0em 0.5em 0.5em;
+}
+
+#panel_tabs .dewarpingTab {
+    display: none;
+}
+
+#positionType0 {
+    margin-top: 0.3em;
+}
+
+.defaultPosition {
+    margin: 0.5em 0em 0.5em 0.5em;
+}
+
+.defaultPositionContents {
+    display: none;
+}
+
+#ptzCtrlShow {
+	margin-top : 0.5em;
+}
+#screen_ptz {
+	display: none;
+}
+.ptzCtrlContents {
+	display: none;
+}
+
+#btnWiperStart {
+    margin: 0.4em;
+}
+
+.wiperContents {
+    display: none;
+    margin-top: 0.8em;
+}

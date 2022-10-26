@@ -1,0 +1,13 @@
+﻿div#formSmtpNamepwd {
+	margin: 5px 5px 0px 25px; display:none;
+}
+div#formSmtpNamepwd p span {
+	display: inline-block;
+	width: 132px;
+}
+li#formSmtpTestResult {
+	margin-top: 7px;
+}
+#btn {
+	padding-bottom: 20px;
+}

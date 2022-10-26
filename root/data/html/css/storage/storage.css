@@ -1,0 +1,34 @@
+﻿#browserChecked {
+	display: none;
+	font: 16px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+	color: #FFF7F7;
+	background-color: #FF5555;
+	margin-bottom: 3px;
+	padding: 8px;
+	text-align: center;
+}
+#browser {
+	font: 14px Arial, Helvetica, sans-serif, Verdana, Geneva;
+	font-weight: bolder;
+	color: #FFDCD4;
+	margin-top: 5px;
+}
+#browser span {
+	margin: 0px 10px;
+}
+div#frame {
+	display: none;
+}
+div#left div.box {
+	padding-top: 10px;
+}
+div#themesList {
+	display: none;
+}
+li.sd_Contents {
+  display: block;	
+}
+li.usbsd_Contents {
+  display: none;	
+}

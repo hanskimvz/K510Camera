@@ -1,0 +1,49 @@
+#browserChecked {
+	display: none;
+	font: 16px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+	color: #FFF7F7;
+	background-color: #FF5555;
+	margin-bottom: 3px;
+	padding: 8px;
+	text-align: center;
+}
+#browser {
+	font: 14px Arial, Helvetica, sans-serif, Verdana, Geneva;
+	font-weight: bolder;
+	color: #FFDCD4;
+	margin-top: 5px;
+}
+div#left {
+	display: none;
+}
+div#right.content {
+	hasLayout: true; overflow: auto;
+}
+div#rightlist {
+	hasLayout: true; overflow: auto;
+}
+select {
+	border: 2px solid #DEDED0; color:#3E3E3E; font-size:11px;
+	padding: 1px; margin: 3px 3px 0px 0px;
+}
+#screen-page .ui-widget {
+	font-family:verdana,sans-serif; 
+	font-size: 11px;
+}
+.box-title h2 {
+	font-size: 11px;
+	padding: 3px 0px 3px 5px;
+}
+.box-title h2:lang(ar) {
+	padding-left: 0px;
+	padding-right: 5px;
+}
+label
+{
+	position: relative;
+	top: -2px;
+}
+.formConfSliderWidth {
+	width: 50px;
+}
