@@ -16,6 +16,7 @@ remoteFiles = [
     # "/home/k510_buildroot/k510_crb_lp3_v1_2_defconfig/build/encode_app/video_sample.conf",
     # "/home/k510_buildroot/k510_crb_lp3_v1_2_defconfig/build/NaiS/setting.conf",
     # "/home/k510_buildroot/k510_crb_lp3_v1_2_defconfig/build/NaiS/get_status.py",
+    # "/home/k510_buildroot/k510_crb_lp3_v1_2_defconfig/build/mediactl_lib/v4l2_demo/v4l2-demo",
     
 ]
 

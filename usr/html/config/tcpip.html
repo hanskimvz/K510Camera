@@ -185,8 +185,15 @@ echo $header;
 <script>
 $("button").on("click", function () {
 	console.log(this);
-	if (this.id == "modalApply") {
-		console.log($("#formUserName").val());
+	if (this.id == "btnApply") {
+		networkParamSet();
+	}
+	else if (this.id == "btnIPTest"){
+
+	}
+	else if (this.id == "btnIPRenew"){
+
+
 	}
 });
 
@@ -203,10 +210,10 @@ $("#ipv6Enable").on("click", function () {
 
 function loadTCPIPConfig(){
 	// url = "/inc/query.php?page=tcpip";
-	url = "/uapi-cgi/param.cgi?action=list&format=json&group=NETWORK.Eth0,NETWORK.Dns";
+	url = "/uapi-cgi/param.cgi?action=list&format=json_dot&group=NETWORK.Eth0,NETWORK.Dns,Network.ipv6";
 	$.getJSON(url, function(response) {
 		console.log(response);
-		if (response['NETWORK.Eth0.Dhcp.enable']=='yes'){
+		if (response['network.eth0.dhcp.enable']=='yes'){
 			$("#formTcpipDhcpChk0").prop('checked', true);
 		}
 		else {
@@ -214,46 +221,91 @@ function loadTCPIPConfig(){
 			// $("#https_contents").removeAttr('hidden');
 		}
 		
-		$("#formTcpipDhcpIP").val(response['NETWORK.Eth0.Dhcp.ipaddress']);
-		$("#formTcpipDhcpSub").val(response['NETWORK.Eth0.Dhcp.subnet']);
-		$("#formTcpipDhcpGate").val(response['NETWORK.Eth0.Dhcp.gateway']);
-		$("#formTcpipStaticIP").val(response['NETWORK.Eth0.ipaddress']);
-		$("#formTcpipStaticSub").val(response['NETWORK.Eth0.subnet']);
-		$("#formTcpipStaticGate").val(response['NETWORK.Eth0.gateway']);
+		$("#formTcpipDhcpIP").val(response['network.eth0.dhcp.ipaddress']);
+		$("#formTcpipDhcpSub").val(response['network.eth0.dhcp.subnet']);
+		$("#formTcpipDhcpGate").val(response['network.eth0.dhcp.gateway']);
+		$("#formTcpipStaticIP").val(response['network.eth0.ipaddress']);
+		$("#formTcpipStaticSub").val(response['network.eth0.subnet']);
+		$("#formTcpipStaticGate").val(response['network.eth0.gateway']);
 
-		if (response['NETWORK.Eth0.ipversion']=='ipv6'){
+		if (response['network.ipv6.enable']=='yes') {
 			$("#ipv6Enable").prop('checked', true);
 			$("#ipv6Contents").removeAttr('hidden');
-		}		
-		$("#ipaddressInformation").val(response['NETWORK.Eth0.Ipv6.dhcp.ipaddress']);
-		if (response['NETWORK.Eth0.Ipv6.raenable']=='yes')	{
+		}
+		
+		// if (response['network.eth0.ipversion']=='ipv6'){
+		// 	$("#ipv6Enable").prop('checked', true);
+		// 	$("#ipv6Contents").removeAttr('hidden');
+		// }		
+		$("#ipaddressInformation").val(response['network.eth0.ipv6.dhcp.ipaddress']);
+		if (response['network.eth0.ipv6.raenable']=='yes')	{
 			$("#acceptRAEnable").prop('checked', true);
 		}
-		if (response['NETWORK.Eth0.Ipv6.dhcp.enable']=='yes'){
+		if (response['network.eth0.ipv6.dhcp.enable']=='yes'){
 			$("#dhcpEnable").prop('checked', true);
 		}
 		
-		$("#dhcpType").val(response['NETWORK.Eth0.Ipv6.dhcp.type']);
-		$("#staticIPaddress").val(response['NETWORK.Eth0.Ipv6.ipaddress']);
-		$("#prefixLength").val(response['NETWORK.Eth0.Ipv6.prefixlength']);
-		$("#defaultRouter").val(response['NETWORK.Eth0.Ipv6.gateway']);
+		$("#dhcpType").val(response['network.eth0.ipv6.dhcp.type']);
+		$("#staticIPaddress").val(response['network.eth0.ipv6.ipaddress']);
+		$("#prefixLength").val(response['network.eth0.ipv6.prefixlength']);
+		$("#defaultRouter").val(response['network.eth0.ipv6.gateway']);
 
-		$("#formTcpipPriDNS").val(response['NETWORK.Dns.preferred']);
-		$("#formTcpipSecDNS").val(response['NETWORK.Eth0.dns0']);
-		$("#formHostname").val(response['NETWORK.Eth0.hostname']);
+		$("#formTcpipPriDNS").val(response['network.dns.preferred']);
+		$("#formTcpipSecDNS").val(response['network.eth0.dns0']);
+		$("#formHostname").val(response['network.eth0.hostname']);
 
-		if (response['NETWORK.Eth0.Autoip.enable']=='yes'){
+		if (response['network.eth0.autoip.enable']=='yes'){
 			$("#linkLocalEnable").prop('checked', true);
 		}
 		
-		$("#formLinkLocalIP").val(response['NETWORK.Eth0.Autoip.ipaddress']);
-		$("#formLinkLocalSubnet").val(response['NETWORK.Eth0.Autoip.subnet']);
+		$("#formLinkLocalIP").val(response['network.eth0.autoip.ipaddress']);
+		$("#formLinkLocalSubnet").val(response['network.eth0.autoip.subnet']);
 		
 	});
 }
 loadTCPIPConfig();
 
+function networkParamSet(){
+	sdata = {
+		"network.eth0.dhcp.enable": 	$("#formTcpipDhcpChk0").prop('checked') ? "yes" : "no",
+		"network.ipv6.enable":			$("#ipv6Enable").prop('checked') ? "yes" : "no",
+		"network.dns.preferred": 		$("#formTcpipPriDNS").val(),
+		"network.eth0.dns0":			$("#formTcpipSecDNS").val(),
+		"network.eth0.hostname":		$("#formHostname").val()
+	}
 
+	if (sdata["network.eth0.dhcp.enable"] == 'yes') {
+		// "network.eth0.dhcp.ipaddress": 	$("#formTcpipDhcpIP").val(),
+		// "network.eth0.dhcp.subnet": 	$("#formTcpipDhcpSub").val(),
+		// "network.eth0.dhcp.gateway": 	$("#formTcpipDhcpGate").val(),
+	}
+	else {
+		sdata["network.eth0.ipaddress"] =	$("#formTcpipStaticIP").val();
+		sdata["network.eth0.subnet"] = 		$("#formTcpipStaticSub").val();
+		sdata["network.eth0.gateway"] = 	$("#formTcpipStaticGate").val();
+	}
+	if (sdata["network.ipv6.enable"] == "yes") {
+		sdata["network.eth0.ipv6.dhcp.ipaddress"]= 	$("#ipaddressInformation").val();
+		sdata["network.eth0.ipv6.raenable"]=		$("#acceptRAEnable").prop('checked') ? "yes" : "no";
+		sdata["network.eth0.ipv6.dhcp.enable"]=		$("#dhcpEnable").prop('checked') ? "yes" : "no";
+		sdata["network.eth0.ipv6.dhcp.type"]=		$("#dhcpType").val();
+		sdata["network.eth0.ipv6.ipaddress"]=		$("#staticIPaddress").val();
+		sdata["network.eth0.ipv6.prefixlength"]= 	$("#prefixLength").val();
+		sdata["network.eth0.ipv6.gateway"]=			$("#defaultRouter").val();
+	}
+
+	let url = "/uapi-cgi/param.cgi?action=update_batch";
+	let posting = $.post(url,{sdata});
+	posting.done(function(data) {
+		console.log(data);
+		if (data.search("update FAIL")>0) {
+			alert("Changes update fail");
+		}		
+		else if (data.search("update OK")>0) {
+			alert("Changes saved");
+		}
+	});	
+}
 </script>
 
 </html>

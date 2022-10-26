@@ -68,26 +68,26 @@ echo $header;
 											<div class="form-group mb-0">
 												<div class="form-inline">
 													<span class="col-md-2">Brightness</span>
-													<input type="range" id="sliderCamBright"  min="0" max="255"  style="width:200px;" class="slider">
-													<input type="text" size="3" id="formCamBright" class="form-control-custom text-center ml-2 mr-2" />
+													<input type="range" id="sliderCamBright"  min="0" max="255"  style="width:200px;" class="slider ">
+													<input type="text" size="3" id="formCamBright" class="form-control-custom text-center ml-2 mr-2 numSlider" />
 													<label>(0 ... 255, 128)</label>
 												</div>
 												<div class="form-inline">
 													<span class="col-md-2">Contrast</span>
 													<input type="range" id="sliderCamContrast"  min="0" max="255" style="width:200px;" class="slider">
-													<input type="text" size="3" id="formCamContrast" class="form-control-custom text-center ml-2 mr-2" />
+													<input type="text" size="3" id="formCamContrast" class="form-control-custom text-center ml-2 mr-2 numSlider" />
 													<label>(0 ... 255, 128)</label>
 												</div>
 												<div class="form-inline">
 													<span class="col-md-2">Saturation</span>
 													<input type="range" id="sliderCamSaturation"  min="0" max="255"  style="width:200px;" class="slider">
-													<input type="text" size="3" id="formCamSaturation" class="form-control-custom text-center ml-2 mr-2" />
+													<input type="text" size="3" id="formCamSaturation" class="form-control-custom text-center ml-2 mr-2 numSlider" />
 													<label>(0 ... 255, 128)</label>
 												</div>
 												<div class="form-inline">
 													<span class="col-md-2">Sharpness</span>
 													<input type="range" id="sliderCamSharpness"  min="0" max="255" style="width:200px;" class="slider">
-													<input type="text" size="3" id="formCamSharpness" class="form-control-custom text-center ml-2 mr-2"  />
+													<input type="text" size="3" id="formCamSharpness" class="form-control-custom text-center ml-2 mr-2 numSlider"  />
 													<label>(0 ... 255, 128)</label>
 												</div>
 											</div>
@@ -203,7 +203,7 @@ echo $header;
 												<div class="form-inline">
 													<span class="col-md-2">Level</span>
 													<input type="range" id="sliderCamDWDRLevel"  min="0" max="16"  style="width:200px;" class="slider">
-													<input type="text" size="1" id="formCamDWDRLevel"class="form-control-custom text-center ml-2 mr-2" />
+													<input type="text" size="1" id="formCamDWDRLevel"class="form-control-custom text-center ml-2 mr-2 numSlider" />
 													<label>(1 ... 16, 8)</label>
 												</div>
 											</div>
@@ -236,13 +236,13 @@ echo $header;
 											<div class="form-inline ml-2">
 												<span class="col-md-3">Day to Night level</span>
 												<input type="range" id="sliderCamDaytonight"  min="0" max="64" style="width:200px;" class="slider">
-												<input type="text" size="5" id="formCamDaytonight"  class="form-control-custom text-center ml-2 mr-2" />
+												<input type="text" size="5" id="formCamDaytonight"  class="form-control-custom text-center ml-2 mr-2 numSlider" />
 												<label>(0 ... 63, 1)</label>
 											</div>
 											<div class="form-inline ml-2">
 												<span class="col-md-3">Night to Day level</span>
 												<input type="range" id="sliderCamNighttoday"  min="0" max="64"  style="width:200px;" class="slider">
-												<input type="text" size="5" id="formCamNighttoday" class="form-control-custom text-center ml-2 mr-2" />
+												<input type="text" size="5" id="formCamNighttoday" class="form-control-custom text-center ml-2 mr-2 numSlider" />
 												<label>(1 ... 64, 3)</label>
 											</div>
 											<div class="form-inline" hidden>
@@ -270,13 +270,13 @@ echo $header;
 											<div class="form-group form-inline mb-0">
 												<span class="col-md-3">Dynamic 2D DNR</span>
 												<input type="range" id="sliderCamNoisefilter" min="0" max="15"  style="width:200px;" class="slider">
-												<input type="text" size="5" id="formCamNoisefilter" class="form-control-custom text-center ml-2 mr-2"/>
+												<input type="text" size="5" id="formCamNoisefilter" class="form-control-custom text-center ml-2 mr-2 numSlider"/>
 												<label>(0 ... 15)</label>
 											</div>
 											<div class="form-group form-inline" hidden>
 												<span class="col-md-3">Noise Filter</span>
 												<input type="range" id="sliderCamNoisefilter_sub" min="0" max="15"  style="width:200px;" class="slider">
-												<input type="text" size="5" id="formCamNoisefilter_sub" class="form-control-custom text-center ml-2 mr-2"/>
+												<input type="text" size="5" id="formCamNoisefilter_sub" class="form-control-custom text-center ml-2 mr-2 numSlider"/>
 												<label>(0 ... 15)</label>
 											</div>
 											<div class="form-group ml-4">
@@ -315,13 +315,13 @@ echo $header;
 												<div class="form-inline">
 													<span class="col-md-3">Red</span>
 													<input type="range" id="sliderCamGainRed" min="0" max="255"  style="width:200px;" class="slider">
-													<input type="text" size="5" id="formCamGainRed" class="form-control-custom text-center" />
+													<input type="text" size="5" id="formCamGainRed" class="form-control-custom text-center numSlider" />
 													<label>(0 ...255)</label>
 												</div>
 												<div class="form-inline mb-0">
 													<span class="col-md-3">Blue</span>
 													<input type="range" id="sliderCamGainBlue" min="0" max="255"  style="width:200px;" class="slider">
-													<input type="text" size="5" id="formCamGainBlue" class="form-control-custom text-center"/>
+													<input type="text" size="5" id="formCamGainBlue" class="form-control-custom text-center numSlider"/>
 													<label>(0 ...255)</label>
 												</div>
 											</div>
@@ -405,18 +405,18 @@ echo $header;
 												<div class="form-inline"> <!--view only if ice level-->
 													<span class="col-md-2">level</span>
 													<input type="range" id="sliderIceLevel"  min="0" max="255" value="128" style="width:200px;" class="slider">
-													<input type="text" size="5" id="formIceLevel" class="form-control-custom text-center ml-2" />
+													<input type="text" size="5" id="formIceLevel" class="form-control-custom text-center ml-2 numSlider" />
 												</div>
 												<div class="form-inline"><!--view only if manual level-->
 													<span class="col-md-2">gain</span>
 													<input type="range" id="sliderManualGain"  min="0" max="4095" value="1024" style="width:200px;" class="slider">
-													<input type="text" size="5" id="formManualGain" class="form-control-custom text-center ml-2 mr-2" />
+													<input type="text" size="5" id="formManualGain" class="form-control-custom text-center ml-2 mr-2 numSlider" />
 													<label>(0 ... 4095, 1024)</label>
 												</div>
 												<div class="form-inline" ><!--view only if manual level-->
 													<span class="col-md-2">level</span>
 													<input type="range" id="sliderManualLevel"  min="0" max="4095" value="1024" style="width:200px;" class="slider">
-													<input type="text" size="5" id="formManualLevel" class="form-control-custom text-center ml-2 mr-2" />
+													<input type="text" size="5" id="formManualLevel" class="form-control-custom text-center ml-2 mr-2 numSlider" />
 													<label>(0 ... 4095, 1024)</label>
 												</div>
 											</div>
@@ -531,13 +531,35 @@ echo $header;
 </body>
 <?=$footer?>
 <script>
-
-	// sliderCamBright formCamBright
+$("button").on("click", function () {
+	console.log(this.id);
+});
+// sliderCamBright formCamBright
 $(".slider").on("input", function () {
 	xt = this.id.replace("slider","form");
  	$("#" + xt).val(this.value);
 });
+$(".numSlider").on("change", function () {
+	xt = this.id.replace("form", "slider");
+	let min = $("#" + xt).prop("min") *1;
+	let max = $("#" + xt).prop("max") *1;
+	if (this.value < min) {
+		this.value= min;	
+	}
+	else if (this.value > max){
+		this.value = max;	
+	}
+	$("#" + xt).val(this.value);
+});
 
+function loadCameraConfig(){
+	url = "/uapi-cgi/param.cgi?action=list&format=json_dot&group=VideoIn";
+	console.log(url);
+	$.getJSON(url, function(response) {
+		console.log(response);
+	});
+}
+loadCameraConfig();
 // value="<?=$arr_rs['VIDEOIN.Ch0.Color.brightness']?>"
 // value="<?=$arr_rs['VIDEOIN.Ch0.Color.contrast']?>"
 // value="<?=$arr_rs['VIDEOIN.Ch0.Color.saturation']?>"

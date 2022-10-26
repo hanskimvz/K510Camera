@@ -1,7 +1,7 @@
 
 _selected_language = "korean";
 url = "/language/"+_selected_language+".json";
-console.log(url);
+// console.log(url);
 
 
 function txt2Json(txt) {
@@ -32,7 +32,7 @@ async function updateLanguage(url) {
         y = x.replace(/ /g, '').toLowerCase().trim();
         lang[y] = arr[x];
     }
-    console.log(lang);
+    // console.log(lang);
     $("span, h6, option, button, strong").each(function(){
         x = $(this).text().replace(/ /g, '').toLowerCase().trim();
         $(this).text(lang[x]);

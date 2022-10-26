@@ -248,5 +248,27 @@ $("button").on("click", function () {
 		console.log($("#formUserName").val());
 	}
 });
+
+function loadDatetimeConfig(){
+	url = "/uapi-cgi/testCmd.cgi?cmd=date";
+	let posting = $.post(url,{});
+	date_str = { "Jan":01, "Feb":02, "Mar":03, "Apr":04, "May":05, "Jun":06, "Jul":07, "Aug":08, "Sep":09, "Oct":10, "Nov":11, "Dec":12	};
+	posting.done(function(data) {
+		console.log(data);
+		let ex = data.trim().split(" ");
+		console.log(ex);
+		t_str = ex[5] + "/" + date_str[ex[1]] + "/" + ex[2] + " " + ex[3];
+		$("#server_clock").html(t_str);
+	});
+
+	url = "/uapi-cgi/param.cgi?action=list&format=json&group=system.datetime";
+	$.getJSON(url, function(response) {
+		console.log(response);
+		
+
+	});
+}
+loadDatetimeConfig();
+
 </script>
 </html>

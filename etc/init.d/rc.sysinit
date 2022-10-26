@@ -1,6 +1,7 @@
 #!/bin/sh
 
-PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/nais
+
 
 # PATH environment setting
 export PATH=/demo:$PATH
@@ -61,11 +62,12 @@ else
 fi
 
 # static                       
-ifconfig eth0 192.168.1.209 netmask 255.255.0.0 broadcast 192.168.255.255
-ifconfig lo 127.0.0.1 netmask 255.255.0.0 broadcast 127.0.255.255        
-route add -net 127.0.0.0 netmask 255.255.0.0 lo                          
-route add default gw 192.168.1.1 dev eth0 
-echo "nameserver 114.114.114.114" > /etc/resolv.conf
+# ifconfig eth0 192.168.1.209 netmask 255.255.0.0 broadcast 192.168.255.255
+# ifconfig lo 127.0.0.1 netmask 255.255.0.0 broadcast 127.0.255.255        
+# route add -net 127.0.0.0 netmask 255.255.0.0 lo                          
+# route add default gw 192.168.1.1 dev eth0 
+# echo "nameserver 114.114.114.114" > /etc/resolv.conf
+sh /home/netif.sh
 
 # dhcp
 # /sbin/ifup -a -f
@@ -89,9 +91,10 @@ ntpdate  ntp.aliyun.com >/dev/null 2>&1 &
 i2ctransfer -f -y 0 w3@0x10 0x01 0x00 0x00
 
 # Temperature
-echo enabled > /sys/class/thermal/thermal_zone0/mode
-temp=$(cat /sys/class/thermal/thermal_zone0/temp)
-echo "Temperature:${temp}"
+# echo enabled > /sys/class/thermal/thermal_zone0/mode
+# temp=$(cat /sys/class/thermal/thermal_zone0/temp)
+# echo "Temperature:${temp}"
+#sh /home/getTemp.sh &
 
 # Start telnet service
 mkdir /dev/pts
@@ -99,13 +102,15 @@ mount -t devpts devpts /dev/pts
 telnetd
 
 # start services
+/etc/init.d/S30dbus start
 /etc/init.d/S49php-fpm start
 /etc/init.d/S50nginx start
 /etc/init.d/S50sshd start
-
+/etc/init.d/S50avahi-daemon start
 
 #cd /app/mediactl_lib/
 #./v4l2_drm.out -f video_drm_1080x1920.conf -e 1 &
 #cd /
 
 #/usr/sbin/ifplugd -d 0 -u 0 -n -p  -I -i eth0 -r /etc/network/ifplug.sh &
+/home/demo_video.sh

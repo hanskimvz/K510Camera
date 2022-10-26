@@ -304,6 +304,7 @@ function render() {
     n++;
     if (n%2 == 0) {
         img.src="../uapi-cgi/snapshot.cgi?n="+n;
+        // img.src="/padding_img.jpg?n="+n;
         // ctx.drawImage(img, 0,0,canvas.width, canvas.height);
     }
 }

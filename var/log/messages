@@ -1,0 +1,1372 @@
+Oct 14 16:16:12 canaan user.debug kernel: [19860.452816] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:12 canaan user.debug kernel: [19860.453239] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:12 canaan user.debug kernel: [19860.459160] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:12 canaan user.debug kernel: [19860.459191] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:12 canaan user.debug kernel: [19860.459245] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:12 canaan user.debug kernel: [19860.459754] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:12 canaan user.debug kernel: [19861.151976] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:12 canaan user.debug kernel: [19861.152010] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:12 canaan user.debug kernel: [19861.152038] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:12 canaan user.debug kernel: [19861.152450] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:12 canaan user.debug kernel: [19861.154504] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:12 canaan user.debug kernel: [19861.154516] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:12 canaan user.debug kernel: [19861.154543] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:12 canaan user.debug kernel: [19861.155035] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:14 canaan user.debug kernel: [19862.450624] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:14 canaan user.debug kernel: [19862.450650] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:14 canaan user.debug kernel: [19862.450693] i2c_designware 97070000.i2c: Standard-mode HCNT:LCNT = 51:62
+Oct 14 16:16:14 canaan user.debug kernel: [19862.450708] i2c_designware 97070000.i2c: Fast-mode HCNT:LCNT = 8:19
+Oct 14 16:16:14 canaan user.debug kernel: [19862.450745] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:14 canaan user.debug kernel: [19862.451172] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:14 canaan user.debug kernel: [19862.454576] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:14 canaan user.debug kernel: [19862.454595] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:14 canaan user.debug kernel: [19862.454618] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:14 canaan user.debug kernel: [19862.455125] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:14 canaan user.debug kernel: [19862.483785] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:14 canaan user.debug kernel: [19862.483809] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:14 canaan user.debug kernel: [19862.483844] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:14 canaan user.debug kernel: [19862.484261] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:14 canaan user.debug kernel: [19862.486333] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:14 canaan user.debug kernel: [19862.486348] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:14 canaan user.debug kernel: [19862.486373] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:14 canaan user.debug kernel: [19862.486873] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:14 canaan user.debug kernel: [19862.518156] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:14 canaan user.debug kernel: [19862.518188] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:14 canaan user.debug kernel: [19862.518248] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:14 canaan user.debug kernel: [19862.518676] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:14 canaan user.debug kernel: [19862.523612] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:14 canaan user.debug kernel: [19862.523634] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:14 canaan user.debug kernel: [19862.523677] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:14 canaan user.debug kernel: [19862.524182] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:15 canaan user.debug kernel: [19863.616356] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:15 canaan user.debug kernel: [19863.616381] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:15 canaan user.debug kernel: [19863.616421] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:15 canaan user.debug kernel: [19863.616824] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:15 canaan user.debug kernel: [19863.620144] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:15 canaan user.debug kernel: [19863.620159] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:15 canaan user.debug kernel: [19863.620180] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:15 canaan user.debug kernel: [19863.620677] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:15 canaan user.debug kernel: [19863.649028] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:15 canaan user.debug kernel: [19863.649058] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:15 canaan user.debug kernel: [19863.649092] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:15 canaan user.debug kernel: [19863.649510] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:15 canaan user.debug kernel: [19863.651847] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:15 canaan user.debug kernel: [19863.651870] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:15 canaan user.debug kernel: [19863.651907] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:15 canaan user.debug kernel: [19863.652408] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:15 canaan user.debug kernel: [19863.682394] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:15 canaan user.debug kernel: [19863.682417] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:15 canaan user.debug kernel: [19863.682447] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:15 canaan user.debug kernel: [19863.682867] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:15 canaan user.debug kernel: [19863.684961] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:15 canaan user.debug kernel: [19863.684980] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:15 canaan user.debug kernel: [19863.685011] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:15 canaan user.debug kernel: [19863.685521] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:17 canaan user.debug kernel: [19865.546774] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:17 canaan user.debug kernel: [19865.546799] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:17 canaan user.debug kernel: [19865.546836] i2c_designware 97070000.i2c: Standard-mode HCNT:LCNT = 51:62
+Oct 14 16:16:17 canaan user.debug kernel: [19865.546850] i2c_designware 97070000.i2c: Fast-mode HCNT:LCNT = 8:19
+Oct 14 16:16:17 canaan user.debug kernel: [19865.546891] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:17 canaan user.debug kernel: [19865.547304] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:17 canaan user.debug kernel: [19865.549384] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:17 canaan user.debug kernel: [19865.549396] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:17 canaan user.debug kernel: [19865.549414] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:17 canaan user.debug kernel: [19865.549904] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:17 canaan user.debug kernel: [19865.680125] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:17 canaan user.debug kernel: [19865.680149] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:17 canaan user.debug kernel: [19865.680184] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:17 canaan user.debug kernel: [19865.680604] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:17 canaan user.debug kernel: [19865.683892] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:17 canaan user.debug kernel: [19865.683920] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:17 canaan user.debug kernel: [19865.683960] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:17 canaan user.debug kernel: [19865.684485] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:17 canaan user.debug kernel: [19865.714397] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:17 canaan user.debug kernel: [19865.714449] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:17 canaan user.debug kernel: [19865.714528] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:17 canaan user.debug kernel: [19865.714936] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:17 canaan user.debug kernel: [19865.717016] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:17 canaan user.debug kernel: [19865.717803] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:17 canaan user.debug kernel: [19865.717897] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:17 canaan user.debug kernel: [19865.718414] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:17 canaan user.debug kernel: [19865.813356] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:17 canaan user.debug kernel: [19865.813385] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:17 canaan user.debug kernel: [19865.813429] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:17 canaan user.debug kernel: [19865.813831] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:17 canaan user.debug kernel: [19865.816232] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:17 canaan user.debug kernel: [19865.816256] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:17 canaan user.debug kernel: [19865.816291] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:17 canaan user.debug kernel: [19865.816804] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:17 canaan user.debug kernel: [19865.847228] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:17 canaan user.debug kernel: [19865.847267] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:17 canaan user.debug kernel: [19865.847326] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:17 canaan user.debug kernel: [19865.847752] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:17 canaan user.debug kernel: [19865.852454] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:17 canaan user.debug kernel: [19865.852480] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:17 canaan user.debug kernel: [19865.852524] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:17 canaan user.debug kernel: [19865.853033] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:18 canaan user.debug kernel: [19866.545680] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:18 canaan user.debug kernel: [19866.545706] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:18 canaan user.debug kernel: [19866.545768] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:18 canaan user.debug kernel: [19866.546186] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:18 canaan user.debug kernel: [19866.548245] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:18 canaan user.debug kernel: [19866.548260] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:18 canaan user.debug kernel: [19866.548287] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:18 canaan user.debug kernel: [19866.548780] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:18 canaan user.debug kernel: [19867.211559] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:18 canaan user.debug kernel: [19867.211591] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:18 canaan user.debug kernel: [19867.211632] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:18 canaan user.debug kernel: [19867.212050] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:18 canaan user.debug kernel: [19867.214136] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:18 canaan user.debug kernel: [19867.214162] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:18 canaan user.debug kernel: [19867.214196] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:18 canaan user.debug kernel: [19867.214696] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:19 canaan user.debug kernel: [19867.311408] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:19 canaan user.debug kernel: [19867.311435] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:19 canaan user.debug kernel: [19867.311470] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:19 canaan user.debug kernel: [19867.311886] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:19 canaan user.debug kernel: [19867.314236] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:19 canaan user.debug kernel: [19867.314274] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:19 canaan user.debug kernel: [19867.314306] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:19 canaan user.debug kernel: [19867.314823] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:20 canaan user.debug kernel: [19868.443396] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:20 canaan user.debug kernel: [19868.443436] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:20 canaan user.debug kernel: [19868.443476] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:20 canaan user.debug kernel: [19868.443884] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:20 canaan user.debug kernel: [19868.445963] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:20 canaan user.debug kernel: [19868.445980] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:20 canaan user.debug kernel: [19868.446001] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:20 canaan user.debug kernel: [19868.446491] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:20 canaan user.debug kernel: [19868.476658] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:20 canaan user.debug kernel: [19868.476682] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:20 canaan user.debug kernel: [19868.476712] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:20 canaan user.debug kernel: [19868.477130] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:20 canaan user.debug kernel: [19868.479190] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:20 canaan user.debug kernel: [19868.479202] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:20 canaan user.debug kernel: [19868.479220] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:20 canaan user.debug kernel: [19868.479708] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:20 canaan user.debug kernel: [19868.510677] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:20 canaan user.debug kernel: [19868.510701] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:20 canaan user.debug kernel: [19868.510742] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:20 canaan user.debug kernel: [19868.511143] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:20 canaan user.debug kernel: [19868.513558] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:20 canaan user.debug kernel: [19868.513574] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:20 canaan user.debug kernel: [19868.513592] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:20 canaan user.debug kernel: [19868.514131] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:20 canaan user.debug kernel: [19868.543562] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:20 canaan user.debug kernel: [19868.543590] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:20 canaan user.debug kernel: [19868.543627] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:20 canaan user.debug kernel: [19868.544036] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:20 canaan user.debug kernel: [19868.546978] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:20 canaan user.debug kernel: [19868.547004] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:20 canaan user.debug kernel: [19868.547038] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:20 canaan user.debug kernel: [19868.547539] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:20 canaan user.debug kernel: [19869.209192] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:20 canaan user.debug kernel: [19869.209217] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:20 canaan user.debug kernel: [19869.209259] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:20 canaan user.debug kernel: [19869.209661] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:20 canaan user.debug kernel: [19869.211728] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:20 canaan user.debug kernel: [19869.211742] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:20 canaan user.debug kernel: [19869.211760] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:20 canaan user.debug kernel: [19869.212246] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:20 canaan user.debug kernel: [19869.242743] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:20 canaan user.debug kernel: [19869.242767] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:20 canaan user.debug kernel: [19869.242800] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:20 canaan user.debug kernel: [19869.243210] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:20 canaan user.debug kernel: [19869.245288] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:20 canaan user.debug kernel: [19869.245320] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:20 canaan user.debug kernel: [19869.245363] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:20 canaan user.debug kernel: [19869.245876] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:21 canaan user.debug kernel: [19869.908359] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:21 canaan user.debug kernel: [19869.908383] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:21 canaan user.debug kernel: [19869.908422] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:21 canaan user.debug kernel: [19869.908841] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:21 canaan user.debug kernel: [19869.911076] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:21 canaan user.debug kernel: [19869.911092] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:21 canaan user.debug kernel: [19869.911116] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:21 canaan user.debug kernel: [19869.911616] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:21 canaan user.debug kernel: [19869.941772] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:21 canaan user.debug kernel: [19869.941802] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:21 canaan user.debug kernel: [19869.941842] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:21 canaan user.debug kernel: [19869.942254] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:21 canaan user.debug kernel: [19869.945322] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:21 canaan user.debug kernel: [19869.945348] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:21 canaan user.debug kernel: [19869.945385] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:21 canaan user.debug kernel: [19869.945903] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:22 canaan user.debug kernel: [19870.607480] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:22 canaan user.debug kernel: [19870.607520] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:22 canaan user.debug kernel: [19870.607548] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:22 canaan user.debug kernel: [19870.607964] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:22 canaan user.debug kernel: [19870.610024] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:22 canaan user.debug kernel: [19870.610036] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:22 canaan user.debug kernel: [19870.610054] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:22 canaan user.debug kernel: [19870.610541] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.509761] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19873.509786] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.509824] i2c_designware 97070000.i2c: Standard-mode HCNT:LCNT = 51:62
+Oct 14 16:16:25 canaan user.debug kernel: [19873.509837] i2c_designware 97070000.i2c: Fast-mode HCNT:LCNT = 8:19
+Oct 14 16:16:25 canaan user.debug kernel: [19873.509877] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.510290] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.513680] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19873.513696] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.513716] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.514218] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.537401] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19873.537427] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.537468] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.537884] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.539951] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19873.539966] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.539984] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.540479] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.570688] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19873.570713] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.570749] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.571171] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.573304] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19873.573327] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.573371] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.573880] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.603993] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19873.604018] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.604056] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.604479] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.606801] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19873.606819] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.606842] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.607341] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.637291] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19873.637315] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.637344] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.637764] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.639859] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19873.639880] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.639911] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.640439] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.670720] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19873.670751] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.670792] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.671205] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.673268] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19873.673280] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.673305] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.673796] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.703884] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19873.703914] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.703960] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.704380] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.706614] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19873.706646] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.706690] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.707197] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.739058] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19873.739084] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.739120] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.739520] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.742860] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19873.742880] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.742915] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.743422] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.770440] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19873.770464] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.770495] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.770909] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.772983] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19873.773001] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.773035] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.773533] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.804382] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19873.804408] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.804450] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.804864] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.806941] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19873.806957] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.808055] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.808567] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.838600] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19873.838643] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.838700] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.839113] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.842028] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19873.842051] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.842087] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.842591] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.870745] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19873.870770] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.870806] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.871215] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.873284] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19873.873297] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.873314] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.873803] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.907280] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19873.907304] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.907342] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.907758] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.911137] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19873.911152] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.911174] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.911661] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.936908] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19873.936932] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.936963] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.937380] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.939440] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19873.939452] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.939483] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.939974] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.971493] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19873.971525] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.971579] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.972005] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19873.976783] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19873.976808] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19873.976843] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19873.977355] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19874.003482] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19874.003794] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19874.003830] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19874.004237] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19874.007623] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19874.007648] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19874.007688] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19874.008182] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19874.036924] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19874.036968] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19874.037000] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19874.037419] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19874.039726] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19874.039760] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19874.039809] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19874.040347] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19874.070376] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19874.070400] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19874.070434] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19874.070841] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19874.074209] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19874.074351] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19874.074381] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19874.074876] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19874.103381] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:25 canaan user.debug kernel: [19874.103742] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19874.103780] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19874.104212] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:25 canaan user.debug kernel: [19874.108691] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:25 canaan user.debug kernel: [19874.108716] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:25 canaan user.debug kernel: [19874.108756] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:25 canaan user.debug kernel: [19874.109263] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:26 canaan user.debug kernel: [19874.835848] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:26 canaan user.debug kernel: [19874.835876] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:26 canaan user.debug kernel: [19874.835904] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:26 canaan user.debug kernel: [19874.836317] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:26 canaan user.debug kernel: [19874.838614] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:26 canaan user.debug kernel: [19874.838635] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:26 canaan user.debug kernel: [19874.838688] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:26 canaan user.debug kernel: [19874.839185] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:26 canaan user.debug kernel: [19874.869514] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:26 canaan user.debug kernel: [19874.869544] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:26 canaan user.debug kernel: [19874.869586] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:26 canaan user.debug kernel: [19874.870021] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:26 canaan user.debug kernel: [19874.872120] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:26 canaan user.debug kernel: [19874.872136] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:26 canaan user.debug kernel: [19874.872156] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:26 canaan user.debug kernel: [19874.872652] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:26 canaan user.debug kernel: [19875.068899] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:26 canaan user.debug kernel: [19875.068924] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:26 canaan user.debug kernel: [19875.068959] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:26 canaan user.debug kernel: [19875.069369] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:26 canaan user.debug kernel: [19875.071421] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:26 canaan user.debug kernel: [19875.071436] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:26 canaan user.debug kernel: [19875.071464] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:26 canaan user.debug kernel: [19875.071956] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:26 canaan user.debug kernel: [19875.102344] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:26 canaan user.debug kernel: [19875.102372] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:26 canaan user.debug kernel: [19875.102408] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:26 canaan user.debug kernel: [19875.102833] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:26 canaan user.debug kernel: [19875.105043] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:26 canaan user.debug kernel: [19875.105076] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:26 canaan user.debug kernel: [19875.105792] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:26 canaan user.debug kernel: [19875.106326] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:27 canaan user.debug kernel: [19875.668368] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:27 canaan user.debug kernel: [19875.668392] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:27 canaan user.debug kernel: [19875.668427] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:27 canaan user.debug kernel: [19875.668829] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:27 canaan user.debug kernel: [19875.670988] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:27 canaan user.debug kernel: [19875.671009] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:27 canaan user.debug kernel: [19875.671028] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:27 canaan user.debug kernel: [19875.671521] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:27 canaan user.debug kernel: [19875.735197] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:27 canaan user.debug kernel: [19875.735224] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:27 canaan user.debug kernel: [19875.735268] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:27 canaan user.debug kernel: [19875.735669] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:27 canaan user.debug kernel: [19875.737726] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:27 canaan user.debug kernel: [19875.737739] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:27 canaan user.debug kernel: [19875.737758] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:27 canaan user.debug kernel: [19875.738264] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:28 canaan user.debug kernel: [19876.470280] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:28 canaan user.debug kernel: [19876.470305] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:28 canaan user.debug kernel: [19876.470342] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:28 canaan user.debug kernel: [19876.470742] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:28 canaan user.debug kernel: [19876.474803] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:28 canaan user.debug kernel: [19876.474822] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:28 canaan user.debug kernel: [19876.474848] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:28 canaan user.debug kernel: [19876.475342] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:28 canaan user.debug kernel: [19876.533825] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:28 canaan user.debug kernel: [19876.533851] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:28 canaan user.debug kernel: [19876.533888] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:28 canaan user.debug kernel: [19876.534307] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:28 canaan user.debug kernel: [19876.536488] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:28 canaan user.debug kernel: [19876.536504] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:28 canaan user.debug kernel: [19876.536527] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:28 canaan user.debug kernel: [19876.537040] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:28 canaan user.debug kernel: [19876.567153] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:28 canaan user.debug kernel: [19876.567180] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:28 canaan user.debug kernel: [19876.567214] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:28 canaan user.debug kernel: [19876.567629] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:28 canaan user.debug kernel: [19876.569929] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:28 canaan user.debug kernel: [19876.569944] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:28 canaan user.debug kernel: [19876.569976] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:28 canaan user.debug kernel: [19876.570466] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:29 canaan user.debug kernel: [19877.399489] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:29 canaan user.debug kernel: [19877.399515] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:29 canaan user.debug kernel: [19877.399552] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:29 canaan user.debug kernel: [19877.399966] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:29 canaan user.debug kernel: [19877.402026] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:29 canaan user.debug kernel: [19877.402040] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:29 canaan user.debug kernel: [19877.402058] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:29 canaan user.debug kernel: [19877.402549] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:29 canaan user.debug kernel: [19877.433061] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:29 canaan user.debug kernel: [19877.433086] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:29 canaan user.debug kernel: [19877.433116] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:29 canaan user.debug kernel: [19877.433554] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:29 canaan user.debug kernel: [19877.435716] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:29 canaan user.debug kernel: [19877.435752] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:29 canaan user.debug kernel: [19877.435812] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:29 canaan user.debug kernel: [19877.436330] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:30 canaan user.debug kernel: [19878.765053] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:30 canaan user.debug kernel: [19878.765079] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:30 canaan user.debug kernel: [19878.765124] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:30 canaan user.debug kernel: [19878.765539] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:30 canaan user.debug kernel: [19878.769360] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:30 canaan user.debug kernel: [19878.769384] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:30 canaan user.debug kernel: [19878.769413] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:30 canaan user.debug kernel: [19878.769928] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:30 canaan user.debug kernel: [19878.832117] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:30 canaan user.debug kernel: [19878.832160] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:30 canaan user.debug kernel: [19878.832232] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:30 canaan user.debug kernel: [19878.832637] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:30 canaan user.debug kernel: [19878.834711] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:30 canaan user.debug kernel: [19878.834733] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:30 canaan user.debug kernel: [19878.834774] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:30 canaan user.debug kernel: [19878.835284] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:30 canaan user.debug kernel: [19878.865268] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:30 canaan user.debug kernel: [19878.865294] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:30 canaan user.debug kernel: [19878.865328] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:30 canaan user.debug kernel: [19878.865732] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:30 canaan user.debug kernel: [19878.868676] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:30 canaan user.debug kernel: [19878.868700] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:30 canaan user.debug kernel: [19878.868735] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:30 canaan user.debug kernel: [19878.869247] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:31 canaan user.debug kernel: [19879.963152] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:31 canaan user.debug kernel: [19879.963182] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:31 canaan user.debug kernel: [19879.963220] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:31 canaan user.debug kernel: [19879.963640] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:31 canaan user.debug kernel: [19879.965915] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:31 canaan user.debug kernel: [19879.965947] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:31 canaan user.debug kernel: [19879.965991] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:31 canaan user.debug kernel: [19879.966500] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:31 canaan user.debug kernel: [19879.996821] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:31 canaan user.debug kernel: [19879.996848] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:31 canaan user.debug kernel: [19879.996889] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:31 canaan user.debug kernel: [19879.997296] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:31 canaan user.debug kernel: [19879.999344] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:31 canaan user.debug kernel: [19879.999357] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:31 canaan user.debug kernel: [19879.999372] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:31 canaan user.debug kernel: [19879.999869] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:31 canaan user.debug kernel: [19880.030071] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:31 canaan user.debug kernel: [19880.030095] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:31 canaan user.debug kernel: [19880.030126] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:31 canaan user.debug kernel: [19880.030530] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:31 canaan user.debug kernel: [19880.032764] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:31 canaan user.debug kernel: [19880.032784] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:31 canaan user.debug kernel: [19880.032808] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:31 canaan user.debug kernel: [19880.033300] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:32 canaan user.debug kernel: [19880.862196] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:32 canaan user.debug kernel: [19880.862226] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:32 canaan user.debug kernel: [19880.862262] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:32 canaan user.debug kernel: [19880.862668] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:32 canaan user.debug kernel: [19880.864731] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:32 canaan user.debug kernel: [19880.864747] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:32 canaan user.debug kernel: [19880.864768] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:32 canaan user.debug kernel: [19880.865264] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:32 canaan user.debug kernel: [19880.895512] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:32 canaan user.debug kernel: [19880.895541] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:32 canaan user.debug kernel: [19880.895576] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:32 canaan user.debug kernel: [19880.895988] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:32 canaan user.debug kernel: [19880.898568] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:32 canaan user.debug kernel: [19880.898590] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:32 canaan user.debug kernel: [19880.898620] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:32 canaan user.debug kernel: [19880.899144] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:35 canaan user.debug kernel: [19883.525593] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:35 canaan user.debug kernel: [19883.525616] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:35 canaan user.debug kernel: [19883.525655] i2c_designware 97070000.i2c: Standard-mode HCNT:LCNT = 51:62
+Oct 14 16:16:35 canaan user.debug kernel: [19883.525668] i2c_designware 97070000.i2c: Fast-mode HCNT:LCNT = 8:19
+Oct 14 16:16:35 canaan user.debug kernel: [19883.525698] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:35 canaan user.debug kernel: [19883.526115] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:35 canaan user.debug kernel: [19883.528210] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:35 canaan user.debug kernel: [19883.528225] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:35 canaan user.debug kernel: [19883.528250] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:35 canaan user.debug kernel: [19883.528760] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:35 canaan user.debug kernel: [19883.658775] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:35 canaan user.debug kernel: [19883.658804] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:35 canaan user.debug kernel: [19883.658834] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:35 canaan user.debug kernel: [19883.659256] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:35 canaan user.debug kernel: [19883.661339] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:35 canaan user.debug kernel: [19883.661352] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:35 canaan user.debug kernel: [19883.661368] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:35 canaan user.debug kernel: [19883.661860] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:35 canaan user.debug kernel: [19883.725785] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:35 canaan user.debug kernel: [19883.725820] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:35 canaan user.debug kernel: [19883.725856] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:35 canaan user.debug kernel: [19883.726264] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:35 canaan user.debug kernel: [19883.729418] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:35 canaan user.debug kernel: [19883.729443] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:35 canaan user.debug kernel: [19883.729467] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:35 canaan user.debug kernel: [19883.729956] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:35 canaan user.debug kernel: [19883.758955] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:35 canaan user.debug kernel: [19883.758978] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:35 canaan user.debug kernel: [19883.759009] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:35 canaan user.debug kernel: [19883.759436] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:35 canaan user.debug kernel: [19883.765974] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:35 canaan user.debug kernel: [19883.766003] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:35 canaan user.debug kernel: [19883.766052] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:35 canaan user.debug kernel: [19883.766564] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:35 canaan user.debug kernel: [19883.792060] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:35 canaan user.debug kernel: [19883.792087] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:35 canaan user.debug kernel: [19883.792119] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:35 canaan user.debug kernel: [19883.792524] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:35 canaan user.debug kernel: [19883.795017] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:35 canaan user.debug kernel: [19883.795040] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:35 canaan user.debug kernel: [19883.795072] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:35 canaan user.debug kernel: [19883.795580] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:36 canaan user.debug kernel: [19884.525798] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:36 canaan user.debug kernel: [19884.525824] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:36 canaan user.debug kernel: [19884.525864] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:36 canaan user.debug kernel: [19884.526264] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:36 canaan user.debug kernel: [19884.528376] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:36 canaan user.debug kernel: [19884.528390] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:36 canaan user.debug kernel: [19884.528408] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:36 canaan user.debug kernel: [19884.528908] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:36 canaan user.debug kernel: [19884.557862] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:36 canaan user.debug kernel: [19884.557886] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:36 canaan user.debug kernel: [19884.557924] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:36 canaan user.debug kernel: [19884.558334] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:36 canaan user.debug kernel: [19884.560833] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:36 canaan user.debug kernel: [19884.560856] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:36 canaan user.debug kernel: [19884.560904] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:36 canaan user.debug kernel: [19884.561427] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:36 canaan user.debug kernel: [19884.591546] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:36 canaan user.debug kernel: [19884.591572] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:36 canaan user.debug kernel: [19884.591616] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:36 canaan user.debug kernel: [19884.592033] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:36 canaan user.debug kernel: [19884.595781] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:36 canaan user.debug kernel: [19884.595807] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:36 canaan user.debug kernel: [19884.595841] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:36 canaan user.debug kernel: [19884.596347] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:38 canaan user.debug kernel: [19886.588673] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:38 canaan user.debug kernel: [19886.588697] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:38 canaan user.debug kernel: [19886.588738] i2c_designware 97070000.i2c: Standard-mode HCNT:LCNT = 51:62
+Oct 14 16:16:38 canaan user.debug kernel: [19886.588752] i2c_designware 97070000.i2c: Fast-mode HCNT:LCNT = 8:19
+Oct 14 16:16:38 canaan user.debug kernel: [19886.588786] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:38 canaan user.debug kernel: [19886.589212] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:38 canaan user.debug kernel: [19886.591466] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:38 canaan user.debug kernel: [19886.591490] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:38 canaan user.debug kernel: [19886.591515] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:38 canaan user.debug kernel: [19886.592020] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:38 canaan user.debug kernel: [19886.621956] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:38 canaan user.debug kernel: [19886.621984] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:38 canaan user.debug kernel: [19886.622014] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:38 canaan user.debug kernel: [19886.622427] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:38 canaan user.debug kernel: [19886.624841] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:38 canaan user.debug kernel: [19886.624862] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:38 canaan user.debug kernel: [19886.624888] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:38 canaan user.debug kernel: [19886.625398] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:39 canaan user.debug kernel: [19887.387757] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:39 canaan user.debug kernel: [19887.387785] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:39 canaan user.debug kernel: [19887.387824] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:39 canaan user.debug kernel: [19887.388240] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:39 canaan user.debug kernel: [19887.390304] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:39 canaan user.debug kernel: [19887.390319] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:39 canaan user.debug kernel: [19887.390343] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:39 canaan user.debug kernel: [19887.390841] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:39 canaan user.debug kernel: [19887.421029] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:39 canaan user.debug kernel: [19887.421055] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:39 canaan user.debug kernel: [19887.421092] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:39 canaan user.debug kernel: [19887.421516] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:39 canaan user.debug kernel: [19887.423640] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:39 canaan user.debug kernel: [19887.423656] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:39 canaan user.debug kernel: [19887.423686] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:39 canaan user.debug kernel: [19887.424192] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:39 canaan user.debug kernel: [19887.454376] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:39 canaan user.debug kernel: [19887.454400] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:39 canaan user.debug kernel: [19887.454440] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:39 canaan user.debug kernel: [19887.454856] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:39 canaan user.debug kernel: [19887.456912] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:39 canaan user.debug kernel: [19887.456925] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:39 canaan user.debug kernel: [19887.456952] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:39 canaan user.debug kernel: [19887.457449] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:39 canaan user.debug kernel: [19887.754033] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:39 canaan user.debug kernel: [19887.754136] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:39 canaan user.debug kernel: [19887.754168] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:39 canaan user.debug kernel: [19887.754597] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:39 canaan user.debug kernel: [19887.756688] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:39 canaan user.debug kernel: [19887.756706] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:39 canaan user.debug kernel: [19887.756736] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:39 canaan user.debug kernel: [19887.757252] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:39 canaan user.debug kernel: [19887.787663] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:39 canaan user.debug kernel: [19887.787688] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:39 canaan user.debug kernel: [19887.787723] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:39 canaan user.debug kernel: [19887.788157] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:39 canaan user.debug kernel: [19887.790237] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:39 canaan user.debug kernel: [19887.790252] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:39 canaan user.debug kernel: [19887.790285] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:39 canaan user.debug kernel: [19887.790776] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:39 canaan user.debug kernel: [19888.021376] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:39 canaan user.debug kernel: [19888.021401] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:39 canaan user.debug kernel: [19888.021439] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:39 canaan user.debug kernel: [19888.021840] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:39 canaan user.debug kernel: [19888.025169] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:39 canaan user.debug kernel: [19888.025188] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:39 canaan user.debug kernel: [19888.025217] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:39 canaan user.debug kernel: [19888.025724] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:39 canaan user.debug kernel: [19888.053617] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:39 canaan user.debug kernel: [19888.053642] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:39 canaan user.debug kernel: [19888.053673] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:39 canaan user.debug kernel: [19888.054109] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:39 canaan user.debug kernel: [19888.056446] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:39 canaan user.debug kernel: [19888.056472] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:39 canaan user.debug kernel: [19888.056528] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:39 canaan user.debug kernel: [19888.057044] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:39 canaan user.debug kernel: [19888.086969] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:39 canaan user.debug kernel: [19888.086993] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:39 canaan user.debug kernel: [19888.087022] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:39 canaan user.debug kernel: [19888.087451] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:39 canaan user.debug kernel: [19888.089538] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:39 canaan user.debug kernel: [19888.089553] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:39 canaan user.debug kernel: [19888.089583] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:39 canaan user.debug kernel: [19888.090086] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:40 canaan user.debug kernel: [19888.353294] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:40 canaan user.debug kernel: [19888.353321] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:40 canaan user.debug kernel: [19888.353353] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:40 canaan user.debug kernel: [19888.353770] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:40 canaan user.debug kernel: [19888.355839] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:40 canaan user.debug kernel: [19888.355858] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:40 canaan user.debug kernel: [19888.355900] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:40 canaan user.debug kernel: [19888.356397] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:40 canaan user.debug kernel: [19888.386623] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:40 canaan user.debug kernel: [19888.386650] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:40 canaan user.debug kernel: [19888.386689] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:40 canaan user.debug kernel: [19888.387114] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:40 canaan user.debug kernel: [19888.389261] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:40 canaan user.debug kernel: [19888.389276] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:40 canaan user.debug kernel: [19888.389294] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:40 canaan user.debug kernel: [19888.389782] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:40 canaan user.debug kernel: [19888.420293] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:40 canaan user.debug kernel: [19888.420320] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:40 canaan user.debug kernel: [19888.420362] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:40 canaan user.debug kernel: [19888.420777] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:40 canaan user.debug kernel: [19888.423940] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:40 canaan user.debug kernel: [19888.423964] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:40 canaan user.debug kernel: [19888.424004] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:40 canaan user.debug kernel: [19888.424506] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:43 canaan user.debug kernel: [19891.715986] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:43 canaan user.debug kernel: [19891.716013] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:43 canaan user.debug kernel: [19891.716059] i2c_designware 97070000.i2c: Standard-mode HCNT:LCNT = 51:62
+Oct 14 16:16:43 canaan user.debug kernel: [19891.716072] i2c_designware 97070000.i2c: Fast-mode HCNT:LCNT = 8:19
+Oct 14 16:16:43 canaan user.debug kernel: [19891.716108] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:43 canaan user.debug kernel: [19891.716535] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:43 canaan user.debug kernel: [19891.718851] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:43 canaan user.debug kernel: [19891.718871] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:43 canaan user.debug kernel: [19891.718892] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:43 canaan user.debug kernel: [19891.719380] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:44 canaan user.debug kernel: [19892.282004] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:44 canaan user.debug kernel: [19892.282030] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:44 canaan user.debug kernel: [19892.282067] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:44 canaan user.debug kernel: [19892.282476] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:44 canaan user.debug kernel: [19892.284546] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:44 canaan user.debug kernel: [19892.284562] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:44 canaan user.debug kernel: [19892.284588] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:44 canaan user.debug kernel: [19892.285081] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:44 canaan user.debug kernel: [19892.381874] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:44 canaan user.debug kernel: [19892.381900] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:44 canaan user.debug kernel: [19892.381941] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:44 canaan user.debug kernel: [19892.382368] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:44 canaan user.debug kernel: [19892.384459] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:44 canaan user.debug kernel: [19892.384484] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:44 canaan user.debug kernel: [19892.384517] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:44 canaan user.debug kernel: [19892.385053] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:44 canaan user.debug kernel: [19892.415143] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:44 canaan user.debug kernel: [19892.415168] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:44 canaan user.debug kernel: [19892.415205] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:44 canaan user.debug kernel: [19892.415628] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:44 canaan user.debug kernel: [19892.417712] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:44 canaan user.debug kernel: [19892.417725] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:44 canaan user.debug kernel: [19892.417756] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:44 canaan user.debug kernel: [19892.418255] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:44 canaan user.debug kernel: [19892.448425] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:44 canaan user.debug kernel: [19892.448452] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:44 canaan user.debug kernel: [19892.448489] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:44 canaan user.debug kernel: [19892.448904] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:44 canaan user.debug kernel: [19892.451162] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:44 canaan user.debug kernel: [19892.451182] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:44 canaan user.debug kernel: [19892.451217] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:44 canaan user.debug kernel: [19892.451707] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:44 canaan user.debug kernel: [19892.814675] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:44 canaan user.debug kernel: [19892.814700] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:44 canaan user.debug kernel: [19892.814734] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:44 canaan user.debug kernel: [19892.815156] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:44 canaan user.debug kernel: [19892.817249] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:44 canaan user.debug kernel: [19892.817264] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:44 canaan user.debug kernel: [19892.817284] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:44 canaan user.debug kernel: [19892.817789] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:44 canaan user.debug kernel: [19892.847963] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:44 canaan user.debug kernel: [19892.847989] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:44 canaan user.debug kernel: [19892.848023] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:44 canaan user.debug kernel: [19892.848434] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:44 canaan user.debug kernel: [19892.850730] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:44 canaan user.debug kernel: [19892.850748] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:44 canaan user.debug kernel: [19892.850792] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:44 canaan user.debug kernel: [19892.851289] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:45 canaan user.debug kernel: [19894.013323] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:45 canaan user.debug kernel: [19894.013349] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:45 canaan user.debug kernel: [19894.013387] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:45 canaan user.debug kernel: [19894.013789] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:45 canaan user.debug kernel: [19894.015866] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:45 canaan user.debug kernel: [19894.015889] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:45 canaan user.debug kernel: [19894.015920] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:45 canaan user.debug kernel: [19894.016413] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:45 canaan user.debug kernel: [19894.046586] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:45 canaan user.debug kernel: [19894.046614] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:45 canaan user.debug kernel: [19894.046656] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:45 canaan user.debug kernel: [19894.047071] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:45 canaan user.debug kernel: [19894.049337] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:45 canaan user.debug kernel: [19894.049353] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:45 canaan user.debug kernel: [19894.049382] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:45 canaan user.debug kernel: [19894.049881] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:45 canaan user.debug kernel: [19894.080320] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:45 canaan user.debug kernel: [19894.080345] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:45 canaan user.debug kernel: [19894.080379] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:45 canaan user.debug kernel: [19894.080785] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:45 canaan user.debug kernel: [19894.082833] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:45 canaan user.debug kernel: [19894.082847] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:45 canaan user.debug kernel: [19894.082864] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:45 canaan user.debug kernel: [19894.083379] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:45 canaan user.debug kernel: [19894.114378] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:45 canaan user.debug kernel: [19894.114412] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:45 canaan user.debug kernel: [19894.114456] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:45 canaan user.debug kernel: [19894.114858] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:45 canaan user.debug kernel: [19894.117747] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:45 canaan user.debug kernel: [19894.117772] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:45 canaan user.debug kernel: [19894.117810] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:45 canaan user.debug kernel: [19894.118328] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:45 canaan user.debug kernel: [19894.146567] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:45 canaan user.debug kernel: [19894.146592] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:45 canaan user.debug kernel: [19894.146625] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:45 canaan user.debug kernel: [19894.147048] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:45 canaan user.debug kernel: [19894.149695] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:45 canaan user.debug kernel: [19894.149718] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:45 canaan user.debug kernel: [19894.149758] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:45 canaan user.debug kernel: [19894.150272] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:45 canaan user.debug kernel: [19894.179696] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:16:45 canaan user.debug kernel: [19894.179722] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:45 canaan user.debug kernel: [19894.179756] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:45 canaan user.debug kernel: [19894.180171] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:16:45 canaan user.debug kernel: [19894.182229] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:16:45 canaan user.debug kernel: [19894.182244] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:16:45 canaan user.debug kernel: [19894.182266] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:16:45 canaan user.debug kernel: [19894.182792] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:01 canaan user.debug kernel: [19909.661477] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:01 canaan user.debug kernel: [19909.661500] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:01 canaan user.debug kernel: [19909.661539] i2c_designware 97070000.i2c: Standard-mode HCNT:LCNT = 51:62
+Oct 14 16:17:01 canaan user.debug kernel: [19909.661551] i2c_designware 97070000.i2c: Fast-mode HCNT:LCNT = 8:19
+Oct 14 16:17:01 canaan user.debug kernel: [19909.661584] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:01 canaan user.debug kernel: [19909.661986] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:01 canaan user.debug kernel: [19909.664140] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:01 canaan user.debug kernel: [19909.664176] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:01 canaan user.debug kernel: [19909.664208] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:01 canaan user.debug kernel: [19909.664748] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:02 canaan user.debug kernel: [19910.593752] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:02 canaan user.debug kernel: [19910.593777] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:02 canaan user.debug kernel: [19910.593807] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:02 canaan user.debug kernel: [19910.594222] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:02 canaan user.debug kernel: [19910.596404] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:02 canaan user.debug kernel: [19910.596424] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:02 canaan user.debug kernel: [19910.596451] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:02 canaan user.debug kernel: [19910.596945] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:02 canaan user.debug kernel: [19910.660825] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:02 canaan user.debug kernel: [19910.660850] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:02 canaan user.debug kernel: [19910.660888] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:02 canaan user.debug kernel: [19910.661288] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:02 canaan user.debug kernel: [19910.663394] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:02 canaan user.debug kernel: [19910.663407] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:02 canaan user.debug kernel: [19910.663424] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:02 canaan user.debug kernel: [19910.663910] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:02 canaan user.debug kernel: [19910.693574] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:02 canaan user.debug kernel: [19910.693598] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:02 canaan user.debug kernel: [19910.693630] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:02 canaan user.debug kernel: [19910.694043] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:02 canaan user.debug kernel: [19910.696424] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:02 canaan user.debug kernel: [19910.696462] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:02 canaan user.debug kernel: [19910.696504] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:02 canaan user.debug kernel: [19910.697012] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:03 canaan user.debug kernel: [19911.625845] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:03 canaan user.debug kernel: [19911.625869] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:03 canaan user.debug kernel: [19911.625910] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:03 canaan user.debug kernel: [19911.626325] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:03 canaan user.debug kernel: [19911.628625] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:03 canaan user.debug kernel: [19911.628644] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:03 canaan user.debug kernel: [19911.628669] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:03 canaan user.debug kernel: [19911.629186] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:03 canaan user.debug kernel: [19911.758976] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:03 canaan user.debug kernel: [19911.759004] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:03 canaan user.debug kernel: [19911.759041] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:03 canaan user.debug kernel: [19911.759462] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:03 canaan user.debug kernel: [19911.761575] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:03 canaan user.debug kernel: [19911.761590] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:03 canaan user.debug kernel: [19911.761619] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:03 canaan user.debug kernel: [19911.762127] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:03 canaan user.debug kernel: [19911.826527] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:03 canaan user.debug kernel: [19911.826551] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:03 canaan user.debug kernel: [19911.826582] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:03 canaan user.debug kernel: [19911.827000] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:03 canaan user.debug kernel: [19911.830413] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:03 canaan user.debug kernel: [19911.830428] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:03 canaan user.debug kernel: [19911.830450] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:03 canaan user.debug kernel: [19911.830961] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:04 canaan user.debug kernel: [19912.691440] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:04 canaan user.debug kernel: [19912.691465] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:04 canaan user.debug kernel: [19912.691499] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:04 canaan user.debug kernel: [19912.691900] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:04 canaan user.debug kernel: [19912.694156] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:04 canaan user.debug kernel: [19912.694186] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:04 canaan user.debug kernel: [19912.694234] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:04 canaan user.debug kernel: [19912.694760] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:04 canaan user.debug kernel: [19912.791246] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:04 canaan user.debug kernel: [19912.791272] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:04 canaan user.debug kernel: [19912.791306] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:04 canaan user.debug kernel: [19912.791716] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:04 canaan user.debug kernel: [19912.793770] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:04 canaan user.debug kernel: [19912.793781] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:04 canaan user.debug kernel: [19912.793798] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:04 canaan user.debug kernel: [19912.794292] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:05 canaan user.debug kernel: [19913.789971] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:05 canaan user.debug kernel: [19913.789996] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:05 canaan user.debug kernel: [19913.790028] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:05 canaan user.debug kernel: [19913.790444] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:05 canaan user.debug kernel: [19913.792519] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:05 canaan user.debug kernel: [19913.792540] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:05 canaan user.debug kernel: [19913.792573] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:05 canaan user.debug kernel: [19913.793108] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:05 canaan user.debug kernel: [19914.156229] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:05 canaan user.debug kernel: [19914.156272] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:05 canaan user.debug kernel: [19914.156308] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:05 canaan user.debug kernel: [19914.156718] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:05 canaan user.debug kernel: [19914.158771] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:05 canaan user.debug kernel: [19914.158784] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:05 canaan user.debug kernel: [19914.158815] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:05 canaan user.debug kernel: [19914.159305] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:05 canaan user.debug kernel: [19914.256121] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:05 canaan user.debug kernel: [19914.256150] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:05 canaan user.debug kernel: [19914.256189] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:05 canaan user.debug kernel: [19914.256607] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:05 canaan user.debug kernel: [19914.258704] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:05 canaan user.debug kernel: [19914.258719] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:05 canaan user.debug kernel: [19914.258745] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:05 canaan user.debug kernel: [19914.259245] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19914.289402] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:06 canaan user.debug kernel: [19914.289427] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19914.289464] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19914.289884] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19914.292465] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:06 canaan user.debug kernel: [19914.292484] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19914.292511] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19914.293033] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19914.322684] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:06 canaan user.debug kernel: [19914.322709] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19914.322748] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19914.323168] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19914.325332] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:06 canaan user.debug kernel: [19914.326008] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19914.326047] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19914.326567] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19914.392145] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:06 canaan user.debug kernel: [19914.392169] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19914.392198] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19914.392599] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19914.395034] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:06 canaan user.debug kernel: [19914.395059] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19914.395094] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19914.395603] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19914.422593] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:06 canaan user.debug kernel: [19914.422624] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19914.422663] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19914.423079] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19914.425157] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:06 canaan user.debug kernel: [19914.425727] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19914.425772] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19914.426287] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19914.688924] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:06 canaan user.debug kernel: [19914.688950] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19914.688980] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19914.689392] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19914.691448] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:06 canaan user.debug kernel: [19914.691460] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19914.691492] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19914.691991] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19914.724316] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:06 canaan user.debug kernel: [19914.724339] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19914.724373] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19914.724786] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19914.728278] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:06 canaan user.debug kernel: [19914.728296] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19914.728317] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19914.728822] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19914.755485] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:06 canaan user.debug kernel: [19914.755509] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19914.755539] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19914.755946] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19914.757996] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:06 canaan user.debug kernel: [19914.758008] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19914.758044] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19914.758536] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19914.955280] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:06 canaan user.debug kernel: [19914.955305] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19914.955344] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19914.955765] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19914.958466] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:06 canaan user.debug kernel: [19914.958489] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19914.958518] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19914.959035] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19915.088464] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:06 canaan user.debug kernel: [19915.088493] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19915.088532] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19915.088951] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19915.091023] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:06 canaan user.debug kernel: [19915.091038] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19915.091060] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19915.091548] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19915.122972] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:06 canaan user.debug kernel: [19915.122997] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19915.123025] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19915.123441] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19915.125788] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:06 canaan user.debug kernel: [19915.125819] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19915.125864] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19915.126387] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19915.222033] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:06 canaan user.debug kernel: [19915.222058] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19915.222096] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19915.222496] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19915.225928] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:06 canaan user.debug kernel: [19915.225952] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19915.225992] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19915.226481] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19915.255083] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:06 canaan user.debug kernel: [19915.255108] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19915.255145] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19915.255565] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:06 canaan user.debug kernel: [19915.257914] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:06 canaan user.debug kernel: [19915.257934] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:06 canaan user.debug kernel: [19915.257973] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:06 canaan user.debug kernel: [19915.258472] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:07 canaan user.debug kernel: [19915.289838] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:07 canaan user.debug kernel: [19915.289863] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:07 canaan user.debug kernel: [19915.289895] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:07 canaan user.debug kernel: [19915.290302] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:07 canaan user.debug kernel: [19915.293569] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:07 canaan user.debug kernel: [19915.293584] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:07 canaan user.debug kernel: [19915.293606] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:07 canaan user.debug kernel: [19915.294109] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:07 canaan user.debug kernel: [19915.455260] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:07 canaan user.debug kernel: [19915.455283] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:07 canaan user.debug kernel: [19915.455316] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:07 canaan user.debug kernel: [19915.455722] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:07 canaan user.debug kernel: [19915.457774] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:07 canaan user.debug kernel: [19915.457785] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:07 canaan user.debug kernel: [19915.457801] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:07 canaan user.debug kernel: [19915.458287] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:07 canaan user.debug kernel: [19915.487944] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:07 canaan user.debug kernel: [19915.487977] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:07 canaan user.debug kernel: [19915.488005] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:07 canaan user.debug kernel: [19915.488425] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:07 canaan user.debug kernel: [19915.490490] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:07 canaan user.debug kernel: [19915.490502] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:07 canaan user.debug kernel: [19915.490520] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:07 canaan user.debug kernel: [19915.491012] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:07 canaan user.debug kernel: [19915.521332] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:07 canaan user.debug kernel: [19915.521356] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:07 canaan user.debug kernel: [19915.521388] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:07 canaan user.debug kernel: [19915.521812] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:07 canaan user.debug kernel: [19915.523913] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:07 canaan user.debug kernel: [19915.523929] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:07 canaan user.debug kernel: [19915.523950] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:07 canaan user.debug kernel: [19915.524457] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:07 canaan user.debug kernel: [19915.621191] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:07 canaan user.debug kernel: [19915.621215] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:07 canaan user.debug kernel: [19915.621252] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:07 canaan user.debug kernel: [19915.621659] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:07 canaan user.debug kernel: [19915.623707] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:07 canaan user.debug kernel: [19915.623718] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:07 canaan user.debug kernel: [19915.623744] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:07 canaan user.debug kernel: [19915.624244] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:07 canaan user.debug kernel: [19915.654439] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:07 canaan user.debug kernel: [19915.654462] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:07 canaan user.debug kernel: [19915.654492] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:07 canaan user.debug kernel: [19915.654912] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:07 canaan user.debug kernel: [19915.657210] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:07 canaan user.debug kernel: [19915.657229] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:07 canaan user.debug kernel: [19915.657258] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:07 canaan user.debug kernel: [19915.657763] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:08 canaan user.debug kernel: [19917.185950] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:08 canaan user.debug kernel: [19917.185976] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:08 canaan user.debug kernel: [19917.186016] i2c_designware 97070000.i2c: Standard-mode HCNT:LCNT = 51:62
+Oct 14 16:17:08 canaan user.debug kernel: [19917.186032] i2c_designware 97070000.i2c: Fast-mode HCNT:LCNT = 8:19
+Oct 14 16:17:08 canaan user.debug kernel: [19917.186064] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:08 canaan user.debug kernel: [19917.186493] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:08 canaan user.debug kernel: [19917.188577] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:08 canaan user.debug kernel: [19917.188592] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:08 canaan user.debug kernel: [19917.188612] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:08 canaan user.debug kernel: [19917.189104] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:08 canaan user.debug kernel: [19917.219512] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:08 canaan user.debug kernel: [19917.219540] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:08 canaan user.debug kernel: [19917.219577] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:08 canaan user.debug kernel: [19917.219985] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:08 canaan user.debug kernel: [19917.222294] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:08 canaan user.debug kernel: [19917.222316] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:08 canaan user.debug kernel: [19917.222348] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:08 canaan user.debug kernel: [19917.222862] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.485666] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:09 canaan user.debug kernel: [19917.485692] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.485722] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.486151] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.488223] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:09 canaan user.debug kernel: [19917.488238] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.488259] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.488750] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.518876] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:09 canaan user.debug kernel: [19917.518900] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.518928] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.519346] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.522684] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:09 canaan user.debug kernel: [19917.522698] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.522717] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.523210] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.552228] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:09 canaan user.debug kernel: [19917.552252] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.552281] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.552692] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.554788] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:09 canaan user.debug kernel: [19917.554810] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.554845] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.555339] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.586320] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:09 canaan user.debug kernel: [19917.586356] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.586404] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.586840] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.588950] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:09 canaan user.debug kernel: [19917.588970] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.588993] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.589507] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.618764] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:09 canaan user.debug kernel: [19917.618791] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.618823] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.619243] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.621302] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:09 canaan user.debug kernel: [19917.621316] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.621338] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.621832] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.653070] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:09 canaan user.debug kernel: [19917.653108] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.653160] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.653575] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.655685] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:09 canaan user.debug kernel: [19917.655710] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.655752] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.656256] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.685538] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:09 canaan user.debug kernel: [19917.685564] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.685598] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.686005] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.688054] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:09 canaan user.debug kernel: [19917.688066] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.688083] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.688570] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.718968] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:09 canaan user.debug kernel: [19917.718994] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.719026] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.719449] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.721512] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:09 canaan user.debug kernel: [19917.721527] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.721557] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.722052] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.785530] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:09 canaan user.debug kernel: [19917.785554] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.785585] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.786004] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.788074] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:09 canaan user.debug kernel: [19917.788088] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.788123] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.788612] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.818715] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:09 canaan user.debug kernel: [19917.818742] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.818777] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.819213] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.821394] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:09 canaan user.debug kernel: [19917.821417] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.821451] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.821964] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.852052] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:09 canaan user.debug kernel: [19917.852074] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.852104] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.852517] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.854607] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:09 canaan user.debug kernel: [19917.854626] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.854656] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.855164] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.951696] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:09 canaan user.debug kernel: [19917.951720] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.951750] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.952160] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.954797] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:09 canaan user.debug kernel: [19917.954819] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.954853] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.955366] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.985031] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:09 canaan user.debug kernel: [19917.985056] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.985093] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.985520] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19917.987638] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:09 canaan user.debug kernel: [19917.987655] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19917.987683] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19917.988190] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19918.018293] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:09 canaan user.debug kernel: [19918.018319] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19918.018351] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19918.018760] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:09 canaan user.debug kernel: [19918.020816] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:09 canaan user.debug kernel: [19918.020828] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:09 canaan user.debug kernel: [19918.020861] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:09 canaan user.debug kernel: [19918.021356] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:10 canaan user.debug kernel: [19918.384547] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:10 canaan user.debug kernel: [19918.384572] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:10 canaan user.debug kernel: [19918.384600] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:10 canaan user.debug kernel: [19918.385010] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:10 canaan user.debug kernel: [19918.387302] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:10 canaan user.debug kernel: [19918.387323] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:10 canaan user.debug kernel: [19918.387352] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:10 canaan user.debug kernel: [19918.387853] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:10 canaan user.debug kernel: [19918.418624] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:10 canaan user.debug kernel: [19918.418648] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:10 canaan user.debug kernel: [19918.418687] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:10 canaan user.debug kernel: [19918.419088] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:10 canaan user.debug kernel: [19918.421212] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:10 canaan user.debug kernel: [19918.421228] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:10 canaan user.debug kernel: [19918.421252] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:10 canaan user.debug kernel: [19918.421778] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:10 canaan user.debug kernel: [19918.451236] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:10 canaan user.debug kernel: [19918.451283] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:10 canaan user.debug kernel: [19918.451320] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:10 canaan user.debug kernel: [19918.451732] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:10 canaan user.debug kernel: [19918.453932] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:10 canaan user.debug kernel: [19918.453947] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:10 canaan user.debug kernel: [19918.453976] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:10 canaan user.debug kernel: [19918.454486] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:10 canaan user.debug kernel: [19918.950564] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:10 canaan user.debug kernel: [19918.950588] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:10 canaan user.debug kernel: [19918.950627] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:10 canaan user.debug kernel: [19918.951039] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:10 canaan user.debug kernel: [19918.953111] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:10 canaan user.debug kernel: [19918.953124] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:10 canaan user.debug kernel: [19918.953141] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:10 canaan user.debug kernel: [19918.953635] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:10 canaan user.debug kernel: [19918.984489] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:10 canaan user.debug kernel: [19918.984512] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:10 canaan user.debug kernel: [19918.984544] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:10 canaan user.debug kernel: [19918.984974] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:10 canaan user.debug kernel: [19918.987070] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:10 canaan user.debug kernel: [19918.987088] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:10 canaan user.debug kernel: [19918.987117] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:10 canaan user.debug kernel: [19918.987648] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:10 canaan user.debug kernel: [19919.017122] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:10 canaan user.debug kernel: [19919.017147] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:10 canaan user.debug kernel: [19919.017179] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:10 canaan user.debug kernel: [19919.017591] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:10 canaan user.debug kernel: [19919.019644] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:10 canaan user.debug kernel: [19919.019656] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:10 canaan user.debug kernel: [19919.019686] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:10 canaan user.debug kernel: [19919.020181] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:12 canaan user.debug kernel: [19920.315663] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:12 canaan user.debug kernel: [19920.315686] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:12 canaan user.debug kernel: [19920.315722] i2c_designware 97070000.i2c: Standard-mode HCNT:LCNT = 51:62
+Oct 14 16:17:12 canaan user.debug kernel: [19920.315735] i2c_designware 97070000.i2c: Fast-mode HCNT:LCNT = 8:19
+Oct 14 16:17:12 canaan user.debug kernel: [19920.315776] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:12 canaan user.debug kernel: [19920.316194] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:12 canaan user.debug kernel: [19920.318297] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:12 canaan user.debug kernel: [19920.318317] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:12 canaan user.debug kernel: [19920.318347] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:12 canaan user.debug kernel: [19920.318872] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:12 canaan user.debug kernel: [19920.349059] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:12 canaan user.debug kernel: [19920.349084] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:12 canaan user.debug kernel: [19920.349121] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:12 canaan user.debug kernel: [19920.349524] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:12 canaan user.debug kernel: [19920.351596] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:12 canaan user.debug kernel: [19920.351611] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:12 canaan user.debug kernel: [19920.351629] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:12 canaan user.debug kernel: [19920.352115] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:12 canaan user.debug kernel: [19920.383261] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:12 canaan user.debug kernel: [19920.383304] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:12 canaan user.debug kernel: [19920.383364] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:12 canaan user.debug kernel: [19920.383778] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:12 canaan user.debug kernel: [19920.385920] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:12 canaan user.debug kernel: [19920.385959] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:12 canaan user.debug kernel: [19920.386007] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:12 canaan user.debug kernel: [19920.386511] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:12 canaan user.debug kernel: [19920.681839] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:12 canaan user.debug kernel: [19920.681864] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:12 canaan user.debug kernel: [19920.681893] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:12 canaan user.debug kernel: [19920.682313] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:12 canaan user.debug kernel: [19920.684828] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:12 canaan user.debug kernel: [19920.684850] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:12 canaan user.debug kernel: [19920.684878] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:12 canaan user.debug kernel: [19920.685392] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:12 canaan user.debug kernel: [19920.781744] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:12 canaan user.debug kernel: [19920.781769] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:12 canaan user.debug kernel: [19920.781800] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:12 canaan user.debug kernel: [19920.782216] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:12 canaan user.debug kernel: [19920.785000] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:12 canaan user.debug kernel: [19920.785024] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:12 canaan user.debug kernel: [19920.785064] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:12 canaan user.debug kernel: [19920.785558] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19922.313318] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:14 canaan user.debug kernel: [19922.313343] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19922.313382] i2c_designware 97070000.i2c: Standard-mode HCNT:LCNT = 51:62
+Oct 14 16:17:14 canaan user.debug kernel: [19922.313395] i2c_designware 97070000.i2c: Fast-mode HCNT:LCNT = 8:19
+Oct 14 16:17:14 canaan user.debug kernel: [19922.313427] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19922.313864] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19922.316004] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:14 canaan user.debug kernel: [19922.316031] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19922.316077] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19922.316609] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19922.346612] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:14 canaan user.debug kernel: [19922.346641] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19922.346684] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19922.347093] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19922.349149] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:14 canaan user.debug kernel: [19922.349160] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19922.349191] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19922.349681] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19922.379902] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:14 canaan user.debug kernel: [19922.379927] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19922.379962] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19922.380380] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19922.382477] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:14 canaan user.debug kernel: [19922.382498] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19922.382525] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19922.383028] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19922.413549] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:14 canaan user.debug kernel: [19922.413573] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19922.413605] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19922.414010] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19922.416068] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:14 canaan user.debug kernel: [19922.416087] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19922.416110] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19922.416609] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19922.447560] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:14 canaan user.debug kernel: [19922.447614] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19922.447659] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19922.448063] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19922.452648] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:14 canaan user.debug kernel: [19922.452672] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19922.452695] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19922.453182] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19922.479761] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:14 canaan user.debug kernel: [19922.479785] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19922.479821] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19922.480242] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19922.482339] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:14 canaan user.debug kernel: [19922.482356] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19922.482409] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19922.482906] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19923.012476] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:14 canaan user.debug kernel: [19923.012504] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19923.012544] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19923.012952] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19923.015017] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:14 canaan user.debug kernel: [19923.015036] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19923.015058] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19923.015550] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19923.045749] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:14 canaan user.debug kernel: [19923.045776] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19923.045816] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19923.046228] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19923.048308] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:14 canaan user.debug kernel: [19923.048324] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19923.048349] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19923.048855] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19923.080484] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:14 canaan user.debug kernel: [19923.080508] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19923.080545] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19923.080945] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:14 canaan user.debug kernel: [19923.083083] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:14 canaan user.debug kernel: [19923.083101] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:14 canaan user.debug kernel: [19923.083126] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:14 canaan user.debug kernel: [19923.083628] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:15 canaan user.debug kernel: [19924.044650] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:15 canaan user.debug kernel: [19924.044679] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:15 canaan user.debug kernel: [19924.044717] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:15 canaan user.debug kernel: [19924.045137] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:15 canaan user.debug kernel: [19924.047400] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:15 canaan user.debug kernel: [19924.047424] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:15 canaan user.debug kernel: [19924.047467] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:15 canaan user.debug kernel: [19924.047963] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:15 canaan user.debug kernel: [19924.078069] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:15 canaan user.debug kernel: [19924.078095] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:15 canaan user.debug kernel: [19924.078126] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:15 canaan user.debug kernel: [19924.078536] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:15 canaan user.debug kernel: [19924.081827] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:15 canaan user.debug kernel: [19924.081840] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:15 canaan user.debug kernel: [19924.081856] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:15 canaan user.debug kernel: [19924.082348] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:15 canaan user.debug kernel: [19924.111128] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:15 canaan user.debug kernel: [19924.111153] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:15 canaan user.debug kernel: [19924.111191] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:15 canaan user.debug kernel: [19924.111603] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:15 canaan user.debug kernel: [19924.113679] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:15 canaan user.debug kernel: [19924.113700] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:15 canaan user.debug kernel: [19924.113734] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:15 canaan user.debug kernel: [19924.114233] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:16 canaan user.debug kernel: [19924.810324] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:16 canaan user.debug kernel: [19924.810347] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:16 canaan user.debug kernel: [19924.810382] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:16 canaan user.debug kernel: [19924.810811] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:16 canaan user.debug kernel: [19924.812904] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:16 canaan user.debug kernel: [19924.812920] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:16 canaan user.debug kernel: [19924.812947] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:16 canaan user.debug kernel: [19924.813460] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:16 canaan user.debug kernel: [19925.044460] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:16 canaan user.debug kernel: [19925.044482] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:16 canaan user.debug kernel: [19925.044515] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:16 canaan user.debug kernel: [19925.044940] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:16 canaan user.debug kernel: [19925.047016] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:16 canaan user.debug kernel: [19925.047031] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:16 canaan user.debug kernel: [19925.047056] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:16 canaan user.debug kernel: [19925.047547] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:16 canaan user.debug kernel: [19925.081616] i2c i2c-0: master_xfer[0] W, addr=0x10, len=3
+Oct 14 16:17:16 canaan user.debug kernel: [19925.081640] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:16 canaan user.debug kernel: [19925.081673] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:16 canaan user.debug kernel: [19925.082076] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:17:16 canaan user.debug kernel: [19925.085607] i2c i2c-0: master_xfer[0] W, addr=0x10, len=4
+Oct 14 16:17:16 canaan user.debug kernel: [19925.085629] i2c_designware 97070000.i2c: i2c_dw_xfer: msgs: 1
+Oct 14 16:17:16 canaan user.debug kernel: [19925.085657] i2c_designware 97070000.i2c: enabled=0x1 stat=0x10
+Oct 14 16:17:16 canaan user.debug kernel: [19925.086160] i2c_designware 97070000.i2c: enabled=0x1 stat=0x710
+Oct 14 16:19:37 canaan auth.err sshd[424]: error: Could not get shadow information for root
+Oct 14 16:19:37 canaan auth.info sshd[424]: Accepted password for root from 192.168.1.2 port 55301 ssh2

@@ -2,12 +2,18 @@
 <html lang="en" >
 
 <?php
-include ("../inc/common.php");
+require_once ("../inc/common.php");
 echo $header;
+// include ("menu.php");
+
+
+
+
+
 ?>
 
 <body>
-    <div id="wrapper">
+    <div id="wrapper"><?=$sidemenu?>
 		<div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
 				<p class="menuLocationInfo"><span>Setup</span> > <span>Maintenance</span> > <strong>Users</strong></p>
@@ -23,9 +29,9 @@ echo $header;
 								</div>
 							</div>
 							<div class="card-footer">
-								<button id="btnAdd" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#userInfoModal">Add</button>
-								<button id="btnModify" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#userInfoModal">Modify</button>
-								<button id="btnRemove" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#userDelModal">Remove</button>
+								<button id="btnAdd" class="btn btn-primary btn-sm" data-toggle="modal" >Add</button>
+								<button id="btnModify" class="btn btn-primary btn-sm" data-toggle="modal">Modify</button>
+								<button id="btnRemove" class="btn btn-secondary btn-sm" data-toggle="modal">Remove</button>
 							</div>
 						</div>
 					</div>
@@ -52,16 +58,20 @@ echo $header;
 </div>
 
 <!-- Add, modify Modal-->
-<div class="modal fade" id="userInfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="userInfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h6 class="modal-title" id="exampleModalLabel">User information</h6>
-				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+				<span class="col-md-5 ml-4" id="tagAdd" hidden>Add</span>
+				<span class="col-md-5 ml-4" id="tagModify" hidden>Modify</span>
+				<span class="col-md-5 ml-4" id="tagRemove" hidden>Remove</span>
+				<button class="close" type="button" id="modalX" aria-label="Close">
 					<span aria-hidden="true">x</span>
 				</button>
 			</div>
 			<div class="card-body">
+				<input type="hidden" id="modalAction"/>
 				<div class="form-group form-inline">
 					<span class="col-md-5">User name</span>
 					<input type="text" id="formUserName" class="form-control form-control-sm" />
@@ -79,23 +89,23 @@ echo $header;
 					<span>User group</span>
 					<div class="form-group ml-2">
 						<label class="form-check mb-0">
-							<input type="radio" id="formUserGroup0" name="formUserGroup" value="viewer" class="form-check-input" />
-							<span>Viewer</span>
+							<input type="radio" id="formUserGroup0" name="formUserGroup" value="administrator" class="form-check-input" />
+							<span>Administrator</span>
 						</label>
 						<label class="form-check mb-0">
 							<input type="radio" id="formUserGroup1" name="formUserGroup" value="operator" class="form-check-input" />
 							<span class="form-check-label">Operator</span>
 						</label>
 						<label class="form-check">
-							<input type="radio" id="formUserGroup2" name="formUserGroup" value="administrator" class="form-check-input" />
-							<span class="form-check-label">Administrator</span>
+							<input type="radio" id="formUserGroup2" name="formUserGroup" value="viewer" class="form-check-input" />
+							<span class="form-check-label">Viewer</span>
 						</label>
 					</div>
 				</div>										
 			</div>
 			<div class="modal-footer">
-				<button id="modalCancel" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-				<button id="modalApply" class="btn btn-primary" data-dismiss="modal">Apply</button>
+				<button id="modalApply" class="btn btn-primary">Apply</button>
+				<button id="modalCancel" class="btn btn-secondary">Cancel</button>
 			</div>
 		</div>
 	</div>
@@ -107,36 +117,159 @@ echo $header;
 </body>
 <?=$footer?>
 <script>
+var user_info = new Array();
 $("button").on("click", function () {
-	console.log(this);
-	if (this.id == "modalApply") {
-		console.log($("#formUserName").val());
+	// console.log(this);
+	if (this.id == "btnAdd" || this.id == "btnModify" || this.id == "btnRemove"){
+		$("#tagAdd").prop("hidden", true);
+		$("#tagModify").prop("hidden", true);
+		$("#tagRemove").prop("hidden", true);
+		$("#formUserName").val("");
+		$("#formUserPassword").val("");
+		$("#formUserConfirmPassword").val("");
+		$("#formUserGroup0").prop('checked', false);
+		$("#formUserGroup1").prop('checked', false);
+		$("#formUserGroup2").prop('checked', false);
 	}
+
+	if (this.id == "btnAdd"){
+		$("#userInfoModal").modal("show");
+		$("#formUserName").prop("readonly", false);
+		$("#modalAction").val("add");
+		$("#tagAdd").prop("hidden", false);
+	}
+	else if (this.id == "btnModify"){
+		$("#modalAction").val("modify");
+		if ($("#formUserList").val()) {
+			$("#userInfoModal").modal("show");
+			$("#tagModify").prop("hidden", false);
+			$("#formUserName").val($("#formUserList").val());
+			$("#formUserName").prop("readonly", true);
+			for (let i=0; i<user_info.length; i++){
+				if (user_info[i]['id'] == $("#formUserList").val()) {
+					$("#formUserGroup" + user_info[i]['level']).prop('checked', true);
+				}
+			}
+		}
+	}	
+	else if (this.id == "btnRemove"){
+		$("#modalAction").val("remove");
+		if ($("#formUserList").val()) {
+			$("#userInfoModal").modal("show");
+			$("#tagRemove").prop("hidden", false);
+			$("#formUserName").val($("#formUserList").val());
+		}
+	}	
+	else if (this.id == "btnApply"){
+		let url = "/uapi-cgi/param.cgi?action=update_batch";
+		sdata = {
+			"user.anonymousviewerlogin": $("#formAnonymous").prop("checked") ? "yes": "no"
+		}
+		let posting = $.post(url,{sdata});
+		posting.done(function(data) {
+			console.log(data);
+		});
+
+	}	
+	else if (this.id == "modalApply") {
+		let action  = $("#modalAction").val();
+		if (checkdata()){
+			proc_user(action);
+		}
+	}
+	else if (this.id == "modalCancel") {
+		$("#userInfoModal").modal("hide");
+	}
+	else if (this.id == "modalX") {
+		$("#userInfoModal").modal("hide");
+	}	
 });
 
-$("select").on("click", function () {
-	console.log(this);
-	console.log(this.id, this.value);
-});
+function checkdata() {
+	let username = $("#formUserName").val();
+	let passwd   = $("#formUserPassword").val();
+	let passwd2  = $("#formUserConfirmPassword").val();
+	let usergroup = $("#formUserGroup0").prop('checked') ? 0 :
+					$("#formUserGroup1").prop('checked') ? 1 :
+					$("#formUserGroup2").prop('checked') ? 2 : -1;
+
+	if (!username.trim()){
+		alert ("Error: empty user name");
+		return false;
+	}
+	if (!passwd.trim() || !passwd2.trim()){
+		alert ("Error: empty password");
+		return false;
+	}
+	if (passwd.trim() != passwd2.trim()){
+		alert ("Error: passwords are not match");
+		return false;
+	}
+	if (usergroup == -1){
+		alert ("Error: select user group");
+		return false;
+	}
+
+	return true;
+}
+function proc_user(action) {
+	var sdata = {
+		act:		action,
+		username: 	$("#formUserName").val(),
+		passwd:		$("#formUserPassword").val(),
+		usergroup: 	$("#formUserGroup0").prop('checked') ? 0 :
+					$("#formUserGroup1").prop('checked') ? 1 :
+					$("#formUserGroup2").prop('checked') ? 2 : 3,
+	};
+	let url = "/uapi-cgi/param.cgi?action=update_batch&group=users";
+	let posting = $.post(url,{sdata});
+	posting.done(function(data) {
+		console.log(data);
+		if (data.search("update FAIL")>0) {
+			alert("Changes update fail");
+		}		
+		else if (data.search("update OK")>0) {
+			alert("Changes saved");
+			$("#userInfoModal").modal("hide");
+
+		}
+
+
+	});		
+
+
+	
+}
+
+// $("select").on("click", function () {
+// 	console.log(this);
+// 	console.log(this.id, this.value);
+// });
 
 
 function loadUSERConfig(){
 	// url = "/inc/query.php?page=upnp";
-	user_level = ['Administrator', 'Operator', 'Viewer'];
-	url = "/uapi-cgi/param.cgi?action=list&table=user_tbl&format=json";
+	// user_level = ['Administrator', 'Operator', 'Viewer'];
+	url = "/uapi-cgi/param.cgi?action=list&format=json&group=users,user";
 	$.getJSON(url, function(response) {
 		console.log(response);
+
+		user_level = response['user']['grouplist'].split(",");
 		$("#formUserList").empty();
-		response.forEach(function(item){
-			// $("select#formUserList").append("<option value='" + item.id + "'></option>")
-			// .find("option").last()
-			// .append("&nbsp;"+FillText(item.id, 30, "left")+FillText($user_level[item.level], 20, "left"));
-			$("select#formUserList").append("<option value='" + item.id + "'>&nbsp;"+FillText(item.id, 30, "left") + FillText(user_level[item.level], 20, "left")+"</option>");
+		response['users'].forEach(function(item){
+			user_info.push(item);
+			// $("select#formUserList").append("<option value='" + item.id + "'>" + FillText(item.id,50,"left") + FillText(user_level[item.level], 50, "right")+"</option>");
+			let txt = item.id;
+			for (let j=txt.length; j<30; j++){
+				txt += "&nbsp; ";
+			}
+			txt += user_level[item.level];
+
+			$("select#formUserList").append("<option value='" + item.id + "'>" + txt +"</option>");
 		});
-		// if (response['NETWORK.Upnp.enable']=='yes'){
-		// 	$("#formUpnpEnable").prop('checked', true);
-		// }
-		// $("#formUpnpFriName").val(response['NETWORK.Upnp.friendlyname']);
+		if (response['user']['anonymousviewerlogin'] == 'yes'){
+			$("#formAnonymous").prop("checked", true);
+		}
 	});
 }
 

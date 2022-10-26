@@ -1,0 +1,102 @@
+[01-Jan-1970 08:00:04] NOTICE: fpm is running, pid 143
+[01-Jan-1970 08:00:04] NOTICE: ready to handle connections
+[07-Oct-2022 13:46:43] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[07-Oct-2022 23:50:56] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[01-Jan-1970 08:00:06] NOTICE: fpm is running, pid 138
+[01-Jan-1970 08:00:06] NOTICE: ready to handle connections
+[08-Oct-2022 04:11:21] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[01-Jan-1970 08:00:06] NOTICE: fpm is running, pid 140
+[01-Jan-1970 08:00:06] NOTICE: ready to handle connections
+[08-Oct-2022 09:14:38] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[08-Oct-2022 16:12:03] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[09-Oct-2022 18:44:41] NOTICE: Terminating ...
+[09-Oct-2022 18:44:41] NOTICE: exiting, bye-bye!
+[01-Jan-1970 08:00:04] NOTICE: fpm is running, pid 138
+[01-Jan-1970 08:00:04] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[10-Oct-2022 00:52:37] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 138
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:10] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[01-Jan-1970 08:00:06] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:06] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:06] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:06] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:06] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:06] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:12] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 138
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[10-Oct-2022 01:53:57] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[01-Jan-1970 08:00:06] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:06] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 138
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[10-Oct-2022 03:10:33] NOTICE: Terminating ...
+[10-Oct-2022 03:10:33] NOTICE: exiting, bye-bye!
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 138
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[11-Oct-2022 09:12:15] NOTICE: Terminating ...
+[11-Oct-2022 09:12:15] NOTICE: exiting, bye-bye!
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[11-Oct-2022 15:59:30] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[11-Oct-2022 16:29:46] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[01-Jan-1970 08:00:06] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:06] NOTICE: ready to handle connections
+[11-Oct-2022 18:38:26] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[12-Oct-2022 04:36:00] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[12-Oct-2022 07:19:14] NOTICE: Terminating ...
+[12-Oct-2022 07:19:14] NOTICE: exiting, bye-bye!
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 138
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:06] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:06] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:11] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:06] NOTICE: fpm is running, pid 140
+[01-Jan-1970 08:00:06] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[13-Oct-2022 01:28:25] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:06] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:06] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:06] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:06] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:06] NOTICE: fpm is running, pid 140
+[01-Jan-1970 08:00:06] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:06] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:06] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:05] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:05] NOTICE: ready to handle connections
+[01-Jan-1970 08:00:08] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[01-Jan-1970 08:00:06] NOTICE: fpm is running, pid 139
+[01-Jan-1970 08:00:06] NOTICE: ready to handle connections
+[14-Oct-2022 10:46:03] WARNING: [pool www] server reached max_children setting (5), consider raising it
+[14-Oct-2022 12:48:24] WARNING: [pool www] server reached max_children setting (5), consider raising it

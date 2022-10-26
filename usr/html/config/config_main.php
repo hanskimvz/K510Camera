@@ -4,13 +4,17 @@
 <?php
 // $_COOKIE['selected_language'] = "korean";
 // print_r($_COOKIE);
+
 include ("../inc/common.php");
 echo $header;
 
-require_once $_SERVER['DOCUMENT_ROOT']."/inc/json.php";
-$json = new Services_JSON();
 $json_str = file_get_contents($_SERVER['DOCUMENT_ROOT']."/inc/menu.json");
-$objmenu = $json->decode($json_str);
+$objmenu = json_decode($json_str);
+
+// require_once $_SERVER['DOCUMENT_ROOT']."/inc/json.php";
+// $json = new Services_JSON();
+// $json_str = file_get_contents($_SERVER['DOCUMENT_ROOT']."/inc/menu.json");
+// $objmenu = $json->decode($json_str);
 // print_r($objmenu);
 
 $top_left_menu= '';
@@ -29,7 +33,6 @@ $top_left_menu = '<div id="topmenu" class="btn-group btn-group text-center mt-3 
 //         <button class="btn btn-white" onClick="location.href=(\'/storage/\')" style="padding:10px 0px 10px 0px; text-align:center;">Search</button>
 // </div>';
 
-
 $leftMenu = '<li class="nav-item">';
 foreach(($objmenu->config) as $grp=>$obj){
     if ($obj->display =='n') {
@@ -43,6 +46,7 @@ foreach(($objmenu->config) as $grp=>$obj){
             continue;
         }
 		$leftMenu .= '<a id="'.($param->lang_key).'" class="collapse-item" href="'.$param->href.'"  target="contentFrame"><span>'.($param->display).'</span></a>';
+        // $leftMenu .= '<a id="'.($param->lang_key).'" class="collapse-item" href="#"  target="contentFrame"><span>'.($param->display).'</span></a>';
 	}
 	$leftMenu .= '</div></div>';
 }
@@ -76,7 +80,10 @@ $href = 'users.html';
             <div id="content">
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-2 static-top shadow"><h3 class="ml-5">NiceHans</h3></nav>
 
-                <div class="container-fluid">
+                <div class="container-fluid" id="contentsBody">
+                    <?php
+                    // echo file_get_contents($href);
+                    ?>
                     <iframe src="<?=$href?>" name="contentFrame" width="100%" height="1800px" scrolling="no" marginheight="1" marginwidth="2" frameborder="0"></iframe>
                 </div>
             </div>

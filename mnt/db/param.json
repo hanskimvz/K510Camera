@@ -1,0 +1,2034 @@
+
+{
+    "ADREC": {
+        "backupinterval": "60",
+        "duration": "0",
+        "enable": "no",
+        "maxduration": "0",
+        "recycle": "yes",
+        "resource": "video",
+        "segmentsize": "700",
+        "source": "first",
+        "storage": "sd",
+        "version": "1",
+        "Ftp": {
+            "account": "",
+            "address": "",
+            "name": "",
+            "port": "21",
+            "prefixname": "usn",
+            "prefixusername": "",
+            "pwd": "",
+            "targetpath": "",
+            "Infofile": {
+                "enable": "no"
+            }
+        }
+    },
+    "AVIREC": {
+        "enable": "no",
+        "enableautosense": "no",
+        "prefixname": "REC",
+        "recycle": "yes",
+        "resource": "video",
+        "segsize": "100",
+        "segtime": "10",
+        "segtype": "size",
+        "source": "first",
+        "storage": "sd",
+        "verifyintegrity": "no"
+    },
+    "BITXT": {
+        "nbrofchannel": "1",
+        "Ch0": {
+            "nbrofstream": "1",
+            "St0": {
+                "enable": "yes",
+                "Date": {
+                    "enable": "yes",
+                    "position": "6%:12%"
+                },
+                "Name": {
+                    "enable": "yes",
+                    "position": "90%:90%",
+                    "text": "This is Hans kim with UDP"
+                },
+                "Time": {
+                    "enable": "yes",
+                    "millisec": "no",
+                    "position": "6%:16%"
+                }
+            }
+        }
+    },
+    "DDNS": {
+        "domainname": "",
+        "enable": "no",
+        "pwd": "",
+        "servertype": "DynDNS",
+        "updatetime": "600",
+        "user": ""
+    },
+    "DIDO": {
+        "Di": {
+            "enable": "yes",
+            "nbrofchannel": "0",
+            "type": "relay",
+            "Ch0": {
+                "enable": "yes",
+                "name": "DI1_NAME",
+                "trig": "close",
+                "type": "relay"
+            }
+        },
+        "Do": {
+            "nbrofchannel": "0",
+            "Ch0": {
+                "enable": "yes",
+                "name": "DO1_NAME",
+                "opermanu": "yes",
+                "trig": "off",
+                "trigon": "0"
+            }
+        },
+        "Map": {
+            "Di": {
+                "nbrofchannel": "0",
+                "Ch0": {
+                    "detectiontype": "edge",
+                    "duration": "5",
+                    "elapse": "5",
+                    "type": "no"
+                }
+            },
+            "Do": {
+                "Ch0": {
+                    "detectiontype": "edge",
+                    "duration": "5",
+                    "elapse": "5"
+                }
+            }
+        }
+    },
+    "ENCODER": {
+        "nbrofchannel": "1",
+        "Ch0": {
+            "description": "",
+            "name": "default",
+            "profile": "default",
+            "Audioin": {
+                "nbrofchannel": "1",
+                "Ch0": {
+                    "enable": "no",
+                    "port": "0",
+                    "volume": "128",
+                    "Adc": {
+                        "": "16000"
+                    }
+                }
+            },
+            "Audioout": {
+                "nbrofchannel": "1",
+                "Ch0": {
+                    "enable": "no",
+                    "name": "audioout",
+                    "volume": "128",
+                    "tcp": {
+                        "": "6000"
+                    }
+                }
+            },
+            "Snapshot": {
+                "enable": "no",
+                "maxfps": "2",
+                "name": "snapshot",
+                "quality": "70",
+                "resolution": "1920x1080"
+            },
+            "Videocodec": {
+                "lock": "yes",
+                "nbrofstream": "2",
+                "recenable": "no",
+                "vcaenable": "no",
+                "St0": {
+                    "enable": "yes",
+                    "name": "stream-0",
+                    "standard": "h264",
+                    "H264": {
+                        "": "no"
+                    },
+                    "Mjpeg": {
+                        "": "1280x720"
+                    }
+                },
+                "St1": {
+                    "enable": "yes",
+                    "name": "stream-1",
+                    "standard": "mjpeg",
+                    "H264": {
+                        "": "no"
+                    },
+                    "Mjpeg": {
+                        "": "1920x1080"
+                    }
+                }
+            }
+        }
+    },
+    
+    "EVENT": {
+        "Default": {
+            "Notify": {
+                "Email": {
+                    "bcc": "",
+                    "description": "",
+                    "id": "0",
+                    "name": "",
+                    "to": ""
+                },
+                "Ftp": {
+                    "account": "",
+                    "address": "0.0.0.0",
+                    "description": "",
+                    "id": "0",
+                    "msg": "",
+                    "name": "",
+                    "nameformatdate": "yyyymmdd",
+                    "nameformatprefix": "ip",
+                    "nameformattext": "",
+                    "port": "21",
+                    "pwd": "",
+                    "targetpath": ""
+                },
+                "Http": {
+                    "account": "",
+                    "address": "0.0.0.0",
+                    "description": "",
+                    "id": "0",
+                    "name": "",
+                    "optionenable": "yes",
+                    "port": "80",
+                    "pwd": "",
+                    "syntax": "\/cgi-bin\/test.cgi?action=query",
+                    "syntaxformat": "0",
+                    "timeout": "5"
+                }
+            }
+        },
+        "Legacy": {
+            "Alarm": {
+                "Ch0": {
+                    "timeout": "0"
+                }
+            },
+            "Rule": {
+                "Di": {
+                    "Ch0": {
+                        "": "0"
+                    },
+                    "Ch1": {
+                        "": "0"
+                    },
+                    "Ch2": {
+                        "": "0"
+                    },
+                    "Ch3": {
+                        "": "0"
+                    },
+                    "Email": {
+                        "": "no"
+                    },
+                    "Ftp": {
+                        "": "yes"
+                    },
+                    "Http": {
+                        "": "0,1,2"
+                    },
+                    "Multicast": {
+                        "": "no"
+                    },
+                    "Tcp": {
+                        "": "yes"
+                    }
+                },
+                "Md": {
+                    "do": "0",
+                    "Email": {
+                        "": "no"
+                    },
+                    "Ftp": {
+                        "": "yes"
+                    },
+                    "Http": {
+                        "": "0,1,2"
+                    },
+                    "Multicast": {
+                        "": "no"
+                    },
+                    "Tcp": {
+                        "": "yes"
+                    }
+                },
+                "Vca": {
+                    "Alarm": {
+                        "": "no"
+                    },
+                    "Email": {
+                        "": "no"
+                    },
+                    "Ftp": {
+                        "": "yes"
+                    },
+                    "Multicast": {
+                        "": "no"
+                    },
+                    "Tcp": {
+                        "": "yes"
+                    }
+                },
+                "Vsignal": {
+                    "do": "0",
+                    "Email": {
+                        "": "no"
+                    },
+                    "Ftp": {
+                        "": "yes"
+                    },
+                    "Http": {
+                        "": "0,1,2"
+                    },
+                    "Multicast": {
+                        "": "no"
+                    },
+                    "Tcp": {
+                        "": "yes"
+                    }
+                }
+            }
+        },
+        "Notify": {
+            "Email": {
+                "contentstype": "html",
+                "fromemail": "",
+                "list": "<?list(.E*.id)?>",
+                "nbrofcount": "<?count(.E*.id)?>",
+                "sendratelimit": "0",
+                "unitname": ""
+            },
+            "Ftp": {
+                "list": "<?list(.F*.id)?>",
+                "nbrofcount": "<?count(.F*.id)?>",
+                "F0": {
+                    "account": "",
+                    "address": "",
+                    "description": "",
+                    "id": "0",
+                    "msg": "",
+                    "name": "192.168.1.2",
+                    "nameformatdate": "yyyymmdd",
+                    "nameformatprefix": "ip",
+                    "nameformattext": "",
+                    "port": "21",
+                    "pwd": "",
+                    "targetpath": ""
+                }
+            },
+            "Http": {
+                "list": "<?list(.H*.id)?>",
+                "nbrofcount": "<?count(.H*.id)?>",
+                "H0": {
+                    "account": "root",
+                    "address": "http:\/\/127.0.0.1",
+                    "description": "",
+                    "id": "0",
+                    "name": "Reset_Ct0",
+                    "optionenable": "no",
+                    "port": "80",
+                    "pwd": "pass",
+                    "syntax": "nvc-cgi\/admin\/vca.cgi?action=update&group=VCA.Ch0.ct0&count=0",
+                    "syntaxformat": "0",
+                    "timeout": "5"
+                },
+                "H1": {
+                    "account": "root",
+                    "address": "http:\/\/127.0.0.1",
+                    "description": "",
+                    "id": "1",
+                    "name": "Reset_ct1",
+                    "optionenable": "no",
+                    "port": "80",
+                    "pwd": "pass",
+                    "syntax": "nvc-cgi\/admin\/vca.cgi?action=update&group=VCA.Ch0.ct1&count=0",
+                    "syntaxformat": "0",
+                    "timeout": "5"
+                },
+                "H2": {
+                    "account": "root",
+                    "address": "http:\/\/127.0.0.1",
+                    "description": "",
+                    "id": "2",
+                    "name": "Reset_Ct2",
+                    "optionenable": "no",
+                    "port": "80",
+                    "pwd": "pass",
+                    "syntax": "nvc-cgi\/admin\/vca.cgi?action=update&group=VCA.Ch0.ct2&count=0",
+                    "syntaxformat": "0",
+                    "timeout": "5"
+                }
+            },
+            "Message": {
+                "Customizedheader": {
+                    "fmt": "type=$MSGTYPE$@info=$MSGINFO$@CameraId=1@",
+                    "type": "custom"
+                },
+                "Dido": {
+                    "fmt": "count=$COUNT$@prevmask=$PREV_MASK$@currmask=$CURR_MASK$",
+                    "type": "default"
+                },
+                "Md": {
+                    "Detected": {
+                        "": "default"
+                    },
+                    "Enable": {
+                        "": "default"
+                    },
+                    "Zonecfg": {
+                        "": "default"
+                    }
+                },
+                "Network": {
+                    "fmt": "interface=$INTERFACE$@prev=$PREV_IP$,$PREV_SUBNET$,$PREV_GATEWAY$,$PREV_DNS1$,$PREV_DNS2$@curr=$CURR_IP$,$CURR_SUBNET$,$CURR_GATEWAY$,$CURR_DNS1$,$CURR_DNS2$",
+                    "type": "default"
+                },
+                "Pir": {
+                    "fmt": "status=$STATUS$@timestamp=$TIMESTAMP$",
+                    "type": "default"
+                },
+                "System": {
+                    "fmt": "type=$SYS_TYPE$@action=$SYS_ACTION$@info=$SYS_INFO$",
+                    "type": "default"
+                },
+                "Temperature": {
+                    "fmt": "celsius=$TEMP_CELSIUS$,$TEMP_CELSIUS_PRECISION3$@farhrenheit=$TEMP_FAHRENHEIT$,$TEMP_FAHRENHEIT_PRECISION3$@heater=$HEATER$@fan=$FAN$",
+                    "type": "default"
+                },
+                "Vca": {
+                    "Alarm": {
+                        "": "default"
+                    },
+                    "Config": {
+                        "": "default"
+                    },
+                    "Counter": {
+                        "": "default"
+                    }
+                },
+                "Vsignal": {
+                    "fmt": "count=$COUNT$@prevmask=$PREV_MASK$@currmask=$CURR_MASK$",
+                    "type": "default"
+                }
+            },
+            "Multicast": {
+                "address": "224.0.0.251",
+                "enable": "yes",
+                "name": "Multicast Event",
+                "port": "2555",
+                "ttl": "1"
+            },
+            "Tcp": {
+                "enable": "yes",
+                "name": "Tcp Event",
+                "port": "2555"
+            },
+            "Tcppush": {
+                "address": "192.168.3.3",
+                "enable": "no",
+                "name": "",
+                "port": "7700",
+                "Alive": {
+                    "timeout": "2",
+                    "type": "unlimited"
+                },
+                "Connect": {
+                    "timeout": "180"
+                },
+                "Send": {
+                    "timeout": "18"
+                }
+            }
+        }
+    },
+    "EVENTPROFILE": {
+        "enable": "yes",
+        "list": "0",
+        "nbrofcount": "1",
+        "Default": {
+            "Profile": {
+                "description": "This is test",
+                "enable": "no",
+                "id": "0",
+                "name": "test",
+                "Action": {
+                    "enable": "no",
+                    "System": {
+                        "": ""
+                    },
+                    "Vca": {
+                        "": ""
+                    }
+                },
+                "Notification": {
+                    "logenable": "no",
+                    "Alarm": {
+                        "": "no"
+                    },
+                    "Email": {
+                        "": "yes"
+                    },
+                    "Ftp": {
+                        "": "no"
+                    },
+                    "Http": {
+                        "": "GET"
+                    },
+                    "Multicast": {
+                        "": "no"
+                    },
+                    "Recorder": {
+                        "": "yes"
+                    },
+                    "Tcp": {
+                        "": "no"
+                    },
+                    "Tcppush": {
+                        "": "no"
+                    }
+                },
+                "Schedule": {
+                    "list": "",
+                    "nbrofcount": "0"
+                },
+                "Source": {
+                    "Advrl": {
+                        "": ""
+                    },
+                    "Alarm": {
+                        "": "active"
+                    },
+                    "Custom0": {
+                        "": "no"
+                    },
+                    "Daynight": {
+                        "": "both"
+                    },
+                    "Face": {
+                        "": ""
+                    },
+                    "Motion": {
+                        "": "5"
+                    },
+                    "Pir": {
+                        "": ""
+                    },
+                    "Recurrence": {
+                        "": "1"
+                    },
+                    "Schedule": {
+                        "": ""
+                    },
+                    "Sensor": {
+                        "": "active"
+                    },
+                    "System": {
+                        "": "all"
+                    },
+                    "Vca": {
+                        "": "all"
+                    }
+                }
+            }
+        },
+        "P0": {
+            "description": "TcpPush",
+            "enable": "yes",
+            "id": "0",
+            "name": "TcpPush",
+            "Action": {
+                "enable": "no",
+                "System": {
+                    "enableactionlist": ""
+                },
+                "Vca": {
+                    "enableactionlist": "",
+                    "resetcounterlist": ""
+                }
+            },
+            "Notification": {
+                "logenable": "no",
+                "Alarm": {
+                    "duration": "1",
+                    "enable": "no",
+                    "minholdontime": "1",
+                    "mode": "edge",
+                    "trigger": "active",
+                    "unlimitedoflevel": "no"
+                },
+                "Email": {
+                    "content": "",
+                    "enable": "no",
+                    "enablelist": "",
+                    "holdoff": "0",
+                    "nbrofpost": "1",
+                    "nbrofpre": "2",
+                    "snapshot": "no",
+                    "subject": "",
+                    "thumbnail": "yes"
+                },
+                "Ftp": {
+                    "enable": "no",
+                    "enablelist": "",
+                    "snapshot": "no",
+                    "text": "no",
+                    "thumbnail": "no"
+                },
+                "Http": {
+                    "enable": "yes",
+                    "enablelist": "0,1,2",
+                    "method": "GET",
+                    "Post": {
+                        "": "no"
+                    }
+                },
+                "Multicast": {
+                    "enable": "no"
+                },
+                "Recorder": {
+                    "enable": "no",
+                    "netlossenable": "no",
+                    "postinterval": "10",
+                    "preinterval": "3",
+                    "thumbnail": "yes"
+                },
+                "Tcp": {
+                    "enable": "no"
+                },
+                "Tcppush": {
+                    "enable": "yes"
+                }
+            },
+            "Schedule": {
+                "list": "",
+                "nbrofcount": "0"
+            },
+            "Source": {
+                "Advrl": {
+                    "enable": "no",
+                    "enablelist": ""
+                },
+                "Alarm": {
+                    "enable": "no",
+                    "trigger": "active"
+                },
+                "Custom0": {
+                    "enable": "no"
+                },
+                "Daynight": {
+                    "enable": "no",
+                    "transition": "both"
+                },
+                "Face": {
+                    "enable": "no",
+                    "enablelist": ""
+                },
+                "Motion": {
+                    "enable": "no",
+                    "enablelist": "",
+                    "interval": "5"
+                },
+                "Pir": {
+                    "enable": "no"
+                },
+                "Recurrence": {
+                    "enable": "no",
+                    "unit": "day",
+                    "value": "1"
+                },
+                "Schedule": {
+                    "enable": "yes",
+                    "enablelist": "0"
+                },
+                "Sensor": {
+                    "enable": "no",
+                    "trigger": "active"
+                },
+                "System": {
+                    "apchgenable": "no",
+                    "apperrenable": "no",
+                    "cpuenable": "no",
+                    "memoryenable": "no",
+                    "netchgenable": "no",
+                    "netlossenable": "no",
+                    "recerrenable": "no",
+                    "storageenable": "no",
+                    "syserrenable": "no",
+                    "tempenable": "no",
+                    "vsignal": "no",
+                    "vsignaltrigger": "all"
+                },
+                "Vca": {
+                    "allzoneenable": "no",
+                    "configenable": "no",
+                    "countenable": "yes",
+                    "enable": "yes",
+                    "enablecounterlist": "0,1",
+                    "enablelist": "",
+                    "enablerulelist": "",
+                    "potentialenable": "no",
+                    "tamperenable": "no",
+                    "translatemd": "no",
+                    "zonetrigger": "all"
+                }
+            }
+        }
+    },
+    "FD": {
+        "enable": "no",
+        "nbrofchannel": "1",
+        "Ch0": {
+            "cliprateh": "150",
+            "clipratew": "130",
+            "confidence": "128",
+            "enable": "no",
+            "ignorecnt": "3",
+            "list": "0,1,2,3",
+            "maxcnt": "4",
+            "maxsizerate": "100",
+            "minsizerate": "0",
+            "nbrofzone": "4",
+            "sizeorder": "descending",
+            "trkfactorh": "100",
+            "trkfactorw": "100",
+            "trkholdon": "3000",
+            "Da0": {
+                "description": "",
+                "enable": "no",
+                "name": "da",
+                "position": "0,0,9999,0",
+                "trkduration": "120"
+            },
+            "Ez0": {
+                "enable": "no",
+                "name": "ez0",
+                "position": "0,0,0,0"
+            },
+            "Ez1": {
+                "enable": "no",
+                "name": "ez1",
+                "position": "0,0,0,0"
+            },
+            "Ez2": {
+                "enable": "no",
+                "name": "ez2",
+                "position": "0,0,0,0"
+            },
+            "Ez3": {
+                "enable": "no",
+                "name": "ez3",
+                "position": "0,0,0,0"
+            },
+            "Osd": {
+                "enable": "no",
+                "snapshot": "no",
+                "st0": "no",
+                "st1": "no",
+                "zone": "no"
+            },
+            "Z0": {
+                "description": "",
+                "enable": "no",
+                "name": "zone",
+                "number": "0",
+                "position": "0,0,9999,9999"
+            },
+            "Z1": {
+                "description": "",
+                "enable": "no",
+                "name": "zone",
+                "number": "1",
+                "position": "2500,0,4999,9999"
+            },
+            "Z2": {
+                "description": "",
+                "enable": "no",
+                "name": "zone",
+                "number": "2",
+                "position": "5000,0,7499,9999"
+            },
+            "Z3": {
+                "description": "",
+                "enable": "no",
+                "name": "zone",
+                "number": "3",
+                "position": "7500,0,10000,9999"
+            }
+        }
+    },
+    "FWUPGRADE": {
+        "Server": {
+            "enable": "no",
+            "url": ""
+        }
+    },
+    "GENETEC": {
+        "enable": "yes",
+        "version": "1.0.0"
+    },
+    "HEARTBEAT": {
+        "enable": "yes",
+        "interval": "60",
+        "Multicast": {
+            "enable": "no"
+        },
+        "Tcp": {
+            "enable": "no"
+        },
+        "Tcppush": {
+            "enable": "yes"
+        }
+    },
+    "HOST": {
+        "address": "",
+        "enable": "no",
+        "port": "5000",
+        "updateinterval": "60"
+    },
+    "IOT": {
+        "address": "iot.ucount.it",
+        "enable": "no",
+        "port": "1883",
+        "status": ""
+    },
+    "IPFILTER": {
+        "adminip": "",
+        "alwaysallowicmp": "yes",
+        "apply": "",
+        "enable": "no",
+        "type": "deny",
+        "Allowlist": {
+            "filter": ""
+        },
+        "Denylist": {
+            "filter": ""
+        }
+    },
+    "MD": {
+        "enable": "yes",
+        "nbrofchannel": "1",
+        "zonemode": "position",
+        "Ch0": {
+            "enable": "yes",
+            "list": "0,1,2,3,4,5,6,7",
+            "nbrofzone": "8",
+            "Z0": {
+                "bitmask": "",
+                "description": "",
+                "duration": "0",
+                "enable": "no",
+                "id": "0",
+                "name": "zone",
+                "number": "0",
+                "objectsize": "128",
+                "position": "0,0,2499,4999",
+                "sensitivity": "128"
+            },
+            "Z1": {
+                "bitmask": "",
+                "description": "",
+                "duration": "0",
+                "enable": "no",
+                "id": "1",
+                "name": "zone",
+                "number": "1",
+                "objectsize": "128",
+                "position": "2500,0,4999,4999",
+                "sensitivity": "128"
+            },
+            "Z2": {
+                "bitmask": "",
+                "description": "",
+                "duration": "0",
+                "enable": "no",
+                "id": "2",
+                "name": "zone",
+                "number": "2",
+                "objectsize": "128",
+                "position": "5000,0,7499,4999",
+                "sensitivity": "128"
+            },
+            "Z3": {
+                "bitmask": "",
+                "description": "",
+                "duration": "0",
+                "enable": "no",
+                "id": "3",
+                "name": "zone",
+                "number": "3",
+                "objectsize": "128",
+                "position": "7500,0,10000,4999",
+                "sensitivity": "128"
+            },
+            "Z4": {
+                "bitmask": "",
+                "description": "",
+                "duration": "0",
+                "enable": "no",
+                "id": "4",
+                "name": "zone",
+                "number": "4",
+                "objectsize": "128",
+                "position": "0,5000,2499,10000",
+                "sensitivity": "128"
+            },
+            "Z5": {
+                "bitmask": "",
+                "description": "",
+                "duration": "0",
+                "enable": "no",
+                "id": "5",
+                "name": "zone",
+                "number": "5",
+                "objectsize": "128",
+                "position": "2500,5000,4999,10000",
+                "sensitivity": "128"
+            },
+            "Z6": {
+                "bitmask": "",
+                "description": "",
+                "duration": "0",
+                "enable": "no",
+                "id": "6",
+                "name": "zone",
+                "number": "6",
+                "objectsize": "128",
+                "position": "5000,5000,7499,10000",
+                "sensitivity": "128"
+            },
+            "Z7": {
+                "bitmask": "",
+                "description": "",
+                "duration": "0",
+                "enable": "no",
+                "id": "7",
+                "name": "zone",
+                "number": "7",
+                "objectsize": "128",
+                "position": "7500,5000,10000,10000",
+                "sensitivity": "128"
+            }
+        },
+        "Default": {
+            "Zone": {
+                "bitmask": "",
+                "description": "",
+                "duration": "0",
+                "enable": "yes",
+                "id": "0",
+                "name": "zone",
+                "number": "0",
+                "objectsize": "128",
+                "position": "500,900,3000,4000",
+                "sensitivity": "128"
+            }
+        },
+        "Metadata": {
+            "enable": "yes",
+            "blob": {
+                "enable": "yes"
+            }
+        }
+    },
+    "NETLOSS": {
+        "Detect": {
+            "Ethlink": {
+                "enable": "yes"
+            },
+            "Ping": {
+                "address": "",
+                "enable": "no",
+                "interval": "10"
+            }
+        }
+    },
+    "NETWORK": {
+        "nbrofethernet": "1",
+        "Dns": {
+            "alternate0": "",
+            "alternate1": "",
+            "alternate2": "",
+            "preferred": "8.8.8.8"
+        },
+        "Eth0": {
+            "broadcast": "192.168.255.255",
+            "dns0": "0.0.0.0",
+            "dns1": "0.0.0.0",
+            "gateway": "192.168.0.1",
+            "hostname": "NS602HD",
+            "interface": "eth0",
+            "ipaddress": "192.168.3.38",
+            "ipversion": "ipv4",
+            "mac": "00:13:23:A0:03:26",
+            "mode": "auto",
+            "mtu": "1500",
+            "nbrofdns": "2",
+            "subnet": "255.255.0.0",
+            "Autoip": {
+                "enable": "yes",
+                "ipaddress": "169.254.4.4",
+                "subnet": "255.255.0.0"
+            },
+            "Dhcp": {
+                "broadcast": "0.0.0.0",
+                "dns0": "0.0.0.0",
+                "dns1": "0.0.0.0",
+                "enable": "no",
+                "gateway": "0.0.0.0",
+                "ipaddress": "0.0.0.0",
+                "nbrofdns": "2",
+                "subnet": "0.0.0.0"
+            },
+            "Ipv6": {
+                "gateway": "",
+                "ipaddress": "",
+                "prefixlength": "128",
+                "raenable": "yes",
+                "dhcp": {
+                    "enable": "yes",
+                    "ipaddress": "",
+                    "type": "auto"
+                }
+            }
+        },
+        "Http": {
+            "authentype": "basic",
+            "enable": "yes",
+            "port": "80"
+        },
+        "Https": {
+            "enable": "no",
+            "port": "443"
+        },
+        "Ieee8021x": {
+            "eaptype": "tls",
+            "enable": "no",
+            "id": "",
+            "pwd": ""
+        },
+        "Ipv6": {
+            "enable": "no"
+        },
+        "Mdns": {
+            "enable": "yes",
+            "friendlyname": "NS602HD"
+        },
+        "Outerport": {
+            "rtsp": "554"
+        },
+        "Rtmp": {
+            "chunksize": "819200",
+            "enable": "yes",
+            "flashver": "",
+            "nbrofstream": "2",
+            "port": "1935",
+            "streambuffercount": "300",
+            "streambuffersize": "512",
+            "tcpsocketbuffersize": "100",
+            "St0": {
+                "appinstance": "first",
+                "appname": "live",
+                "Publish": {
+                    "bufferlength": "3000",
+                    "enable": "no",
+                    "type": "live",
+                    "url": ""
+                }
+            },
+            "St1": {
+                "appinstance": "second",
+                "appname": "live",
+                "Publish": {
+                    "bufferlength": "3000",
+                    "enable": "no",
+                    "type": "live",
+                    "url": ""
+                }
+            }
+        },
+        "Rtp": {
+            "nbrofstream": "2",
+            "St0": {
+                "Multicast": {
+                    "alwaysmulticast": "no",
+                    "audiodscp": "0",
+                    "audioipaddress": "0.0.0.0",
+                    "audioport": "18890",
+                    "enable": "no",
+                    "enableqos": "no",
+                    "includeaudio": "yes",
+                    "includemeta": "yes",
+                    "includeonvifmeta": "no",
+                    "ipaddress": "0.0.0.0",
+                    "metadscp": "0",
+                    "metaipaddress": "0.0.0.0",
+                    "metaport": "18892",
+                    "name": "mfirststream",
+                    "onvifmetadscp": "0",
+                    "onvifmetaipaddress": "0.0.0.0",
+                    "onvifmetaport": "18894",
+                    "ttl": "1",
+                    "videodscp": "0",
+                    "videoport": "18888"
+                },
+                "Unicast": {
+                    "audiodscp": "0",
+                    "enable": "yes",
+                    "enableqos": "no",
+                    "includeaudio": "yes",
+                    "includemeta": "yes",
+                    "includeonvifmeta": "no",
+                    "metadscp": "0",
+                    "name": "ufirststream",
+                    "onvifmetadscp": "0",
+                    "videodscp": "0"
+                }
+            },
+            "St1": {
+                "Multicast": {
+                    "alwaysmulticast": "no",
+                    "audiodscp": "0",
+                    "audioipaddress": "0.0.0.0",
+                    "audioport": "28890",
+                    "enable": "no",
+                    "enableqos": "no",
+                    "includeaudio": "yes",
+                    "includemeta": "yes",
+                    "includeonvifmeta": "no",
+                    "ipaddress": "0.0.0.0",
+                    "metadscp": "0",
+                    "metaipaddress": "0.0.0.0",
+                    "metaport": "28892",
+                    "name": "msecondstream",
+                    "onvifmetadscp": "0",
+                    "onvifmetaipaddress": "0.0.0.0",
+                    "onvifmetaport": "28894",
+                    "ttl": "1",
+                    "videodscp": "0",
+                    "videoport": "28888"
+                },
+                "Unicast": {
+                    "audiodscp": "0",
+                    "enable": "yes",
+                    "enableqos": "no",
+                    "includeaudio": "yes",
+                    "includemeta": "yes",
+                    "includeonvifmeta": "no",
+                    "metadscp": "0",
+                    "name": "usecondstream",
+                    "onvifmetadscp": "0",
+                    "videodscp": "0"
+                }
+            }
+        },
+        "Rtsp": {
+            "bandwidth": "0",
+            "enable": "yes",
+            "port": "554",
+            "rtpheadercreatetype": "client",
+            "streambuffercount": "100",
+            "streambuffersize": "1024",
+            "tcpsocketbuffersize": "100",
+            "tunneltype": "standalone",
+            "udpsocketbuffersize": "50",
+            "Authen": {
+                "enable": "no",
+                "privilege": "administrator",
+                "type": "digest"
+            },
+            "Sessiontimeout": {
+                "audioencoder0": "60",
+                "metadata": "60",
+                "onvifmetadata": "60",
+                "videoencoder0": "60",
+                "videoencoder1": "60",
+                "videoencoder2": "60"
+            }
+        },
+        "Smtp": {
+            "address": "",
+            "auth": "",
+            "port": "",
+            "pwd": "",
+            "ssl": "",
+            "user": ""
+        },
+        "Snmp": {
+            "contact": "",
+            "enable": "no",
+            "incmib": "cap",
+            "location": "",
+            "rocommunity": "public",
+            "trap1sink": "",
+            "trap2sink": "",
+            "version": "v2c",
+            "trap1": {
+                "address": "",
+                "community": ""
+            },
+            "trap2": {
+                "address": "",
+                "community": ""
+            },
+            "user": {
+                "list": "<?list(.U*.id)?>",
+                "nbrofcount": "<?count(.U*.id)?>",
+                "Default": {
+                    "authprotocol": "sha",
+                    "id": "0",
+                    "name": "",
+                    "privprotocol": "aes",
+                    "pwd": ""
+                }
+            }
+        },
+        "Srtp": {
+            "enable": "no",
+            "protectionprofile": "srtp_aes128_cm_hmac_sha1_80",
+            "establish": {
+                "enable": "no",
+                "type": "sdp"
+            },
+            "key": {
+                "master": "",
+                "salt": ""
+            }
+        },
+        "Telnet": {
+            "enable": "yes"
+        },
+        "Upnp": {
+            "enable": "yes",
+            "friendlyname": "NS602HD"
+        },
+        "Wlan0": {
+            "broadcast": "0.0.0.0",
+            "dns0": "0.0.0.0",
+            "dns1": "0.0.0.0",
+            "enable": "yes",
+            "gateway": "0.0.0.0",
+            "interface": "eth1",
+            "ipaddress": "0.0.0.0",
+            "ipversion": "ipv4",
+            "mac": "",
+            "subnet": "0.0.0.0",
+            "Autoip": {
+                "enable": "yes",
+                "ipaddress": "169.254.0.1",
+                "subnet": "255.255.0.0"
+            },
+            "Connect": {
+                "authmode": "OPEN",
+                "enable": "no",
+                "encrypttype": "NONE",
+                "essid": "",
+                "key": "",
+                "mac": "",
+                "mode": "Managed",
+                "Ap": {
+                    "authmode": "OPEN",
+                    "encrypttype": "NONE",
+                    "essid": "",
+                    "key": ""
+                }
+            },
+            "Dhcp": {
+                "broadcast": "0.0.0.0",
+                "dns0": "0.0.0.0",
+                "dns1": "0.0.0.0",
+                "enable": "yes",
+                "gateway": "0.0.0.0",
+                "ipaddress": "0.0.0.0",
+                "subnet": "0.0.0.0"
+            }
+        },
+        "Wsdiscovery": {
+            "enable": "yes"
+        }
+    },
+    "ONVIF": {
+        "enable": "yes",
+        "version": "1.0.0",
+        "Authentication": {
+            "enable": "yes"
+        },
+        "Profile": {
+            "Default1": {
+                "fixed": "1",
+                "name": "DEFAULT1",
+                "token": "DEFAULT1",
+                "videoencoderconfigtoken": "VIDENCCFG0",
+                "videosourceconfigtoken": "VIDSRCCFG0"
+            },
+            "Default2": {
+                "fixed": "1",
+                "name": "DEFAULT2",
+                "token": "DEFAULT2",
+                "videosourceconfigtoken": "VIDSRCCFG0"
+            }
+        },
+        "Profileg": {
+            "enable": "yes"
+        },
+        "Recordingjob": {
+            "sizejob": "1",
+            "Job1": {
+                "enable": "no",
+                "jobtoken": "Jobtoken1",
+                "Configuration": {
+                    "eventstatus": "done",
+                    "mode": "Idle",
+                    "priority": "50",
+                    "recordingtoken": "RECTOKEN1",
+                    "sizesource": "1",
+                    "Source1": {
+                        "": "http:\/\/www.onvif.org\/ver10\/schema\/Profile"
+                    }
+                }
+            }
+        },
+        "Recordings": {
+            "Record1": {
+                "recordingtoken": "RECTOKEN1",
+                "spareaudiotrack": "0",
+                "sparejob": "1",
+                "sparevideotrack": "0",
+                "Configuration": {
+                    "content": "default",
+                    "maximumretentiontime": "0",
+                    "Source": {
+                        "": "default"
+                    }
+                },
+                "Tracks": {
+                    "sizetrack": "1",
+                    "Track1": {
+                        "": "track1"
+                    }
+                }
+            }
+        },
+        "Replayattackprotection": {
+            "enable": "no"
+        },
+        "Rtspurlnat": {
+            "enable": "yes"
+        },
+        "Scopes": {
+            "Item0": {
+                "fixed": "1",
+                "uri": "onvif:\/\/www.onvif.org\/Profile\/Streaming"
+            },
+            "Item1": {
+                "fixed": "1",
+                "uri": "onvif:\/\/www.onvif.org\/Profile\/G"
+            },
+            "Item2": {
+                "fixed": "0",
+                "uri": "onvif:\/\/www.onvif.org\/name\/NS602HD-6111"
+            },
+            "Item3": {
+                "fixed": "1",
+                "uri": "onvif:\/\/www.onvif.org\/type\/video_encoder"
+            },
+            "Item4": {
+                "fixed": "0",
+                "uri": "onvif:\/\/www.onvif.org\/location\/"
+            },
+            "Item5": {
+                "fixed": "1",
+                "uri": "onvif:\/\/www.onvif.org\/hardware\/NS602HD"
+            }
+        },
+        "Tracks": {
+            "sizetrack": "1",
+            "Track1": {
+                "description": "none",
+                "recordingtoken": "RECTOKEN1",
+                "tracktype": "0"
+            }
+        }
+    },
+    "PIR": {
+        "interval": "5"
+    },
+    "PRIVACYZONE": {
+        "enable": "yes",
+        "nbrofchannel": "1",
+        "Ch0": {
+            "enable": "yes",
+            "list": "0,1,2,3,4,5,6,7",
+            "nbrofzone": "8",
+            "type": "static",
+            "Z0": {
+                "dynamic": "",
+                "enable": "no",
+                "name": "zone",
+                "position": "2500,2500,4999,4999"
+            },
+            "Z1": {
+                "dynamic": "",
+                "enable": "no",
+                "name": "zone",
+                "position": "5000,2500,7499,4999"
+            },
+            "Z2": {
+                "dynamic": "",
+                "enable": "no",
+                "name": "zone",
+                "position": "2500,5000,4999,7499"
+            },
+            "Z3": {
+                "dynamic": "",
+                "enable": "no",
+                "name": "zone",
+                "position": "5000,5000,7499,7499"
+            },
+            "Z4": {
+                "dynamic": "",
+                "enable": "no",
+                "name": "zone",
+                "position": "0,0,0,0"
+            },
+            "Z5": {
+                "dynamic": "",
+                "enable": "no",
+                "name": "zone",
+                "position": "0,0,0,0"
+            },
+            "Z6": {
+                "dynamic": "",
+                "enable": "no",
+                "name": "zone",
+                "position": "0,0,0,0"
+            },
+            "Z7": {
+                "dynamic": "",
+                "enable": "no",
+                "name": "zone",
+                "position": "0,0,0,0"
+            }
+        }
+    },
+    "PTZ": {
+        "enable": "yes",
+        "nbrofchannel": "1",
+        "Calibration": {
+            "Periodic": {
+                "enable": "no",
+                "endhour": "23",
+                "endminute": "59",
+                "hour": "0",
+                "interval": "1440",
+                "minute": "0"
+            }
+        },
+        "Ch0": {
+            "enable": "yes",
+            "Autorun": {
+                "enable": "no",
+                "preset": "",
+                "timeunit": "sec",
+                "waittime": "30"
+            },
+            "Preset": {
+                "defaultvcaprofile": "0",
+                "list": "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                "nbrofpreset": "16",
+                "P0": {
+                    "description": "",
+                    "enable": "no",
+                    "focus": "0",
+                    "id": "0",
+                    "name": "",
+                    "number": "0",
+                    "pan": "0",
+                    "tilt": "0",
+                    "vcaprofile": "-1",
+                    "zoom": "0"
+                },
+                "P1": {
+                    "description": "",
+                    "enable": "no",
+                    "focus": "0",
+                    "id": "1",
+                    "name": "",
+                    "number": "1",
+                    "pan": "0",
+                    "tilt": "0",
+                    "vcaprofile": "-1",
+                    "zoom": "0"
+                },
+                "P10": {
+                    "description": "",
+                    "enable": "no",
+                    "focus": "0",
+                    "id": "10",
+                    "name": "",
+                    "number": "10",
+                    "pan": "0",
+                    "tilt": "0",
+                    "vcaprofile": "-1",
+                    "zoom": "0"
+                },
+                "P11": {
+                    "description": "",
+                    "enable": "no",
+                    "focus": "0",
+                    "id": "11",
+                    "name": "",
+                    "number": "11",
+                    "pan": "0",
+                    "tilt": "0",
+                    "vcaprofile": "-1",
+                    "zoom": "0"
+                },
+                "P12": {
+                    "description": "",
+                    "enable": "no",
+                    "focus": "0",
+                    "id": "12",
+                    "name": "",
+                    "number": "12",
+                    "pan": "0",
+                    "tilt": "0",
+                    "vcaprofile": "-1",
+                    "zoom": "0"
+                },
+                "P13": {
+                    "description": "",
+                    "enable": "no",
+                    "focus": "0",
+                    "id": "13",
+                    "name": "",
+                    "number": "13",
+                    "pan": "0",
+                    "tilt": "0",
+                    "vcaprofile": "-1",
+                    "zoom": "0"
+                },
+                "P14": {
+                    "description": "",
+                    "enable": "no",
+                    "focus": "0",
+                    "id": "14",
+                    "name": "",
+                    "number": "14",
+                    "pan": "0",
+                    "tilt": "0",
+                    "vcaprofile": "-1",
+                    "zoom": "0"
+                },
+                "P15": {
+                    "description": "",
+                    "enable": "no",
+                    "focus": "0",
+                    "id": "15",
+                    "name": "",
+                    "number": "15",
+                    "pan": "0",
+                    "tilt": "0",
+                    "vcaprofile": "-1",
+                    "zoom": "0"
+                },
+                "P2": {
+                    "description": "",
+                    "enable": "no",
+                    "focus": "0",
+                    "id": "2",
+                    "name": "",
+                    "number": "2",
+                    "pan": "0",
+                    "tilt": "0",
+                    "vcaprofile": "-1",
+                    "zoom": "0"
+                },
+                "P3": {
+                    "description": "",
+                    "enable": "no",
+                    "focus": "0",
+                    "id": "3",
+                    "name": "",
+                    "number": "3",
+                    "pan": "0",
+                    "tilt": "0",
+                    "vcaprofile": "-1",
+                    "zoom": "0"
+                },
+                "P4": {
+                    "description": "",
+                    "enable": "no",
+                    "focus": "0",
+                    "id": "4",
+                    "name": "",
+                    "number": "4",
+                    "pan": "0",
+                    "tilt": "0",
+                    "vcaprofile": "-1",
+                    "zoom": "0"
+                },
+                "P5": {
+                    "description": "",
+                    "enable": "no",
+                    "focus": "0",
+                    "id": "5",
+                    "name": "",
+                    "number": "5",
+                    "pan": "0",
+                    "tilt": "0",
+                    "vcaprofile": "-1",
+                    "zoom": "0"
+                },
+                "P6": {
+                    "description": "",
+                    "enable": "no",
+                    "focus": "0",
+                    "id": "6",
+                    "name": "",
+                    "number": "6",
+                    "pan": "0",
+                    "tilt": "0",
+                    "vcaprofile": "-1",
+                    "zoom": "0"
+                },
+                "P7": {
+                    "description": "",
+                    "enable": "no",
+                    "focus": "0",
+                    "id": "7",
+                    "name": "",
+                    "number": "7",
+                    "pan": "0",
+                    "tilt": "0",
+                    "vcaprofile": "-1",
+                    "zoom": "0"
+                },
+                "P8": {
+                    "description": "",
+                    "enable": "no",
+                    "focus": "0",
+                    "id": "8",
+                    "name": "",
+                    "number": "8",
+                    "pan": "0",
+                    "tilt": "0",
+                    "vcaprofile": "-1",
+                    "zoom": "0"
+                },
+                "P9": {
+                    "description": "",
+                    "enable": "no",
+                    "focus": "0",
+                    "id": "9",
+                    "name": "",
+                    "number": "9",
+                    "pan": "0",
+                    "tilt": "0",
+                    "vcaprofile": "-1",
+                    "zoom": "0"
+                }
+            },
+            "Schedule": {
+                "list": "0,1,2,3",
+                "nbrofschedule": "4",
+                "S0": {
+                    "day": "",
+                    "enable": "yes",
+                    "id": "0",
+                    "preset": "0",
+                    "time": "00:00:00"
+                },
+                "S1": {
+                    "day": "",
+                    "enable": "yes",
+                    "id": "1",
+                    "preset": "0",
+                    "time": "00:00:00"
+                },
+                "S2": {
+                    "day": "",
+                    "enable": "yes",
+                    "id": "2",
+                    "preset": "0",
+                    "time": "00:00:00"
+                },
+                "S3": {
+                    "day": "",
+                    "enable": "yes",
+                    "id": "3",
+                    "preset": "0",
+                    "time": "00:00:00"
+                }
+            }
+        },
+        "Default": {
+            "Preset": {
+                "description": "",
+                "enable": "yes",
+                "focus": "0",
+                "id": "0",
+                "name": "",
+                "number": "0",
+                "pan": "0",
+                "tilt": "0",
+                "vcaprofile": "-1",
+                "zoom": "0"
+            },
+            "Schedule": {
+                "day": "",
+                "enable": "yes",
+                "id": "0",
+                "preset": "0",
+                "time": "0:00:00"
+            }
+        }
+    },
+    "PTZDRIVER": {
+        "nbrofchannel": "1",
+        "Ch0": {
+            "address": "1",
+            "enable": "yes",
+            "port": "1",
+            "protocol": "pelco-d.ptzs"
+        }
+    },
+    "SCHEDULE": {
+        "list": "<?list(.S*.id)?>",
+        "nbrofcount": "<?count(.S*.id)?>",
+        "Default": {
+            "dateenable": "no",
+            "dayofweek": "mon,tue,wed,thu,fri,sat,sun",
+            "description": "",
+            "endday": "31",
+            "endhour": "23",
+            "endminute": "59",
+            "endmonth": "12",
+            "endyear": "2037",
+            "id": "0",
+            "name": "",
+            "startday": "0",
+            "starthour": "0",
+            "startminute": "0",
+            "startmonth": "1",
+            "startyear": "2000",
+            "timeenable": "no"
+        },
+        "S0": {
+            "dateenable": "no",
+            "dayofweek": "mon,tue,wed,thu,fri,sat,sun",
+            "description": "",
+            "endday": "31",
+            "endhour": "23",
+            "endminute": "59",
+            "endmonth": "12",
+            "endyear": "2037",
+            "id": "0",
+            "name": "Midnight",
+            "startday": "1",
+            "starthour": "23",
+            "startminute": "58",
+            "startmonth": "1",
+            "startyear": "2000",
+            "timeenable": "yes"
+        }
+    },
+    "SYSTEM": {
+        "Datetime": {
+            "syncinterval": "everyday",
+            "syncsource": "ntp",
+            "Date": {
+                "format": "yyyymmdd"
+            },
+            "Ntp": {
+                "nbrofserver": "4",
+                "s0": "time.windows.com",
+                "s1": "clock.isc.org",
+                "s2": "ntp.shoa.cl",
+                "s3": "time.bora.net"
+            },
+            "Sntpd": {
+                "enable": "no"
+            },
+            "Time": {
+                "format": "24hmnss"
+            },
+            "Tz": {
+                "name": "Hong_Kong",
+                "posixrule": "HKT-8",
+                "utcoffset": "",
+                "Dst": {
+                    "enabled": "",
+                    "mode": "auto"
+                }
+            }
+        },
+        "Heater": {
+            "Control": {
+                "mode": "auto",
+                "offtemp": "3",
+                "ontemp": "0",
+                "unit": "cel"
+            }
+        },
+        "Info": {
+            "rack": "",
+            "Rackstate": {
+                "fanstate0": "",
+                "fanstate1": "",
+                "fanstate2": "",
+                "temperature0": "",
+                "temperature1": "",
+                "temperature2": "",
+                "voltage0": "",
+                "voltage1": ""
+            }
+        },
+        "Install": {
+            "place": "ceiling"
+        },
+        "Loadbalance": {
+            "enable": "yes",
+            "max": "95",
+            "method": "dfps",
+            "min": "92"
+        },
+        "Properties": {
+            "Stream": {
+                "resolution": "1920x1080,1280x720,1120x630,960x540,800x450,640x360,480x270,320x180",
+                "standard": "h264,mjpeg"
+            }
+        },
+        "Status": {
+            "Videoin": {
+                "Ch0": {
+                    "signal": "normal",
+                    "standard": "ntsc"
+                }
+            }
+        }
+    },
+    "SYSTEMLOG": {
+        "mode": "manual",
+        "Ftp": {
+            "account": "",
+            "address": "",
+            "name": "",
+            "port": "21",
+            "prefixname": "",
+            "pwd": "",
+            "targetpath": ""
+        }
+    },
+    "TD": {
+        "Ch0": {
+            "enable": "no",
+            "firedarea": "70",
+            "timeout": "10"
+        }
+    },
+    "UART": {
+        "nbrofchannel": "1",
+        "Ch0": {
+            "baudrate": "115200",
+            "databits": "8",
+            "flowcontrol": "none",
+            "parity": "none",
+            "stopbits": "1",
+            "type": "rs232"
+        },
+        "Ch1": {
+            "baudrate": "9600",
+            "databits": "8",
+            "flowcontrol": "none",
+            "mode": "ptz",
+            "parity": "none",
+            "stopbits": "1",
+            "type": "rs485",
+            "Serialoverip": {
+                "ipaddress": "",
+                "mode": "udp",
+                "status": "",
+                "tcpclientipaddress": "",
+                "tcpclientport": "7100",
+                "tcpconnecttimeout": "30",
+                "tcpserverport": "7101",
+                "udpport": "7002"
+            }
+        }
+    },
+    "USER": {
+        "anonymousviewerlogin": "yes",
+        "enableauthen": "yes",
+        "grouplist": "Admin,Operator,Viewer",
+        "Admin": {
+            "name": "root"
+        },
+        "Operator": {
+            "name": "root"
+        },
+        "Viewer": {
+            "name": "root"
+        }
+    },
+    "VCA": {
+        "Zn0": {
+            "enable": "no",
+            "points": "200:200,200:4000,4000:4000,4000:200,200:200"
+        },
+        "Zn1": {
+            "enable": "no",
+            "points": "200:200,200:4000,4000:4000,4000:200,200:200"
+        }
+    },
+    "VIDEOIN": {
+        "nbrofchannel": "1",
+        "Ch0": {
+            "name": "NS602HD-6111",
+            "Adjust": {
+                "Ntsc": {
+                    "hdelay": "15",
+                    "vdelay": "18"
+                },
+                "Pal": {
+                    "hdelay": "10",
+                    "vdelay": "24"
+                }
+            },
+            "Cmos": {
+                "ratio": "16:9"
+            },
+            "Color": {
+                "brightness": "128",
+                "contrast": "128",
+                "saturation": "128",
+                "sharpness": "128"
+            },
+            "Deinterlace": {
+                "enable": "yes"
+            },
+            "Focus": {
+                "mode": "semiauto",
+                "syncwithdaynight": "no"
+            },
+            "Image": {
+                "mirror": "none"
+            },
+            "Isp": {
+                "noisefilter": "3",
+                "Defog": {
+                    "enable": "no",
+                    "mode": "manual",
+                    "Manual": {
+                        "": "low"
+                    }
+                },
+                "Exposure": {
+                    "compensation": "128",
+                    "dss": "off",
+                    "fixedshutter": "30",
+                    "irlevel": "128",
+                    "irmode": "auto",
+                    "maxagc": "50",
+                    "maxshutter": "30",
+                    "minshutter": "2000",
+                    "mode": "normal"
+                },
+                "Whitebalance": {
+                    "manualbluegain": "128",
+                    "manualredgain": "128",
+                    "mode": "atw1"
+                }
+            },
+            "Light": {
+                "Backlight": {
+                    "enable": "no",
+                    "level": "off",
+                    "zone": "center"
+                },
+                "Daynight": {
+                    "dtnlevel": "1",
+                    "mode": "auto",
+                    "ntdlevel": "3",
+                    "Sensor": {
+                        "": "yes"
+                    }
+                }
+            },
+            "Rotate": {
+                "direction": "none"
+            },
+            "Tim": {
+                "agcspeed": "255",
+                "version": "",
+                "Colorization": {
+                    "mode": "whitehot",
+                    "polarity": "positive"
+                },
+                "Gaincontrol": {
+                    "mode": "auto",
+                    "Ice": {
+                        "": "2"
+                    },
+                    "Manual": {
+                        "": "1024"
+                    }
+                },
+                "Metadata": {
+                    "enable": "no"
+                },
+                "Noisereduction": {
+                    "enable": "no"
+                },
+                "Nuc": {
+                    "interval": "5"
+                }
+            },
+            "Tof": {
+                "Multicam": {
+                    "enable": "no",
+                    "id": "0",
+                    "maxnum": "3"
+                }
+            },
+            "Vs": {
+                "bordertype": "dynamic",
+                "enable": "yes",
+                "snapshot": "no",
+                "st0": "no",
+                "st1": "no"
+            },
+            "Wdr": {
+                "enable": "no",
+                "level": "7",
+                "mode": "manual"
+            }
+        }
+    },
+    "VIDEOOUT": {
+        "nbrofchannel": "1",
+        "Ch0": {
+            "mode": "loop",
+            "Bnc": {
+                "enable": "no",
+                "standard": "pal"
+            }
+        }
+    }
+}
