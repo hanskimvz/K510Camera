@@ -3,16 +3,10 @@
 error_reporting( E_ALL );
 ini_set( 'display_errors', '1' );
 
-#define PROMPT_SHM_ID       0xF6081
-#define PROMPT_SHM_SIZE        1024   // 2^10
-#define PARAM_SHM_ID        0xF6080
-#define PARAM_SHM_SIZE       131072   // 2^17  
-define('PROMPT_SHM_ID',     0xF6081);
+define('PROMPT_SHM_ID',     0xF8080);
 define('PROMPT_SHM_SIZE',   1024);   // 2^10  
-define('PARAM_SHM_ID',      0xF6080);
-// define('PARAM_SHM_SIZE',    131072);   // 2^17
+define('PARAM_SHM_ID',      0xF8081);
 define('PARAM_SHM_SIZE',    65536);    // 2^16
-// define("PARAM_FNAME",    "/mnt/db/param.json");
 define("PARAM_FNAME",    "/root/data/param.json");
 
 

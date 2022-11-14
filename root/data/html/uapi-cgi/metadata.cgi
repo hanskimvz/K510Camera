@@ -13,35 +13,33 @@ $arr_cat = array(
     "refrigerator", "book", "clock", "vase", "scissors", "teddy bear", "hair drier", "toothbrush"
 );
 
-$systemid = 0x000f1206; // System ID for the shared memory segment 
+#define VCA_SHM_ID          0xF8085
+#define VCA_SHM_SIZE           4096   // 2^12
+
+$systemid = 0xF8085; // System ID for the shared memory segment 
 $shmid = shmop_open($systemid, "a", 0, 0); 
 $sz = shmop_size($shmid);
 
-// print ("shm id:".$shmid.", size:". shmop_size($shmid));
-// shmop_write($shmid, "Hello World!", 0);
-// rs[4:5]  = frame_cnt
-// rs[8:15]  = ts microsecond
-// rs[16:19] = size of metadata
-// string shmop_read ( int shmid, int start, int count)
-$read_data = shmop_read($shmid, 0, 32);
-// for($i=0; $i<32; $i++) {
-//     print "(".$i.")".ord($read_data[$i]).",";
+// typedef struct {
+//     uint16_t  framecnt; 8
+//     uint64_t timestamp; 8
+//     uint16_t datalength; 8
+// } vcaInfo;
+
+$read_data = shmop_read($shmid, 0, 24);
+// for($i=0; $i<24; $i++) {
+//     print "(".$i.")".ord($read_data[$i]).":".$read_data[$i]."\n";
 // }
-$sz = 0;
-for ($i=0; $i<4; $i++) {
-    $sz |= ord($read_data[16+$i]) <<(8*$i) ;
-}
-// print ("size:".$sz);
-$ts_m=0;
-for ($i=0; $i<8; $i++) {
+$frame_cnt = ord($read_data[1]) <<8 | ord($read_data[0]);
+for ($i=0, $ts_m=0; $i<8; $i++) {
     $ts_m |= ord($read_data[8+$i])<<(8*$i);
 }
+for ($i=0, $sz=0; $i<2; $i++) {
+    $sz |= ord($read_data[16+$i]) <<(8*$i) ;
+}
+// print ("frame count:".$frame_cnt.", ts:".$ts_m.", datetime:".date("Y-m-d H:i:s", ($ts_m/1000) + 3600*8).", datalength:".$sz."\n");
 
-
-// print ($sz);
-$frame_cnt  = ord($read_data[4]) | ord($read_data[5]) << 8;
-
-$read_data = shmop_read($shmid, 32, $sz);
+$read_data = shmop_read($shmid, 24, $sz);
 $arr_rs = array();
 for ($i =0; $i<$sz; $i+=12 ){
     $cat_no = ord($read_data[$i]);
@@ -83,12 +81,6 @@ $arr_rs_t = array(
     "data" => $arr_rs
 );
 
-// print "<pre>";
-// print_r($arr_rs_t);
-// print "</pre>";
-
-
-// $json_str = json_encode($arr_rs_t,JSON_NUMERIC_CHECK);
 $json_str = json_encode($arr_rs_t, JSON_NUMERIC_CHECK|JSON_PRETTY_PRINT);
 print $json_str;
 

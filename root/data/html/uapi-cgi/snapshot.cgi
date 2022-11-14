@@ -2,16 +2,10 @@
 <meta http-equiv='expires' content='0'>
 <meta http-equiv='pragma' content='no-cache'>
 <?php 
-$systemid = 0x000f6085; // System ID for the shared memory segment 
+
+$systemid = 0xF8084; // System ID for the shared memory segment 
 $shmid = shmop_open($systemid, "a", 0, 0); 
 $offset = 524288;
-
-
-// read_data[4:7] frame_cnt
-// read_data[6:7] timestamp_microsecond
-// read_data[8:11] timestamp_second
-// read_data[16:31] sizeof snapshot
-// read_data[32~] snapshot data
 
 // $read_data = shmop_read($shmid, 0, 200); for ($i=0; $i<200; $i++) {  print (ord($read_data[$i]).",");} shmop_close($shmid); exit();
 $read_data = shmop_read($shmid, 0, 1);
